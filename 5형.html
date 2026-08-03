@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#f37021">
+<title>손해보험·제3보험 모의고사 05형</title>
+<style>
+:root{--orange:#f37021;--orange-dark:#d9570d;--ink:#202124;--muted:#6b7280;--line:#e5e7eb;--soft:#fff7f1;--green:#16803c;--green-bg:#eaf8ef;--red:#c62828;--red-bg:#fff0f0;--yellow:#fff7bf;--navy:#202b3c}
+*{box-sizing:border-box}
+html,body{margin:0;min-height:100%;background:#f5f6f8;color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Apple SD Gothic Neo","Noto Sans KR",Arial,sans-serif}
+body{padding:env(safe-area-inset-top) 0 env(safe-area-inset-bottom)}
+button,input,textarea{font:inherit}
+button{border:0;cursor:pointer}
+.app{width:min(760px,100%);margin:0 auto;min-height:100vh;background:#fff;box-shadow:0 0 24px rgba(0,0,0,.06)}
+.topbar{background:var(--orange);color:#fff;padding:18px 20px 16px;position:sticky;top:0;z-index:5}
+.brand{font-weight:800;font-size:18px;letter-spacing:-.04em}.subbrand{font-size:12px;opacity:.9;margin-top:4px}
+.screen{padding:22px 18px 30px}.hidden{display:none!important}
+.hero{text-align:center;padding:18px 0 10px}.badge{display:inline-flex;padding:6px 10px;border-radius:999px;background:#fff0e6;color:var(--orange-dark);font-weight:800;font-size:13px}.hero h1{font-size:28px;line-height:1.28;margin:15px 0 9px;letter-spacing:-.06em}.hero p{margin:0;color:var(--muted);font-size:14px;line-height:1.55}
+.timeline{display:grid;grid-template-columns:repeat(4,1fr);gap:7px;margin:24px 0 26px;position:relative}.timeline:before{content:"";position:absolute;left:12%;right:12%;top:22px;height:2px;background:#ffd4bd;z-index:0}.step{position:relative;z-index:1;text-align:center}.step-no{width:44px;height:44px;margin:0 auto 8px;border-radius:50%;display:grid;place-items:center;background:#fff;border:2px solid #ffc39f;color:var(--orange-dark);font-weight:900}.step-label{font-size:12px;line-height:1.35;font-weight:700;color:#444}
+.form-card,.info-card,.result-card,.review-card{border:1px solid var(--line);border-radius:18px;padding:18px;background:#fff}.form-card{box-shadow:0 8px 22px rgba(243,112,33,.08)}
+label{display:block;font-weight:800;font-size:14px;margin-bottom:8px}input[type=text]{width:100%;padding:14px 15px;border:1px solid #d6d9df;border-radius:12px;outline:none}input[type=text]:focus{border-color:var(--orange);box-shadow:0 0 0 3px #fff0e6}.hint{margin:8px 0 0;color:var(--muted);font-size:12px}
+.mode-title{font-size:14px;font-weight:800;margin:18px 0 9px}.mode-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.mode-card{min-height:78px;padding:10px 7px;border:1px solid #d6d9df;border-radius:12px;background:#fff;color:#374151;font-weight:800;font-size:13px;line-height:1.35}.mode-card strong{display:block;font-size:16px;color:var(--orange-dark);margin-bottom:3px}.mode-card.selected{border:2px solid var(--orange);background:#fff7f1;color:var(--orange-dark);box-shadow:0 0 0 2px #fff0e6}.mode-hint{margin:9px 0 0;color:var(--muted);font-size:12px;line-height:1.45}
+.primary,.secondary,.danger{width:100%;min-height:48px;border-radius:12px;font-weight:800;margin-top:15px}.primary{background:var(--orange);color:#fff}.primary:active{background:var(--orange-dark)}.secondary{background:#fff3ea;color:var(--orange-dark)}.danger{background:#fff0f0;color:var(--red)}button:disabled{opacity:.42;cursor:not-allowed}
+.info-card{margin-top:15px;background:#fafafa;font-size:13px;line-height:1.6;color:#555}.info-card strong{color:var(--ink)}
+.progress-wrap{margin-bottom:16px}.progress-line{display:flex;justify-content:space-between;align-items:center;font-size:13px;font-weight:800}.progress-line span:last-child{color:var(--orange-dark)}.progress{height:7px;background:#f0f1f3;border-radius:99px;overflow:hidden;margin-top:9px}.progress>i{display:block;height:100%;background:var(--orange);border-radius:99px;transition:width .2s}
+.question-card{border:1px solid var(--line);border-radius:18px;overflow:hidden}.question-head{padding:17px 16px;background:var(--soft);border-bottom:1px solid #ffe1cf}.q-number{font-size:13px;color:var(--orange-dark);font-weight:900}.q-weight{float:right;color:#8c4a29;font-size:12px}.question-text{font-size:19px;line-height:1.55;font-weight:800;letter-spacing:-.04em;margin-top:9px;white-space:pre-line}.choices{padding:10px}.choice{display:flex;gap:11px;align-items:flex-start;width:100%;text-align:left;background:#fff;border:1px solid #dfe2e7;border-radius:13px;margin:8px 0;padding:14px 13px;line-height:1.48;color:var(--ink)}.choice:active,.choice.selected{border-color:var(--orange);background:#fff7f1}.choice-num{flex:0 0 28px;height:28px;border-radius:50%;display:grid;place-items:center;background:#f1f2f4;font-weight:900;font-size:13px}.choice.selected .choice-num{background:var(--orange);color:#fff}.choice-text{font-size:15px;white-space:pre-line}
+.nav{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:16px}.nav button{min-height:48px;border-radius:12px;font-weight:800}.prev{background:#f0f1f3;color:#4b5563}.next{background:var(--orange);color:#fff}.home{grid-column:1/-1;background:#f0f1f3;color:#4b5563}.submit{grid-column:1/-1;background:var(--navy);color:#fff}.test-note{margin-top:13px;color:var(--muted);font-size:12px;text-align:center}
+.result-card{margin:14px 0;padding:18px}.result-title{font-size:20px;font-weight:900;margin:0 0 14px}.result-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}.score-box{border-radius:14px;padding:14px;background:#fafafa}.score-box h3{font-size:13px;margin:0 0 6px}.score{font-size:30px;font-weight:900;color:var(--orange-dark)}.status{font-weight:900;font-size:13px}.pass{color:var(--green)}.fail{color:var(--red)}.final-banner{padding:15px;border-radius:13px;text-align:center;background:var(--navy);color:#fff;font-weight:900;font-size:18px;margin-bottom:14px}.final-banner.fail-banner{background:#7f1d1d}
+.copy-label{font-size:13px;font-weight:900;margin:18px 0 7px}.copy-box{width:100%;min-height:190px;resize:vertical;padding:14px;border:2px dashed #e1c500;border-radius:12px;background:#fffef0;line-height:1.65;font-size:13px;outline:none}.copy-box:focus{box-shadow:0 0 0 3px #fff4a8}
+.review-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}.review-top h2{font-size:20px;margin:0}.review-top span{font-size:13px;color:var(--muted);font-weight:800}.review-question{font-size:18px;font-weight:900;line-height:1.5;white-space:pre-line;margin:10px 0 14px}.review-choice{display:flex;gap:9px;align-items:flex-start;border:1px solid var(--line);border-radius:11px;padding:12px;margin:7px 0;line-height:1.48;font-size:14px}.review-choice.correct{background:var(--green-bg);border-color:#92d6a9;color:#135b2e}.review-choice.wrong{background:var(--red-bg);border-color:#ef9b9b;color:#8e1e1e}.review-choice .mark{min-width:78px;font-weight:900;font-size:12px}.review-choice .letter{font-weight:900}.review-status{margin:13px 0 0;font-size:13px;font-weight:800}.explanation{margin-top:16px;padding:14px;border-radius:12px;background:#f7f8fa;font-size:14px;line-height:1.6}.explanation strong{display:block;color:var(--orange-dark);margin-bottom:5px}.review-nav{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:16px}.review-nav button{min-height:48px;border-radius:12px;font-weight:800}.review-prev{background:#f0f1f3;color:#4b5563}.review-next{background:var(--orange);color:#fff}.complete{grid-column:1/-1;background:var(--navy);color:#fff}
+.small-note{font-size:12px;color:var(--muted);line-height:1.55;margin:12px 2px 0}.section-title{font-size:16px;margin:20px 0 8px}.footer-note{text-align:center;color:#9ca3af;font-size:11px;margin-top:24px}
+@media(max-width:420px){.screen{padding-left:14px;padding-right:14px}.hero h1{font-size:25px}.timeline{gap:3px}.step-label{font-size:11px}.question-text{font-size:18px}.result-grid{grid-template-columns:1fr}.mode-card{font-size:12px}.mode-card strong{font-size:14px}.choice-text{font-size:14px}.review-choice{font-size:13px}.review-choice .mark{min-width:70px}}
+</style>
+</head>
+<body>
+<main class="app">
+<header class="topbar"><div class="brand">한화손보 모의고사</div><div class="subbrand">손해보험·제3보험 등록자격시험 · 05형</div></header>
+
+<section id="startScreen" class="screen">
+  <div class="hero"><span class="badge">2026 개정판 · 50문항</span><h1>손해보험·제3보험<br>모의고사 05형</h1><p>모바일에 맞춘 한 문제씩 풀이 방식입니다.<br>이름을 입력하고 시험을 시작하세요.</p></div>
+  <div class="timeline">
+    <div class="step"><div class="step-no">1</div><div class="step-label">모의고사<br>풀이</div></div>
+    <div class="step"><div class="step-no">2</div><div class="step-label">실시간<br>채점</div></div>
+    <div class="step"><div class="step-no">3</div><div class="step-label">1문항씩<br>오답노트</div></div>
+    <div class="step"><div class="step-no">4</div><div class="step-label">틀린문제·전체<br>재시험</div></div>
+  </div>
+  <div class="form-card"><label for="traineeName">훈련생 이름</label><input id="traineeName" type="text" maxlength="30" autocomplete="name" placeholder="이름을 입력하세요"><p class="hint">이름은 결과 요약과 카카오톡 공유 문구에 사용됩니다.</p><div class="mode-title">응시 범위 선택</div><div class="mode-grid"><button type="button" class="mode-card selected" data-mode="all"><strong>전체</strong>1~50번</button><button type="button" class="mode-card" data-mode="damage"><strong>손해보험</strong>1~33번</button><button type="button" class="mode-card" data-mode="third"><strong>제3보험</strong>18~50번</button></div><p id="modeHint" class="mode-hint">두 과목 전체를 응시합니다.</p><button id="startButton" class="primary">시험 시작하기</button></div>
+  <div class="info-card"><strong>채점 기준</strong><br>손해보험 1~33번, 제3보험 18~50번입니다. 일반 문항은 3점, 공통문항인 18번은 각 과목에서 4점으로 계산되어 과목별 100점 만점입니다.</div>
+  <div class="footer-note">파일 첨부만으로 실행되는 단일 HTML · 인터넷 연결 불필요</div>
+</section>
+
+<section id="testScreen" class="screen hidden">
+  <div class="progress-wrap"><div class="progress-line"><span id="roundLabel">1회차</span><span id="progressLabel">1 / 50</span></div><div class="progress"><i id="progressBar" style="width:2%"></i></div></div>
+  <div class="question-card"><div class="question-head"><div class="q-number" id="questionNumber"></div><div class="q-weight" id="questionWeight"></div><div class="question-text" id="questionText"></div></div><div class="choices" id="choices"></div></div>
+  <div class="nav"><button id="prevButton" class="prev">이전</button><button id="nextButton" class="next">다음</button><button id="homeButton" class="home">처음으로</button><button id="submitButton" class="submit hidden">현재 답안 제출하고 채점하기</button></div>
+  <p class="test-note">문항 번호를 눌러 선택한 답을 바꿀 수 있습니다. 제출 전 모든 문항에 답했는지 확인하세요.</p>
+</section>
+
+<section id="resultScreen" class="screen hidden"><div id="resultContent"></div></section>
+<section id="reviewScreen" class="screen hidden"><div class="review-top"><h2>정답·해설 오답노트</h2><span id="reviewProgress"></span></div><div class="review-card"><div class="q-number" id="reviewNumber"></div><div class="review-question" id="reviewQuestion"></div><div id="reviewChoices"></div><div class="review-status" id="reviewStatus"></div><div class="explanation"><strong>공식 해설</strong><span id="reviewExplanation"></span></div></div><div class="review-nav"><button id="reviewPrev" class="review-prev">이전 문항</button><button id="reviewNext" class="review-next">다음 문항</button><button id="reviewComplete" class="complete hidden">오답학습 완료</button></div><p id="reviewNote" class="small-note"></p></section>
+<section id="finalScreen" class="screen hidden"><div id="finalContent"></div></section>
+</main>
+
+<script>
+const legacyQuestions = [
+{n:1,q:"보험회사가 잔존물을 보전하기 위하여 지출한 비용 또는 유익한 비용은 무엇인가?",c:["잔존물 제거비용","잔존물 보전비용","오염물질 제거비용","폐기물 처리비용"],a:2,e:"잔존물 보전비용입니다."},
+{n:2,q:"다음 중 주택화재보험에서 보험회사의 책임개시기는 언제인가?",c:["계약자가 청약한 날 시점부터","보험기간의 첫날 12시부터","청약의 승낙 및 제1회 보험료를 받은 때부터","청약을 승낙한 때부터"],a:3,e:"청약의 승낙 및 전액 또는 제1회 보험료를 받은 때부터 책임이 시작됩니다."},
+{n:3,q:"풍수해·지진재해보험의 가입대상에 해당하지 않는 것은?",c:["주택(16층 이상 아파트 제외)","온실(비닐하우스 포함)","16층 이상 아파트","소상공인 상가·공장"],a:3,e:"16층 이상 아파트는 특수건물화재보험 의무가입대상입니다."},
+{n:4,q:"손해사고기준 배상책임보험에 해당하지 않는 것은?",c:["시설소유관리자배상책임보험","경비업자배상책임보험","선주배상책임보험","변호사배상책임보험"],a:4,e:"변호사배상책임보험은 배상청구기준입니다."},
+{n:5,q:"다음 중 동산종합보험의 잔위험에 해당하지 않는 것은?",c:["강설","연기손해","건물의 붕괴","도난"],a:4,e:"도난은 동산종합보험의 잔위험에 해당하지 않습니다."},
+{n:6,q:"다음 중 장기손해보험의 해약환급금에 대한 설명으로 틀린 것은?",c:["보험계약자가 보험료를 납부하지 않아 계약이 해지되는 경우 해약환급금을 지급한다","보험계약자 및 피보험자가 통지의무를 위반하여 계약이 해지되는 경우 해약환급금을 지급하지 않는다","보험계약자 및 피보험자가 고지의무를 위반하여 계약이 해지되는 경우 해약환급금을 지급한다","계약자가 해지 의사표시를 한 경우 해약환급금을 지급한다"],a:2,e:"통지의무 위반으로 해지되어도 해약환급금을 지급합니다."},
+{n:7,q:"다음 중 청약을 철회할 수 있는 경우로 알맞지 않은 것은?",c:["보험증권을 받은 날로부터 1주일 이내","보험증권을 받은 날로부터 30일 이내","보험증권을 받은 날로부터 15일 이내","보험증권을 받은 날로부터 3일 이내"],a:2,e:"보험증권 수령일부터 15일 이내, 청약일부터 30일 이내 철회할 수 있습니다."},
+{n:8,q:"내근직원 인건비, 물건비 등 보험계약을 유지·관리하는데 소요되는 제경비로 알맞은 것은?",c:["저축보험료","유지비","수금비","신계약비"],a:2,e:"유지비는 보험계약 유지·관리에 드는 제경비입니다."},
+{n:9,q:"재산손해보험금의 보험금 지급기간으로 알맞은 것은?",c:["지급보험금 결정 후 3일 이내","지급보험금 결정 후 7일 이내","지급보험금 결정 후 10일 이내","지급보험금 결정 후 15일 이내"],a:2,e:"지급보험금 결정 후 7일 이내 지급합니다."},
+{n:10,q:"연금저축보험의 세액공제를 받기 위한 납입금액의 한도는?",c:["분기당 100만원 이내","분기당 300만원 이내","연간 1,800만원 이내","연간 600만원 이내"],a:3,e:"연간 납입한도는 1,800만원입니다."},
+{n:11,q:"연금저축보험의 연금수령시 과세에 대한 설명으로 맞는 것은?",c:["70세 이전 연금수령시 기타소득세 15%를 부과한다","연간 연금수령금액이 1,500만원 이하인 경우 분리과세로 납세의무를 종결한다","연간 연금수령금액이 1,500만원을 초과하는 경우 무조건 분리과세로 납세의무를 종결한다","연금수령요건을 충족하지 못한 경우 3%의 연금소득세를 부과한다"],a:2,e:"연간 연금수령금액이 1,500만원 이하이면 분리과세로 납세의무가 종결됩니다."},
+{n:12,q:"다음 중 자동차보험의 사고로 인한 형사상 책임에 해당하는 것은?",c:["면허 정지·취소","불법주차","사용자책임","과실치사상"],a:4,e:"과실치사상은 형사상 책임입니다."},
+{n:13,q:"자동차보험에 처음으로 가입하는 경우 적용되는 보험기간은?",c:["보험기간 첫날 오후 4시부터 마지막 날 오후 4시","보험기간 첫날 0시부터 마지막 날 0시","보험기간 첫날 24시부터 마지막 날 24시","보험료를 받은 때부터 마지막 날 24시"],a:4,e:"처음 가입하는 경우 보험료를 받은 때부터 마지막 날 24시까지입니다."},
+{n:14,q:"자동차보험의 임의보험에 대한 설명 중 맞는 것은?",c:["보험가입자의 보험가입 의사에 대해서 보험회사가 거절할 수 없다","대인배상Ⅱ는 책임보험(대인배상Ⅰ)의 초과 손해를 보상한다","종합보험에 가입하면 무면허 사고도 교통사고처리특례법상 특례를 적용받을 수 있다","가족운전자 한정특약 위반시에도 손해에 대해서는 보상한다"],a:2,e:"대인배상Ⅱ는 대인배상Ⅰ의 초과 손해를 보상합니다."},
+{n:15,q:"자동차보험 보험요율의 반영요소가 아닌 것은?",c:["무보험차·불량화물요율","특약요율","사고건수별 특성요율","장기요율"],a:4,e:"장기요율은 자동차보험 보험요율의 반영요소가 아닙니다."},
+{n:16,q:"다음 표와 같이 차량사고가 생겼다면 자동차 사고처리상 손해로 인한 보험금은 얼마인가?\n\n사고 전 자동차 가액은 2,000만원(출고 후 1년 6개월 경과), 수리비는 800만원이다.",c:["65만원","80만원","120만원","160만원"],a:3,e:"출고 후 1~2년 자동차는 수리비의 15%를 지급하므로 800만원의 15%인 120만원입니다."},
+{n:17,q:"자동차손해배상보장사업에 대한 설명으로 맞는 것은?",c:["자동차사고 피해자 가족에 대한 지원금은 피해자가 사망한 경우에만 지급된다","청구권자는 부상 또는 장애의 경우 피해자 본인이다","무보험 또는 미등록 자동차가 피해자는 차량소유주(보유자)가 손해배상책임이 있는 경우에도 보장사업 청구가 가능하다","피해자가 기초생활보장 수급을 받는 경우에도 보장사업 청구가 가능하다"],a:2,e:"부상 또는 장애의 경우 청구권자는 피해자 본인입니다."},
+{n:18,q:"다음 중 보험상품 완전판매를 위한 약관의 전달 및 중요한 내용 설명에 대한 내용으로 옳지 않은 것은? [4점]",c:["약관에 기재된 보험상품의 내용, 보상하는 손해, 보상하지 않는 손해 등 약관의 중요한 내용을 설명해야 한다","보험약관은 분량이 많고 이해하기 어려운 보험전문용어로 설명되어 있는 부분들이 많으므로 중요한 내용에 대해 충분히 설명해야 한다","중요한 내용은 일반적으로 보장개시일, 보험금 지급사유, 보험계약의 해지사유, 보험회사의 면책사유 등에 해당하지 않으며 보험금액의 권리·의무에 대한 것이다","약관 전달의 경우 청약서 부본 전달과 달리 전자우편 등 전자적 방법으로 교부할 수 없다"],a:4,e:"보험계약자 동의시 약관은 전자우편 등 전자적 방법으로 교부할 수 있습니다."},
+{n:19,q:"보험설계사가 보험계약자에게 보험료가 1백만원인 자동차보험 계약을 신규로 모집하고, 가사의 표로 50만원 상당의 골프공을 선물하였다. 어떤 위반행위에 해당하는가?",c:["경유계약 위반","승환계약 위반","위반사항 없음","특별이익 제공금지 위반"],a:4,e:"1년간 납입보험료 100만원의 10%인 10만원을 초과하는 50만원 상당의 골프공을 제공했으므로 특별이익 제공금지 위반입니다."},
+{n:20,q:"중고차 매매업자가 중고차 판매과정에서 자동차보험 가입의사가 있는 고객을 대리점에 소개하고 대리점으로부터 일정비율의 수수료를 받은 경우 모집질서와 관련하여 무엇을 위반한 것인가?",c:["특별이익 제공금지 위반","경유처리 금지 위반","자기계약 금지 위반","수수료 부당지급 금지 위반"],a:4,e:"보험모집 자격이 없는 제3자에게 모집을 위탁하고 수수료를 지급하는 것은 수수료 부당지급 금지 위반입니다."},
+{n:21,q:"보험계약정보를 제3자에게 제공할 수 있는 경우로 알맞은 것은?",c:["보험협회 등에 정보를 제공하는 경우","고객에게 상품 또는 서비스를 판매할 목적으로 사용하는 경우","고객으로부터 서면동의를 받은 경우","중복보험 가입여부를 조회하는 경우"],a:3,e:"보험계약정보는 고객으로부터 서면동의를 받은 경우 제3자에게 제공할 수 있습니다."},
+{n:22,q:"「보험업법」상 보험설계사로 등록할 수 없는 경우를 모두 고른 것은?\n\na. 보험업법 위반으로 선고받은 벌금형이 면제되고 1년이 지난 자\nb. 등록이 취소된 이후 2년이 경과한 자\nc. 파산자로 복권되지 아니한 자\nd. 과거 보험료를 다른 용도로 유용한 후 3년이 지난 자",c:["a, b","a, c","b, c","c, d"],a:2,e:"벌금형 선고 후 일정기간이 지나지 않은 자와 파산자로 복권되지 않은 자는 등록할 수 없습니다."},
+{n:23,q:"다음 중 보험설계사의 등록취소 및 업무정지 사유로 옳지 않은 것은?",c:["업무정지 1회 이상","보험사기 행위","「보험업법」상 명령·처분 위반","「금융소비자보호법」상 시정명령 위반"],a:1,e:"등록취소 및 업무정지 사유가 되는 업무정지는 1회 이상이 아니라 법령에서 정한 요건에 해당하는 경우입니다."},
+{n:24,q:"보험대리점의 업무폐지 절차를 순서대로 나열한 것은?",c:["보험회사에 업무폐지 신청 → 타 보험회사 이직 → 보험회사와 계약해지 → 보험협회로 업무폐지 신청","보험협회로 업무폐지 신청 → 타 보험회사 이직 → 보험회사와 계약해지 → 보험회사에 업무폐지 신청","보험회사에 업무폐지 신청 → 보험회사와 계약해지 → 보험협회로 업무폐지 신청 → 타 보험회사 이직","타 보험회사 이직 → 보험회사와 계약해지 → 보험협회로 업무폐지 신청 → 보험회사에 업무폐지 신청"],a:3,e:"보험회사에 업무폐지를 신청하고 보험회사와 계약을 해지한 후 보험협회에 업무폐지를 신청하는 순서입니다."},
+{n:25,q:"손해보험 우수인증 설계사 제도에 관하여 바르게 설명한 것은?",c:["동일 회사에서 최소 5년 이상 근속하여야 한다","신청일로부터 1년 이내 보험업법 및 금융 관련 법령 위반으로 처벌받은 경력이 있어야 한다","불완전판매비율은 연간 1% 이하 요건을 충족해야 한다","보험회사 소속 보험설계사 및 전속 보험대리점에 대해 적용한다"],a:4,e:"우수인증 설계사 제도는 보험회사 소속 보험설계사와 전속 보험대리점을 대상으로 적용합니다."},
+{n:26,q:"강도, 사기 등은 어떠한 위험에 해당하는가?",c:["정신적 위험","기망적 위험","물리적 위험","도덕적 위험"],a:4,e:"강도와 사기는 도덕적 위험에 해당합니다."},
+{n:27,q:"비례보상의 원칙에 대한 설명으로 옳은 것은?",c:["손해보험계약에 있어 보험가액에 있어 보험가입금액의 비율(부보비율)로 손해를 보상한다는 원칙","보험가액에 있어 보험료와 보험회사의 이익이 비례하여야 한다는 원칙","생명보험계약에서 사망률과 보험금은 비례하여야 한다는 원칙","생명보험계약에서 보험료와 보험금은 비례하여야 한다는 원칙"],a:1,e:"비례보상은 보험가액에 대한 보험가입금액의 비율인 부보비율에 따라 손해를 보상하는 원칙입니다."},
+{n:28,q:"보험범죄의 특성으로 틀린 것은?",c:["범죄의 복합성","범죄의 단순성","범죄입증의 곤란성","범죄자의 조직화"],a:2,e:"보험범죄는 단순성이 아니라 다양한 형태로 나타나는 다양성이 특징입니다."},
+{n:29,q:"정비업체 보험사기 방지를 위한 「자동차관리법」에 대한 설명으로 틀린 것은?",c:["정비의뢰자 등의 없는 정비업체의 업무지시를 금한다","정비업체는 정비하기 전에 사전견적서를 교부하여야 한다","정비업체는 정비가 끝난 후에 정비내역서를 교부하여야 한다","재생품 사용시 정비의뢰자에게 사전에 알려야 하며, 위반시 200만원 이하의 과태료를 부과한다"],a:4,e:"재생품 사용 고지의무 위반시 과태료 기준은 200만원이 아니라 100만원입니다."},
+{n:30,q:"고지의무 위반과 관련하여 보험회사가 계약을 해지할 수 있는 기간은?",c:["위반의 사실을 안 날로부터 1개월, 계약이 성립한 날로부터 3년 이내","위반의 사실을 안 날로부터 3개월, 계약이 성립한 날로부터 1년 이내","위반의 사실을 안 날로부터 3개월, 계약이 성립한 날로부터 3년 이내","위반의 사실을 안 날로부터 2개월, 계약이 성립한 날로부터 2년 이내"],a:1,e:"고지의무 위반 사실을 안 날로부터 1개월 이내, 계약이 성립한 날로부터 3년 이내에 계약을 해지할 수 있습니다."},
+{n:31,q:"보험가입금액과 보험가액에 대한 설명으로 틀린 것은?",c:["보험가입금액은 보험회사가 피보험자에게 지급할 금액의 최고한도로서 보험계약 당시 보험가입금액을 정한다","초과보험은 이득금지원칙의 예외로 정액보상한다","보험가액은 보험회사가 보상해야 할 보험금 최고한도이며 손해액 산정의 기준이 된다","보험가입금액은 보험료 산정의 기준이 된다"],a:2,e:"초과보험도 이득금지원칙에 따라 보험가액을 한도로 실손보상합니다."},
+{n:32,q:"청약철회제도에 대한 설명으로 틀린 것은?",c:["일반보험계약자를 보호하기 위한 제도이다","청약의 철회를 접수한 날부터 3영업일 이내에 납입한 보험료를 반환한다","보험회사가 직권으로 청약철회를 취소할 수 있다","보험증권을 받은 날로부터 15일 이내에 청약을 철회할 수 있다"],a:3,e:"보험회사가 직권으로 청약철회를 취소할 수는 없습니다."},
+{n:33,q:"보험사업을 영위하기 위한 보험종목별 자본금 요건이 틀린 것은?",c:["항공보험과 운송보험을 포함하는 해상보험 - 200억원","자동차보험 - 200억원","상해보험 - 100억원","화재보험 - 100억원"],a:1,e:"항공보험과 운송보험을 포함하는 해상보험의 자본금 기준은 200억원이 아니라 150억원입니다."},
+{n:34,q:"제3보험의 종류에 해당하지 않는 것은?",c:["생명보험","상해보험","질병보험","간병보험"],a:1,e:"제3보험의 종류에는 상해보험, 질병보험, 간병보험이 있으며 생명보험은 해당하지 않습니다."},
+{n:35,q:"피보험자에 대한 설명이 알맞게 연결된 것은?",c:["생명보험 - 보험금을 수령하는 사람","손해보험 - 보험사고의 대상이 되는 사람","종신보험 - 보험금을 수령하는 사람","제3보험 - 보험사고의 대상이 되는 사람"],a:4,e:"제3보험에서 피보험자는 보험사고의 대상이 되는 사람입니다."},
+{n:36,q:"다음 중 사망담보 가입제한 대상에 해당하지 않는 것은?",c:["15세 미만자","의사능력이 없는 심신박약자","65세 이상 고령자","심신상실자"],a:3,e:"65세 이상 고령자는 사망담보 가입제한 대상이라는 이유만으로 일률적으로 제외되지 않습니다."},
+{n:37,q:"다음의 보기에서 설명하는 제3보험 설계기준에 해당하는 것은?\n\n생존시 지급되는 보험금 합계액이 지금까지 납부한 보험료보다 큰 상품",c:["정액보험","보장성보험","저축성보험","실적배당형보험"],a:2,e:"생존시 지급되는 보험금 합계액이 납부보험료보다 큰 상품은 보장성보험의 설계기준에 해당합니다."},
+{n:38,q:"손해보험회사의 사망담보 운영에 대한 설명으로 올바른 것은?",c:["상해사망 담보: 주계약 및 특약 모두 가능 / 질병사망 담보: 주계약 및 특약 모두 가능","상해사망 담보: 주계약 및 특약 모두 가능 / 질병사망 담보: 주계약으로만 가능","상해사망 담보: 주계약 및 특약 모두 가능 / 질병사망 담보: 특약으로만 가능","상해사망 담보: 특약으로만 가능 / 질병사망 담보: 특약으로만 가능"],a:3,e:"손해보험회사는 상해사망을 주계약 또는 특약으로 운영할 수 있고 질병사망은 특약으로만 운영할 수 있습니다."},
+{n:39,q:"상해보험의 특징에 대한 설명으로 옳은 것은?",c:["보험회사는 보험계약자의 중과실에 의한 사고에 대해서 면책한다","보험회사는 피보험자의 중과실에 의한 사고에 대해서 면책한다","보험수익자를 변경하는 경우 피보험자의 동의를 받아야 한다","보험회사는 보험계약자의 중과실에 의한 사고에 대해서 면책한다"],a:3,e:"보험수익자를 변경하는 경우 피보험자의 동의를 받아야 합니다. 보험계약자·피보험자·보험수익자의 중과실만으로 보험회사가 면책되는 것은 아닙니다."},
+{n:40,q:"상해보험에서 보상하는 손해에 해당하는 것으로 알맞은 것은?",c:["피보험자의 임신·출산","피보험자가 심신상실 등의 자유로운 의사결정을 할 수 없는 상태에서 자신을 해친 경우","선박승무원이 직무상 선박에 탑승하고 있는 동안 발생한 손해","자동차 또는 오토바이 시운전 중 발생한 손해"],a:2,e:"심신상실 등으로 자유로운 의사결정을 할 수 없는 상태에서 자신을 해친 경우에는 상해보험에서 보상할 수 있습니다."},
+{n:41,q:"다음 표에서 설명하는 것은 무엇인가?\n\n상해 또는 질병에 대하여 치유된 후 신체에 남아 있는 영구적인 정신 또는 육체의 훼손 상태 및 기능상실 상태를 말한다.",c:["질병","장해","부상","재해"],a:2,e:"치유 후 신체에 남은 영구적인 훼손 상태 및 기능상실 상태는 장해입니다."},
+{n:42,q:"교통상해보험에서 보상하지 않는 손해는?",c:["도로에서 주행 중인 이륜자동차로 인해 발생한 손해","도로에서 주행 중인 트랙터로 인해 발생한 손해","도로에서 작업 중인 트랙터로 인해 발생한 손해","항공기와 선박(보트 포함)으로 인해 발생한 손해"],a:3,e:"도로에서 작업 중인 트랙터는 주행 중인 자동차에 해당하지 않아 교통상해보험에서 보상하지 않습니다."},
+{n:43,q:"단체상해보험에서 단체의 종류가 바르게 나열된 것은?",c:["급여단체, 규약단체, 임의단체","법정단체, 급여단체, 임의단체","규약단체, 법정단체, 담합단체","급여단체, 법정단체, 규약단체"],a:4,e:"단체상해보험의 단체 종류에는 급여단체, 법정단체, 규약단체가 있습니다."},
+{n:44,q:"대기기간(Waiting Period)이 가장 유효하게 적용되는 보험종목은?",c:["상해보험","질병보험","화재보험","제3자 배상책임보험"],a:2,e:"대기기간은 질병보험에서 질병 발생 직전 가입을 통한 역선택을 방지하기 위해 적용됩니다."},
+{n:45,q:"다음 (  ) 안에 들어갈 말로 바르게 짝지어진 것은?\n\n질병후유장해 담보의 경우, 질병사망 발생시 ( 가 ) 및 ( 나 ) 산출방법에서 정한 계약자적립금을 지급한 후 해당 담보는 소멸된다.",c:["(가) 보험금, (나) 해약환급금","(가) 보험금, (나) 보험가입금액","(가) 보험료, (나) 해약환급금","(가) 보험료, (나) 보험가입금액"],a:1,e:"질병사망 발생시 약관에서 정한 보험금 및 해약환급금 산출방법에 따라 계약자적립금을 지급한 후 해당 담보는 소멸합니다."},
+{n:46,q:"치아보험에 대한 설명으로 틀린 것은?",c:["치아보험은 충치·잇몸질환 등의 질병(또는 상해)으로 보철치료나 보존치료 등을 받은 경우 보험금을 지급할 수 있는 보험상품이다","질병으로 인한 치료에 대하여는 감액기간을 운영하고 있으나 면책기간은 적용하지 않는다","감액기간은 보험가입 전에 이미 치아질환을 보유한 사람이 보험금을 받을 목적으로 보험에 가입하는 것을 방지하기 위한 장치이다","치아보험 갱신형은 연령 증가 등에 따라 갱신할 때마다 보험료가 조정된다"],a:2,e:"치아보험은 질병으로 인한 치료에 대해 면책기간과 감액기간을 모두 운영합니다."},
+{n:47,q:"보험사고 발생으로 본인 스스로 보험금 청구가 현실적으로 어려운 상황이 발생한 경우 보험금을 대신 청구하는 자를 미리 지정하는 것을 뜻하는 용어로 알맞은 것은?",c:["보험수익자 지정","피보험자 지정","보험금 대리청구인 지정","보험금 상속인 지정"],a:3,e:"보험금 대리청구인 지정은 피보험자가 보험금을 직접 청구하기 어려운 상황에 대비하여 대신 청구할 사람을 미리 지정하는 제도입니다."},
+{n:48,q:"2026년 5월 출시한 실손의료보험(5세대) 특별약관의 보장범위가 아닌 것은?",c:["상해비급여","치과비급여","질병비급여","3대비급여"],a:2,e:"5세대 실손 특별약관에는 상해비급여, 질병비급여, 3대비급여가 포함되며 치과비급여는 보장범위가 아닙니다."},
+{n:49,q:"5세대 실손의료보험의 특별약관2에서 보상하지 않는 것은?",c:["상급병실료 차액","의사의 임상적 소견에 따른 검사비용","한방병원에서 발생한 양방 비급여 의료비","비급여환자의 응급의료관리료"],a:4,e:"비급여환자의 응급의료관리료는 특별약관2에서 보상하지 않습니다."},
+{n:50,q:"5세대 실손의료보험 특별약관2에서 보험료 갱신시 적용되는 요율 상대도에서 할증요율이 적용되는 특별약관2 보험금 지급실적은 얼마인가?",c:["200만원 이상","100만원 미만","100만원 이상","300만원 이상"],a:3,e:"특별약관2의 보험금 지급실적이 연간 100만원 이상인 계약에 대해서는 갱신시 할증요율이 적용됩니다."}
+];
+
+const questions = [
+{n:1,q:"보험회사가 잔존물을 보전하기 위하여 지출한 비용 또는 유익한 비용은 무엇인가?",c:["잔존물 제거비용","잔존물 보전비용","오염물질 제거비용","폐기물 처리비용"],a:2,e:"잔존물 보전비용입니다."},
+{n:2,q:"다음 중 주택화재보험에서 보험회사의 책임개시기는 언제인가?",c:["계약자가 청약한 날 시점부터","보험기간의 첫날 12시부터","청약의 승낙 및 제1회 보험료를 받은 때부터","청약을 승낙한 때부터"],a:3,e:"청약의 승낙 및 전액 또는 제1회 보험료를 받은 때부터 책임이 시작됩니다."},
+{n:3,q:"풍수해·지진재해보험의 가입대상에 해당하지 않는 것은?",c:["주택(16층 이상 아파트 제외)","온실(비닐하우스 포함)","16층 이상 아파트","소상공인 상가·공장"],a:3,e:"16층 이상 아파트는 특수건물화재보험 의무가입대상입니다."},
+{n:4,q:"손해사고기준 배상책임보험에 해당하지 않는 것은?",c:["시설소유관리자배상책임보험","경비업자배상책임보험","선주배상책임보험","변호사배상책임보험"],a:4,e:"변호사배상책임보험은 배상청구기준입니다."},
+{n:5,q:"다음 중 동산종합보험의 잔위험에 해당하지 않는 것은?",c:["강설","연기손해","건물의 붕괴","도난"],a:4,e:"도난은 동산종합보험의 잔위험에 해당하지 않습니다."},
+{n:6,q:"다음 중 장기손해보험의 해약환급금에 대한 설명으로 틀린 것은?",c:["보험계약자가 보험료를 납부하지 않아 계약이 해지되는 경우 해약환급금을 지급한다","보험계약자 및 피보험자가 통지의무를 위반하여 계약이 해지되는 경우 해약환급금을 지급하지 않는다","보험계약자 및 피보험자가 고지의무를 위반하여 계약이 해지되는 경우 해약환급금을 지급한다","계약자가 해지 의사표시를 한 경우 해약환급금을 지급한다"],a:2,e:"통지의무 위반으로 해지되어도 해약환급금을 지급합니다."},
+{n:7,q:"다음 중 청약을 철회할 수 있는 경우로 알맞지 않은 것은?",c:["보험증권을 받은 날로부터 1주일 이내","보험증권을 받은 날로부터 30일 이내","보험증권을 받은 날로부터 15일 이내","보험증권을 받은 날로부터 3일 이내"],a:2,e:"보험증권 수령일부터 15일 이내, 청약일부터 30일 이내 철회할 수 있습니다."},
+{n:8,q:"내근직원 인건비, 물건비 등 보험계약을 유지·관리하는데 소요되는 제경비로 알맞은 것은?",c:["저축보험료","유지비","수금비","신계약비"],a:2,e:"유지비는 보험계약 유지·관리에 드는 제경비입니다."},
+{n:9,q:"재산손해보험금의 보험금 지급기간으로 알맞은 것은?",c:["지급보험금 결정 후 3일 이내","지급보험금 결정 후 7일 이내","지급보험금 결정 후 10일 이내","지급보험금 결정 후 15일 이내"],a:2,e:"지급보험금 결정 후 7일 이내 지급합니다."},
+{n:10,q:"연금저축보험의 세액공제를 받기 위한 납입금액의 한도는?",c:["분기당 100만원 이내","분기당 300만원 이내","연간 1,800만원 이내","연간 600만원 이내"],a:3,e:"연간 납입한도는 1,800만원입니다."},
+{n:11,q:"연금저축보험의 연금수령시 과세에 대한 설명으로 맞는 것은?",c:["70세 이전 연금수령시 기타소득세 15%를 부과한다","연간 연금수령금액이 1,500만원 이하인 경우 분리과세로 납세의무를 종결한다","연간 연금수령금액이 1,500만원을 초과하는 경우 무조건 분리과세로 납세의무를 종결한다","연금수령요건을 충족하지 못한 경우 3%의 연금소득세를 부과한다"],a:2,e:"연간 연금수령금액이 1,500만원 이하이면 분리과세로 납세의무가 종결됩니다."},
+{n:12,q:"다음 중 자동차보험의 사고로 인한 형사상 책임에 해당하는 것은?",c:["면허 정지·취소","불법주차","사용자책임","과실치사상"],a:4,e:"과실치사상은 형사상 책임입니다."},
+{n:13,q:"자동차보험에 처음으로 가입하는 경우 적용되는 보험기간은?",c:["보험기간 첫날 오후 4시부터 마지막 날 오후 4시","보험기간 첫날 0시부터 마지막 날 0시","보험기간 첫날 24시부터 마지막 날 24시","보험료를 받은 때부터 마지막 날 24시"],a:4,e:"처음 가입하는 경우 보험료를 받은 때부터 마지막 날 24시까지입니다."},
+{n:14,q:"자동차보험의 임의보험에 대한 설명 중 맞는 것은?",c:["보험가입자의 보험가입 의사에 대해서 보험회사가 거절할 수 없다","대인배상Ⅱ는 책임보험(대인배상Ⅰ)의 초과 손해를 보상한다","종합보험에 가입하면 무면허 사고도 교통사고처리특례법상 특례를 적용받을 수 있다","가족운전자 한정특약 위반시에도 손해에 대해서는 보상한다"],a:2,e:"대인배상Ⅱ는 대인배상Ⅰ의 초과 손해를 보상합니다."},
+{n:15,q:"자동차보험 보험요율의 반영요소가 아닌 것은?",c:["무보험차·불량화물요율","특약요율","사고건수별 특성요율","장기요율"],a:4,e:"장기요율은 자동차보험 보험요율의 반영요소가 아닙니다."},
+{n:16,q:"다음 표와 같이 차량사고가 생겼다면 자동차 사고처리상 손해로 인한 보험금은 얼마인가?\n\n사고 전 자동차 가액은 2,000만원(출고 후 1년 6개월 경과), 수리비는 800만원이다.",c:["65만원","80만원","120만원","160만원"],a:3,e:"출고 후 1~2년 자동차는 수리비의 15%를 지급하므로 800만원의 15%인 120만원입니다."},
+{n:17,q:"자동차손해배상보장사업에 대한 설명으로 맞는 것은?",c:["자동차사고 피해자 가족에 대한 지원금은 피해자가 사망한 경우에만 지급된다","청구권자는 부상 또는 장애의 경우 피해자 본인이다","무보험 또는 미등록 자동차가 피해자는 차량소유주(보유자)가 손해배상책임이 있는 경우에도 보장사업 청구가 가능하다","피해자가 기초생활보장 수급을 받는 경우에도 보장사업 청구가 가능하다"],a:2,e:"부상 또는 장애의 경우 청구권자는 피해자 본인입니다."},
+{n:18,q:"다음 중 보험상품 완전판매를 위한 약관의 전달 및 중요한 내용 설명에 대한 내용으로 옳지 않은 것은? [4점]",c:["약관에 기재된 보험상품의 내용, 보상하는 손해, 보상하지 않는 손해 등 약관의 중요한 내용을 설명해야 한다","보험약관은 분량이 많고 이해하기 어려운 보험전문용어로 설명되어 있는 부분들이 많으므로 중요한 내용에 대해 충분히 설명해야 한다","중요한 내용은 일반적으로 보장개시일, 보험금 지급사유, 보험계약의 해지사유, 보험회사의 면책사유 등에 해당하지 않으며 보험금액의 권리·의무에 대한 것이다","약관 전달의 경우 청약서 부본 전달과 달리 전자우편 등 전자적 방법으로 교부할 수 없다"],a:4,e:"보험계약자 동의시 약관은 전자우편 등 전자적 방법으로 교부할 수 있습니다."},
+{n:19,q:"보험안내자료의 필수기재사항에 해당하지 않는 것은?",c:["보험가입에 따른 권리·의무에 관한 주요 사항","보험료 할인이 가능한 신용카드 목록 제공 서비스","해약환급금에 관한 사항","보험상담 및 분쟁의 해결에 관한 사항"],a:2,e:"신용카드 목록 제공 서비스는 필수기재사항이 아닙니다."},
+{n:20,q:"보험업법상 보험계약의 모집질서 위반행위에 대한 설명으로 틀린 것은?",c:["다른 보험회사에 소속되어 있는 모집종사자에게 모집을 위탁하는 것은 위반행위에 해당한다","실제 명의인이 아닌 자의 보험계약을 모집하거나 실제 명의인의 동의가 없는 보험계약을 모집하는 행위를 경유처리라고 한다","다른 모집 종사자의 명의를 이용하여 보험계약을 모집하는 행위시 1천만원 이하의 과태료를 부과한다","보험계약자나 피보험자가 보험상품의 중요한 사항에 대하여 부실한 사항을 보험회사에 알릴 것을 권유하는 것은 위반행위에 해당한다"],a:2,e:"명의인이 아닌 자의 계약 모집은 허위·작성계약이며, 경유처리는 다른 모집종사자의 명의를 이용하는 행위입니다."},
+{n:21,q:"「손해보험 공정경쟁질서유지에 관한 상호협정」에서 금지하고 있는 행위가 아닌 것은?",c:["특별이익 제공","무자격 모집행위","보험계약 인수거절","승환계약"],a:3,e:"보험계약 인수거절은 금지행위가 아닙니다."},
+{n:22,q:"다음 중 모집종사자에 대한 설명으로 옳지 않은 것은?",c:["보험중개사는 독립적으로 보험계약의 체결을 중개하는 자이다","보험설계사는 보험회사, 보험대리점 또는 보험중개사에 소속되어 보험계약의 체결을 대리하는 자이다","보험회사의 임원 또는 직원(대표이사, 사외이사, 감사 및 감사위원 제외)은 보험을 모집할 수 있다","보험대리점은 보험회사를 위하여 보험계약의 체결을 대리하는 자이다"],a:2,e:"보험설계사는 보험계약 체결을 대리하는 자가 아니라 모집종사자입니다."},
+{n:23,q:"보험대리점에 관한 설명으로 틀린 것은?",c:["보험대리점은 영업종목별로 생명보험·손해보험·제3보험 대리점으로 구분한다","개인보험대리점은 관계 업무에 1년 이상 종사한 경력이 있으면 등록할 수 있다","임직원수가 100명 이상인 법인보험대리점의 경우 소속 임직원의 10분의 1 이상이 보험설계사 등록요건을 갖추고 있어야 한다","비전속 법인대리점 소속 설계사는 소속 보험대리점과 별도로 보험중개사가 될 수 없다"],a:2,e:"개인보험대리점의 관계 업무 경력 요건은 2년 이상입니다."},
+{n:24,q:"「금융소비자보호법」상 금융상품직접판매업자에 해당하는 것은?",c:["보험회사","보험설계사","보험대리점","보험중개사"],a:1,e:"보험회사는 금융상품직접판매업자입니다."},
+{n:25,q:"보험모집 프로세스에 대해 잘못된 설명은?",c:["반복적인 훈련을 통해 자연스럽게 실행하는 습관을 형성한다","보험판매란 고객의 필요사항을 이해하고 그에 맞는 해결책을 제시하여 가입을 유도하는 과정이다","성공적인 보험설계사들은 이 과정을 체계화하여 일정한 판매절차로 정립한다","프로세스의 각 단계가 반드시 독립적으로 순차적으로 진행되어야 한다"],a:4,e:"상황에 따라 일부 단계가 생략·통합될 수 있습니다."},
+{n:26,q:"투기위험에 대한 설명으로 틀린 것은?",c:["손해와 이익이 모두 상존하는 위험이다","주식투자, 신규 사업 등이 해당된다","대수의 법칙 적용이 가능하다","개인이나 기업은 손해를 입어도 사회에 이익을 얻을 수 있다"],a:3,e:"투기위험에는 대수의 법칙을 적용하기 어렵습니다."},
+{n:27,q:"보험가입금액에 따른 보험의 분류에 대한 설명으로 옳은 것은?",c:["전부보험은 보험가입금액이 보험가액보다 큰 경우를 말한다","전부보험은 보험가입금액과 보험가액이 일치하는 경우를 말한다","초과보험은 보험가입금액이 보험가액보다 큰 경우를 말한다","일부보험은 보험가액에 대한 보험가입금액의 비율에 따라 비례보상한다"],a:3,e:"초과보험은 보험가입금액이 보험가액을 초과하는 경우입니다."},
+{n:28,q:"보험사기에 대한 설명 중 틀린 것은?",c:["보험사기방지특별법상 보험사기 행위란 보험사고 발생 원인 또는 내용에 관하여 보험자를 기망하여 보험금을 청구하는 행위이다","보험사기방지특별법상 보험사기를 상습으로 범한 자에 대해서는 그 죄에 정한 형의 1/3까지 가중 처벌한다","보험사기로 인한 이득액이 5억원 이상 고액인 경우 가중 처벌된다","보험사기방지특별법에서는 보험사기의 미수범도 처벌한다"],a:2,e:"상습 보험사기는 그 죄에 정한 형의 1/2까지 가중 처벌합니다."},
+{n:29,q:"교통사고 관련 보험사고의 특징에 대한 설명으로 틀린 것은?",c:["병원·정비업체와의 이해관계 부합","위장사고·고의사고 유발 가능","혐의 입증 용이","가해자 불명사고 발생 가능"],a:3,e:"교통사고 관련 보험사고는 혐의 입증이 난해합니다."},
+{n:30,q:"손해보험에서 피보험이익에 대한 설명으로 옳지 않은 것은?",c:["보험의 목적에 대해 특정한 경제주체가 갖는 경제적 이해관계를 말한다","보험의 목적이 멸실 또는 손상됨으로써 경제적 손실을 입게 되는 손해보험에서 필요하다","금전으로 산정할 수 없는 이익이라도 적법한 것이라면 피보험이익이 될 수 있다","현존하는 이익뿐만 아니라 장래의 이익도 그 존재가 확정 가능하다면 피보험이익이 될 수 있다"],a:3,e:"피보험이익은 금전으로 산정할 수 있어야 합니다."},
+{n:31,q:"보험의 종류에 따른 보상방법에 대한 다음의 설명 중 틀린 것은?",c:["전부보험은 보험가입금액 한도 내에서 실제 손해액 전액을 보상한다","초과보험은 보험가입금액이 아닌 보험가액을 한도로 실손보상한다","중복보험은 각 보험자의 보험가입금액 비율에 따라 연대책임을 지고 보상한다","일부보험은 보험가입금액에 대한 보험가액의 비율에 따라 비례보상한다"],a:4,e:"일부보험은 보험가액에 대한 보험가입금액의 비율로 비례보상하므로 ④는 반대입니다."},
+{n:32,q:"보험계약의 무효와 취소에 관한 설명 중 옳은 것은?",c:["보험계약이 무효가 되었더라도 경우에 따라 나중에 유효한 것으로 추인할 수 있다","보험계약 당시 보험사고가 이미 발생하였더라도 계약 당사자와 피보험자가 이를 알지 못하였다면 보험계약은 유효하다","계약 취소시 이미 납입한 보험료에 예정이율로 계산한 이자를 더하여 반환한다","보험회사가 장기손해보험의 청약철회를 접수한 경우에는 59일 이내에 보험료를 반환한다"],a:2,e:"사고 발생 사실을 계약 당사자와 피보험자가 알지 못했다면 계약은 유효합니다."},
+{n:33,q:"「보험업법」상 보험업 종류와 관련한 설명으로 틀린 것은?",c:["보험업법상 보험업은 생명보험업, 손해보험업, 제3보험업으로 구분된다","해외보험에 대한 허가를 받은 보험회사는 보험종목별로 허가받은 범위에서 영위할 수 있다","퇴직보험은 생명보험회사와 손해보험회사에서 모두 판매할 수 있고, 제3보험업에 해당한다","소액단기전문보험회사는 20억원 이상의 자본금 납입으로 보험업을 개시할 수 있다"],a:3,e:"퇴직보험은 분류상 생명보험업에 해당합니다."},
+{n:34,q:"제3보험에 대한 설명으로 맞는 것은?",c:["하나의 상품에서 상해담보, 질병담보, 간병담보를 2개 이상 복합적으로 운영할 수 없다","피보험자가 질병에 걸리거나, 화재로 인해 발생한 건물의 피해를 보상한다","손해보험과 생명보험 어느 한 영역으로 명확히 구분할 수 없어 ‘Gray Zone’이라고도 한다","손해보험 및 생명보험 중 한 가지 성격만 가진다"],a:3,e:"제3보험은 손해보험과 생명보험의 Gray Zone입니다."},
+{n:35,q:"보험업의 겸영에 대한 설명으로 옳지 않은 것은?",c:["생명보험업과 손해보험업은 겸영하지 못한다","생명보험의 재보험은 겸영하지 못한다","제3보험의 재보험은 겸영할 수 있다","연금보험 및 퇴직보험은 겸영할 수 있다"],a:2,e:"생명보험의 재보험은 겸영할 수 있습니다."},
+{n:36,q:"제3보험의 보상방식에 대한 설명으로 맞는 것은?",c:["실손보상과 정액보상 모두 가능하다","실손보상만 가능하다","정액보상금부가 있는 중복계약은 비례보상한다","실손보상금부가 있는 중복계약은 중복보상한다"],a:1,e:"제3보험은 실손보상과 정액보상이 모두 가능합니다."},
+{n:37,q:"제3보험에서 손해보험회사가 기본계약으로 영위할 수 있는 담보는?",c:["암으로 인한 사망보험금","중대질환으로 인한 사망보험금","심혈관질환으로 인한 사망보험금","중대재해로 인한 사망보험금"],a:4,e:"질병사망은 특약으로만 가능하며 중대재해 사망은 기본계약으로 영위할 수 있습니다."},
+{n:38,q:"제3보험의 특징에 대한 설명으로 올바르지 않은 것은?",c:["생명보험회사와 손해보험회사가 모두 영위할 수 있다","상해보험, 질병보험, 간병보험이 대표적인 보험종목이다","실손보상, 정액보상 모두 가능하다","제3보험 상품에는 보장성상품이 없다"],a:4,e:"제3보험에는 보장성상품이 있습니다."},
+{n:39,q:"다음 중 상해보험의 보험사고 요건에 해당하지 않는 것은?",c:["원인에서 결과에 이르는 과정이 외부적 요인에 기인하는 사고","질병으로 인한 상해","결과의 발생을 피할 수 없을 정도의 급박한 사고","원인 또는 결과가 예견되지 않은 사고"],a:2,e:"질병으로 인한 상해는 상해보험의 사고요건이 아닙니다."},
+{n:40,q:"다음 중 상해보험의 보험료 산출시 고려사항을 모두 고른 것은?\n\n(가) 직업의 위험도   (나) 직무의 위험도   (다) 연령",c:["(가), (나)","(가), (나), (다)","(나), (다)","(가), (다)"],a:1,e:"직업과 직무의 위험도를 고려하며 연령은 고려하지 않습니다."},
+{n:41,q:"상해보험에서 보상하지 않는 손해 중 분류가 다른 하나는?",c:["선박승무원의 직무상 선박에 탑승 중 발생한 상해","보험수익자가 고의로 피보험자를 해친 경우","계약자가 고의로 피보험자를 해친 경우","피보험자가 고의로 자신을 해친 경우(심신상실 상태 아님)"],a:1,e:"②~④는 고의행위이고 ①은 직업상 위험으로 분류가 다릅니다."},
+{n:42,q:"상해보험에서 지급하는 보험금에 대한 설명으로 틀린 것은?",c:["피보험자가 상해보험 보장개시일 이후에 특정 상해 상태를 진단받은 경우 상해진단비를 지급한다","피보험자가 보험기간 중에 상해로 생활기능에 지장이 발생하여 입원치료를 받은 경우 입원 1일당 보험가입금액을 입원위로금으로 지급한다","피보험자가 입원기간 중 의사의 지시를 따르지 아니한 때에는 입원급여금의 전부 또는 일부를 지급하지 않는다","보험기간 중 전환확정된 상태로 간병이 필요한 상태가 되었을 때 간병보험금을 지급한다"],a:2,e:"입원위로금은 피보험자가 아니라 보험수익자에게 지급합니다."},
+{n:43,q:"대중교통이용 중 교통상해보험에서 보상하지 않는 사고는?",c:["지하철 하차 중 발생한 사고","마을버스 탑승 중 발생한 사고","전세버스 탑승 중 발생한 사고","여객수송용 선박에 탑승 중 발생한 사고"],a:3,e:"전세버스는 대중교통수단에서 제외됩니다."},
+{n:44,q:"질병보험의 특성과 가장 거리가 먼 것은?",c:["보상한도의 설정","중증치매 보장","부담보조건 인수","대기기간 설정"],a:2,e:"중증치매 보장은 간병보험의 대표적 보장입니다."},
+{n:45,q:"질병보험에서 보상할 수 있는 경우가 아닌 것은?",c:["입원, 수술, 요양 등이 필요한 상태가 되었을 때","피보험자가 보험기간 중에 진단확정된 질병으로 사망한 경우","장해분류표의 장해지급률에 해당하는 장해상태가 되었을 때","우연하고 급격한 외래의 사고로 신체가 훼손된 때"],a:4,e:"우연하고 급격한 외래의 사고는 상해보험의 보상사고입니다."},
+{n:46,q:"다음의 암보험에 대한 설명에서 (  ) 안에 알맞은 것은?\n\n피보험자가 암 보장개시일 이후에 통상 최초 (  )에 한하여 암으로 진단된 경우 암진단급여금을 지급한다",c:["1회","2회","3회","4회"],a:1,e:"암진단급여금은 통상 최초 1회 지급합니다."},
+{n:47,q:"장기요양등급은 장기요양인정 신청인의 요양필요도에 따라 1~5등급 및 인지지원등급으로 구분되는데, 이 중 가장 중증인 등급은 무엇인가?",c:["인지지원등급","5등급","1등급","10등급"],a:3,e:"장기요양등급 중 가장 중증은 1등급입니다."},
+{n:48,q:"5세대 실손의료보험의 보상한도 중 잘못된 것은?",c:["상해급여는 입원과 통원의 보상금액을 합산하여 5천만원 이내","질병급여는 입원과 통원의 보상금액을 합산하여 5천만원 이내","상해급여 통원은 1회당 20만원 이내","질병급여 통원의 연간 치료횟수는 100회 한도"],a:4,e:"질병급여 통원은 연간 치료횟수 제한이 없습니다."},
+{n:49,q:"5세대 실손의료보험의 특별약관에서 보상하지 않는 경우에 해당하지 않는 것은?",c:["치료 목적으로 사용된 영양제","의수족 구입비용","치과교정으로 발생한 비급여","미용목적의 지방흡입"],a:1,e:"치료 목적의 영양제는 보상하며 나머지는 보상하지 않습니다."},
+{n:50,q:"노후 실손의료보험에서 입원시 자기부담금의 연간 한도로 맞는 것은?",c:["200만원","300만원","500만원","400만원"],a:3,e:"입원시 자기부담금의 연간 한도는 500만원입니다."}
+];
+const $ = id => document.getElementById(id);
+const allNumbers = questions.map(x=>x.n);
+const weight = n => n===18 ? 4 : 3;
+const subjectNumbers = {all:allNumbers,damage:allNumbers.filter(n=>n<=33),third:allNumbers.filter(n=>n>=18)};
+const subjectLabels = {all:'손해보험·제3보험 전체',damage:'손해보험',third:'제3보험'};
+let trainee = '';
+let answers = Array(51).fill(null);
+let activeNumbers = [];
+let cursor = 0;
+let reviewCursor = 0;
+let round = 1;
+let lastWrong = [];
+let selectedMode = 'all';
+let retryRound = false;
+let reviewNumbers = [];
+
+function showOnly(id){['startScreen','testScreen','resultScreen','reviewScreen','finalScreen'].forEach(x=>$(x).classList.toggle('hidden',x!==id));window.scrollTo({top:0,behavior:'smooth'});}
+function begin(numbers,resetAll,isRetry=false){
+  if(resetAll) answers=Array(51).fill(null);
+  activeNumbers=numbers.slice();cursor=0;retryRound=isRetry;showOnly('testScreen');renderQuestion();
+}
+function renderQuestion(){
+  const n=activeNumbers[cursor], item=questions[n-1];
+  $('roundLabel').textContent=round+'회차 · '+subjectLabels[selectedMode]+(retryRound?' · 틀린 문제 재시험':'');
+  $('progressLabel').textContent=(cursor+1)+' / '+activeNumbers.length;
+  $('progressBar').style.width=((cursor+1)/activeNumbers.length*100)+'%';
+  $('questionNumber').textContent=n+'번'+(n>=18&&n<=33?' · 공통문항':'');
+  $('questionWeight').textContent=weight(n)+'점';
+  $('questionText').textContent=item.q;
+  $('choices').innerHTML='';
+  item.c.forEach((choice,index)=>{
+    const b=document.createElement('button');b.type='button';b.className='choice'+(answers[n]===index+1?' selected':'');
+    b.innerHTML='<span class="choice-num">'+(index+1)+'</span><span class="choice-text"></span>';
+    b.querySelector('.choice-text').textContent=choice;
+    b.addEventListener('click',()=>{answers[n]=index+1;renderQuestion()});$('choices').appendChild(b);
+  });
+  $('prevButton').disabled=cursor===0;
+  $('nextButton').textContent=cursor===activeNumbers.length-1?'마지막 문항':'다음';
+  $('nextButton').disabled=cursor===activeNumbers.length-1;
+  $('submitButton').classList.toggle('hidden',cursor!==activeNumbers.length-1);
+}
+function submitAnswers(){
+  const missing=activeNumbers.filter(n=>answers[n]===null);
+  if(missing.length){alert('아직 답하지 않은 문항이 '+missing.length+'개 있습니다. 모든 문항에 답한 뒤 제출해 주세요.');const first=activeNumbers.indexOf(missing[0]);cursor=first;renderQuestion();return;}
+  lastWrong=activeNumbers.filter(n=>answers[n]!==questions[n-1].a);
+  reviewNumbers=subjectNumbers[selectedMode].slice();
+  showResults();
+}
+function scores(){
+  const one=subjectNumbers.damage, two=subjectNumbers.third;
+  const calc=list=>list.reduce((sum,n)=>sum+(answers[n]===questions[n-1].a?weight(n):0),0);
+  return {one:selectedMode==='third'?null:calc(one),two:selectedMode==='damage'?null:calc(two)};
+}
+function wrongFor(list){return list.filter(n=>answers[n]!==questions[n-1].a)}
+function isPassed(s){return selectedMode==='all'?(s.one>=60&&s.two>=60):(selectedMode==='damage'?s.one>=60:s.two>=60)}
+function resultLabel(s){return selectedMode==='all'?(isPassed(s)?'★최종합격★':'불합격(과락)'):(isPassed(s)?'★합격★':'불합격(과락)')}
+function copyText(){
+  const s=scores(),lines=[`[한화손보 모의고사 05형 결과]`,`훈련생: ${trainee}`,`결과: ${resultLabel(s)}`];
+  if(selectedMode!=='third')lines.push(`▶ 손해보험: ${s.one}점 (${s.one>=60?'합격':'과락'})`);
+  if(selectedMode!=='damage')lines.push(`▶ 제3보험: ${s.two}점 (${s.two>=60?'합격':'과락'})`);
+  const format=list=>list.length?list.map(n=>n+'번').join(', '):'없음';
+  lines.push('❌ 틀린 문항');
+  if(selectedMode!=='third')lines.push(`- 손보 틀린번호: ${format(wrongFor(subjectNumbers.damage))}`);
+  if(selectedMode!=='damage')lines.push(`- 제3보 틀린번호: ${format(wrongFor(subjectNumbers.third))}`);
+  return lines.join('\n');
+}
+function scoreBox(title,score){return `<div class="score-box"><h3>${title}</h3><div class="score">${score}점</div><div class="status ${score>=60?'pass':'fail'}">${score>=60?'합격':'과락'}</div></div>`}
+function scoreBoxes(s){let html='';if(selectedMode!=='third')html+=scoreBox('손해보험 · 1~33번',s.one);if(selectedMode!=='damage')html+=scoreBox('제3보험 · 18~50번',s.two);return html}
+function showResults(){
+  const s=scores(),passed=isPassed(s),reviewCount=subjectNumbers[selectedMode].length;
+  $('resultContent').innerHTML=`<div class="result-card"><div class="final-banner ${passed?'':'fail-banner'}">${passed?(selectedMode==='all'?'★ 최종 합격 ★':'★ 합격 ★'):'불합격 · 과락'}</div><p class="result-title">${trainee}님의 ${round}회차 ${subjectLabels[selectedMode]} 채점 결과</p><div class="result-grid">${scoreBoxes(s)}</div><div class="copy-label">카카오톡 공유용 결과 요약 · 터치하면 전체 선택</div><textarea id="copyArea" class="copy-box" readonly onclick="this.select();">${copyText()}</textarea><button id="reviewButton" class="primary">선택한 범위 정답·해설 확인하기</button></div><div class="info-card"><strong>다음 단계</strong><br>채점 결과 다음에는 선택한 범위의 ${reviewCount}문항 정답과 공식 해설을 한 문항씩 확인합니다. 마지막 문항까지 확인해야 재시험 메뉴가 열립니다.</div>`;
+  $('reviewButton').addEventListener('click',()=>{reviewCursor=0;showReview()});showOnly('resultScreen');
+}
+function showReview(){$('reviewNote').textContent=subjectLabels[selectedMode]+' '+reviewNumbers.length+'문항의 정답과 해설을 모두 확인해야 다음 화면으로 이동할 수 있습니다.';showOnly('reviewScreen');renderReview()}
+function renderReview(){
+  const n=reviewNumbers[reviewCursor],item=questions[n-1],selected=answers[n];
+  $('reviewProgress').textContent=(reviewCursor+1)+' / '+reviewNumbers.length;$('reviewNumber').textContent=n+'번'+(n>=18&&n<=33?' · 공통문항':'');$('reviewQuestion').textContent=item.q;
+  $('reviewChoices').innerHTML='';
+  item.c.forEach((choice,index)=>{
+    const correct=index+1===item.a,isSelected=selected===index+1;
+    const d=document.createElement('div');d.className='review-choice'+(correct?' correct':'')+(!correct&&isSelected?' wrong':'');
+    let mark=correct?(isSelected?'⭕ 나의 답·정답':'⭕ 정답'):(isSelected?'❌ 나의 답':'');
+    d.innerHTML='<span class="mark">'+mark+'</span><span class="letter">'+(index+1)+'.</span><span></span>';d.querySelector('span:last-child').textContent=choice;$('reviewChoices').appendChild(d);
+  });
+  $('reviewStatus').textContent=selected===null?'나의 답: 미응답':selected===item.a?'나의 답: '+selected+'번 · 정답':'나의 답: '+selected+'번 · 오답';$('reviewStatus').className='review-status '+(selected===item.a?'pass':'fail');$('reviewExplanation').textContent=item.e;
+  $('reviewPrev').disabled=reviewCursor===0;$('reviewNext').classList.toggle('hidden',reviewCursor===reviewNumbers.length-1);$('reviewComplete').classList.toggle('hidden',reviewCursor!==reviewNumbers.length-1);
+}
+function finishReview(){showFinal()}
+function showFinal(){
+  const s=scores(),passed=isPassed(s),wrong=lastWrong.length,retryLabel=selectedMode==='all'?'처음부터 전체 다시 풀기':subjectLabels[selectedMode]+' 처음부터 다시 풀기';
+  $('finalContent').innerHTML=`<div class="result-card"><div class="final-banner ${passed?'':'fail-banner'}">${passed?(selectedMode==='all'?'★ 최종 합격 ★':'★ 합격 ★'):'불합격 · 과락'}</div><p class="result-title">${trainee}님의 ${subjectLabels[selectedMode]} 학습 결과</p><div class="result-grid">${scoreBoxes(s)}</div><div class="copy-label">최신 결과 공유 문구 · 터치하면 전체 선택</div><textarea id="finalCopyArea" class="copy-box" readonly onclick="this.select();">${copyText()}</textarea><button id="wrongRetryButton" class="primary" ${wrong?'':'disabled'}>${wrong?'틀린 문제만 다시 풀기':'틀린 문제가 없어 재시험 불필요'}</button><button id="allRetryButton" class="secondary">${retryLabel}</button></div><div class="info-card"><strong>${wrong?'현재 틀린 문항 '+wrong+'개를 다시 학습할 수 있습니다.':'선택한 범위의 모든 문항을 맞혔습니다.'}</strong><br>재시험 제출 후에도 최신 답안을 기준으로 선택한 과목의 점수와 카카오톡 복사 문구가 갱신됩니다.</div>`;
+  $('wrongRetryButton').addEventListener('click',()=>{if(!lastWrong.length)return;lastWrong.forEach(n=>answers[n]=null);round++;begin(lastWrong,false,true)});$('allRetryButton').addEventListener('click',()=>{round++;begin(subjectNumbers[selectedMode],true,false)});showOnly('finalScreen');
+}
+
+function goHome(){
+  if(!confirm('시험을 종료하고 처음 화면으로 돌아가시겠습니까? 현재 답안은 저장되지 않습니다.'))return;
+  trainee='';answers=Array(51).fill(null);activeNumbers=[];lastWrong=[];reviewNumbers=[];cursor=0;reviewCursor=0;round=1;retryRound=false;selectedMode='all';$('traineeName').value='';document.querySelectorAll('.mode-card').forEach(x=>x.classList.toggle('selected',x.dataset.mode==='all'));$('modeHint').textContent='두 과목 전체를 응시합니다.';showOnly('startScreen');
+}
+
+document.querySelectorAll('.mode-card').forEach(button=>button.addEventListener('click',()=>{selectedMode=button.dataset.mode;document.querySelectorAll('.mode-card').forEach(x=>x.classList.toggle('selected',x===button));$('modeHint').textContent=selectedMode==='all'?'두 과목 전체를 응시합니다.':selectedMode==='damage'?'손해보험 1~33번만 응시하고 바로 채점합니다.':'제3보험 18~50번만 응시하고 바로 채점합니다.'}));
+$('startButton').addEventListener('click',()=>{const value=$('traineeName').value.trim();if(!value){alert('훈련생 이름을 입력해 주세요.');$('traineeName').focus();return}trainee=value;round=1;lastWrong=[];begin(subjectNumbers[selectedMode],true,false)});
+$('traineeName').addEventListener('keydown',e=>{if(e.key==='Enter')$('startButton').click()});
+$('prevButton').addEventListener('click',()=>{if(cursor>0){cursor--;renderQuestion();window.scrollTo({top:0,behavior:'smooth'})}});
+$('nextButton').addEventListener('click',()=>{if(cursor<activeNumbers.length-1){cursor++;renderQuestion();window.scrollTo({top:0,behavior:'smooth'})}});
+$('homeButton').addEventListener('click',goHome);
+$('submitButton').addEventListener('click',submitAnswers);
+$('reviewPrev').addEventListener('click',()=>{if(reviewCursor>0){reviewCursor--;renderReview();window.scrollTo({top:0,behavior:'smooth'})}});
+$('reviewNext').addEventListener('click',()=>{if(reviewCursor<reviewNumbers.length-1){reviewCursor++;renderReview();window.scrollTo({top:0,behavior:'smooth'})}});
+$('reviewComplete').addEventListener('click',finishReview);
+</script>
+<footer class="site-footer" aria-label="개발저작권" style="padding:18px 16px 28px;color:#9ca3af;text-align:center;font-size:12px;">개발저작권 @career_educator</footer>
+</body>
+</html>

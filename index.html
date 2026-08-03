@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f37021">
+  <meta name="description" content="손해보험·제3보험 자격시험 1형부터 20형까지 온라인 모의고사 목차">
+  <title>손해보험·제3보험 온라인 모의고사</title>
+  <style>
+    :root{--orange:#f37021;--orange-dark:#d95b12;--ink:#242424;--muted:#6b7280;--line:#ececec;--card:#fff;--shadow:0 12px 30px rgba(36,36,36,.08)}
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans KR","Malgun Gothic",sans-serif;line-height:1.5}
+    a{color:inherit;text-decoration:none}
+    .wrap{width:min(100% - 32px,980px);margin:0 auto}
+    .hero{padding:48px 0 34px;background:linear-gradient(135deg,#fff 0%,#fff7f1 100%);border-bottom:1px solid #f2dfd3}
+    .eyebrow{display:inline-flex;align-items:center;gap:7px;margin:0 0 14px;color:var(--orange-dark);font-size:13px;font-weight:800;letter-spacing:.04em}
+    .eyebrow::before{content:"";width:9px;height:9px;border-radius:50%;background:var(--orange)}
+    h1{margin:0;font-size:clamp(28px,5vw,46px);letter-spacing:-.055em;line-height:1.15}
+    .lead{max-width:650px;margin:16px 0 0;color:#4b5563;font-size:16px}
+    .hero-meta{display:flex;flex-wrap:wrap;gap:9px;margin-top:23px}
+    .pill{padding:8px 12px;border:1px solid #f2d3c0;border-radius:999px;background:#fff;color:#7c3d1d;font-size:13px;font-weight:700}
+    main{padding:30px 0 54px}
+    .section-head{display:flex;align-items:end;justify-content:space-between;gap:16px;margin-bottom:15px}
+    h2{margin:0;font-size:21px;letter-spacing:-.035em}
+    .section-note{margin:0;color:var(--muted);font-size:13px}
+    .grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+    .exam-card{display:flex;flex-direction:column;justify-content:space-between;min-height:156px;padding:20px;border:1px solid var(--line);border-radius:18px;background:var(--card);box-shadow:var(--shadow);transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease}
+    .exam-card:hover,.exam-card:focus-within{transform:translateY(-3px);border-color:#f4c4a6;box-shadow:0 16px 32px rgba(211,93,24,.14)}
+    .type{display:flex;align-items:center;gap:10px}
+    .number{display:grid;place-items:center;width:36px;height:36px;border-radius:11px;background:#fff0e6;color:var(--orange-dark);font-size:16px;font-weight:900}
+    .type strong{font-size:18px;letter-spacing:-.04em}
+    .desc{margin:17px 0 19px;color:var(--muted);font-size:13px}
+    .button{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:10px 12px;border-radius:10px;background:var(--orange);color:#fff;font-size:13px;font-weight:800}
+    .button::after{content:"→";font-size:17px;line-height:1}
+    .button:hover{background:var(--orange-dark)}
+    footer{padding:22px 0 36px;border-top:1px solid var(--line);color:var(--muted);font-size:12px;text-align:center}
+    @media (max-width:760px){.wrap{width:min(100% - 24px,560px)}.hero{padding:36px 0 28px}.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:11px}.exam-card{min-height:146px;padding:16px}.desc{margin:14px 0 16px}.section-head{align-items:start;flex-direction:column;gap:4px}}
+    @media (max-width:390px){.grid{grid-template-columns:1fr}.exam-card{min-height:132px}}
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="wrap">
+      <p class="eyebrow">2026 개정판 · 온라인 모의고사</p>
+      <h1>손해보험·제3보험<br>자격시험 문제풀기</h1>
+      <p class="lead">응시할 유형을 선택하면 모바일 시험 화면으로 바로 이동합니다. 각 유형은 한 문항씩 풀고, 제출 후 점수·정답·해설·오답복습을 확인할 수 있습니다.</p>
+      <div class="hero-meta" aria-label="시험 안내">
+        <span class="pill">총 20개 유형</span>
+        <span class="pill">유형별 50문항</span>
+        <span class="pill">손해보험 · 제3보험</span>
+      </div>
+    </div>
+  </header>
+  <main class="wrap">
+    <div class="section-head">
+      <h2>유형별 모의고사</h2>
+      <p class="section-note">원하는 유형의 문제풀기를 눌러 시작하세요.</p>
+    </div>
+    <section class="grid" aria-label="1형부터 20형까지 모의고사 목록">
+      <a class="exam-card" href="./1형/1형.html"><div class="type"><span class="number">1</span><strong>1형</strong></div><p class="desc">손해보험·제3보험 모의고사</p><span class="button">문제풀기</span></a>
+      <a class="exam-card" href="./2형/2형.html"><div class="type"><span class="number">2</span><strong>2형</strong></div><p class="desc">손해보험·제3보험 모의고사</p><span class="button">문제풀기</span></a>
+      <a class="exam-card" href="./3형/3형.html"><div class="type"><span class="number">3</span><strong>3형</strong></div><p class="desc">손해보험·제3보험 모의고사</p><span class="button">문제풀기</span></a>
+      <a class="exam-card" href="./4형/4형.html"><div class="type"><span class="number">4</span><strong>4형</strong></div><p class="desc">손해보험·제3보험 모의고사</p><span class="button">문제풀기</span></a>
+      <a class="exam-card" href="./5형/5형.html"><div class="type"><span class="number">5</span><strong>5형</strong></div><p class="desc">손해보험·제3보험 모의고사</p><span class="button">문제풀기</span></a>
+      <a class="exam-card" href="./6형/6형.html"><div class="type"><span class="number">6</span><strong>6형</strong></div><p class="desc">손해보험·제3보험 모의고사</p><span class="button">문제풀기</span></a>
+      <a class="exam-card" href="./7형/7형.html"><div class="type"><span class="number">7</span><strong>7형</strong></div><p class="desc">손해보험·제3보험 모의고사</p><span class="button">문제풀기</span></a>
+      <a class="exam-card" href="./8형/8형.html"><div class="type"><span class="number">8</span><strong>8형</strong></div><p class="desc">손해보험·제3보험 모의고사</p><span class="button">문제풀기</span></a>
+      <a class="exam-card" href="./9형/9형.html"><div class="type"><span class="number">9</span><strong>9형</strong></div><p class="desc">손해보험·제3보험 모의고사</p><span class="button">문제풀기</span></a>
+      <a class="exam-card" href="./10형/10형.html"><div class="type"><span class="number">10</span><strong>10형</strong></div><p class="desc">손해보험·제3보험 모의고사</p><span class="button">문제풀기</span></a>
+      <a class="exam-card" href="./11형/11형.html"><div class="type"><span class="number">11</span><strong>11형</strong></div><p class="desc">손해보험·제3보험 모의고사</p><span class="button">문제풀기</span></a>
+      <a class="exam-card" href="./12형/12형.html"><div class="type"><span class="number">12</span><strong>12형</strong></div><p class="desc">손해보험·제3보험 모의고사</p><span class="button">문제풀기</span></a>
+      <a class="exam-card" href="./13형/13형.html"><div class="type"><span class="number">13</span><strong>13형</strong></div><p class="desc">손해보험·제3보험 모의고사</p><span class="button">문제풀기</span></a>
+      <a class="exam-card" href="./14형/14형.html"><div class="type"><span class="number">14</span><strong>14형</strong></div><p class="desc">손해보험·제3보험 모의고사</p><span class="button">문제풀기</span></a>
+      <a class="exam-card" href="./15형/15형.html"><div class="type"><span class="number">15</span><strong>15형</strong></div><p class="desc">손해보험·제3보험 모의고사</p><span class="button">문제풀기</span></a>
+      <a class="exam-card" href="./16형/16형.html"><div class="type"><span class="number">16</span><strong>16형</strong></div><p class="desc">손해보험·제3보험 모의고사</p><span class="button">문제풀기</span></a>
+      <a class="exam-card" href="./17형/17형.html"><div class="type"><span class="number">17</span><strong>17형</strong></div><p class="desc">손해보험·제3보험 모의고사</p><span class="button">문제풀기</span></a>
+      <a class="exam-card" href="./18형/18형.html"><div class="type"><span class="number">18</span><strong>18형</strong></div><p class="desc">손해보험·제3보험 모의고사</p><span class="button">문제풀기</span></a>
+      <a class="exam-card" href="./19형/19형.html"><div class="type"><span class="number">19</span><strong>19형</strong></div><p class="desc">손해보험·제3보험 모의고사</p><span class="button">문제풀기</span></a>
+      <a class="exam-card" href="./20형/20형.html"><div class="type"><span class="number">20</span><strong>20형</strong></div><p class="desc">손해보험·제3보험 모의고사</p><span class="button">문제풀기</span></a>
+    </section>
+  </main>
+  <footer>손해보험·제3보험 자격시험 · 2026 개정판 온라인 모의고사<br><span style="display:inline-block;margin-top:4px;color:#9ca3af;">개발저작권 @career_educator</span></footer>
+</body>
+</html>
