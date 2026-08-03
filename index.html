@@ -79,6 +79,17 @@
       <a class="exam-card" href="./20형/20형.html"><div class="type"><span class="number">20</span><strong>20형</strong></div><p class="desc">손해보험·제3보험 모의고사</p><span class="button">문제풀기</span></a>
     </section>
   </main>
+  <script>
+    document.querySelectorAll('.exam-card').forEach((link) => {
+      const folderHref = link.getAttribute('href');
+      const match = folderHref.match(/^\.\/(\d+형)\/\1\.html$/);
+      if (!match) return;
+      const flatHref = './' + match[1] + '.html';
+      fetch(folderHref, {method:'HEAD'}).then((response) => {
+        if (!response.ok) link.setAttribute('href', flatHref);
+      }).catch(() => {});
+    });
+  </script>
   <footer>손해보험·제3보험 자격시험 · 2026 개정판 온라인 모의고사<br><span style="display:inline-block;margin-top:4px;color:#9ca3af;">개발저작권 @career_educator</span></footer>
 </body>
 </html>
