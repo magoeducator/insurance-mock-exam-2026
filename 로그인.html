@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#155e75">
+  <title>온라인학습실 로그인</title>
+  <style>
+    :root{--teal:#155e75;--teal-dark:#0f4050;--blue:#2563eb;--ink:#17202a;--muted:#64748b;--line:#dbe5ec;--bg:#f3f8fb;--card:#fff;--red:#b42318;--shadow:0 18px 42px rgba(15,64,80,.12)}
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans KR","Malgun Gothic",sans-serif;line-height:1.5}
+    a{color:inherit;text-decoration:none}
+    .top{background:var(--teal);color:#fff;padding:18px 18px 20px}
+    .top-inner{width:min(100%,980px);margin:0 auto}.brand{font-size:clamp(16px,3.8vw,22px);font-weight:900;letter-spacing:-.05em}.sub{margin:5px 0 0;color:#cdebf3;font-size:13px}
+    main{width:min(100% - 28px,980px);margin:0 auto;padding:30px 0 48px}.layout{display:grid;grid-template-columns:minmax(0,1fr) minmax(320px,420px);gap:22px;align-items:start}
+    .card{background:var(--card);border:1px solid var(--line);border-radius:20px;box-shadow:var(--shadow);padding:26px}.eyebrow{margin:0 0 7px;color:var(--teal);font-size:13px;font-weight:900}.card h1{margin:0;font-size:28px;letter-spacing:-.06em}.intro{margin:10px 0 22px;color:var(--muted);font-size:14px}
+    label{display:block;margin:14px 0 6px;font-size:13px;font-weight:800}.field{width:100%;height:48px;border:1px solid #cbd8e1;border-radius:11px;padding:0 13px;font:inherit;font-size:15px;outline:none;background:#fff}.field:focus{border-color:var(--teal);box-shadow:0 0 0 3px rgba(21,94,117,.12)}.code{letter-spacing:.24em}.primary{width:100%;height:50px;margin-top:20px;border:0;border-radius:11px;background:var(--teal);color:#fff;font:inherit;font-weight:900;cursor:pointer}.primary:hover{background:var(--teal-dark)}.message{min-height:22px;margin:13px 0 0;color:var(--red);font-size:13px;font-weight:700}.hint{margin:17px 0 0;padding-top:15px;border-top:1px solid var(--line);color:var(--muted);font-size:12px}
+    .schedule-head{display:flex;align-items:end;justify-content:space-between;gap:12px;margin-bottom:16px}.schedule-head h2{margin:0;font-size:20px;letter-spacing:-.05em}.month{color:var(--teal);font-size:13px;font-weight:900}.calendar{display:grid;grid-template-columns:repeat(7,1fr);gap:4px}.weekday{text-align:center;color:#7b8794;font-size:11px;font-weight:800;padding:4px 0}.day{min-height:47px;padding:5px;border:1px solid #edf1f4;border-radius:8px;background:#fff;font-size:12px}.day.empty{border-color:transparent;background:transparent}.day strong{font-size:13px}.day.event-start{background:#e6f5f8;border-color:#a8dce5;color:#0f586b}.day.event-exam{background:#eaf0ff;border-color:#b9c9fa;color:#234aa2}.event-label{display:block;margin-top:3px;font-size:9px;font-weight:900;white-space:nowrap}.legend{display:flex;gap:14px;margin-top:13px;color:var(--muted);font-size:11px}.legend span::before{content:"";display:inline-block;width:9px;height:9px;margin-right:4px;border-radius:3px;background:#a8dce5;vertical-align:-1px}.legend .exam::before{background:#b9c9fa}.notice{margin-top:16px;padding:12px 13px;border-radius:10px;background:#f6f8fa;color:var(--muted);font-size:12px}
+    footer{padding:20px 0 32px;border-top:1px solid var(--line);color:#7d8993;text-align:center;font-size:12px}
+    @media(max-width:760px){main{width:min(100% - 22px,560px);padding-top:20px}.layout{grid-template-columns:1fr}.card{padding:21px}.calendar-card{order:-1}.card h1{font-size:25px}}
+  </style>
+</head>
+<body>
+  <header class="top"><div class="top-inner"><div class="brand">2026 손해보험 자격시험 온라인학습실[8월 개정판]</div><p class="sub">등록된 수강생만 이용할 수 있습니다.</p></div></header>
+  <main>
+    <div class="layout">
+      <section class="card calendar-card">
+        <div class="schedule-head"><h2>이번 달 시험 일정</h2><span id="monthLabel" class="month">일정 불러오는 중</span></div>
+        <div id="calendar" class="calendar" aria-live="polite"></div>
+        <div class="legend"><span>개강일</span><span class="exam">시험일</span></div>
+        <div id="scheduleMessage" class="notice">관리자 등록 후 개강일과 시험일이 표시됩니다.</div>
+      </section>
+      <section class="card">
+        <p class="eyebrow">수강생 전용</p>
+        <h1>온라인학습실 로그인</h1>
+        <p class="intro">이름, 연락처 뒤 4자리, 당월 인증코드를 입력해 주세요.</p>
+        <form id="loginForm">
+          <label for="name">이름</label><input id="name" class="field" type="text" autocomplete="name" required>
+          <label for="phone">연락처 뒤 4자리</label><input id="phone" class="field" type="text" inputmode="numeric" maxlength="4" pattern="[0-9]{4}" placeholder="예: 1234" required>
+          <label for="code">당월 인증코드 4자리</label><input id="code" class="field code" type="password" inputmode="numeric" maxlength="4" pattern="[0-9]{4}" required>
+          <button class="primary" type="submit">학습실 입장</button>
+          <p id="loginMessage" class="message" role="alert"></p>
+        </form>
+        <p class="hint">이용기간은 관리자에게 안내받은 개강일부터 시험일 또는 관리자가 지정한 종료일까지입니다.</p>
+      </section>
+    </div>
+  </main>
+  <footer>개발저작권 @career_educator</footer>
+  <script src="./인증설정.js"></script>
+  <script>
+    (function(){
+      var monthKey = new Date().getFullYear() + '-' + String(new Date().getMonth() + 1).padStart(2, '0');
+      var calendar = document.getElementById('calendar');
+      var label = document.getElementById('monthLabel');
+      var scheduleMessage = document.getElementById('scheduleMessage');
+      var form = document.getElementById('loginForm');
+      var loginMessage = document.getElementById('loginMessage');
+
+      function renderCalendar(setting) {
+        var parts = setting.month.split('-').map(Number), year = parts[0], month = parts[1];
+        var start = Number(setting.startDate.slice(-2)), exam = Number(setting.examDate.slice(-2));
+        var firstDay = new Date(year, month - 1, 1).getDay();
+        var lastDay = new Date(year, month, 0).getDate();
+        var html = ['<span class="weekday">일</span><span class="weekday">월</span><span class="weekday">화</span><span class="weekday">수</span><span class="weekday">목</span><span class="weekday">금</span><span class="weekday">토</span>'];
+        var i;
+        for (i = 0; i < firstDay; i++) html.push('<span class="day empty"></span>');
+        for (i = 1; i <= lastDay; i++) {
+          var cls = i === start ? ' event-start' : (i === exam ? ' event-exam' : '');
+          var labelText = i === start ? '<span class="event-label">개강</span>' : (i === exam ? '<span class="event-label">시험</span>' : '');
+          html.push('<span class="day' + cls + '"><strong>' + i + '</strong>' + labelText + '</span>');
+        }
+        calendar.innerHTML = html.join('');
+        label.textContent = year + '년 ' + month + '월';
+        scheduleMessage.textContent = '개강일 ' + setting.startDate + ' · 시험일 ' + setting.examDate;
+      }
+
+      window.LearningAuth.request('calendar', {month: monthKey}).then(function(result){
+        if (result.ok) renderCalendar(result.setting);
+        else { label.textContent = monthKey.replace('-', '년 ') + '월'; scheduleMessage.textContent = result.error; }
+      }).catch(function(error){ scheduleMessage.textContent = error.message; });
+
+      form.addEventListener('submit', function(event){
+        event.preventDefault();
+        loginMessage.textContent = '확인 중입니다.';
+        var button = form.querySelector('button'); button.disabled = true;
+        window.LearningAuth.login(document.getElementById('name').value, document.getElementById('phone').value, document.getElementById('code').value).then(function(result){
+          if (!result.ok) { loginMessage.textContent = result.error || '로그인 정보를 확인해 주세요.'; button.disabled = false; return; }
+          var target = new URLSearchParams(window.location.search).get('return') || '학습실.html';
+          window.location.href = './' + target;
+        }).catch(function(error){ loginMessage.textContent = error.message; button.disabled = false; });
+      });
+    }());
+  </script>
+</body>
+</html>

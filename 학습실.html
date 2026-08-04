@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="ko" class="auth-pending">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta name="theme-color" content="#155e75">
+  <title>온라인학습실</title>
+  <style>
+    html.auth-pending body{visibility:hidden} :root{--teal:#155e75;--teal-dark:#0f4050;--ink:#17202a;--muted:#64748b;--line:#dbe5ec;--bg:#f3f8fb;--shadow:0 16px 34px rgba(15,64,80,.1)}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans KR","Malgun Gothic",sans-serif}a{color:inherit;text-decoration:none}.header{position:sticky;top:0;z-index:5;background:var(--teal);color:#fff;box-shadow:0 5px 18px rgba(15,64,80,.2)}.title-row{width:min(100% - 28px,980px);margin:0 auto;min-height:56px;display:flex;align-items:center;justify-content:space-between;gap:12px}.title{font-weight:900;font-size:clamp(14px,3.4vw,20px);letter-spacing:-.05em}.user-area{display:flex;align-items:center;gap:9px;white-space:nowrap}.dday{padding:6px 9px;border-radius:999px;background:#fff;color:var(--teal);font-size:12px;font-weight:900}.logout{border:1px solid rgba(255,255,255,.55);border-radius:8px;padding:5px 8px;background:transparent;color:#fff;font:inherit;font-size:11px;cursor:pointer}.nav{background:#fff;border-bottom:1px solid var(--line)}.nav-inner{width:min(100% - 28px,980px);margin:0 auto;display:flex;gap:7px;padding:8px 0;overflow-x:auto}.nav a{flex:0 0 auto;border:1px solid #b7d7df;border-radius:999px;padding:7px 13px;color:var(--teal);font-size:12px;font-weight:900;background:#f5fbfc}.nav a:hover{background:var(--teal);color:#fff}.main{width:min(100% - 28px,980px);margin:0 auto;padding:34px 0 54px}.hero{padding:30px 30px 27px;border-radius:22px;background:linear-gradient(135deg,#e4f5f7,#fff);border:1px solid #cce8ec}.eyebrow{margin:0 0 7px;color:var(--teal);font-size:13px;font-weight:900}.hero h1{margin:0;font-size:clamp(28px,5vw,42px);letter-spacing:-.07em}.hero p{margin:12px 0 0;color:var(--muted);font-size:14px}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px;margin-top:21px}.card{display:flex;min-height:190px;flex-direction:column;justify-content:space-between;padding:21px;border:1px solid var(--line);border-radius:18px;background:#fff;box-shadow:var(--shadow)}.card-icon{font-size:30px}.card h2{margin:12px 0 5px;font-size:20px;letter-spacing:-.05em}.card p{margin:0;color:var(--muted);font-size:13px}.card-link{display:flex;justify-content:space-between;margin-top:20px;padding:10px 12px;border-radius:10px;background:var(--teal);color:#fff;font-size:13px;font-weight:900}.card-link::after{content:'→';font-size:17px}footer{padding:22px 0 34px;border-top:1px solid var(--line);color:#7d8993;text-align:center;font-size:12px}@media(max-width:700px){.title-row{width:min(100% - 22px,560px)}.user-area{gap:5px}.title{font-size:13px}.dday{font-size:10px;padding:5px 7px}.main{width:min(100% - 22px,560px);padding-top:20px}.hero{padding:23px 20px}.grid{grid-template-columns:1fr}.card{min-height:155px}}
+  </style>
+</head>
+<body>
+  <header class="header"><div class="title-row"><div class="title">2026 손해보험 자격시험 온라인학습실[8월 개정판]</div><div class="user-area"><span id="dday" class="dday">D-day 확인 중</span><span id="studentName"></span><button id="logout" class="logout">로그아웃</button></div></div></header>
+  <nav class="nav"><div class="nav-inner"><a href="./자격시험안내.html">자격시험 안내</a><a href="./강의목차.html">동영상 강의보기</a><a href="./index.html">모의고사 테스트</a></div></nav>
+  <main class="main"><section class="hero"><p class="eyebrow">2026 개정판 · 온라인 학습</p><h1>오늘의 학습을 시작하세요.</h1><p>자격시험 안내를 확인하고, 동영상 강의와 모의고사 테스트를 차례로 이용할 수 있습니다.</p></section><section class="grid"><a class="card" href="./자격시험안내.html"><div><div class="card-icon">📘</div><h2>자격시험 안내</h2><p>응시 절차와 시험 구성, 합격 기준을 확인합니다.</p></div><span class="card-link">안내 보기</span></a><a class="card" href="./강의목차.html"><div><div class="card-icon">▶</div><h2>동영상 강의보기</h2><p>교재 순서에 맞춰 필요한 강의를 시청합니다.</p></div><span class="card-link">강의 보기</span></a><a class="card" href="./index.html"><div><div class="card-icon">✎</div><h2>모의고사 테스트</h2><p>20유형의 문제를 풀고 결과와 해설을 확인합니다.</p></div><span class="card-link">테스트 시작</span></a></section></main>
+  <footer>개발저작권 @career_educator</footer>
+  <script src="./인증설정.js"></script>
+  <script>
+    window.LearningAuth.requireStudent().then(function(ok){
+      if (!ok) return;
+      var state = window.LearningAuth.savedState();
+      document.getElementById('studentName').textContent = state.student && state.student.name ? state.student.name + '님' : '';
+      document.getElementById('dday').textContent = state.setting && state.setting.dDay ? state.setting.dDay : 'D-day';
+    });
+    document.getElementById('logout').addEventListener('click', function(){ window.LearningAuth.logout(); });
+  </script>
+</body>
+</html>
