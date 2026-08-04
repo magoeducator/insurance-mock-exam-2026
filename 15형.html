@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="ko">
 <head>
 <meta charset="utf-8">
@@ -59,7 +59,7 @@ label{display:block;font-weight:800;font-size:14px;margin-bottom:8px}input[type=
 
 <section id="resultScreen" class="screen hidden"><div id="resultContent"></div></section>
 <section id="reviewScreen" class="screen hidden"><div class="review-top"><h2>정답·해설 오답노트</h2><span id="reviewProgress"></span></div><div class="review-card"><div class="q-number" id="reviewNumber"></div><div class="review-question" id="reviewQuestion"></div><div id="reviewChoices"></div><div class="review-status" id="reviewStatus"></div><div class="explanation"><strong>공식 해설</strong><span id="reviewExplanation"></span></div></div><div class="review-nav"><button id="reviewPrev" class="review-prev">이전 문항</button><button id="reviewNext" class="review-next">다음 문항</button><button id="reviewComplete" class="complete hidden">오답학습 완료</button></div><p id="reviewNote" class="small-note"></p></section>
-<section id="finalScreen" class="screen hidden"><div id="finalContent"></div></section>
+<section id="finalScreen" class="screen hidden"><div id="finalContent"></div><button id="tocButton" class="secondary" type="button" onclick="goToToc()">목차로 이동하기</button></section>
 </main>
 
 <script>
@@ -155,6 +155,7 @@ function renderReview(){
   $('reviewPrev').disabled=reviewCursor===0;$('reviewNext').classList.toggle('hidden',reviewCursor===reviewNumbers.length-1);$('reviewComplete').classList.toggle('hidden',reviewCursor!==reviewNumbers.length-1);
 }
 function finishReview(){showFinal();}
+function goToToc(){const inFolder=/\/\d+형\/\d+형\.html$/.test(window.location.pathname);window.location.href=inFolder?'../index.html':'index.html'}
 function showFinal(){
   const s=scores(),passed=isPassed(s),wrong=lastWrong.length,retryLabel=selectedMode==='all'?'처음부터 전체 다시 풀기':subjectLabels[selectedMode]+' 처음부터 다시 풀기';
   $('finalContent').innerHTML='<div class="result-card"><div class="final-banner '+(passed?'':'fail-banner')+'">'+(passed?(selectedMode==='all'?'★ 최종 합격 ★':'★ 합격 ★'):'불합격 · 과락')+'</div><p class="result-title">'+esc(trainee)+'님의 '+subjectLabels[selectedMode]+' 학습 결과</p><div class="result-grid">'+scoreBoxes(s)+'</div><div class="copy-label">최신 결과 공유 문구 · 터치하면 전체 선택</div><textarea id="finalCopyArea" class="copy-box" readonly onclick="this.select();">'+esc(copyText())+'</textarea><button id="wrongRetryButton" class="primary" '+(wrong?'':'disabled')+'>'+(wrong?'틀린 문제만 다시 풀기':'틀린 문제가 없어 재시험 불필요')+'</button><button id="allRetryButton" class="secondary">'+retryLabel+'</button></div><div class="info-card"><strong>'+ (wrong?'현재 틀린 문항 '+wrong+'개를 다시 학습할 수 있습니다.':'선택한 범위의 모든 문항을 맞혔습니다.')+'</strong><br>재시험 제출 후에도 최신 답안을 기준으로 선택한 과목의 점수와 카카오톡 복사 문구가 갱신됩니다.</div>';
