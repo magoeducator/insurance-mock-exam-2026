@@ -57,6 +57,38 @@
     try { return JSON.parse(window.localStorage.getItem(STATE_KEY) || '{}'); } catch (error) { return {}; }
   }
 
+  function renderPageDday(setting) {
+    var row = document.querySelector('.site-title-row');
+    if (!row || document.getElementById('authDdayBadge')) return;
+
+    if (!document.getElementById('authDdayStyle')) {
+      var style = document.createElement('style');
+      style.id = 'authDdayStyle';
+      style.textContent = [
+        '.site-title-row{position:relative;padding-right:max(108px,calc((100% - 760px)/2 + 108px))!important}',
+        '.site-title{padding-right:4px}',
+        '.auth-dday-badge{position:absolute;top:6px;right:max(12px,calc((100% - 760px)/2 + 12px));display:inline-flex;align-items:center;gap:5px;min-width:78px;height:32px;padding:3px 8px;border:1px solid #84f3c5;border-radius:7px;background:#0b1724;color:#fef08a;box-shadow:0 0 8px rgba(110,231,183,.48),inset 0 0 8px rgba(110,231,183,.16);font-family:"Courier New",monospace;line-height:1;animation:authDdayGlow 2.4s ease-in-out infinite;z-index:2}',
+        '.auth-dday-badge span{color:#8df3c1;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans KR",sans-serif;font-size:9px;font-weight:800;letter-spacing:-.04em}',
+        '.auth-dday-badge strong{font-size:15px;letter-spacing:.02em;text-shadow:0 0 5px rgba(254,240,138,.85)}',
+        '@keyframes authDdayGlow{0%,100%{filter:brightness(1);transform:translateY(0)}50%{filter:brightness(1.16);transform:translateY(-1px)}}',
+        '@media(max-width:390px){.site-title-row{padding-right:92px!important}.auth-dday-badge{right:8px;min-width:67px;padding:3px 5px}.auth-dday-badge span{font-size:8px}.auth-dday-badge strong{font-size:12px}}',
+        '@media(prefers-reduced-motion:reduce){.auth-dday-badge{animation:none}}'
+      ].join('');
+      document.head.appendChild(style);
+    }
+
+    var badge = document.createElement('span');
+    badge.id = 'authDdayBadge';
+    badge.className = 'auth-dday-badge';
+    var label = document.createElement('span');
+    label.textContent = '시험일까지';
+    var value = document.createElement('strong');
+    value.textContent = setting && setting.dDay ? setting.dDay : 'D-day';
+    badge.appendChild(label);
+    badge.appendChild(value);
+    row.appendChild(badge);
+  }
+
   function redirectToLogin() {
     var returnTo = window.location.pathname.split('/').pop() || '학습실.html';
     var base = /\/\d+형\//.test(window.location.pathname) ? '../' : './';
@@ -81,6 +113,7 @@
           setting: payload.setting || null
         }));
       } catch (error) {}
+      renderPageDday(payload.setting);
       document.documentElement.classList.remove('auth-pending');
       return true;
     }).catch(function () {
