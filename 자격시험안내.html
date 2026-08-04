@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="ko">
+<html lang="ko" class="auth-pending">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
@@ -7,6 +7,7 @@
   <meta name="description" content="2026 손해보험 자격시험 응시 절차와 합격 기준 안내">
   <title>자격시험 안내 | 2026 손해보험 자격시험 온라인학습실</title>
   <style>
+    html.auth-pending body{visibility:hidden}
     :root{--teal:#0f766e;--teal-dark:#115e59;--teal-soft:#ccfbf1;--ink:#173331;--muted:#64748b;--line:#dce9e7;--card:#fff;--bg:#f3faf9;--shadow:0 10px 26px rgba(15,118,110,.09)}
     *{box-sizing:border-box}
     html{scroll-behavior:smooth}
@@ -96,6 +97,8 @@
       .manual-button{width:100%}
     }
   </style>
+  <script src="./인증설정.js"></script>
+  <script>window.LearningAuth.requireStudent();</script>
 </head>
 <body>
   <header class="site-header">
