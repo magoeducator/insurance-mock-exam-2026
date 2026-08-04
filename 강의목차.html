@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="ko">
+<html lang="ko" class="auth-pending">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
@@ -7,6 +7,7 @@
   <meta name="description" content="2026 손해보험 자격시험 온라인학습실 8월 개정판 동영상 강의 목차">
   <title>동영상 강의 목차 | 2026 손해보험 자격시험 온라인학습실</title>
   <style>
+    html.auth-pending body{visibility:hidden}
     :root{--orange:#2563eb;--orange-dark:#1d4ed8;--ink:#202124;--muted:#6b7280;--line:#e6e8ec;--green:#16803c;--green-bg:#effaf2;--shadow:0 10px 26px rgba(32,43,60,.08)}
     *{box-sizing:border-box}
     body{margin:0;background:#f5f6f8;color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Apple SD Gothic Neo","Noto Sans KR",Arial,sans-serif}
@@ -81,6 +82,8 @@
       .watch-button{min-width:76px;padding:0 8px;font-size:11px}
     }
   </style>
+  <script src="./인증설정.js"></script>
+  <script>window.LearningAuth.requireStudent();</script>
 </head>
 <body>
   <header class="site-header">
