@@ -5,43 +5,30 @@
   var API_URL = 'https://script.google.com/macros/s/AKfycbzXTQDRMXsiiqBNi4hQ1qzYx1hYTU7niFhcf019c5EPUMEIYPDglCtWxEtmcg0h6SSO/exec';
   var TOKEN_KEY = 'career_educator_learning_token';
   var STATE_KEY = 'career_educator_learning_state';
-  var callbackId = 0;
-
   function request(action, params) {
-    return new Promise(function (resolve, reject) {
-      var callbackName = '__learningAuthCallback' + Date.now() + '_' + (callbackId++);
-      var script = document.createElement('script');
-      var query = ['action=' + encodeURIComponent(action), 'callback=' + callbackName];
-      var values = params || {};
-      var key;
+    var query = [];
+    var values = params || {};
+    var key;
 
-      for (key in values) {
-        if (Object.prototype.hasOwnProperty.call(values, key) && values[key] !== undefined && values[key] !== null) {
-          query.push(encodeURIComponent(key) + '=' + encodeURIComponent(values[key]));
-        }
+    query.push('action=' + encodeURIComponent(action));
+    for (key in values) {
+      if (Object.prototype.hasOwnProperty.call(values, key) && values[key] !== undefined && values[key] !== null) {
+        query.push(encodeURIComponent(key) + '=' + encodeURIComponent(values[key]));
       }
+    }
 
-      var timer = window.setTimeout(function () {
-        cleanup();
-        reject(new Error('서버 응답 시간이 초과되었습니다.'));
-      }, 15000);
-
-      function cleanup() {
-        window.clearTimeout(timer);
-        script.remove();
-        try { delete window[callbackName]; } catch (error) { window[callbackName] = undefined; }
+    return fetch(API_URL + '?' + query.join('&'), {
+      method: 'GET',
+      mode: 'cors',
+      cache: 'no-store'
+    }).then(function (response) {
+      if (!response.ok) throw new Error('로그인 서버가 응답하지 않습니다.');
+      return response.json();
+    }).catch(function (error) {
+      if (error && error.message === 'Failed to fetch') {
+        throw new Error('로그인 서버 연결이 차단되었습니다. 브라우저를 새로고침해 주세요.');
       }
-
-      window[callbackName] = function (payload) {
-        cleanup();
-        resolve(payload || { ok: false, error: '응답을 확인할 수 없습니다.' });
-      };
-      script.onerror = function () {
-        cleanup();
-        reject(new Error('로그인 서버에 연결할 수 없습니다.'));
-      };
-      script.src = API_URL + '?' + query.join('&');
-      document.head.appendChild(script);
+      throw error;
     });
   }
 
