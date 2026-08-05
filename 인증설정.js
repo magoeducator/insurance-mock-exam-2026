@@ -89,6 +89,24 @@
     row.appendChild(badge);
   }
 
+  function renderExamSocialLinks() {
+    var topbar = document.querySelector('.topbar');
+    if (!topbar || document.getElementById('authSocialLinks')) return;
+
+    if (!document.getElementById('authSocialLinksStyle')) {
+      var style = document.createElement('style');
+      style.id = 'authSocialLinksStyle';
+      style.textContent = '.auth-social-links{display:flex;align-items:center;gap:9px;margin-top:9px;font-size:11px;font-weight:800}.auth-social-links .auth-social-label{color:rgba(255,255,255,.92);white-space:nowrap}.auth-social-links a{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:8px;color:#fff;text-decoration:none}.auth-social-links svg{width:15px;height:15px;display:block}.auth-social-links .instagram{background:linear-gradient(135deg,#f58529,#dd2a7b 52%,#8134af)}.auth-social-links .blog{background:#03c75a}.auth-social-links a:hover,.auth-social-links a:focus-visible{filter:brightness(.92);transform:translateY(-1px)}@media(max-width:420px){.auth-social-links{gap:8px;font-size:10px}}';
+      document.head.appendChild(style);
+    }
+
+    var links = document.createElement('div');
+    links.id = 'authSocialLinks';
+    links.className = 'auth-social-links';
+    links.innerHTML = '<span class="auth-social-label">강의하는 심팀장</span><a class="instagram" href="https://www.instagram.com/career_educator" target="_blank" rel="noopener noreferrer" aria-label="인스타그램" title="인스타그램"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"/></svg></a><a class="blog" href="https://blog.naver.com/magoshim" target="_blank" rel="noopener noreferrer" aria-label="네이버 블로그" title="네이버 블로그"><svg viewBox="0 0 24 24" aria-hidden="true"><text x="12" y="17" text-anchor="middle" font-family="Arial,sans-serif" font-size="15" font-weight="900" fill="currentColor">B</text></svg></a>';
+    topbar.appendChild(links);
+  }
+
   function redirectToLogin() {
     var returnTo = window.location.pathname.split('/').pop() || '학습실.html';
     var base = /\/\d+형\//.test(window.location.pathname) ? '../' : './';
@@ -114,6 +132,7 @@
         }));
       } catch (error) {}
       renderPageDday(payload.setting);
+      renderExamSocialLinks();
       document.documentElement.classList.remove('auth-pending');
       return true;
     }).catch(function () {
