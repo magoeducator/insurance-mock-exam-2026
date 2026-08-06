@@ -1,6 +1,19 @@
 <!doctype html>
-<html lang="ko">
+<html lang="ko" class="auth-pending">
 <head>
+<script>
+(function(){
+  document.documentElement.classList.add('auth-pending');
+  var style = document.createElement('style');
+  style.textContent = 'html.auth-pending body{visibility:hidden}';
+  document.head.appendChild(style);
+  var authScript = document.createElement('script');
+  var nested = /\/\d+형\//.test(window.location.pathname);
+  authScript.src = nested ? '../인증설정.js' : './인증설정.js';
+  authScript.onload = function(){ window.LearningAuth.requireStudent(); };
+  document.head.appendChild(authScript);
+}());
+</script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#f37021">
