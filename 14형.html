@@ -71,7 +71,7 @@ label{display:block;font-weight:800;font-size:14px;margin-bottom:8px}input[type=
 </section>
 
 <section id="resultScreen" class="screen hidden"><div id="resultContent"></div></section>
-<section id="reviewScreen" class="screen hidden"><div class="review-top"><h2>정답·해설 오답노트</h2><span id="reviewProgress"></span></div><div class="review-card"><div class="q-number" id="reviewNumber"></div><div class="review-question" id="reviewQuestion"></div><div id="reviewChoices"></div><div class="review-status" id="reviewStatus"></div><div class="explanation"><strong>공식 해설</strong><span id="reviewExplanation"></span></div></div><div class="review-nav"><button id="reviewPrev" class="review-prev">이전 문항</button><button id="reviewNext" class="review-next">다음 문항</button><button id="reviewComplete" class="complete hidden">오답학습 완료</button></div><p id="reviewNote" class="small-note"></p></section>
+<section id="reviewScreen" class="screen hidden"><div class="review-top"><h2>정답·해설 오답노트</h2><span id="reviewProgress"></span></div><div class="review-card"><div class="q-number" id="reviewNumber"></div><div class="review-question" id="reviewQuestion"></div><div id="reviewChoices"></div><div class="review-status" id="reviewStatus"></div><div class="explanation"><strong>공식 해설</strong><span id="reviewExplanation"></span></div></div><div class="review-nav"><button id="reviewPrev" class="review-prev">이전 문항</button><button id="reviewNext" class="review-next">다음 문항</button><button id="reviewComplete" class="complete hidden">오답학습 완료</button></div><p id="reviewNote" class="small-note"></p><button id="reviewTocButton" class="secondary" type="button" onclick="goToToc()">모의고사 목차로 이동하기</button></section>
 <section id="finalScreen" class="screen hidden"><div id="finalContent"></div><button id="tocButton" class="secondary" type="button" onclick="goToToc()">목차로 이동하기</button></section>
 </main>
 
@@ -249,6 +249,6 @@ $('reviewPrev').addEventListener('click',()=>{if(reviewCursor>0){reviewCursor--;
 $('reviewNext').addEventListener('click',()=>{if(reviewCursor<reviewNumbers.length-1){reviewCursor++;renderReview();window.scrollTo({top:0,behavior:'smooth'})}});
 $('reviewComplete').addEventListener('click',finishReview);
 </script>
-<footer class="site-footer" aria-label="개발저작권" style="padding:18px 16px 28px;color:#9ca3af;text-align:center;font-size:12px;">개발저작권 @career_educator</footer>
+<footer class="site-footer" aria-label="개발저작권" style="padding:18px 16px 28px;color:#9ca3af;text-align:center;font-size:12px;">14형 · 개발저작권 @career_educator</footer>
 </body>
 </html>
