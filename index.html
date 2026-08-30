@@ -8,7 +8,7 @@
   <title>2026 손해보험 자격시험 온라인학습실[8월 개정판] | 모의고사 테스트</title>
   <style>
     html.auth-pending body{visibility:hidden}
-    :root{--orange:#f37021;--orange-dark:#d95b12;--ink:#242424;--muted:#6b7280;--line:#ececec;--card:#fff;--shadow:0 12px 30px rgba(36,36,36,.08)}
+    :root{--orange:#f37021;--orange-dark:#d95b12;--ink:#242424;--muted:#6b7280;--line:#ececec;--card:#fff;--bg:#f5f6f8;--shadow:0 12px 30px rgba(36,36,36,.08)}
     *{box-sizing:border-box}
     body{margin:0;padding-top:92px;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans KR","Malgun Gothic",sans-serif;line-height:1.5}
     a{color:inherit;text-decoration:none}
@@ -21,7 +21,7 @@
     .top-menu-link:hover,.top-menu-link:focus-visible{background:var(--orange);color:#fff;border-color:var(--orange)}
     .top-menu-link.active{background:var(--orange);border-color:var(--orange);color:#fff}
     .wrap{width:min(100% - 32px,980px);margin:0 auto}
-    .hero{padding:48px 0 34px;background:linear-gradient(135deg,#fff 0%,#fff7f1 100%);border-bottom:1px solid #f2dfd3}
+    .hero{padding:36px 0 28px;background:linear-gradient(135deg,#fff 0%,#fff7f1 100%);border-bottom:1px solid #f2dfd3}
     .eyebrow{display:inline-flex;align-items:center;gap:7px;margin:0 0 14px;color:var(--orange-dark);font-size:13px;font-weight:800;letter-spacing:.04em}
     .eyebrow::before{content:"";width:9px;height:9px;border-radius:50%;background:var(--orange)}
     h1{margin:0;font-size:clamp(28px,5vw,46px);letter-spacing:-.055em;line-height:1.15}
@@ -32,6 +32,29 @@
     .section-head{display:flex;align-items:end;justify-content:space-between;gap:16px;margin-bottom:15px}
     h2{margin:0;font-size:21px;letter-spacing:-.035em}
     .section-note{margin:0;color:var(--muted);font-size:13px}
+    .catalog-section{padding:22px 22px 24px;border:1px solid #eadfd9;border-radius:14px;background:#fff;box-shadow:0 10px 26px rgba(36,36,36,.07)}
+    .catalog-section+.catalog-section{margin-top:24px}
+    .section-copy{margin-bottom:0}
+    .section-copy h2{margin-bottom:5px}
+    .section-points{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0 18px}
+    .section-point{display:inline-flex;align-items:center;min-height:30px;padding:5px 10px;border:1px solid #f2d3c0;border-radius:8px;background:#fff7f1;color:#7c3d1d;font-size:12px;font-weight:800;line-height:1.2}
+    .catalog-panel{border-top:2px solid var(--orange);border-bottom:0;background:transparent}
+    .catalog-summary{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:18px 4px;cursor:pointer;list-style:none}
+    .catalog-summary::-webkit-details-marker{display:none}
+    .catalog-summary::after{content:"+";flex:0 0 auto;color:var(--orange);font-size:24px;font-weight:400;line-height:1}
+    .catalog-panel[open] .catalog-summary::after{content:"−"}
+    .catalog-summary-main{display:flex;align-items:baseline;gap:12px;min-width:0}
+    .catalog-summary-title{font-size:20px;font-weight:900;letter-spacing:-.04em}
+    .catalog-summary-meta{color:var(--muted);font-size:13px;font-weight:700;white-space:nowrap}
+    .catalog-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:28px;margin:0;padding:0;list-style:none}
+    .catalog-row{border-top:1px solid #edf0f2}
+    .catalog-row-link{display:grid;grid-template-columns:68px minmax(0,1fr) auto 72px;align-items:center;gap:10px;min-height:58px;padding:10px 4px;color:var(--ink);transition:background .14s ease,color .14s ease}
+    .catalog-row-link:hover,.catalog-row-link:focus-visible{background:#fff7f1;color:var(--orange-dark)}
+    .catalog-row-range{display:inline-flex;align-items:center;justify-content:center;min-height:28px;padding:0 7px;border-radius:7px;background:#fff0e6;color:var(--orange-dark);font-size:12px;font-weight:900;line-height:1.1;white-space:nowrap}
+    .catalog-row-title{min-width:0;font-size:14px;font-weight:800;line-height:1.35;letter-spacing:-.03em}
+    .catalog-row-count{color:var(--muted);font-size:12px;font-weight:700;white-space:nowrap}
+    .catalog-row-button{display:inline-flex;align-items:center;justify-content:center;min-width:68px;height:30px;padding:0 8px;border-radius:7px;background:var(--orange);color:#fff;font-size:11px;font-weight:900;line-height:1;white-space:nowrap;transition:background .14s ease,transform .14s ease}
+    .catalog-row-link:hover .catalog-row-button,.catalog-row-link:focus-visible .catalog-row-button{background:var(--orange-dark);transform:translateX(1px)}
     .grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
     .exam-card{display:flex;flex-direction:column;justify-content:space-between;min-height:156px;padding:20px;border:1px solid var(--line);border-radius:18px;background:var(--card);box-shadow:var(--shadow);transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease}
     .exam-card:hover,.exam-card:focus-within{transform:translateY(-3px);border-color:#f4c4a6;box-shadow:0 16px 32px rgba(211,93,24,.14)}
@@ -43,8 +66,8 @@
     .button::after{content:"→";font-size:17px;line-height:1}
     .button:hover{background:var(--orange-dark)}
     footer{padding:22px 0 36px;border-top:1px solid var(--line);color:var(--muted);font-size:12px;text-align:center}
-    @media (max-width:760px){body{padding-top:92px}.site-title-row{padding:0 12px}.top-menu{justify-content:center;gap:6px;padding:0 8px}.top-menu-link{padding:0 11px;font-size:12px}.wrap{width:min(100% - 24px,560px)}.hero{padding:36px 0 28px}.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:11px}.exam-card{min-height:146px;padding:16px}.desc{margin:14px 0 16px}.section-head{align-items:start;flex-direction:column;gap:4px}}
-    @media (max-width:390px){.grid{grid-template-columns:1fr}.exam-card{min-height:132px}}
+    @media (max-width:760px){body{padding-top:92px}.site-title-row{padding:0 12px}.top-menu{justify-content:center;gap:6px;padding:0 8px}.top-menu-link{padding:0 11px;font-size:12px}.wrap{width:min(100% - 24px,560px)}.hero{padding:30px 0 24px}.catalog-section{padding:18px 14px 20px}.catalog-summary{padding:16px 2px}.catalog-summary-main{display:block}.catalog-summary-meta{display:block;margin-top:4px}.catalog-list{grid-template-columns:1fr}.catalog-row-link{grid-template-columns:66px minmax(0,1fr) auto 68px;gap:8px}.section-head{align-items:start;flex-direction:column;gap:4px}}
+    @media (max-width:390px){.catalog-row-link{grid-template-columns:60px minmax(0,1fr) auto 64px;gap:6px}.catalog-row-range{font-size:11px;padding:0 5px}.catalog-row-title{font-size:13px}.catalog-row-count{font-size:11px}.catalog-row-button{min-width:60px;padding:0 5px;font-size:10px}}
   </style>
   <style>
     .social-brand{display:inline-flex;align-items:center;flex:0 0 auto;color:#6b7280;font-size:12px;font-weight:900;letter-spacing:-.04em;white-space:nowrap}
@@ -61,6 +84,7 @@
   <header class="site-header">
     <div class="site-title-row"><div class="site-title">2026 손해보험 자격시험 온라인학습실[8월 개정판]</div></div>
     <nav class="top-menu" aria-label="주요 메뉴">
+      <a class="top-menu-link" href="./학습실.html">홈</a>
       <a class="top-menu-link" href="./자격시험안내.html">자격시험 안내</a>
       <a class="top-menu-link" href="./강의목차.html">동영상 강의보기</a>
       <a class="top-menu-link active" href="./index.html" aria-current="page">모의고사 테스트</a>
@@ -71,55 +95,76 @@
   </header>
   <header class="hero">
     <div class="wrap">
-      <p class="eyebrow">2026 개정판. 온라인 모의고사</p>
-      <h1>손해보험·제3보험<br>자격시험 문제풀기</h1>
-      <p class="lead">응시할 유형을 선택하면 모바일 시험 화면으로 바로 이동합니다. 각 유형은 한 문항씩 풀고, 제출 후 점수·정답·해설·오답복습을 확인할 수 있습니다.</p>
-      <div class="hero-meta" aria-label="시험 안내">
-        <span class="pill">총 20개 유형</span>
-        <span class="pill">유형별 50문항</span>
-        <span class="pill">손해보험 · 제3보험</span>
-      </div>
+      <p class="eyebrow">2026 개정판 · 온라인 학습 메뉴</p>
+      <h1>모의고사 테스트</h1>
     </div>
   </header>
   <main class="wrap">
-    <div class="section-head">
-      <h2>유형별 모의고사</h2>
-      <p class="section-note">원하는 유형의 문제풀기를 눌러 시작하세요.</p>
-    </div>
-    <section class="grid" aria-label="1형부터 20형까지 모의고사 목록">
-      <a class="exam-card" href="./1형/1형.html"><div class="type"><span class="number">1</span><strong>1형</strong></div><p class="desc">손해보험·제3보험 모의고사</p><span class="button">문제풀기</span></a>
-      <a class="exam-card" href="./2형/2형.html"><div class="type"><span class="number">2</span><strong>2형</strong></div><p class="desc">손해보험·제3보험 모의고사</p><span class="button">문제풀기</span></a>
-      <a class="exam-card" href="./3형/3형.html"><div class="type"><span class="number">3</span><strong>3형</strong></div><p class="desc">손해보험·제3보험 모의고사</p><span class="button">문제풀기</span></a>
-      <a class="exam-card" href="./4형/4형.html"><div class="type"><span class="number">4</span><strong>4형</strong></div><p class="desc">손해보험·제3보험 모의고사</p><span class="button">문제풀기</span></a>
-      <a class="exam-card" href="./5형/5형.html"><div class="type"><span class="number">5</span><strong>5형</strong></div><p class="desc">손해보험·제3보험 모의고사</p><span class="button">문제풀기</span></a>
-      <a class="exam-card" href="./6형/6형.html"><div class="type"><span class="number">6</span><strong>6형</strong></div><p class="desc">손해보험·제3보험 모의고사</p><span class="button">문제풀기</span></a>
-      <a class="exam-card" href="./7형/7형.html"><div class="type"><span class="number">7</span><strong>7형</strong></div><p class="desc">손해보험·제3보험 모의고사</p><span class="button">문제풀기</span></a>
-      <a class="exam-card" href="./8형/8형.html"><div class="type"><span class="number">8</span><strong>8형</strong></div><p class="desc">손해보험·제3보험 모의고사</p><span class="button">문제풀기</span></a>
-      <a class="exam-card" href="./9형/9형.html"><div class="type"><span class="number">9</span><strong>9형</strong></div><p class="desc">손해보험·제3보험 모의고사</p><span class="button">문제풀기</span></a>
-      <a class="exam-card" href="./10형/10형.html"><div class="type"><span class="number">10</span><strong>10형</strong></div><p class="desc">손해보험·제3보험 모의고사</p><span class="button">문제풀기</span></a>
-      <a class="exam-card" href="./11형/11형.html"><div class="type"><span class="number">11</span><strong>11형</strong></div><p class="desc">손해보험·제3보험 모의고사</p><span class="button">문제풀기</span></a>
-      <a class="exam-card" href="./12형/12형.html"><div class="type"><span class="number">12</span><strong>12형</strong></div><p class="desc">손해보험·제3보험 모의고사</p><span class="button">문제풀기</span></a>
-      <a class="exam-card" href="./13형/13형.html"><div class="type"><span class="number">13</span><strong>13형</strong></div><p class="desc">손해보험·제3보험 모의고사</p><span class="button">문제풀기</span></a>
-      <a class="exam-card" href="./14형/14형.html"><div class="type"><span class="number">14</span><strong>14형</strong></div><p class="desc">손해보험·제3보험 모의고사</p><span class="button">문제풀기</span></a>
-      <a class="exam-card" href="./15형/15형.html"><div class="type"><span class="number">15</span><strong>15형</strong></div><p class="desc">손해보험·제3보험 모의고사</p><span class="button">문제풀기</span></a>
-      <a class="exam-card" href="./16형/16형.html"><div class="type"><span class="number">16</span><strong>16형</strong></div><p class="desc">손해보험·제3보험 모의고사</p><span class="button">문제풀기</span></a>
-      <a class="exam-card" href="./17형/17형.html"><div class="type"><span class="number">17</span><strong>17형</strong></div><p class="desc">손해보험·제3보험 모의고사</p><span class="button">문제풀기</span></a>
-      <a class="exam-card" href="./18형/18형.html"><div class="type"><span class="number">18</span><strong>18형</strong></div><p class="desc">손해보험·제3보험 모의고사</p><span class="button">문제풀기</span></a>
-      <a class="exam-card" href="./19형/19형.html"><div class="type"><span class="number">19</span><strong>19형</strong></div><p class="desc">손해보험·제3보험 모의고사</p><span class="button">문제풀기</span></a>
-      <a class="exam-card" href="./20형/20형.html"><div class="type"><span class="number">20</span><strong>20형</strong></div><p class="desc">손해보험·제3보험 모의고사</p><span class="button">문제풀기</span></a>
+    <section id="focusCatalog" class="catalog-section" aria-labelledby="focusCatalogTitle">
+      <div class="section-copy">
+        <h2 id="focusCatalogTitle">파트별 집중학습</h2>
+        <p class="section-note">출제 번호대별 핵심 문제를 반복 학습하고, 정답·해설·오답복습을 확인할 수 있습니다.</p>
+      </div>
+      <div class="section-points" aria-label="파트별 집중학습 포인트">
+        <span class="section-point">12개 파트</span>
+        <span class="section-point">원하는 파트만 골라서</span>
+        <span class="section-point">단기집중암기</span>
+      </div>
+      <details class="catalog-panel">
+        <summary class="catalog-summary"><span class="catalog-summary-main"><span class="catalog-summary-title">학습파트 목차</span><span class="catalog-summary-meta">12개 파트 · 1,000문항</span></span></summary>
+        <ul class="catalog-list" aria-label="12개 파트별 집중학습 목록">
+          <li class="catalog-row"><a class="catalog-row-link" href="./60문항학습.html" aria-label="1~3번 60문항 손해보험 개요와 화재보험 이해 학습 시작"><span class="catalog-row-range">1~3번</span><span class="catalog-row-title">손해보험 개요 · 화재보험 이해</span><span class="catalog-row-count">60문항</span><span class="catalog-row-button">문제풀기</span></a></li>
+          <li class="catalog-row"><a class="catalog-row-link" href="./특종보험40문항학습.html" aria-label="4~5번 40문항 특종보험 학습 시작"><span class="catalog-row-range">4~5번</span><span class="catalog-row-title">특종보험</span><span class="catalog-row-count">40문항</span><span class="catalog-row-button">문제풀기</span></a></li>
+          <li class="catalog-row"><a class="catalog-row-link" href="./장기손해보험100문항학습.html" aria-label="6~10번 89문항 장기손해보험 학습 시작"><span class="catalog-row-range">6~10번</span><span class="catalog-row-title">장기손해보험</span><span class="catalog-row-count">89문항</span><span class="catalog-row-button">문제풀기</span></a></li>
+          <li class="catalog-row"><a class="catalog-row-link" href="./연금저축보험51문항학습.html" aria-label="11~12번 39문항 연금저축보험 학습 시작"><span class="catalog-row-range">11~12번</span><span class="catalog-row-title">연금저축보험</span><span class="catalog-row-count">39문항</span><span class="catalog-row-button">문제풀기</span></a></li>
+          <li class="catalog-row"><a class="catalog-row-link" href="./자동차보험112문항학습.html" aria-label="13~17번 112문항 자동차보험 학습 시작"><span class="catalog-row-range">13~17번</span><span class="catalog-row-title">자동차보험</span><span class="catalog-row-count">112문항</span><span class="catalog-row-button">문제풀기</span></a></li>
+          <li class="catalog-row"><a class="catalog-row-link" href="./모집질서관련법규80문항학습.html" aria-label="18~21번 80문항 모집질서 관련 법규 학습 시작"><span class="catalog-row-range">18~21번</span><span class="catalog-row-title">모집질서 관련 법규</span><span class="catalog-row-count">80문항</span><span class="catalog-row-button">문제풀기</span></a></li>
+          <li class="catalog-row"><a class="catalog-row-link" href="./보험이론및윤리160문항학습.html" aria-label="22~29번 160문항 보험이론 및 윤리 학습 시작"><span class="catalog-row-range">22~29번</span><span class="catalog-row-title">보험이론 및 윤리</span><span class="catalog-row-count">160문항</span><span class="catalog-row-button">문제풀기</span></a></li>
+          <li class="catalog-row"><a class="catalog-row-link" href="./손해보험법규와약관80문항학습.html" aria-label="30~33번 80문항 손해보험 법규와 약관 학습 시작"><span class="catalog-row-range">30~33번</span><span class="catalog-row-title">손해보험 법규와 약관</span><span class="catalog-row-count">80문항</span><span class="catalog-row-button">문제풀기</span></a></li>
+          <li class="catalog-row"><a class="catalog-row-link" href="./제3보험의개요100문항학습.html" aria-label="34~38번 100문항 제3보험의 개요 학습 시작"><span class="catalog-row-range">34~38번</span><span class="catalog-row-title">제3보험의 개요</span><span class="catalog-row-count">100문항</span><span class="catalog-row-button">문제풀기</span></a></li>
+          <li class="catalog-row"><a class="catalog-row-link" href="./상해보험100문항학습.html" aria-label="39~43번 100문항 상해보험 학습 시작"><span class="catalog-row-range">39~43번</span><span class="catalog-row-title">상해보험</span><span class="catalog-row-count">100문항</span><span class="catalog-row-button">문제풀기</span></a></li>
+          <li class="catalog-row"><a class="catalog-row-link" href="./질병보험간병보험80문항학습.html" aria-label="44~47번 80문항 질병보험과 간병보험 학습 시작"><span class="catalog-row-range">44~47번</span><span class="catalog-row-title">질병보험 · 간병보험</span><span class="catalog-row-count">80문항</span><span class="catalog-row-button">문제풀기</span></a></li>
+          <li class="catalog-row"><a class="catalog-row-link" href="./실손보험60문항학습.html" aria-label="48~50번 60문항 실손보험 학습 시작"><span class="catalog-row-range">48~50번</span><span class="catalog-row-title">실손보험</span><span class="catalog-row-count">60문항</span><span class="catalog-row-button">문제풀기</span></a></li>
+        </ul>
+      </details>
+    </section>
+    <section id="mockCatalog" class="catalog-section" aria-labelledby="mockCatalogTitle">
+      <div class="section-copy">
+        <h2 id="mockCatalogTitle">모의고사 테스트</h2>
+        <p class="section-note">1~20형 중 원하는 유형을 선택해 실제 시험처럼 50문항을 풀어볼 수 있습니다.</p>
+      </div>
+      <div class="section-points" aria-label="모의고사 테스트 포인트">
+        <span class="section-point">전체풀기</span>
+        <span class="section-point">손해보험</span>
+        <span class="section-point">제3보험</span>
+      </div>
+      <details class="catalog-panel">
+        <summary class="catalog-summary"><span class="catalog-summary-main"><span class="catalog-summary-title">모의고사 테스트 목차</span><span class="catalog-summary-meta">1~20형 · 각 50문항</span></span></summary>
+        <ul class="catalog-list" aria-label="1형부터 20형까지 모의고사 목록">
+          <li class="catalog-row"><a class="catalog-row-link" href="./1형/1형.html" aria-label="1형 50문항 모의고사 시작"><span class="catalog-row-range">1형</span><span class="catalog-row-title">손해보험 · 제3보험 모의고사</span><span class="catalog-row-count">50문항</span><span class="catalog-row-button">문제풀기</span></a></li>
+          <li class="catalog-row"><a class="catalog-row-link" href="./2형/2형.html" aria-label="2형 50문항 모의고사 시작"><span class="catalog-row-range">2형</span><span class="catalog-row-title">손해보험 · 제3보험 모의고사</span><span class="catalog-row-count">50문항</span><span class="catalog-row-button">문제풀기</span></a></li>
+          <li class="catalog-row"><a class="catalog-row-link" href="./3형/3형.html" aria-label="3형 50문항 모의고사 시작"><span class="catalog-row-range">3형</span><span class="catalog-row-title">손해보험 · 제3보험 모의고사</span><span class="catalog-row-count">50문항</span><span class="catalog-row-button">문제풀기</span></a></li>
+          <li class="catalog-row"><a class="catalog-row-link" href="./4형/4형.html" aria-label="4형 50문항 모의고사 시작"><span class="catalog-row-range">4형</span><span class="catalog-row-title">손해보험 · 제3보험 모의고사</span><span class="catalog-row-count">50문항</span><span class="catalog-row-button">문제풀기</span></a></li>
+          <li class="catalog-row"><a class="catalog-row-link" href="./5형/5형.html" aria-label="5형 50문항 모의고사 시작"><span class="catalog-row-range">5형</span><span class="catalog-row-title">손해보험 · 제3보험 모의고사</span><span class="catalog-row-count">50문항</span><span class="catalog-row-button">문제풀기</span></a></li>
+          <li class="catalog-row"><a class="catalog-row-link" href="./6형/6형.html" aria-label="6형 50문항 모의고사 시작"><span class="catalog-row-range">6형</span><span class="catalog-row-title">손해보험 · 제3보험 모의고사</span><span class="catalog-row-count">50문항</span><span class="catalog-row-button">문제풀기</span></a></li>
+          <li class="catalog-row"><a class="catalog-row-link" href="./7형/7형.html" aria-label="7형 50문항 모의고사 시작"><span class="catalog-row-range">7형</span><span class="catalog-row-title">손해보험 · 제3보험 모의고사</span><span class="catalog-row-count">50문항</span><span class="catalog-row-button">문제풀기</span></a></li>
+          <li class="catalog-row"><a class="catalog-row-link" href="./8형/8형.html" aria-label="8형 50문항 모의고사 시작"><span class="catalog-row-range">8형</span><span class="catalog-row-title">손해보험 · 제3보험 모의고사</span><span class="catalog-row-count">50문항</span><span class="catalog-row-button">문제풀기</span></a></li>
+          <li class="catalog-row"><a class="catalog-row-link" href="./9형/9형.html" aria-label="9형 50문항 모의고사 시작"><span class="catalog-row-range">9형</span><span class="catalog-row-title">손해보험 · 제3보험 모의고사</span><span class="catalog-row-count">50문항</span><span class="catalog-row-button">문제풀기</span></a></li>
+          <li class="catalog-row"><a class="catalog-row-link" href="./10형/10형.html" aria-label="10형 50문항 모의고사 시작"><span class="catalog-row-range">10형</span><span class="catalog-row-title">손해보험 · 제3보험 모의고사</span><span class="catalog-row-count">50문항</span><span class="catalog-row-button">문제풀기</span></a></li>
+          <li class="catalog-row"><a class="catalog-row-link" href="./11형/11형.html" aria-label="11형 50문항 모의고사 시작"><span class="catalog-row-range">11형</span><span class="catalog-row-title">손해보험 · 제3보험 모의고사</span><span class="catalog-row-count">50문항</span><span class="catalog-row-button">문제풀기</span></a></li>
+          <li class="catalog-row"><a class="catalog-row-link" href="./12형/12형.html" aria-label="12형 50문항 모의고사 시작"><span class="catalog-row-range">12형</span><span class="catalog-row-title">손해보험 · 제3보험 모의고사</span><span class="catalog-row-count">50문항</span><span class="catalog-row-button">문제풀기</span></a></li>
+          <li class="catalog-row"><a class="catalog-row-link" href="./13형/13형.html" aria-label="13형 50문항 모의고사 시작"><span class="catalog-row-range">13형</span><span class="catalog-row-title">손해보험 · 제3보험 모의고사</span><span class="catalog-row-count">50문항</span><span class="catalog-row-button">문제풀기</span></a></li>
+          <li class="catalog-row"><a class="catalog-row-link" href="./14형/14형.html" aria-label="14형 50문항 모의고사 시작"><span class="catalog-row-range">14형</span><span class="catalog-row-title">손해보험 · 제3보험 모의고사</span><span class="catalog-row-count">50문항</span><span class="catalog-row-button">문제풀기</span></a></li>
+          <li class="catalog-row"><a class="catalog-row-link" href="./15형/15형.html" aria-label="15형 50문항 모의고사 시작"><span class="catalog-row-range">15형</span><span class="catalog-row-title">손해보험 · 제3보험 모의고사</span><span class="catalog-row-count">50문항</span><span class="catalog-row-button">문제풀기</span></a></li>
+          <li class="catalog-row"><a class="catalog-row-link" href="./16형/16형.html" aria-label="16형 50문항 모의고사 시작"><span class="catalog-row-range">16형</span><span class="catalog-row-title">손해보험 · 제3보험 모의고사</span><span class="catalog-row-count">50문항</span><span class="catalog-row-button">문제풀기</span></a></li>
+          <li class="catalog-row"><a class="catalog-row-link" href="./17형/17형.html" aria-label="17형 50문항 모의고사 시작"><span class="catalog-row-range">17형</span><span class="catalog-row-title">손해보험 · 제3보험 모의고사</span><span class="catalog-row-count">50문항</span><span class="catalog-row-button">문제풀기</span></a></li>
+          <li class="catalog-row"><a class="catalog-row-link" href="./18형/18형.html" aria-label="18형 50문항 모의고사 시작"><span class="catalog-row-range">18형</span><span class="catalog-row-title">손해보험 · 제3보험 모의고사</span><span class="catalog-row-count">50문항</span><span class="catalog-row-button">문제풀기</span></a></li>
+          <li class="catalog-row"><a class="catalog-row-link" href="./19형/19형.html" aria-label="19형 50문항 모의고사 시작"><span class="catalog-row-range">19형</span><span class="catalog-row-title">손해보험 · 제3보험 모의고사</span><span class="catalog-row-count">50문항</span><span class="catalog-row-button">문제풀기</span></a></li>
+          <li class="catalog-row"><a class="catalog-row-link" href="./20형/20형.html" aria-label="20형 50문항 모의고사 시작"><span class="catalog-row-range">20형</span><span class="catalog-row-title">손해보험 · 제3보험 모의고사</span><span class="catalog-row-count">50문항</span><span class="catalog-row-button">문제풀기</span></a></li>
+        </ul>
+      </details>
     </section>
   </main>
-  <script>
-    document.querySelectorAll('.exam-card').forEach((link) => {
-      const folderHref = link.getAttribute('href');
-      const match = folderHref.match(/^\.\/(\d+형)\/\1\.html$/);
-      if (!match) return;
-      const flatHref = './' + match[1] + '.html';
-      fetch(folderHref, {method:'HEAD'}).then((response) => {
-        if (!response.ok) link.setAttribute('href', flatHref);
-      }).catch(() => {});
-    });
-  </script>
-  <footer>손해보험·제3보험 자격시험 · 2026 개정판 온라인 모의고사<br><span style="display:inline-block;margin-top:4px;color:#9ca3af;">개발저작권 @career_educator</span></footer>
+  <footer><div style="display:flex;justify-content:center;flex-wrap:wrap;gap:8px 14px;margin-bottom:9px;color:#d95b12;font-weight:900;"><a href="./학습실.html">홈</a><a href="./자격시험안내.html">자격시험 안내</a><a href="./강의목차.html">동영상 강의보기</a></div>손해보험·제3보험 자격시험 · 2026 개정판 온라인 모의고사<br><span style="display:inline-block;margin-top:4px;color:#9ca3af;">개발저작권 @career_educator</span></footer>
 </body>
 </html>
