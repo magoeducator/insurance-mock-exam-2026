@@ -1,0 +1,372 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f37021">
+  <meta name="description" content="1형부터 20형까지 모집질서 관련 법규 80문항 집중학습">
+  <title>모집질서 관련 법규 80문항 집중학습</title>
+  
+  <style>
+    html.auth-pending body{visibility:hidden}
+    :root{--orange:#f37021;--orange-dark:#d95810;--ink:#202124;--muted:#6b7280;--line:#e6e8eb;--soft:#fff7f1;--green:#16803c;--green-bg:#eaf8ef;--red:#c62828;--red-bg:#fff0f0;--navy:#243247}
+    *{box-sizing:border-box}
+    html,body{margin:0;min-height:100%;background:#f5f6f8;color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Apple SD Gothic Neo","Noto Sans KR","Malgun Gothic",sans-serif}
+    body{padding:env(safe-area-inset-top) 0 env(safe-area-inset-bottom)}
+    button{font:inherit}
+    button{border:0;cursor:pointer}
+    button:disabled{cursor:default}
+    .app{width:min(760px,100%);margin:0 auto;min-height:100vh;background:#fff;box-shadow:0 0 24px rgba(0,0,0,.06)}
+    .site-header{position:sticky;top:0;z-index:10;background:#fff;border-bottom:1px solid var(--line);box-shadow:0 5px 18px rgba(32,43,60,.1)}
+    .site-title-row{height:44px;display:flex;align-items:center;background:var(--orange);color:#fff;padding:0 max(14px,calc((100% - 760px)/2 + 14px));overflow:hidden}
+    .site-title{width:100%;font-size:clamp(12px,3.6vw,16px);font-weight:900;letter-spacing:-.045em;line-height:1;white-space:nowrap;overflow-x:auto;scrollbar-width:none}
+    .site-title::-webkit-scrollbar,.top-menu::-webkit-scrollbar{display:none}
+    .top-menu{height:48px;display:flex;align-items:center;justify-content:center;gap:8px;padding:0 12px;overflow-x:auto;white-space:nowrap;background:#fff}
+    .top-menu-link{flex:0 0 auto;display:inline-flex;align-items:center;justify-content:center;min-height:34px;padding:0 14px;border:1px solid #ffd0b5;border-radius:999px;color:var(--orange-dark);font-size:13px;font-weight:900;text-align:center;background:#fff8f3;text-decoration:none}
+    .top-menu-link:hover,.top-menu-link:focus-visible,.top-menu-link.active{background:var(--orange);color:#fff;border-color:var(--orange)}
+    .social-brand{display:inline-flex;align-items:center;flex:0 0 auto;color:#6b7280;font-size:12px;font-weight:900;letter-spacing:-.04em;white-space:nowrap}
+    .social-icon-link{display:inline-flex;align-items:center;justify-content:center;flex:0 0 34px;width:34px;min-height:34px;height:34px;padding:0;border-radius:10px;color:#fff}
+    .social-icon-link svg{width:18px;height:18px;display:block}
+    .social-icon-link.instagram{background:linear-gradient(135deg,#f58529,#dd2a7b 52%,#8134af)}
+    .social-icon-link.blog{background:#03c75a}
+    .topbar{background:var(--orange);color:#fff;padding:16px 18px 15px;position:relative;z-index:1}
+    .global-nav{display:none}
+    .global-nav::-webkit-scrollbar{display:none}
+    .global-nav a{flex:0 0 auto;padding:7px 12px;border:1px solid #ffd0b5;border-radius:999px;background:#fff8f3;color:var(--orange-dark);font-size:12px;font-weight:900;text-decoration:none}
+    .global-nav a:hover,.global-nav a:focus-visible{background:var(--orange);border-color:var(--orange);color:#fff}
+    .topbar-row{display:flex;align-items:center;justify-content:space-between;gap:12px}
+    .brand{font-weight:900;font-size:18px;letter-spacing:-.06em;line-height:1.25}
+    .subbrand{margin-top:4px;font-size:12px;opacity:.92}
+    .top-actions{display:flex;align-items:center;gap:6px;white-space:nowrap}
+    .student-name{font-size:12px;font-weight:800}
+    .top-button{padding:7px 9px;border:1px solid rgba(255,255,255,.55);border-radius:9px;background:transparent;color:#fff;font-size:11px;font-weight:800}
+    .screen{padding:22px 18px 34px}
+    .hidden{display:none!important}
+    .hero{text-align:center;padding:14px 0 7px}
+    .badge{display:inline-flex;padding:6px 10px;border-radius:999px;background:#fff0e6;color:var(--orange-dark);font-size:13px;font-weight:900}
+    h1{margin:15px 0 10px;font-size:clamp(27px,6vw,38px);line-height:1.22;letter-spacing:-.075em}
+    .hero p{margin:0;color:var(--muted);font-size:14px;line-height:1.6}
+    .timeline{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin:25px 0 23px;position:relative}
+    .timeline:before{content:"";position:absolute;left:12%;right:12%;top:21px;height:2px;background:#ffd4bd}
+    .step{position:relative;z-index:1;text-align:center}
+    .step-no{display:grid;place-items:center;width:42px;height:42px;margin:0 auto 7px;border:2px solid #ffc39f;border-radius:50%;background:#fff;color:var(--orange-dark);font-weight:900}
+    .step-label{font-size:11px;line-height:1.3;font-weight:800;color:#4b5563}
+    .info-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:20px 0}
+    .info-box{padding:14px 7px;border:1px solid var(--line);border-radius:13px;background:#fff;text-align:center}
+    .info-box strong{display:block;color:var(--orange-dark);font-size:18px}
+    .info-box span{display:block;margin-top:3px;color:var(--muted);font-size:11px}
+    .notice{margin:18px 0;padding:14px 15px;border-radius:13px;background:var(--soft);color:#70411e;font-size:13px;line-height:1.55}
+    .primary{width:100%;padding:14px 16px;border-radius:12px;background:var(--orange);color:#fff;font-weight:900;font-size:15px;box-shadow:0 8px 18px rgba(243,112,33,.2)}
+    .primary:hover,.primary:focus-visible{background:var(--orange-dark)}
+    .quiz-head,.review-head{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:10px}
+    .progress-label{color:var(--orange-dark);font-size:14px;font-weight:900}
+    .source-label{color:var(--muted);font-size:12px;font-weight:800}
+    .progress-track{height:7px;margin-bottom:18px;border-radius:999px;background:#f3e5dd;overflow:hidden}
+    .progress-fill{height:100%;border-radius:inherit;background:var(--orange);transition:width .2s ease}
+    .question-card,.result-card,.review-card,.complete-card{border:1px solid var(--line);border-radius:18px;background:#fff}
+    .question-card{padding:20px 17px}
+    .question-number{margin-bottom:11px;color:var(--orange-dark);font-size:13px;font-weight:900}
+    .question-text{margin:0;white-space:pre-line;font-size:19px;line-height:1.55;letter-spacing:-.045em}
+    .choices{display:grid;gap:10px;margin-top:20px}
+    .choice{display:flex;align-items:flex-start;gap:10px;width:100%;padding:13px 12px;border:1px solid #d9dde2;border-radius:12px;background:#fff;color:var(--ink);text-align:left;line-height:1.45}
+    .choice:hover,.choice:focus-visible{border-color:#f5a678;background:#fffaf7}
+    .choice.selected{border-color:var(--orange);background:#fff3eb;box-shadow:0 0 0 2px #ffe1cd}
+    .choice-number{display:grid;place-items:center;flex:0 0 26px;width:26px;height:26px;border-radius:50%;background:#f1f3f5;color:#5b6470;font-size:12px;font-weight:900}
+    .choice.selected .choice-number{background:var(--orange);color:#fff}
+    .choice-text{font-size:14px;white-space:pre-line}
+    .quiz-nav,.review-nav{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:16px}
+    .nav-button{padding:12px 10px;border:1px solid #d9dde2;border-radius:11px;background:#fff;color:#4b5563;font-size:13px;font-weight:900}
+    .nav-button:hover:not(:disabled),.nav-button:focus-visible{border-color:#f0a272;color:var(--orange-dark)}
+    .nav-button:disabled{opacity:.4}
+    .nav-button.next,.nav-button.submit,.nav-button.complete{border-color:var(--orange);background:var(--orange);color:#fff}
+    .nav-button.submit,.nav-button.complete{grid-column:1/-1}
+    .quit-button{display:block;margin:18px auto 0;padding:5px 8px;background:transparent;color:#9aa1aa;font-size:11px;text-decoration:underline}
+    .validation-note{margin:13px 0 0;padding:11px 12px;border-radius:10px;background:#fff4df;color:#8a5a16;font-size:12px;font-weight:700}
+    .result-card{padding:21px 17px;text-align:center}
+    .result-kicker{margin:0;color:var(--muted);font-size:13px;font-weight:800}
+    .score{margin:7px 0 0;color:var(--orange-dark);font-size:42px;font-weight:950;letter-spacing:-.07em}
+    .score-sub{margin:3px 0 0;color:var(--muted);font-size:13px}
+    .wrong-summary{margin:18px 0 0;padding:14px;border-radius:12px;background:var(--red-bg);color:#7c2222;text-align:left;font-size:13px;line-height:1.55}
+    .wrong-summary strong{display:block;margin-bottom:4px;color:var(--red)}
+    .review-card{padding:19px 17px}
+    .review-choice{position:relative;display:flex;align-items:flex-start;gap:10px;width:100%;margin-top:9px;padding:12px;border:1px solid #d9dde2;border-radius:11px;background:#fff;text-align:left}
+    .review-choice.correct{border-color:#8bc99e;background:var(--green-bg);color:#155d2c}
+    .review-choice.wrong-selected{border-color:#eba0a0;background:var(--red-bg);color:#8c2424}
+    .review-choice-number{display:grid;place-items:center;flex:0 0 25px;width:25px;height:25px;border-radius:50%;background:#eef0f2;color:#5d6670;font-size:12px;font-weight:900}
+    .review-choice.correct .review-choice-number{background:var(--green);color:#fff}
+    .review-choice.wrong-selected .review-choice-number{background:var(--red);color:#fff}
+    .review-choice-text{font-size:14px;line-height:1.45;white-space:pre-line}
+    .choice-mark{margin-left:auto;flex:0 0 auto;font-size:11px;font-weight:900}
+    .review-status{margin-top:15px;padding:11px 12px;border-radius:10px;background:#f7f8fa;color:#4b5563;font-size:13px;font-weight:800}
+    .explanation{margin-top:14px;padding:14px;border-left:4px solid var(--orange);border-radius:0 11px 11px 0;background:#fff8f3}
+    .explanation strong{display:block;margin-bottom:6px;color:var(--orange-dark);font-size:13px}
+    .explanation span{display:block;white-space:pre-line;color:#4b5563;font-size:13px;line-height:1.6}
+    .complete-card{padding:31px 18px;text-align:center}
+    .complete-icon{font-size:42px}
+    .complete-card h2{margin:12px 0 7px;font-size:25px;letter-spacing:-.06em}
+    .complete-card p{margin:0;color:var(--muted);font-size:14px;line-height:1.6}
+    .footer-note{margin:21px 0 0;color:#a0a6ad;text-align:center;font-size:11px}
+    .site-footer{padding:22px 14px 34px;border-top:1px solid var(--line);color:#8a929b;text-align:center;font-size:11px}
+    .footer-nav{display:flex;justify-content:center;flex-wrap:wrap;gap:8px 14px;margin-bottom:10px;color:var(--orange-dark);font-weight:900}
+    .footer-nav a{color:inherit;text-decoration:none}
+    .footer-nav a:hover,.footer-nav a:focus-visible{text-decoration:underline}
+    @media(max-width:520px){.screen{padding:20px 14px 30px}.topbar{padding-left:14px;padding-right:14px}.brand{font-size:16px}.subbrand{font-size:11px}.student-name{display:none}.question-text{font-size:18px}.choice-text{font-size:13px}}
+    @media(max-width:370px){.timeline{gap:2px}.step-label{font-size:10px}.info-box strong{font-size:16px}.info-box span{font-size:10px}}
+    @media(prefers-reduced-motion:reduce){.progress-fill{transition:none}}
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-title-row"><div class="site-title">2026 손해보험 자격시험 온라인학습실[8월 개정판]</div></div>
+    <nav class="top-menu" aria-label="주요 메뉴">
+      <a class="top-menu-link" href="./학습실.html">홈</a>
+      <a class="top-menu-link" href="./자격시험안내.html">자격시험 안내</a>
+      <a class="top-menu-link" href="./강의목차.html">동영상 강의보기</a>
+      <a class="top-menu-link active" href="./index.html" aria-current="page">모의고사 테스트</a></nav>
+  </header>
+  <div class="app">
+    <main>
+      <section id="startScreen" class="screen">
+        <button id="startButton" class="primary" type="button">80문항 학습시작</button>
+      </section>
+
+      <section id="quizScreen" class="screen hidden">
+        <div class="quiz-head">
+          <span id="quizProgress" class="progress-label"></span>
+          <span id="quizSource" class="source-label"></span>
+        </div>
+        <div class="progress-track" aria-hidden="true"><div id="quizProgressFill" class="progress-fill"></div></div>
+        <article class="question-card">
+          <div id="quizNumber" class="question-number"></div>
+          <h2 id="quizQuestion" class="question-text"></h2>
+          <div id="quizChoices" class="choices"></div>
+        </article>
+        <p id="validationNote" class="validation-note hidden"></p>
+        <div class="quiz-nav">
+          <button id="prevButton" class="nav-button" type="button">이전 문제</button>
+          <button id="nextButton" class="nav-button next" type="button">다음 문제</button>
+          <button id="submitButton" class="nav-button submit hidden" type="button">80문제 제출하고 채점</button>
+        </div>
+        <button id="quitButton" class="quit-button" type="button">학습을 중단하고 처음으로</button>
+      </section>
+
+      <section id="resultScreen" class="screen hidden">
+        <div class="result-card">
+          <p class="result-kicker">80문항 학습 결과</p>
+          <div id="scoreText" class="score"></div>
+          <p id="scoreSub" class="score-sub"></p>
+          <div id="wrongSummary" class="wrong-summary"></div>
+          <button id="reviewButton" class="primary" type="button">오답노트 시작</button>
+          <button id="resultHomeButton" class="quit-button" type="button">처음으로 돌아가기</button>
+        </div>
+      </section>
+
+      <section id="reviewScreen" class="screen hidden">
+        <div class="review-head">
+          <span id="reviewProgress" class="progress-label"></span>
+          <span id="reviewSource" class="source-label"></span>
+        </div>
+        <div class="progress-track" aria-hidden="true"><div id="reviewProgressFill" class="progress-fill"></div></div>
+        <article class="review-card">
+          <div id="reviewNumber" class="question-number"></div>
+          <h2 id="reviewQuestion" class="question-text"></h2>
+          <div id="reviewChoices"></div>
+          <div id="reviewStatus" class="review-status"></div>
+          <div class="explanation"><strong>공식 해설</strong><span id="reviewExplanation"></span></div>
+        </article>
+        <div class="review-nav">
+          <button id="reviewPrevButton" class="nav-button" type="button">이전 오답</button>
+          <button id="reviewNextButton" class="nav-button next" type="button">다음 오답</button>
+          <button id="reviewCompleteButton" class="nav-button complete hidden" type="button">오답노트 완료</button>
+        </div>
+      </section>
+
+      <section id="completeScreen" class="screen hidden">
+        <div class="complete-card">
+          <div class="complete-icon">✓</div>
+          <h2>학습이 끝났습니다.</h2>
+          <p id="completeText">80문항 풀이와 오답노트 확인을 완료했습니다.</p>
+          <button id="completeHomeButton" class="primary" type="button" style="margin-top:22px">처음으로 돌아가기</button>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <nav class="footer-nav" aria-label="하단 공통 메뉴"><a href="./학습실.html">홈</a><a href="./자격시험안내.html">자격시험 안내</a><a href="./강의목차.html">동영상 강의보기</a><a href="./index.html">모의고사 테스트</a></nav>
+      개발저작권 @career_educator
+    </footer>
+  </div>
+
+  <script>
+    const questions = [{"id":"1-18","type":1,"n":1,"sourceN":18,"q":"완전판매를 위한 3대 기본지키기에서 청약서 부본(사본) 전달에 대한 설명으로 옳은 것은? [4점]","c":["보험계약 체결시 약관에 기재된 보험상품의 내용, 보상하는 손해 등 약관의 중요한 내용을 설명해야 하는 것을 말한다","보험계약 체결시 보험계약자가 작성한 청약서의 사본(부본)을 보험계약자에게 제공하여 본인의 계약내용에 대해 확인할 수 있도록 안내해야 하는 것을 말한다","보험계약 청약시 청약서에서 질문한 사항에 대하여 알고 있는 사실을 반드시 사실대로 보험회사에 알려야 하는 것을 말한다","보험계약 체결시 보험계약자 및 피보험자로부터 청약서, 고지사항(계약 전 알릴 의무), 상품설명서, 신분증 정보 등 자필서명을 받아야 하는 것을 말한다"],"a":2,"e":"① 약관의 전달 및 중요한 내용 설명에 대한 내용임 ③ 고지의무에 대한 설명임 ④ 청약서 등 자필서명에 대한 설명임"},{"id":"1-19","type":1,"n":2,"sourceN":19,"q":"다음 보기의 설명에서 (  ) 안에 들어갈 내용이 알맞게 나열된 것은?\n\n실손의료보험을 모집하기 전에 중복가입 여부를 확인하여야 하며, 확인 결과 (  )로 될 자가 다른 실손의료보험계약에 이미 가입되어 있는 경우 중복보험에 의한 보험금 비례분담 등 보상방법에 관한 사항을 (  )로 될 자에게 충분히 안내하여야 한다.","c":["피보험자 - 보험수익자","보험계약자 - 보험수익자","피보험자 - 보험계약자","보험계약자 - 피보험자"],"a":3,"e":"실손의료보험의 중복가입 여부 확인에 대한 설명임"},{"id":"1-20","type":1,"n":3,"sourceN":20,"q":"보험계약의 체결 또는 모집에 관한 금지행위에 해당하지 않는 것은?","c":["계약자가 개인정보의 제공 동의를 거부하여 설계사가 계약자의 보험계약정보 조회를 중단하는 행위","보험계약의 해지를 방해하는 행위","장애인의 보험가입을 거부하는 행위","보험계약자나 피보험자가 보험상품의 중요한 사항을 보험회사에 알리는 것을 방해하거나 알리지 아니할 것을 권유하는 행위"],"a":1,"e":"보험계약자가 개인정보 제공을 거부하여 설계사가 계약자의 실손의료보험 등의 중복보험 가입여부 등을 확인할 수 없는 등 보험계약정보 조회를 중단하는 행위는 금지행위에 포함되지 않음"},{"id":"1-21","type":1,"n":4,"sourceN":21,"q":"승환계약에 관한 설명으로 틀린 것은?","c":["기존 보험계약을 부당하게 소멸시킴으로써 새로운 보험계약을 청약하게 하는 행위이다","새로운 보험계약을 청약하게 함으로써 기존 보험계약을 부당하게 소멸시키는 행위이다","「보험업법」에 따라 승환계약 체결 행위에 대해 1천만원 이하의 과태료를 부과할 수 있다","「상법」에 따라 승환계약 체결 행위에 대해 모집행위자 1인당 최고 2천만원의 제재금을 부과할 수 있다"],"a":4,"e":"2천만원 → 3천만원"},{"id":"2-18","type":2,"n":5,"sourceN":18,"q":"보험회사가 보험모집자가 보험계약을 체결하는 경우 보험계약자에게 설명의무를 생략해도 되는 경우는? [4점]","c":["기존에 가입한 보험계약서와 같은 보험회사의 보험상품에 가입을 하는 경우","기존에 가입한 손해보험회사와 같은 보험회사의 보험상품에 가입을 하는 경우","보험계약자 간에 거래의 종류·기간·금액 등 가입조건을 미리 정하고 그 범위 내에서 계속적으로 체결되는 경우","전화나 통신판매를 통해 보험계약을 체결하는 경우"],"a":3,"e":"③과 이미 가입되어 있는 보험계약과 동일한 조건으로 갱신되는 보험계약의 경우 설명의무를 이행한 것으로 봄"},{"id":"2-19","type":2,"n":6,"sourceN":19,"q":"보험계약 체결 또는 모집절차에서 금지하는 행위에 해당하지 않는 것은?","c":["특별이익을 제공하는 행위","대리·중개하는 업무를 제3자에게 위탁하거나 수수료·보수 그 밖의 대가를 지급하는 행위","자기가 모집한 계약을 타인이 모집한 것으로 또는 타인이 모집한 것을 자기가 모집한 것으로 처리하는 행위","보험안내자료 및 분쟁의 해결에 관한 사항을 설명하는 행위"],"a":4,"e":"보험안내자료 필수기재사항에 해당하는 내용으로 금지행위가 아님"},{"id":"2-20","type":2,"n":7,"sourceN":20,"q":"다음 중 보험대리점의 신고사항이 아닌 것은?","c":["보험대리점의 주소가 변경된 경우","보험대리점 대표이사의 주소·연락처가 변경된 경우","보험대리점 지점이 신설 또는 폐쇄된 경우","보험대리점 명칭을 변경하거나 폐업하는 경우"],"a":2,"e":"보험대리점의 대표이사 변경은 신고사항에 해당되지만 대표이사의 주소, 연락처 변경은 신고사항에 해당되지 않음"},{"id":"2-21","type":2,"n":8,"sourceN":21,"q":"「손해보험 공정경쟁질서유지에 관한 상호협정」에서 금지하고 있는 행위가 아닌 것은?","c":["무자격 모집위탁","특별이익 제공","보험계약의 경유처리","다른 보험설계사에 대한 허위사실 유포"],"a":4,"e":"상호협정에서 금지하는 행위가 아님"},{"id":"3-18","type":3,"n":9,"sourceN":18,"q":"보험상품 완전판매를 위한 3대 기본지키기에 해당하지 않는 것은? [4점]","c":["청약서 등 자필서명","청약서 부본 전달","보험증권 전달","약관의 전달 및 중요한 내용 설명"],"a":3,"e":"보험증권 전달은 3대 기본지키기에 해당하지 않음"},{"id":"3-19","type":3,"n":10,"sourceN":19,"q":"다음 표에서 설명하는 것은 무엇인가?\n\n보험모집을 위하여 보험계약자 등에게 제공하기 위한 목적으로 사용되는 보험안내서, 상품요약서 등의 제반 홍보물을 말한다.","c":["기초서류","보험약관","상품설명서","보험안내자료"],"a":4,"e":"보험안내자료에 대한 설명임"},{"id":"3-20","type":3,"n":11,"sourceN":20,"q":"자기계약의 금지에 대한 설명으로 알맞지 않은 것은?","c":["보험대리점에서 자기계약 금지를 위반하면 보험대리점 등록을 취소하도록 되어 있다","보험중개사는 주된 목적으로 자기 또는 자기를 고용하고 있는 자를 보험계약자 또는 피보험자로 하는 보험을 모집하지 못한다","보험계약자가 동의하는 경우 자기계약 금지에 해당하지 않는다","자기 또는 자기를 고용하고 있는 자를 보험계약자로 하는 보험의 보험료 누계액이 당해 보험대리점이 모집한 보험의 보험료 100분의 50을 초과하는 경우를 말한다"],"a":3,"e":"자기계약 금지 위반 여부는 보험계약자의 동의 여부와 관련이 없음"},{"id":"3-21","type":3,"n":12,"sourceN":21,"q":"「장애인차별금지법」 위반시 부과되는 벌칙은?","c":["1천만원 이하 벌금 - 1년 이하 징역","2천만원 이하 벌금 - 2년 이하 징역","3천만원 이하 벌금 - 3년 이하 징역","4천만원 이하 벌금 - 4년 이하 징역"],"a":3,"e":"「장애인차별금지법」 위반시 3년 이하의 징역 또는 3천만원 이하의 벌금에 처함"},{"id":"4-18","type":4,"n":13,"sourceN":18,"q":"보험모집 종사자가 보험계약 체결 권유 단계에서 설명해야 할 중요사항에 해당하지 않는 것은? [4점]","c":["보험료 납입기간 및 보험기간","고지의무 위반의 효과","해약환급금 산출근거","보험계약의 승낙절차"],"a":4,"e":"보험계약의 승낙절차는 보험계약 체결 단계의 주요 설명사항임"},{"id":"4-19","type":4,"n":14,"sourceN":19,"q":"보험설계사인 홍길동은 보험계약자에게 보험료가 1백만원인 자동차보험 계약을 신규로 모집하고, 감사의 표시로 5만원 상당의 골프공을 선물하였다. 어떤 위반행위에 해당하는가?","c":["경유계약 위반","승환계약 위반","위반사항 없음","특별이익 제공금지 위반"],"a":4,"e":"1년간 납입보험료 100만원의 10%와 3만원 중 적은 금액을 초과하는 5만원 상당의 골프공을 선물하였으므로 특별이익 제공금지 위반 행위에 해당함"},{"id":"4-20","type":4,"n":15,"sourceN":20,"q":"중고차 매매업자가 중고차 판매과정에서 자동차보험 가입의사가 있는 고객을 대리점에 소개하고 대리점으로부터 일정비율의 수수료를 받은 경우 모집질서와 관련하여 무엇을 위반한 것인가?","c":["특별이익 제공금지 위반","경유처리 금지 위반","자기계약 금지 위반","수수료 부당지급 금지 위반"],"a":4,"e":"보험모집을 할 수 있는 자 외의 자에게 모집을 위탁하여 모집에 관하여 수수료·보수 그 밖의 대가를 지급하는 것은 무자격자 모집위탁 금지 위반 및 수수료 부당지급 금지 위반에 해당함"},{"id":"4-21","type":4,"n":16,"sourceN":21,"q":"보험계약정보를 제3자에게 제공할 수 있는 경우로 알맞은 것은?","c":["보험협회 등에 정보를 제공하는 경우","고객에게 상품 또는 서비스를 판매할 목적으로 사용하는 경우","고객으로부터 서면동의를 받은 경우","중복보험 가입여부를 조회하는 경우"],"a":3,"e":"①, ②, ④의 경우에도 고객으로부터 해당 정보제공에 대해 서면 등의 방법으로 동의를 받아야 함"},{"id":"5-18","type":5,"n":17,"sourceN":18,"q":"다음 중 보험상품 완전판매를 위한 약관의 전달 및 중요한 내용 설명에 대한 내용으로 옳지 않은 것은? [4점]","c":["약관에 기재된 보험상품의 내용, 보상하는 손해, 보상하지 않는 손해 등 약관의 중요한 내용을 설명해야 한다","보험약관은 분량이 많고 이해하기 어려운 보험전문용어로 설명되어 있는 부분들이 많으므로 중요한 내용에 대해 충분히 설명해야 한다","중요한 내용은 일반적으로 보장개시일, 보험금 지급사유, 보험계약의 해지사유, 보험회사의 면책사유 등에 해당하지 않으며 보험금액의 권리·의무에 대한 것이다","약관 전달의 경우 청약서 부본 전달과 달리 전자우편 등 전자적 방법으로 교부할 수 없다"],"a":4,"e":"보험계약자가 동의하는 경우에는 보험약관을 광기록매체, 전자우편 등 전자적 방법으로 교부 또는 수령할 수 있음"},{"id":"5-19","type":5,"n":18,"sourceN":19,"q":"보험안내자료의 필수기재사항에 해당하지 않는 것은?","c":["보험가입에 따른 권리·의무에 관한 주요 사항","보험료 할인이 가능한 신용카드 목록 제공 서비스","해약환급금에 관한 사항","보험상담 및 분쟁의 해결에 관한 사항"],"a":2,"e":"신용카드 목록을 제공하는 서비스는 필수기재사항에 해당하지 않음"},{"id":"5-20","type":5,"n":19,"sourceN":20,"q":"보험업법상 보험계약의 모집질서 위반행위에 대한 설명으로 틀린 것은?","c":["다른 보험회사에 소속되어 있는 모집종사자에게 모집을 위탁하는 것은 위반행위에 해당한다","실제 명의인이 아닌 자의 보험계약을 모집하거나 실제 명의인의 동의가 없는 보험계약을 모집하는 행위를 경유처리라고 한다","다른 모집 종사자의 명의를 이용하여 보험계약을 모집하는 행위시 1천만원 이하의 과태료를 부과한다","보험계약자나 피보험자가 보험상품의 중요한 사항에 대하여 부실한 사항을 보험회사에 알릴 것을 권유하는 것은 위반행위에 해당한다"],"a":2,"e":"경유처리 → 허위·작성계약"},{"id":"5-21","type":5,"n":20,"sourceN":21,"q":"「손해보험 공정경쟁질서유지에 관한 상호협정」에서 금지하고 있는 행위가 아닌 것은?","c":["특별이익 제공","무자격 모집행위","보험계약 인수거절","승환계약"],"a":3,"e":"보험계약의 인수거절은 상호협정에서 금지하고 있는 행위가 아님"},{"id":"6-18","type":6,"n":21,"sourceN":18,"q":"다음 중 청약서 등 자필서명에 대한 설명으로 맞는 것은? [4점]","c":["피보험자가 미성년자인 경우에도 친권자가 대신 자필서명을 할 수 없다","보험계약자 또는 피보험자로부터 직접 서명을 받는 것을 원칙으로 한다","계약자와 피보험자가 다른 경우 계약자가 피보험자를 대리하여 서명할 수 있다","보험설계사는 보험판매 과정의 편의를 위해 보험계약자와 배우자나 가족이 대신 자필서명을 하도록 할 수 있다"],"a":2,"e":"① 미성년자인 경우 친권자가 대신 자필서명할 수 있습니다. ③ 계약자와 피보험자는 직접 서명해야 하며 대리서명은 할 수 없습니다. ④ 배우자나 가족의 대리서명도 허용되지 않습니다."},{"id":"6-19","type":6,"n":22,"sourceN":19,"q":"통신수단을 이용한 보험모집에 대한 설명 중 틀린 것은?","c":["청약자의 신원을 확인할 수 있는 증명자료가 있는 경우에도 자필서명을 받아야 한다","다른 사람의 평온한 생활을 침해하는 방법으로 모집해서는 안 된다","보험계약 체결을 위해 필요한 사항을 질문하고 그에 대한 보험계약자의 답변을 음성녹음하는 등 증거자료를 확보해야 한다","보험계약자가 체결한 계약의 내용을 확인하고자 하는 경우에는 통신수단을 이용할 수 있도록 하여야 한다"],"a":1,"e":"청약자의 신원을 확인할 수 있는 증명자료가 있는 경우 등에는 자필서명을 받지 않을 수 있습니다."},{"id":"6-20","type":6,"n":23,"sourceN":20,"q":"보험모집질서 확립을 통한 보험산업의 공시적 제고 및 보험가입자의 권익보호를 위해 「손해보험 공정경쟁질서유지에 관한 상호협정」을 운영하고 있는 기관은?","c":["보험연구원","보험개발원","손해보험협회","생명보험협회"],"a":3,"e":"손해보험 공정경쟁질서유지에 관한 상호협정을 운영하고 있는 기관은 손해보험협회입니다."},{"id":"6-21","type":6,"n":24,"sourceN":21,"q":"「손해보험 공정경쟁질서유지에 관한 상호협정」에서 무자격 모집행위를 한 경우 부과되는 제재금 최고 한도액은?","c":["3천만원","1천만원","2천만원","5천만원"],"a":1,"e":"무자격 모집행위의 제재금은 최저 10만원에서 최고 3천만원입니다."},{"id":"7-18","type":7,"n":25,"sourceN":18,"q":"보험료정산특별약정서 사용이 가능한 보험계약자의 조건은? [4점]","c":["과거 6개월간 월평균 보험계약건수 25건 이상이고 월평균 보험료가 500만원 이상","과거 6개월간 월평균 보험계약건수 25건 이상이고 월평균 보험료가 600만원 이상","과거 3개월간 월평균 보험계약건수 20건 이상이고 월평균 보험료가 500만원 이상","과거 3개월간 월평균 보험계약건수 25건 이상이고 월평균 보험료가 600만원 이상"],"a":1,"e":"보험료정산특별약정서는 과거 6개월간 월평균 보험계약건수 25건 이상, 월평균 보험료 500만원 이상인 계약자에 한해서 사용 가능함"},{"id":"7-19","type":7,"n":26,"sourceN":19,"q":"모집질서 관련 준수사항에서 특별이익의 제공에 해당하지 않는 것은?","c":["보험계약자나 피보험자를 위한 보험료의 대납","보험계약자나 피보험자가 해당 보험회사로부터 받은 대출금에 대한 이자의 대납","기초서류에서 정한 사유에 근거한 보험료의 할인 또는 수수료의 지급","기초서류에서 정한 보험금액보다 많은 보험금액의 지급"],"a":3,"e":"기초서류에 근거한 보험료의 할인 또는 수수료의 지급은 특별이익 제공에 해당하지 않음"},{"id":"7-20","type":7,"n":27,"sourceN":20,"q":"보험설계사가 준수해야 하는 모집질서 관련 금지사항이 아닌 것은?","c":["자기가 모집한 계약을 타인이 모집한 것으로 처리하는 행위","보험료를 받지 아니하고 영수증을 먼저 선발행하는 행위","자기가 고용하고 있는 자를 보험계약자 또는 피보험자로 하는 보험을 모집하는 행위","모집을 위탁한 보험회사 이외의 보험회사를 위하여 보험을 모집하는 행위"],"a":3,"e":"보험대리점(또는 보험중개사)의 자기계약 금지와 관련된 내용이며 보험설계사에는 적용되지 않음"},{"id":"7-21","type":7,"n":28,"sourceN":21,"q":"장애인차별금지 및 권리구제 등에 관한 법률(이하 「장애인차별금지법」)에 대한 설명으로 틀린 것은?","c":["누구든지 「장애인차별금지법」을 위반하여 타인에게 손해를 가한 자는 그로 인하여 피해를 입은 사람에 대하여 손해배상책임을 진다","국가인권위원회는 피해자의 진정이 없어도 장애인차별금지법 위반행위가 있다고 믿을 만한 상당한 근거가 있고 그 내용이 중대하다고 인정할 때에는 이를 직권으로 조사할 수 있다","장애인차별금지법에서 금지한 차별행위를 행하고 그 행위가 악의적인 것으로 인정되는 경우 법원은 차별한 자에 대하여 3년 이하의 징역 또는 3천만원 이하의 벌금에 처한다","국가인권위원회의 시정명령을 정당한 사유 없이 이행하지 않은 경우 3천만원 이하의 과태료를 부과받을 수 있다"],"a":4,"e":"국가인권위원회 → 법무부 장관"},{"id":"8-18","type":8,"n":29,"sourceN":18,"q":"모집심사 및 상품설명제에 대한 설명으로 맞는 것은? [4점]","c":["모집종사자는 보험계약자에게 제공하는 설명서에 소속, 성명, 주민번호, 주소 등을 기재해야 한다","모집질서를 위반하면 「보험업법」에 따라 1천만원 이하의 과태료가 부과될 수 있다","이미 가입되어 있는 보험계약과 동일한 조건으로 갱신되는 보험계약도 설명의무를 이행하여야 한다","통신수단을 이용한 보험모집의 경우에도 상품설명서는 자필서명을 받아야 한다"],"a":2,"e":"① 소속, 성명, 연락처 등을 기재해야 하며 주민번호, 주소 등은 기재하지 않음 ③ 설명의무를 이행한 계약이 동일한 조건으로 갱신되는 경우 설명한 것으로 봄 ④ 표준상품설명대본을 통해 설명한 내용을 이해했음을 녹취로 확인함"},{"id":"8-19","type":8,"n":30,"sourceN":19,"q":"보험계약자가 컴퓨터통신을 이용하여 체결한 계약을 해지하려는 경우에 보험회사가 확인해야 할 내용으로 틀린 것은?","c":["보험회사가 확인해야 할 내용과 관련이 없다","보험계약자 본인인지 여부","계약체결 전에 통신수단을 이용한 계약체결에 동의하였는지 여부","타인을 위한 보험계약인 경우 피보험자가 동의하였는지 여부"],"a":1,"e":"보험회사가 확인해야 할 내용과 관련 없음"},{"id":"8-20","type":8,"n":31,"sourceN":20,"q":"다음에서 보험계약의 체결 또는 모집에 관한 금지사항에 해당하지 않는 것은?","c":["보험계약자와 대출관계를 이용하여 보험계약을 청약하게 하는 행위","보험상품의 중요한 사항에 대하여 보험회사에 알릴 것을 권유하는 행위","보험계약자에게 보험상품의 중요한 사항을 알리지 않는 행위","보험계약자의 자필서명을 위조하는 행위"],"a":4,"e":"①, ②, ③은 계약체결 또는 모집에 관한 금지사항에 해당함"},{"id":"8-21","type":8,"n":32,"sourceN":21,"q":"다음 보기의 내용은 「손해보험 공정경쟁질서유지에 관한 상호협정」상 어떤 위반행위에 해당하는가?\n\n보험대리점 소속 설계사 김씨는 보험회사 소속 설계사 황씨가 모집한 계약을 자신이\n모집한 것으로 하여 황씨에게 자기가 받은 수당 일부를 지급하였다","c":["승환계약","무자격 모집행위","특별이익 제공","보험계약 경유 처리"],"a":4,"e":"보험계약의 경유 처리 위반에 해당됨"},{"id":"9-18","type":9,"n":33,"sourceN":18,"q":"보험금 청구 단계에서 계약자에게 설명하여야 하는 사항에 해당하지 않는 것은? [4점]","c":["보험금 청구 담당부서 및 연락처","해약환급금의 손실 발생 가능성","보험금 청구에 필요한 서류","보험금 심사 절차"],"a":2,"e":"해약환급금의 손실 발생 가능성은 보험계약 체결 권유 단계에서 설명해야 함"},{"id":"9-19","type":9,"n":34,"sourceN":19,"q":"「보험업법」상 금지되는 특별이익의 제공에 해당하지 않는 것은?","c":["상해보험의 기초서류에 근거하여 직업별 위험도를 반영한 보험료의 할인","기초서류에서 정한 보험금액보다 많은 보험금의 지급 약정","보험계약자나 피보험자를 위한 보험료의 대납","금품(대통령령으로 정하는 금액을 초과하지 아니하는 금품 제외) 제공"],"a":1,"e":"직업에 따른 위험도를 반영한 보험료 차등 적용을 허용하고 있으므로 특별이익 제공에 해당되지 않음"},{"id":"9-20","type":9,"n":35,"sourceN":20,"q":"다음 (   ) 안에 들어갈 내용으로 올바른 것은?\n\n「금소법」에서는 금융상품판매업자·중개업자가 금지행위를 위반한 자에게는 (   ) 이하의 과태료를 부과하도록 되어 있다.","c":["1억원","5천만원","3천만원","1천만원"],"a":1,"e":"「금소법」에서는 금융상품판매업자·중개업자의 금지행위를 위반한 금융상품판매업자·중개업자에 대하여 1억원 이하의 과태료를 부과하도록 되어 있음"},{"id":"9-21","type":9,"n":36,"sourceN":21,"q":"수집한 개인정보가 불필요하게 되었을 때에는 해당 개인정보를 파기하여야 하는데 다음 중 파기의 방법이 잘못된 것은?","c":["전자적 파일형태 - 복구가 불가능하도록 포맷이나 삭제전용 소프트웨어를 사용하여 파기","기록물, 인쇄물 - 파쇄 또는 소각","서면류 - 파쇄 또는 소각","청약서류 - 사본저장 후 파쇄 또는 소각"],"a":4,"e":"사본을 저장하는 것은 개인정보 파기방법이 아님"},{"id":"10-18","type":10,"n":37,"sourceN":18,"q":"보험계약 체결 단계에서 보험회사가 보험계약자에게 설명해야 할 중요사항에 해당하지 않는 것은? [4점]","c":["보험의 모집에 종사하는 자의 성명, 연락처 및 소속","보험계약 승낙거절시 거절 사유","보험의 모집에 종사하는 자가 보험회사를 위하여 보험계약의 체결을 대리할 수 있는지 여부","보험금 심사 절차, 예상 심사기간 및 예상 지급일"],"a":4,"e":"보험금 청구 단계의 주요 설명사항에 해당함"},{"id":"10-19","type":10,"n":38,"sourceN":19,"q":"보험계약의 체결 또는 모집에 관한 금지사항에 해당하지 않는 것은?","c":["계약자에게 보험상품의 중요한 내용을 알리지 아니하는 행위","계약자와의 금전대차관계를 이용하여 보험계약을 청약하게 하는 행위","보험상품의 중요한 사항을 회사에 알리는 것을 방해하거나 알리지 아니할 것을 권유하는 행위","보험금 지급제한 조건에 대해 설명하는 행위"],"a":4,"e":"보험안내자료 필수기재사항에 해당하여 금지사항에 해당하지 않음"},{"id":"10-20","type":10,"n":39,"sourceN":20,"q":"「보험업법상 신고의무 위반시 부과되는 과태료 기준으로 맞는 것은?","c":["1천만원 이하 과태료","2천만원 이하 과태료","1백만원 이하 과태료","5백만원 이하 과태료"],"a":1,"e":"보험설계사, 보험대리점, 보험중개사는 등록신청시 제출한 서류에 기재된 사항이 변경된 경우 보험협회에 신고해야 하며 이를 위반시 1천만원 이하의 과태료가 부과될 수 있음"},{"id":"10-21","type":10,"n":40,"sourceN":21,"q":"다음 보기의 (   ) 안에 공통으로 들어갈 숫자는?\n\n손해보험협회는 2010년부터 소속 설계사 (   )인 미만의 보험대리점에 대하여 위탁검사를 실시하고 있다. 다만, 금융감독원에서 공문을 통해 검사를 요청하는 보험대리점에 대해서는 소속 보험설계사 규모에 관계없이 (   )인 이상의 대리점에 대해서도 검사를 실시할 수 있다.","c":["100","200","50","150"],"a":1,"e":"손해보험협회는 소속 설계사 100인 미만의 보험대리점에 대해 위탁검사를 실시하고 있음"},{"id":"11-18","type":11,"n":41,"sourceN":18,"q":"보험계약의 완전판매에 대한 설명으로 옳지 않은 것은? [4점]","c":["모집사실명제를 위반할 경우에는 1천만원 이하의 과태료가 부과된다","전문금융소비자를 대상으로 하는 경우에는 단계별 설명의무가 적용되지 않는다","3대 기본지키기는 청약서 등 자필서명, 청약서 부본 전달, 상품설명서 제공을 말한다","단계별 설명의무로 보험계약 체결 권유 단계에서 해약환급금에 대한 설명을 하여야 한다"],"a":3,"e":"상품설명서 제공 → 약관의 전달 및 중요한 내용 설명"},{"id":"11-19","type":11,"n":42,"sourceN":19,"q":"보험안내자료에 대한 설명으로 틀린 것은?","c":["전문보험계약자가 체결하는 보험계약의 경우에 일반금융소비자와 같이 보험안내자료를 제공하여야 한다","보험계약을 체결하는 경우 계약자 보관용 청약서, 설명서, 약관, 보험증권을 제공하여야 한다","보험안내자료는 보험계약자 특정인에게 제공되는 홍보물을 말하며, 불특정다수에게 제공되는 홍보물은 모집광고로 본다","사업연도 만료일 기준 1년 이상 유지된 계약은 보험계약관리내용을 연 1회 이상 제공하여야 한다"],"a":1,"e":"일반금융소비자에게 보험계약 체결 권유 또는 일반금융소비자가 설명을 요청하는 경우 상품설명서 등을 제공하여야 하나 전문보험계약자가 체결하는 보험계약은 제외함"},{"id":"11-20","type":11,"n":43,"sourceN":20,"q":"대리점이 보험설계사 위촉시 위탁계약서를 작성하지 않았을 경우 처벌은?","c":["100만원 이하 과태료","500만원 이하 과태료","1천만원 이하 과태료","3천만원 이하 과태료"],"a":3,"e":"보험회사 등이 보험설계사에게 보험계약의 모집을 위탁할 때 위탁계약서 미교부, 계약사항 미이행시 1천만원 이하의 과태료를 부과받을 수 있음"},{"id":"11-21","type":11,"n":44,"sourceN":21,"q":"손해보험협회에서 운영하는 장애인 및 장기기증자 보험가입 차별 신고센터에 신고할 수 없는 자는?","c":["장애인","장기기증자","장애인 및 장기기증자의 대리인","보험회사 직원"],"a":4,"e":"신고 주체는 장애인·장기기증자 본인 및 대리인임"},{"id":"12-18","type":12,"n":45,"sourceN":18,"q":"보험계약 체결 권유 단계에서 설명하여야 할 내용으로 옳지 않은 것은? [4점]","c":["보험의 모집에 종사하는 자의 성명·연락처 및 소속","보험금 지급단계시 유의 및 지급절차","보험료 납입기간 및 보험기간","고지의무·통지의무 위반의 효과"],"a":1,"e":"보험계약 체결 단계에서 설명하여야 할 사항임"},{"id":"12-19","type":12,"n":46,"sourceN":19,"q":"보험계약의 체결 또는 모집에 관한 금지행위에 해당하지 않는 것은?","c":["보험상품의 중요한 사항을 보험회사에 알리는 것을 방해하거나 알리지 아니할 것을 권유하는 행위","비교의 대상 및 근거를 분명하게 밝히지 않고 다른 보험상품과 비교하여 유리하다고 알리는 행위","부당한 계약전환을 통해 새로운 계약을 청약하게 하는 행위","제1회 보험료 납입 후 보장이 개시된다고 설명하는 행위"],"a":4,"e":"보험계약자에게 설명해야 하는 사항에 해당함(보장개시일은 약관 설명의무의 중요한 사항에 해당함)"},{"id":"12-20","type":12,"n":47,"sourceN":20,"q":"실제 명의인이 아닌 자의 보험계약을 모집하거나 실제 명의인의 동의가 없는 보험계약을 모집하는 행위의 처벌은?","c":["과태료 5천만원 이하","과태료 3천만원 이하","과태료 2천만원 이하","과태료 1천만원 이하"],"a":4,"e":"보험계약의 체결 또는 모집에 관한 금지행위에 해당하며 「보험업법」에서는 1천만원 이하의 과태료를 부과함"},{"id":"12-21","type":12,"n":48,"sourceN":21,"q":"「손해보험 공정경쟁질서유지에 관한 상호협정」에 따른 처벌 기준으로 틀린 것은?","c":["특별이익을 제공한 경우 제재금이 부과된다","다른 회사에 대해 허위사실을 유포하거나 모함하는 경우 처벌되지 않는다","무자격 모집행위에 대해서는 제재금이 부과될 수 있다","보험계약의 경유처리를 한 경우 제재금이 부과될 수 있다"],"a":2,"e":"다른 회사를 모함하거나 허위사실 등을 유포하는 경우 최고 3천만원~최고 1천만원의 제재금 부과"},{"id":"13-18","type":13,"n":49,"sourceN":18,"q":"완전판매를 위한 3대 기본지키기 중 \u0027약관의 전달 및 중요한 내용 설명\u0027에 대한 설명으로 맞는 것은? [4점]","c":["보험계약자 및 피보험자로부터 청약서, 상품설명서 등에 직접 서명날인 받는 것을 말한다","계약자에게 약관을 전달하고 약관에 기재된 보험상품의 내용, 보상하는 손해, 보상하지 않는 손해 등 약관의 중요한 내용을 설명하는 것을 말한다","보험계약자가 작성한 청약서의 사본(부분)을 보험계약자에게 제공하여 본인의 계약내용에 대해 확인할 수 있도록 안내하는 것을 말한다","보험계약자 또는 이들의 대리인이 청약서(질문서 포함)에서 질문한 사항에 대하여 알고 있는 사실을 반드시 사실대로 보험회사에 알려야 하는 것을 말한다"],"a":2,"e":"① 청약서 등 자필서명에 대한 설명 ③ 청약서 부본 전달에 대한 설명 ④ 계약 전 알릴 의무에 대한 설명"},{"id":"13-19","type":13,"n":50,"sourceN":19,"q":"보험계약자가 전화를 이용하여 체결한 계약을 해지하고자 할 때 보험회사가 확인해야 할 내용이 아닌 것은?","c":["보험계약자 본인 여부","계약체결 전에 통신수단을 이용한 계약해지 동의 여부","타인을 위한 보험계약인 경우 피보험자 등의 여부","보험계약 체결시 청약서 자필서명 여부"],"a":4,"e":"청약서 자필서명 여부는 확인사항이 아님"},{"id":"13-20","type":13,"n":51,"sourceN":20,"q":"「손해보험 공정경쟁질서유지에 관한 상호협정」에 대한 설명으로 틀린 것은?","c":["「보험업법」에서 규정하고 있는 금지행위와 제재에 관한 내용을 담고 있다","상호협정의 금지행위를 위반한 경우 협정에 따른 제재금을 납부하여야 한다","보험모집질서 확립과 보험계약자 권익보호를 위해 운영된다","상호협정은 보험회사만 대상으로 하고 보험설계사에 대해서는 적용하지 않는다"],"a":4,"e":"보험회사와 그 소속 모집종사자(임직원, 보험설계사, 보험대리점 및 소속 설계사)가 적용 대상임"},{"id":"13-21","type":13,"n":52,"sourceN":21,"q":"장애인 차별행위 시정권고를 이행하지 않을 때 시정명령을 하는 사람은?","c":["법무부장관","국가인권위원회 위원장","금융감독원장","금융위원회 위원장"],"a":1,"e":"「장애인차별금지법」에서 금지하고 있는 행위에 대해 국가인권위원회가 시정권고하고, 시정권고 불이행시 법무부 장관이 시정명령을 내림"},{"id":"14-18","type":14,"n":53,"sourceN":18,"q":"보험계약의 단계별 설명의무에 대한 설명으로 맞는 것은? [4점]","c":["단계별 설명의무는 보험업법과 상법에 규정되어 있다","일반보험계약자가 설명을 거부하는 경우에는 보험계약 체결 단계를 설명하지 않아도 된다","보험계약 체결 단계에서 주계약 보험료, 보험계약의 승낙절차 등을 설명하여야 한다","보험계약 체결 권유 단계에서 설명내용 확인 방법은 서명날인만 허용된다"],"a":2,"e":"① 「보험업법」과 「금소법」에 규정되어 있음 ③ 주계약 보험료는 보험계약 체결 권유 단계에서, 보험계약의 승낙절차는 보험계약 체결 단계에서 설명 ④ 녹취, 기명날인도 가능"},{"id":"14-19","type":14,"n":54,"sourceN":19,"q":"보험업법 제95조에 따른 보험안내자료 필수기재사항에 해당하지 않는 것은?","c":["약관으로 정하는 보장에 관한 사항","해약환급금에 관한 사항","보험상담 및 분쟁의 해결에 관한 사항","특별이익 제공금지에 관한 사항"],"a":4,"e":"특별이익 제공금지에 관한 사항은 「보험업법」 제98조에 따라 보험모집시 금지되는 사항으로 보험안내자료 필수기재사항에 해당되지 않음"},{"id":"14-20","type":14,"n":55,"sourceN":20,"q":"다음은 「보험업법」상 자기계약의 금지에 대한 설명이다. (   ) 안에 들어갈\n내용으로 적절한 것은?\n\n보험대리점 또는 보험중개사가 모집한 자기 또는 자기를 고용하고 있는 자를 보험계약자나 피보험자로 하는 보험의 보험료 누계액이 당해 보험대리점 또는 보험중개사가 모집한 보험의 보험료의 100분의 (   )을 초과하게 된 경우에는 이를 자기 또는 자기를 고용하고 있는 자를 보험계약자 또는 피보험자로 하는 보험을 모집하는 것을 주된 목적으로 한 것으로 본다","c":["20","30","40","50"],"a":4,"e":"보험대리점 또는 보험중개사의 자기계약에 대한 설명임"},{"id":"14-21","type":14,"n":56,"sourceN":21,"q":"보험회사는 정상적인 보험서비스를 제공하기 위하여 반드시 보험계약자에게 개인신용정보의 제공·활용 동의를 얻어야 하는데 다음 중 보험계약정보를 제공하는 기관이 아닌 곳은?","c":["금융결제원","손해보험협회","보험개발원","보험계약 관련 업무를 위탁한 자"],"a":1,"e":"보험계약정보는 보험협회, 보험개발원, 신용정보원, 보험계약 관련 업무를 위탁한 자 등에 제공함"},{"id":"15-18","type":15,"n":57,"sourceN":18,"q":"다음 보기의 (   ) 안에 들어갈 말이 바르게 짝지어진 것은? [4점]\n\n보험회사는 보험기간이 시작되기 전에 보험료를 수납하여야 한다. 단 기초서류에 의한 ((가)) 또는 ((나))이 승인한 특별약정서가 있는 경우에는 보험기간이 시작된 이후에도 보험료 수납이 가능하다","c":["(가) 보험료 분납특약, (나) 금융감독원장","(가) 보험료 분납특약, (나) 금융위원회위원장","(가) 보험료 정기수납, (나) 손해보험협회장","(가) 보험료 정기수납, (나) 보험개발원장"],"a":1,"e":"보험료 영수제도에 대한 설명임"},{"id":"15-19","type":15,"n":58,"sourceN":19,"q":"특별이익 제공에 해당하지 않는 것은?","c":["보험계약 체결시부터 최초 1년간 납입되는 보험료가 30만원인 상품을 계약하고 2만원 상당의 사은품을 제공","인터넷 홈페이지를 통해 보험가입시 감사표시로 5만원 상당의 사은품 지급 약속","기초서류에서 정한 보험금액보다 많은 보험금액의 지급 약속","계약체결 후 초회 보험료의 대납"],"a":1,"e":"보험계약 체결시부터 최초 1년간 납입되는 보험료의 100분의 10과 3만원 중 적은 금액을 제공하는 경우에는 특별이익에 해당하지 않음"},{"id":"15-20","type":15,"n":59,"sourceN":20,"q":"다음 중 보험대리점의 신고사항에 해당되지 않는 것은?","c":["보험대리점의 지점 신설","보험대리점의 폐업","소속 보험설계사 수 증가","보험대리점의 주소 변경"],"a":3,"e":"보험설계사 수 증가 및 감소는 신고사항에 해당되지 않음"},{"id":"15-21","type":15,"n":60,"sourceN":21,"q":"「손해보험 공정경쟁질서유지에 관한 상호협정」에서 모집종사자가 특별이익을 제공한 경우 제재금 부과 한도는?","c":["최저 20만원 - 최고 1천만원","최저 50만원 - 최고 2천만원","최저 10만원 - 최고 5백만원","최저 1백만원 - 최고 3천만원"],"a":4,"e":"모집종사자가 특별이익을 제공한 경우 최저 1백만원~최고 3천만원의 제재금을 부과함"},{"id":"16-18","type":16,"n":61,"sourceN":18,"q":"완전판매를 위한 3대 기본지키기 중 \u0027청약서 등 자필서명\u0027에 대한 설명으로 맞는 것은? [4점]","c":["계약자나 피보험자 또는 이들의 대리인이 청약서(질문서 포함)에서 질문한 사항에 대하여 알고 있는 사실을 반드시 사실대로 보험회사에 알려야 하는 것을 말한다","보험계약자 및 피보험자로부터 청약서, 상품설명서 등에 직접 서명날인 받는 것을 말한다","보험계약자가 작성한 청약서의 사본(부본)을 보험계약자에게 제공하여 본인의 계약내용에 대해 확인할 수 있도록 안내하는 것을 말한다","보험계약자에게 약관을 전달하고 약관에 기재된 보험상품의 내용, 보상하는 손해, 보상하지 않는 손해 등 약관의 중요한 내용을 설명하는 것을 말한다"],"a":2,"e":"① 계약 전 알릴 의무에 대한 설명 ③ 청약서 부본 전달에 대한 설명임 ④ 약관의 전달 및 중요한 내용 설명에 대한 설명임"},{"id":"16-19","type":16,"n":62,"sourceN":19,"q":"「보험업법」에서 규정하는 보험안내자료에 대한 설명으로 알맞은 것은?","c":["계약자에게 제공되는 약관 및 광고를 포함한다","보험설계사가 임의로 작성하여 사용할 수 있고 법적 규제가 없다","모집단계별로 계약자에게 제공되는 홍보물을 포함한다","불특정다수에게 제공되는 홍보물을 포함한다"],"a":3,"e":"① 광고는 「금소법」에 따른 모집광고에 해당함 ② 보험설계사가 임의로 작성하여 사용할 수 없고 「보험업법」 등에서 엄격히 규제하고 있음 ④ 「금소법」에 따른 모집광고에 해당함"},{"id":"16-20","type":16,"n":63,"sourceN":20,"q":"보험계약자 또는 피보험자로 하여금 이미 성립된 보험계약을 부당하게 소멸시킴으로써 새로운 보험계약을 청약하게 하거나 새로운 보험계약을 청약하게 함으로써 기존 보험계약을 부당하게 소멸시키거나 그 밖에 부당하게 보험계약을 청약하게 하거나 이러한 것을 권유하여 체결되는 계약은?","c":["작성계약","부당계약","승환계약","유효계약"],"a":3,"e":"승환계약에 대한 설명"},{"id":"16-21","type":16,"n":64,"sourceN":21,"q":"다음 표에서 (   ) 안에 들어갈 내용으로 맞는 것은?\n\n개인의 보험계약정보는 개인에 관한 (   )정보로서 신용정보법에 준하여 보호받고 있으며 정보유출 등으로 인한 소비자의 2차 피해를 막기 위해 보험회사의 임직원 및 모집종사자들의 철저한 고객정보 관리·감독이 필요하다","c":["카드","보험","신용","개인"],"a":3,"e":"보험계약정보 보호에 대한 설명"},{"id":"17-18","type":17,"n":65,"sourceN":18,"q":"보험계약 체결 단계에서 보험회사가 보험계약자에게 설명해야 할 중요사항에 해당하지 않는 것은? [4점]","c":["보험료 감액 청구","보험의 모집에 종사하는 자의 성명, 연락처","보험계약의 승낙절차","보험계약 승낙거절시 거절 사유"],"a":1,"e":"보험료 감액 청구는 보험계약 체결 권유 단계의 주요 설명사항임"},{"id":"17-19","type":17,"n":66,"sourceN":19,"q":"「보험업법」 위반행위와 벌칙이 틀리게 연결된 것은?","c":["모집종사자 등록서류 변경신고 위반 - 1천만원 이하의 과태료","특별이익 제공금지 위반 - 3년 이하의 징역 또는 3천만원 이하의 벌금","장애인의 보험가입 거부 - 1천만원 이하의 벌금","보험모집 위탁계약서 미교부 - 1천만원 이하의 과태료"],"a":3,"e":"벌금 → 과태료"},{"id":"17-20","type":17,"n":67,"sourceN":20,"q":"보험회사 등이 보험설계사에게 보험계약의 모집을 위탁할 때 교부하여야 하는 것은?","c":["보험모집 위탁계약서","보험계약 청약서","보험모집 신고서","위탁모집 안내서"],"a":1,"e":"보험회사는 보험설계사에게 보험계약의 모집을 위탁할 때 보험모집 위탁계약서를 교부해야 함"},{"id":"17-21","type":17,"n":68,"sourceN":21,"q":"장애인 및 장기기증자 보험가입 차별 신고센터에 신고할 수 있는 내용에 해당하는 것은?","c":["부당한 보험금 미지급","보험료 산정방법 제한","보험가입 청약 거절","장애판정기준 불인정"],"a":3,"e":"장애인 및 장기기증자의 보험가입 청약 거절 등의 부당한 차별에 대해 신고할 수 있음"},{"id":"18-18","type":18,"n":69,"sourceN":18,"q":"다음 보기에서 (   )에 들어갈 알맞은 용어는? [4점]\n\n보험회사는 보험료를 현금으로 수납함을 원칙으로 하되, (   )계약의 경우에는 보험계약자가 발행한 선일자수표 또는 은행도어음(진성어음인 경우 배서를 포함)으로 수납할 수 있다","c":["손해보험의 가계성보험","손해보험의 비가계성보험","기업성보험","생명보험"],"a":2,"e":"손해보험의 비가계성보험계약의 경우 이자상당액을 가산하여 보험계약자가 발행하고 1개월 내에 결제되는 선일자수표 또는 은행도어음(진성어음인 경우 배서를 포함)으로 수납할 수 있음"},{"id":"18-19","type":18,"n":70,"sourceN":19,"q":"보험업법 제98조에서 금지하고 있는 특별이익 제공에 해당하는 것은?","c":["금품제공(보험계약 체결시부터 최초 1년간 납입되는 보험료의 100분의 10과 3만원 중 적은 금액을 초과하지 아니하는 금품)","기초서류에서 정한 사유에 근거한 수수료의 지급","기초서류에서 정한 보험계약자 또는 피보험자에 대한 보험금의 지급 약속","기초서류에서 정한 사유에 근거한 보험료 할인"],"a":3,"e":"기초서류에서 정한 사유보다 많은 보험금액 지급 약속은 특별이익 제공 약속에 해당함"},{"id":"18-20","type":18,"n":71,"sourceN":20,"q":"모집질서 확립을 위한 부당한 모집행위 등 금지사항에 대한 설명으로 옳지 않은 것은?","c":["모집종사자는 보험계약자 또는 피보험자의 실지명의가 아닌 명의로 보험계약을 임의로 작성하여 보험계약을 체결하지 못한다","모집종사자는 보험료를 받지 아니하고 영수증을 선발행하지 못한다","모집종사자는 소속 보험회사 또는 모집을 위탁한 보험회사 이외의 보험회사를 위하여 보험을 모집하지 못한다","모집종사자는 계약자의 동의가 있더라도 자기가 모집한 계약을 타인이 모집한 것으로 처리할 수 있다"],"a":4,"e":"계약자의 동의가 있더라도 모집종사자는 자기가 모집한 계약을 타인이 모집한 것으로 또는 타인이 모집한 것을 자기가 모집한 것으로 처리하지 못함"},{"id":"18-21","type":18,"n":72,"sourceN":21,"q":"승환계약 체결시 제재금 부과기준으로 알맞은 것은?","c":["건당 10만원의 제재금","건당 20만원의 제재금","건당 100만원의 제재금","건당 200만원의 제재금"],"a":3,"e":"제재금 부과기준은 위반계약 건수 1건당 100만원이고 제재금 한도는 모집행위자 1인당 최고 3천만원임"},{"id":"19-18","type":19,"n":73,"sourceN":18,"q":"청약 후 약관 및 계약자 보관용 청약서를 전자우편 등 전자적 방법으로 교부하는 경우 준수사항으로 틀린 것은?","c":["보험계약자가 전자적 방법에 의한 보험계약 자료 교부에 동의하여야 한다","전자적 방법에 의해 교부되는 자료는 위조 및 변조가 불가능하도록 보안시스템을 갖추어야 한다","보험계약 자료를 전자적으로 재생하는 방법, 청약철회 및 계약취소의 방법에 대하여 안내서면으로 교부하여야 한다","전자우편 등 전자적 방법으로 교부하는 경우에 한해 보험계약자의 자필서명이 필요한 경우 자필서명을 생략할 수 있다"],"a":4,"e":"전자적 방법으로 교부할 때, 자필서명이 필요한 경우 전자서명을 받아야 함"},{"id":"19-19","type":19,"n":74,"sourceN":19,"q":"다음은 실손의료보험 계약시 지켜야 할 절차를 열거한 것이다. (   ) 안에 들어갈 절차의 순서가 맞게 열거된 것은?","c":["초회동의서 징구, 중복가입 확인, 청약서 작성","청약서 작성, 초회동의서 징구, 중복가입 확인","초회동의서 징구, 청약서 작성, 중복가입 확인","중복가입 확인, 초회동의서 징구, 청약서 작성"],"a":1,"e":"실손의료보험 판매시 중복가입 확인 및 비례보상 설명을 위한 절차임"},{"id":"19-20","type":19,"n":75,"sourceN":20,"q":"금융상품판매대리·중개업자의 금지행위에 해당하지 않는 것은?","c":["보험설계사가 다른 보험회사·보험대리점에 소속된 다른 보험설계사와 위탁계약을 체결한 경우","보험중개사가 소속 보험설계사와 위탁계약을 체결한 경우","보험설계사가 같은 보험회사·보험대리점 또는 보험중개사에 소속된 다른 보험설계사와 위탁계약을 체결한 경우","보험대리점이 같은 보험회사의 다른 보험대리점과 위탁계약을 체결하면서 금융상품직접판매업자로부터 그 계약내용에 대해 사전동의를 받지 않은 경우"],"a":3,"e":"①, ②는 금지행위에 해당하고, ④는 사전동의를 받아야 함"},{"id":"19-21","type":19,"n":76,"sourceN":21,"q":"다음 보기의 (   ) 안에 들어갈 단어는?","c":["철회","취소","수정","가감"],"a":1,"e":"「개인신용정보의 제공동의」 철회에 대한 설명임"},{"id":"20-18","type":20,"n":77,"sourceN":18,"q":"보험회사 또는 보험설계사 등이 \u0027약관의 전달 및 중요한 내용 설명\u0027을 위반한 경우, 보험계약자가 계약체결 이후 계약을 취소할 수 있는 기간으로 알맞은 것은? [4점]","c":["1개월 이내","2개월 이내","3개월 이내","5개월 이내"],"a":3,"e":"계약체결 이후 3개월 이내에 계약 취소 가능"},{"id":"20-19","type":20,"n":78,"sourceN":19,"q":"보험안내자료에 대한 설명으로 틀린 것은?","c":["보험안내자료는 불특정다수에게 제공되는 홍보물이다","모집광고의 광고 관련 준수사항 등은 「금융소비자보호에 관한 법률」의 적용을 받는다","보험안내자료의 필수기재사항 등은 「보험업법」의 적용을 받는다","전문보험계약자를 대상으로 하는 보험계약은 보험계약관리내용을 제공하지 않아도 된다"],"a":1,"e":"보험안내자료는 보험계약자, 보험금을 수령하는 자 등에게 제공되는 홍보물이고 불특정다수에게 제공되는 홍보물은 모집광고로 봄"},{"id":"20-20","type":20,"n":79,"sourceN":20,"q":"「금소법」상 부당권유행위 금지 위반시 부과되는 과태료는 얼마인가?","c":["1억원","5천만원","3천만원","1천만원"],"a":1,"e":"「금소법」의 부당권유행위 금지 위반시 1억원 이하의 과태료를 부과함"},{"id":"20-21","type":20,"n":80,"sourceN":21,"q":"보험대리점 지점장인 김풍금씨가 인터넷으로 보험상품을 판매하면서 태아보험 가입시 50만원 상당의 유모차를 지급한다는 광고를 게재했다면 이는 「손해보험 공정경쟁질서유지에 관한 상호협정」에서 금지하고 있는 무슨 행위에 해당하는가?","c":["투자적 모집행위","특별이익 제공","보험계약 강요처리","특별이익 제공 약속"],"a":4,"e":"50만원은 최초 1년간 납입보험료의 100분의 10과 3만원 중 적은 것보다 많은 금액이므로 특별이익 제공을 약속한 금지행위임"}]; var questionBank = questions;
+    var totalQuestions = questionBank.length;
+    var answers = Array(totalQuestions).fill(null);
+    var cursor = 0;
+    var wrongItems = [];
+    var reviewCursor = 0;
+
+    function $(id) { return document.getElementById(id); }
+    function displayText(value) {
+      return String(value == null ? '' : value).replace(/\\n/g, '\n');
+    }
+    function showScreen(id) {
+      ['startScreen','quizScreen','resultScreen','reviewScreen','completeScreen'].forEach(function (screenId) {
+        $(screenId).classList.toggle('hidden', screenId !== id);
+      });
+      window.scrollTo(0, 0);
+    }
+    function sourceText(item) {
+      return item.type + '형 ' + item.sourceN + '번';
+    }
+    function resetStudy() {
+      answers = Array(totalQuestions).fill(null);
+      cursor = 0;
+      wrongItems = [];
+      reviewCursor = 0;
+      showScreen('startScreen');
+    }
+    function renderQuiz() {
+      var item = questionBank[cursor];
+      $('quizProgress').textContent = (cursor + 1) + ' / ' + totalQuestions;
+      $('quizSource').textContent = sourceText(item);
+      $('quizProgressFill').style.width = (((cursor + 1) / totalQuestions) * 100) + '%';
+      $('quizNumber').textContent = '문항 ' + (cursor + 1) + ' · ' + sourceText(item);
+      $('quizQuestion').textContent = displayText(item.q);
+      $('quizChoices').innerHTML = '';
+
+      item.c.forEach(function (choice, index) {
+        var button = document.createElement('button');
+        button.type = 'button';
+        button.className = 'choice' + (answers[cursor] === index + 1 ? ' selected' : '');
+        var number = document.createElement('span');
+        number.className = 'choice-number';
+        number.textContent = index + 1;
+        var text = document.createElement('span');
+        text.className = 'choice-text';
+        text.textContent = displayText(choice);
+        button.append(number, text);
+        button.addEventListener('click', function () {
+          answers[cursor] = index + 1;
+          $('validationNote').classList.add('hidden');
+          renderQuiz();
+        });
+        $('quizChoices').appendChild(button);
+      });
+
+      $('prevButton').disabled = cursor === 0;
+      $('nextButton').classList.toggle('hidden', cursor === totalQuestions - 1);
+      $('submitButton').classList.toggle('hidden', cursor !== totalQuestions - 1);
+    }
+    function beginStudy() {
+      answers = Array(totalQuestions).fill(null);
+      cursor = 0;
+      wrongItems = [];
+      showScreen('quizScreen');
+      renderQuiz();
+    }
+    function submitStudy() {
+      var missing = answers.findIndex(function (answer) { return answer == null; });
+      if (missing !== -1) {
+        cursor = missing;
+        $('validationNote').textContent = '아직 답하지 않은 문항이 있습니다. 현재 문항부터 답해 주세요.';
+        $('validationNote').classList.remove('hidden');
+        renderQuiz();
+        return;
+      }
+
+      wrongItems = [];
+      questionBank.forEach(function (item, index) {
+        if (answers[index] !== item.a) {
+          wrongItems.push({ item: item, selected: answers[index] });
+        }
+      });
+
+      var correctCount = totalQuestions - wrongItems.length;
+      $('scoreText').textContent = correctCount + ' / ' + totalQuestions;
+      $('scoreSub').textContent = '정답률 ' + Math.round(correctCount / totalQuestions * 100) + '% · 오답 ' + wrongItems.length + '문항';
+
+      if (wrongItems.length) {
+        $('wrongSummary').innerHTML = '<strong>오답 문항</strong>' + wrongItems.map(function (entry) {
+          return sourceText(entry.item);
+        }).join(', ');
+        $('reviewButton').textContent = '오답노트 시작 (' + wrongItems.length + '문항)';
+        $('reviewButton').classList.remove('hidden');
+      } else {
+        $('wrongSummary').innerHTML = '<strong>전 문항 정답</strong>틀린 문제가 없어 오답노트를 생략합니다.';
+        $('reviewButton').classList.add('hidden');
+      }
+      showScreen('resultScreen');
+    }
+    function renderReview() {
+      var entry = wrongItems[reviewCursor];
+      var item = entry.item;
+      $('reviewProgress').textContent = '오답 ' + (reviewCursor + 1) + ' / ' + wrongItems.length;
+      $('reviewSource').textContent = sourceText(item);
+      $('reviewProgressFill').style.width = (((reviewCursor + 1) / wrongItems.length) * 100) + '%';
+      $('reviewNumber').textContent = '문항 ' + sourceText(item);
+      $('reviewQuestion').textContent = displayText(item.q);
+      $('reviewChoices').innerHTML = '';
+
+      item.c.forEach(function (choice, index) {
+        var choiceNo = index + 1;
+        var isCorrect = choiceNo === item.a;
+        var isSelected = choiceNo === entry.selected;
+        var button = document.createElement('div');
+        button.className = 'review-choice' + (isCorrect ? ' correct' : '') + (isSelected ? ' wrong-selected' : '');
+        var number = document.createElement('span');
+        number.className = 'review-choice-number';
+        number.textContent = choiceNo;
+        var text = document.createElement('span');
+        text.className = 'review-choice-text';
+        text.textContent = displayText(choice);
+        var mark = document.createElement('span');
+        mark.className = 'choice-mark';
+        mark.textContent = isCorrect ? '정답' : (isSelected ? '내 답' : '');
+        button.append(number, text, mark);
+        $('reviewChoices').appendChild(button);
+      });
+
+      $('reviewStatus').textContent = '내가 고른 답: ' + entry.selected + '번 · 정답: ' + item.a + '번';
+      $('reviewExplanation').textContent = displayText(item.e);
+      $('reviewPrevButton').disabled = reviewCursor === 0;
+      $('reviewNextButton').classList.toggle('hidden', reviewCursor === wrongItems.length - 1);
+      $('reviewCompleteButton').classList.toggle('hidden', reviewCursor !== wrongItems.length - 1);
+    }
+    function beginReview() {
+      reviewCursor = 0;
+      showScreen('reviewScreen');
+      renderReview();
+    }
+    function finishStudy() {
+      $('completeText').textContent = '80문항 풀이와 ' + wrongItems.length + '개 오답의 해설 확인을 완료했습니다.';
+      showScreen('completeScreen');
+    }
+
+    $('startButton').addEventListener('click', beginStudy);
+    $('prevButton').addEventListener('click', function () {
+      if (cursor > 0) { cursor -= 1; renderQuiz(); }
+    });
+    $('nextButton').addEventListener('click', function () {
+      if (cursor < totalQuestions - 1) { cursor += 1; renderQuiz(); }
+    });
+    $('submitButton').addEventListener('click', submitStudy);
+    $('reviewButton').addEventListener('click', beginReview);
+    $('reviewPrevButton').addEventListener('click', function () {
+      if (reviewCursor > 0) { reviewCursor -= 1; renderReview(); }
+    });
+    $('reviewNextButton').addEventListener('click', function () {
+      if (reviewCursor < wrongItems.length - 1) { reviewCursor += 1; renderReview(); }
+    });
+    $('reviewCompleteButton').addEventListener('click', finishStudy);
+    function goFocusMenu(confirmFirst) {
+      if (confirmFirst && !confirm('현재 학습을 중단하고 모의고사 테스트 목록으로 돌아갈까요?')) return;
+      window.location.href = './index.html';
+    }
+    $('quitButton').addEventListener('click', function () {
+      goFocusMenu(true);
+    });
+    $('resultHomeButton').addEventListener('click', function () { goFocusMenu(false); });
+    $('completeHomeButton').addEventListener('click', function () { goFocusMenu(false); });
+
+  </script>
+</body>
+</html>

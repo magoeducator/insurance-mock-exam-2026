@@ -1,0 +1,372 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f37021">
+  <meta name="description" content="1형부터 20형까지 질병보험 및 간병보험 80문항 집중학습">
+  <title>질병보험 · 간병보험 80문항 집중학습</title>
+  
+  <style>
+    html.auth-pending body{visibility:hidden}
+    :root{--orange:#f37021;--orange-dark:#d95810;--ink:#202124;--muted:#6b7280;--line:#e6e8eb;--soft:#fff7f1;--green:#16803c;--green-bg:#eaf8ef;--red:#c62828;--red-bg:#fff0f0;--navy:#243247}
+    *{box-sizing:border-box}
+    html,body{margin:0;min-height:100%;background:#f5f6f8;color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Apple SD Gothic Neo","Noto Sans KR","Malgun Gothic",sans-serif}
+    body{padding:env(safe-area-inset-top) 0 env(safe-area-inset-bottom)}
+    button{font:inherit}
+    button{border:0;cursor:pointer}
+    button:disabled{cursor:default}
+    .app{width:min(760px,100%);margin:0 auto;min-height:100vh;background:#fff;box-shadow:0 0 24px rgba(0,0,0,.06)}
+    .site-header{position:sticky;top:0;z-index:10;background:#fff;border-bottom:1px solid var(--line);box-shadow:0 5px 18px rgba(32,43,60,.1)}
+    .site-title-row{height:44px;display:flex;align-items:center;background:var(--orange);color:#fff;padding:0 max(14px,calc((100% - 760px)/2 + 14px));overflow:hidden}
+    .site-title{width:100%;font-size:clamp(12px,3.6vw,16px);font-weight:900;letter-spacing:-.045em;line-height:1;white-space:nowrap;overflow-x:auto;scrollbar-width:none}
+    .site-title::-webkit-scrollbar,.top-menu::-webkit-scrollbar{display:none}
+    .top-menu{height:48px;display:flex;align-items:center;justify-content:center;gap:8px;padding:0 12px;overflow-x:auto;white-space:nowrap;background:#fff}
+    .top-menu-link{flex:0 0 auto;display:inline-flex;align-items:center;justify-content:center;min-height:34px;padding:0 14px;border:1px solid #ffd0b5;border-radius:999px;color:var(--orange-dark);font-size:13px;font-weight:900;text-align:center;background:#fff8f3;text-decoration:none}
+    .top-menu-link:hover,.top-menu-link:focus-visible,.top-menu-link.active{background:var(--orange);color:#fff;border-color:var(--orange)}
+    .social-brand{display:inline-flex;align-items:center;flex:0 0 auto;color:#6b7280;font-size:12px;font-weight:900;letter-spacing:-.04em;white-space:nowrap}
+    .social-icon-link{display:inline-flex;align-items:center;justify-content:center;flex:0 0 34px;width:34px;min-height:34px;height:34px;padding:0;border-radius:10px;color:#fff}
+    .social-icon-link svg{width:18px;height:18px;display:block}
+    .social-icon-link.instagram{background:linear-gradient(135deg,#f58529,#dd2a7b 52%,#8134af)}
+    .social-icon-link.blog{background:#03c75a}
+    .topbar{background:var(--orange);color:#fff;padding:16px 18px 15px;position:relative;z-index:1}
+    .global-nav{display:none}
+    .global-nav::-webkit-scrollbar{display:none}
+    .global-nav a{flex:0 0 auto;padding:7px 12px;border:1px solid #ffd0b5;border-radius:999px;background:#fff8f3;color:var(--orange-dark);font-size:12px;font-weight:900;text-decoration:none}
+    .global-nav a:hover,.global-nav a:focus-visible{background:var(--orange);border-color:var(--orange);color:#fff}
+    .topbar-row{display:flex;align-items:center;justify-content:space-between;gap:12px}
+    .brand{font-weight:900;font-size:18px;letter-spacing:-.06em;line-height:1.25}
+    .subbrand{margin-top:4px;font-size:12px;opacity:.92}
+    .top-actions{display:flex;align-items:center;gap:6px;white-space:nowrap}
+    .student-name{font-size:12px;font-weight:800}
+    .top-button{padding:7px 9px;border:1px solid rgba(255,255,255,.55);border-radius:9px;background:transparent;color:#fff;font-size:11px;font-weight:800}
+    .screen{padding:22px 18px 34px}
+    .hidden{display:none!important}
+    .hero{text-align:center;padding:14px 0 7px}
+    .badge{display:inline-flex;padding:6px 10px;border-radius:999px;background:#fff0e6;color:var(--orange-dark);font-size:13px;font-weight:900}
+    h1{margin:15px 0 10px;font-size:clamp(27px,6vw,38px);line-height:1.22;letter-spacing:-.075em}
+    .hero p{margin:0;color:var(--muted);font-size:14px;line-height:1.6}
+    .timeline{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin:25px 0 23px;position:relative}
+    .timeline:before{content:"";position:absolute;left:12%;right:12%;top:21px;height:2px;background:#ffd4bd}
+    .step{position:relative;z-index:1;text-align:center}
+    .step-no{display:grid;place-items:center;width:42px;height:42px;margin:0 auto 7px;border:2px solid #ffc39f;border-radius:50%;background:#fff;color:var(--orange-dark);font-weight:900}
+    .step-label{font-size:11px;line-height:1.3;font-weight:800;color:#4b5563}
+    .info-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:20px 0}
+    .info-box{padding:14px 7px;border:1px solid var(--line);border-radius:13px;background:#fff;text-align:center}
+    .info-box strong{display:block;color:var(--orange-dark);font-size:18px}
+    .info-box span{display:block;margin-top:3px;color:var(--muted);font-size:11px}
+    .notice{margin:18px 0;padding:14px 15px;border-radius:13px;background:var(--soft);color:#70411e;font-size:13px;line-height:1.55}
+    .primary{width:100%;padding:14px 16px;border-radius:12px;background:var(--orange);color:#fff;font-weight:900;font-size:15px;box-shadow:0 8px 18px rgba(243,112,33,.2)}
+    .primary:hover,.primary:focus-visible{background:var(--orange-dark)}
+    .quiz-head,.review-head{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:10px}
+    .progress-label{color:var(--orange-dark);font-size:14px;font-weight:900}
+    .source-label{color:var(--muted);font-size:12px;font-weight:800}
+    .progress-track{height:7px;margin-bottom:18px;border-radius:999px;background:#f3e5dd;overflow:hidden}
+    .progress-fill{height:100%;border-radius:inherit;background:var(--orange);transition:width .2s ease}
+    .question-card,.result-card,.review-card,.complete-card{border:1px solid var(--line);border-radius:18px;background:#fff}
+    .question-card{padding:20px 17px}
+    .question-number{margin-bottom:11px;color:var(--orange-dark);font-size:13px;font-weight:900}
+    .question-text{margin:0;white-space:pre-line;font-size:19px;line-height:1.55;letter-spacing:-.045em}
+    .choices{display:grid;gap:10px;margin-top:20px}
+    .choice{display:flex;align-items:flex-start;gap:10px;width:100%;padding:13px 12px;border:1px solid #d9dde2;border-radius:12px;background:#fff;color:var(--ink);text-align:left;line-height:1.45}
+    .choice:hover,.choice:focus-visible{border-color:#f5a678;background:#fffaf7}
+    .choice.selected{border-color:var(--orange);background:#fff3eb;box-shadow:0 0 0 2px #ffe1cd}
+    .choice-number{display:grid;place-items:center;flex:0 0 26px;width:26px;height:26px;border-radius:50%;background:#f1f3f5;color:#5b6470;font-size:12px;font-weight:900}
+    .choice.selected .choice-number{background:var(--orange);color:#fff}
+    .choice-text{font-size:14px;white-space:pre-line}
+    .quiz-nav,.review-nav{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:16px}
+    .nav-button{padding:12px 10px;border:1px solid #d9dde2;border-radius:11px;background:#fff;color:#4b5563;font-size:13px;font-weight:900}
+    .nav-button:hover:not(:disabled),.nav-button:focus-visible{border-color:#f0a272;color:var(--orange-dark)}
+    .nav-button:disabled{opacity:.4}
+    .nav-button.next,.nav-button.submit,.nav-button.complete{border-color:var(--orange);background:var(--orange);color:#fff}
+    .nav-button.submit,.nav-button.complete{grid-column:1/-1}
+    .quit-button{display:block;margin:18px auto 0;padding:5px 8px;background:transparent;color:#9aa1aa;font-size:11px;text-decoration:underline}
+    .validation-note{margin:13px 0 0;padding:11px 12px;border-radius:10px;background:#fff4df;color:#8a5a16;font-size:12px;font-weight:700}
+    .result-card{padding:21px 17px;text-align:center}
+    .result-kicker{margin:0;color:var(--muted);font-size:13px;font-weight:800}
+    .score{margin:7px 0 0;color:var(--orange-dark);font-size:42px;font-weight:950;letter-spacing:-.07em}
+    .score-sub{margin:3px 0 0;color:var(--muted);font-size:13px}
+    .wrong-summary{margin:18px 0 0;padding:14px;border-radius:12px;background:var(--red-bg);color:#7c2222;text-align:left;font-size:13px;line-height:1.55}
+    .wrong-summary strong{display:block;margin-bottom:4px;color:var(--red)}
+    .review-card{padding:19px 17px}
+    .review-choice{position:relative;display:flex;align-items:flex-start;gap:10px;width:100%;margin-top:9px;padding:12px;border:1px solid #d9dde2;border-radius:11px;background:#fff;text-align:left}
+    .review-choice.correct{border-color:#8bc99e;background:var(--green-bg);color:#155d2c}
+    .review-choice.wrong-selected{border-color:#eba0a0;background:var(--red-bg);color:#8c2424}
+    .review-choice-number{display:grid;place-items:center;flex:0 0 25px;width:25px;height:25px;border-radius:50%;background:#eef0f2;color:#5d6670;font-size:12px;font-weight:900}
+    .review-choice.correct .review-choice-number{background:var(--green);color:#fff}
+    .review-choice.wrong-selected .review-choice-number{background:var(--red);color:#fff}
+    .review-choice-text{font-size:14px;line-height:1.45;white-space:pre-line}
+    .choice-mark{margin-left:auto;flex:0 0 auto;font-size:11px;font-weight:900}
+    .review-status{margin-top:15px;padding:11px 12px;border-radius:10px;background:#f7f8fa;color:#4b5563;font-size:13px;font-weight:800}
+    .explanation{margin-top:14px;padding:14px;border-left:4px solid var(--orange);border-radius:0 11px 11px 0;background:#fff8f3}
+    .explanation strong{display:block;margin-bottom:6px;color:var(--orange-dark);font-size:13px}
+    .explanation span{display:block;white-space:pre-line;color:#4b5563;font-size:13px;line-height:1.6}
+    .complete-card{padding:31px 18px;text-align:center}
+    .complete-icon{font-size:42px}
+    .complete-card h2{margin:12px 0 7px;font-size:25px;letter-spacing:-.06em}
+    .complete-card p{margin:0;color:var(--muted);font-size:14px;line-height:1.6}
+    .footer-note{margin:21px 0 0;color:#a0a6ad;text-align:center;font-size:11px}
+    .site-footer{padding:22px 14px 34px;border-top:1px solid var(--line);color:#8a929b;text-align:center;font-size:11px}
+    .footer-nav{display:flex;justify-content:center;flex-wrap:wrap;gap:8px 14px;margin-bottom:10px;color:var(--orange-dark);font-weight:900}
+    .footer-nav a{color:inherit;text-decoration:none}
+    .footer-nav a:hover,.footer-nav a:focus-visible{text-decoration:underline}
+    @media(max-width:520px){.screen{padding:20px 14px 30px}.topbar{padding-left:14px;padding-right:14px}.brand{font-size:16px}.subbrand{font-size:11px}.student-name{display:none}.question-text{font-size:18px}.choice-text{font-size:13px}}
+    @media(max-width:370px){.timeline{gap:2px}.step-label{font-size:10px}.info-box strong{font-size:16px}.info-box span{font-size:10px}}
+    @media(prefers-reduced-motion:reduce){.progress-fill{transition:none}}
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-title-row"><div class="site-title">2026 손해보험 자격시험 온라인학습실[8월 개정판]</div></div>
+    <nav class="top-menu" aria-label="주요 메뉴">
+      <a class="top-menu-link" href="./학습실.html">홈</a>
+      <a class="top-menu-link" href="./자격시험안내.html">자격시험 안내</a>
+      <a class="top-menu-link" href="./강의목차.html">동영상 강의보기</a>
+      <a class="top-menu-link active" href="./index.html" aria-current="page">모의고사 테스트</a></nav>
+  </header>
+  <div class="app">
+    <main>
+      <section id="startScreen" class="screen">
+        <button id="startButton" class="primary" type="button">80문항 학습시작</button>
+      </section>
+
+      <section id="quizScreen" class="screen hidden">
+        <div class="quiz-head">
+          <span id="quizProgress" class="progress-label"></span>
+          <span id="quizSource" class="source-label"></span>
+        </div>
+        <div class="progress-track" aria-hidden="true"><div id="quizProgressFill" class="progress-fill"></div></div>
+        <article class="question-card">
+          <div id="quizNumber" class="question-number"></div>
+          <h2 id="quizQuestion" class="question-text"></h2>
+          <div id="quizChoices" class="choices"></div>
+        </article>
+        <p id="validationNote" class="validation-note hidden"></p>
+        <div class="quiz-nav">
+          <button id="prevButton" class="nav-button" type="button">이전 문제</button>
+          <button id="nextButton" class="nav-button next" type="button">다음 문제</button>
+          <button id="submitButton" class="nav-button submit hidden" type="button">80문제 제출하고 채점</button>
+        </div>
+        <button id="quitButton" class="quit-button" type="button">학습을 중단하고 처음으로</button>
+      </section>
+
+      <section id="resultScreen" class="screen hidden">
+        <div class="result-card">
+          <p class="result-kicker">80문항 학습 결과</p>
+          <div id="scoreText" class="score"></div>
+          <p id="scoreSub" class="score-sub"></p>
+          <div id="wrongSummary" class="wrong-summary"></div>
+          <button id="reviewButton" class="primary" type="button">오답노트 시작</button>
+          <button id="resultHomeButton" class="quit-button" type="button">처음으로 돌아가기</button>
+        </div>
+      </section>
+
+      <section id="reviewScreen" class="screen hidden">
+        <div class="review-head">
+          <span id="reviewProgress" class="progress-label"></span>
+          <span id="reviewSource" class="source-label"></span>
+        </div>
+        <div class="progress-track" aria-hidden="true"><div id="reviewProgressFill" class="progress-fill"></div></div>
+        <article class="review-card">
+          <div id="reviewNumber" class="question-number"></div>
+          <h2 id="reviewQuestion" class="question-text"></h2>
+          <div id="reviewChoices"></div>
+          <div id="reviewStatus" class="review-status"></div>
+          <div class="explanation"><strong>공식 해설</strong><span id="reviewExplanation"></span></div>
+        </article>
+        <div class="review-nav">
+          <button id="reviewPrevButton" class="nav-button" type="button">이전 오답</button>
+          <button id="reviewNextButton" class="nav-button next" type="button">다음 오답</button>
+          <button id="reviewCompleteButton" class="nav-button complete hidden" type="button">오답노트 완료</button>
+        </div>
+      </section>
+
+      <section id="completeScreen" class="screen hidden">
+        <div class="complete-card">
+          <div class="complete-icon">✓</div>
+          <h2>학습이 끝났습니다.</h2>
+          <p id="completeText">80문항 풀이와 오답노트 확인을 완료했습니다.</p>
+          <button id="completeHomeButton" class="primary" type="button" style="margin-top:22px">처음으로 돌아가기</button>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <nav class="footer-nav" aria-label="하단 공통 메뉴"><a href="./학습실.html">홈</a><a href="./자격시험안내.html">자격시험 안내</a><a href="./강의목차.html">동영상 강의보기</a><a href="./index.html">모의고사 테스트</a></nav>
+      개발저작권 @career_educator
+    </footer>
+  </div>
+
+  <script>
+    const questions = [{"id":"1-44","type":1,"n":1,"sourceN":44,"q":"질병보험의 사망보장 담보에 대한 설명으로 틀린 것은?","c":["보험기간은 80세 이하로 설계해야 한다","보통약관으로 운용해야 한다","보험금액의 한도는 개인당 2억원 이내여야 한다","보장성보험의 요건을 갖추어야 한다"],"a":2,"e":"보통약관 → 특별약관"},{"id":"1-45","type":1,"n":2,"sourceN":45,"q":"질병보험의 보상에 대해 틀리게 설명한 것은?","c":["피보험자가 고의 또는 과실로 자신을 해친 경우 보상한다","보험수익자가 고의로 피보험자를 해친 경우 보상하지 않는다","보험계약자가 고의로 피보험자를 해친 경우 보상하지 않는다","피보험자가 정당한 이유 없이 의사의 지시를 따르지 않아 발생한 의료비는 보상하지 않는다"],"a":1,"e":"피보험자가 고의로 자신을 해친 경우에는 보상하지 않음"},{"id":"1-46","type":1,"n":3,"sourceN":46,"q":"암보험에 대한 설명으로 틀린 것은?","c":["갑상선암 진단시 암진단금은 가입금액의 120%가 지급된다","암수술로 인한 합병증 치료를 목적으로 입원한 경우 암입원급여금을 지급하지 않는다","보장개시일 이전에 암으로 진단확정된 경우 암사망보험금을 지급하지 않는다","암보장개시일 이후 최초의 암으로 진단확정되어야 지급된다"],"a":1,"e":"갑상선암 진단의 경우 별도 약정금액을 지급하며 보험가입금액을 초과하여 지급하지 않음(통상 암진단보험금의 일부가 지급됨)"},{"id":"1-47","type":1,"n":4,"sourceN":47,"q":"장기간병보험에 대한 설명으로 틀린 것은?","c":["활동불능 또는 인식불능 등 타인의 간병을 필요로 하는 상태 및 이로 인한 치료 등의 위험을 보장하는 보험이다","간병비용은 일시금으로만 지급한다","장기요양등급은 1~5등급과 인지지원등급으로 구분한다","노인성 질병 증가로 장기간병에 대한 대비 필요성이 증가하고 있다"],"a":2,"e":"간병비용은 연금이나 일시금의 형태로 지급함"},{"id":"2-44","type":2,"n":5,"sourceN":44,"q":"질병보험에서 보험나이에 대한 설명으로 올바른 것은?","c":["1년 미만의 단수가 있을 경우 6개월 이상은 1년으로 계산한다","보험나이는 보험료에 영향을 미치지 않는다","보험나이는 당해 1월 1일을 기준으로 증가한다","회사가 정한 계약일의 연령에 따라 보험료는 정산하지 아니한다"],"a":1,"e":"② 보험나이에 따라 보험료가 달라짐 ③ 계약해당일에 증가함 ④ 정산함"},{"id":"2-45","type":2,"n":6,"sourceN":45,"q":"질병보험의 특약에 대한 설명으로 알맞지 않은 것은?","c":["질병보험은 피보험자가 보험기간 중 진단 확정된 질병으로 입원·통원·수술이 필요한 상태가 되었을 때 보장한다","암을 담보하는 특별약관에서는 대기기간(90일) 중 암 진단이 확정되는 경우에는 특별약관을 무효로 한다","청약일 이전에 진단확정된 질병이 청약일 이후 4년간 추가진단·치료사실이 없을 경우 청약일로부터 4년이 지난 이후에는 약관에 따라 보상한다","갑상선암에 대해서는 약관이 정한 보장기간 이후에는 보상하지 않는다"],"a":3,"e":"4년간 → 5년간, 4년이 → 5년이"},{"id":"2-46","type":2,"n":7,"sourceN":46,"q":"태아보험에 대한 설명으로 틀린 것은?","c":["고령임신 증가를 고려하여 장애·기형 등 선천성 질환을 가진 신생아가 보험 혜택을 받을 수 있도록 운영하고 있다","태아는 법적으로 인격을 갖지 못하므로 원칙적으로 보험의 보호 대상이 될 수 없다","역선택 방지를 위해 임산부의 나이는 태아보험 가입과 관계가 없다","태아의 출생을 조건으로 태아가입 특별약관을 통해 계약을 체결할 수 있다"],"a":3,"e":"임산부의 나이는 태아보험의 가입제한과 관계 없음"},{"id":"2-47","type":2,"n":8,"sourceN":47,"q":"피보험자가 보험기간 중에 중증치매상태로 진단 확정되고 보험기간이 끝난 이후에도 그 날을 포함하여 90일 이상 중증치매상태가 계속되었을 때 보험수익자에게 지급하는 보험금으로 알맞은 것은?","c":["장기요양급여금","치매간병비","재가급여","시설급여"],"a":2,"e":"치매간병비에 대한 설명임"},{"id":"3-44","type":3,"n":9,"sourceN":44,"q":"암보험에 대한 설명으로 틀린 것은?","c":["15세 미만자에 대해서는 대기기간을 설정하지 않는다","기타피부암에 대한 보장은 보험기간 시작일로부터 보상한다","대기기간 중 암진단 확정시에는 보험계약은 무효이며, 계약무효시에는 이미 납입한 보험료를 환급한다","대기기간 중 암진단 확정시에 보험회사는 보험계약의 철회를 요청할 수 있다"],"a":4,"e":"대기기간 중 암진단으로 확정되면 계약은 무효가 되며, 보험회사의 계약철회 요청과는 관련이 없음"},{"id":"3-45","type":3,"n":10,"sourceN":45,"q":"질병보험에 대한 설명으로 틀린 것은?","c":["한시적인 후유장해가 5년 이상인 때에는 해당 장해지급률의 10%를 보험가입금액에 곱하여 산출한 금액을 지급한다","암보험에는 대기기간을 설정할 수 있다","80% 이상 후유장해 발생시 질병사망에 준하는 금액을 후유장해보험금으로 지급한다","계약체결 이전에 보험사고가 확정된 경우 보험계약은 무효이다"],"a":1,"e":"10% → 20%"},{"id":"3-46","type":3,"n":11,"sourceN":46,"q":"암보험에 대한 설명으로 맞는 것은?","c":["암진단은 피보험자가 암으로 진단 또는 치료를 받고 있음을 증명할 만한 문서나 증거가 있는 경우에도 인정한다","대기기간을 설정하지 않는다","제자리암·경계성종양·기타피부암의 경우 90일의 대기기간을 설정한다","요양목적의 입원시에는 암입원급여금을 지급한다"],"a":3,"e":"① 암진단은 피보험자가 암으로 진단 또는 치료를 받고 있음을 증명할 만한 문서화된 기록 또는 증거가 있는 경우에도 인정됨 ② 대기기간을 설정하지 않음 ④ 요양목적의 입원시에는 보상하지 않음"},{"id":"3-47","type":3,"n":12,"sourceN":47,"q":"장기요양인정점수가 51점 이상 60점 미만인 경우 적용되는 장기요양등급은?","c":["3등급","4등급","5등급","인지지원등급"],"a":2,"e":"① 3등급 : 60점 이상 75점 미만 ③ 5등급 : 45점 이상 51점 미만 ④ 인지지원등급 : 45점 미만"},{"id":"4-44","type":4,"n":13,"sourceN":44,"q":"대기기간(Waiting Period)이 가장 유효하게 적용되는 보험종목은?","c":["상해보험","질병보험","화재보험","제3자 배상책임보험"],"a":2,"e":"대기기간은 질병보험에서 가장 유효하게 적용됨 (예) 암보험 : 90일"},{"id":"4-45","type":4,"n":14,"sourceN":45,"q":"다음 (  ) 안에 들어갈 말로 바르게 짝지어진 것은?\n\n질병후유장해 담보의 경우, 질병사망 발생시 ( 가 ) 및 ( 나 ) 산출방법에서 정한 계약자적립금을 지급한 후 해당 담보는 소멸된다.","c":["(가) 보험금, (나) 해약환급금","(가) 보험금, (나) 보험가입금액","(가) 보험료, (나) 해약환급금","(가) 보험료, (나) 보험가입금액"],"a":1,"e":"피보험자의 질병사망은 질병후유장해 담보에서 보장하지 않는 사유에 해당하고 이 경우 지급액 및 계약(담보)처리에 대한 설명임"},{"id":"4-46","type":4,"n":15,"sourceN":46,"q":"치아보험에 대한 설명으로 틀린 것은?","c":["치아보험은 충치·잇몸질환 등의 질병(또는 상해)으로 보철치료나 보존치료 등을 받은 경우 보험금을 지급할 수 있는 보험상품이다","질병으로 인한 치료에 대하여는 감액기간을 운영하고 있으나 면책기간은 적용하지 않는다","감액기간은 보험가입 전에 이미 치아질환을 보유한 사람이 보험금을 받을 목적으로 보험에 가입하는 것을 방지하기 위한 장치이다","치아보험 갱신형은 연령 증가 등에 따라 갱신할 때마다 보험료가 조정된다"],"a":2,"e":"치아보험에서는 면책기간 및 감액기간을 운영하고 있음"},{"id":"4-47","type":4,"n":16,"sourceN":47,"q":"보험사고 발생으로 본인 스스로 보험금 청구가 현실적으로 어려운 상황이 발생한 경우 보험금을 대신 청구하는 자를 미리 지정하는 것을 뜻하는 용어로 알맞은 것은?","c":["보험수익자 지정","피보험자 지정","보험금 대리청구인 지정","보험금 상속인 지정"],"a":3,"e":"보험금 대리청구인 지정에 대한 설명임"},{"id":"5-44","type":5,"n":17,"sourceN":44,"q":"질병보험의 특성과 가장 거리가 먼 것은?","c":["보상한도의 설정","중증치매 보장","부담보조건 인수","대기기간 설정"],"a":2,"e":"중증치매 보장은 간병보험 상품임"},{"id":"5-45","type":5,"n":18,"sourceN":45,"q":"질병보험에서 보상할 수 있는 경우가 아닌 것은?","c":["입원, 수술, 요양 등이 필요한 상태가 되었을 때","피보험자가 보험기간 중에 진단확정된 질병으로 사망한 경우","장해분류표의 장해지급률에 해당하는 장해상태가 되었을 때","우연하고 급격한 외래의 사고로 신체가 훼손된 때"],"a":4,"e":"상해보험의 보상요건임"},{"id":"5-46","type":5,"n":19,"sourceN":46,"q":"다음의 암보험에 대한 설명에서 (  ) 안에 알맞은 것은?\n\n피보험자가 암 보장개시일 이후에 통상 최초 (  )에 한하여 암으로 진단된 경우 암진단급여금을 지급한다","c":["1회","2회","3회","4회"],"a":1,"e":"암보험의 암진단급여금에 대한 설명임"},{"id":"5-47","type":5,"n":20,"sourceN":47,"q":"장기요양등급은 장기요양인정 신청인의 요양필요도에 따라 1~5등급 및 인지지원등급으로 구분되는데, 이 중 가장 중증인 등급은 무엇인가?","c":["인지지원등급","5등급","1등급","10등급"],"a":3,"e":"1등급이 가장 중증이며 10등급은 없음"},{"id":"6-44","type":6,"n":21,"sourceN":44,"q":"생년월일이 1974. 6. 1인 피보험자가 2018. 10. 1에 보험에 가입한 경우 보험나이로 맞는 것은?","c":["34세","43세","44세","45세"],"a":3,"e":"만 44세 4개월이므로 6개월 미만은 버리고 계산하여 보험나이는 44세입니다(2018-1974=44, 10-6=4)."},{"id":"6-45","type":6,"n":22,"sourceN":45,"q":"질병보험계약에서 80% 이상 후유장해 발생시 지급보험금에 해당하는 것은?","c":["보험가입금액의 70%","보험가입금액의 80%","보험가입금액의 90%","사망보험금에 준하는 후유장해보험금"],"a":4,"e":"질병보험에서 80% 이상 후유장해가 발생하면 사망보험금에 준하는 후유장해보험금을 지급합니다."},{"id":"6-46","type":6,"n":23,"sourceN":46,"q":"어린이보험에 대한 설명으로 틀린 것은?","c":["자녀의 성장과정 중 발생할 수 있는 질병·상해로 인한 의료비와 자녀의 일상생활 중 발생하는 배상책임 등을 보장하는 상품이다","어린이보험에 특약을 더해 출생시 위험까지 보장하는 상품을 실무적으로 태아보험으로 통칭한다","고령임신부 증가를 고려하여 장애·기형 등 선천성 질환을 가진 신생아가 보험혜택을 받을 수 있도록 태아(임신 중)도 보험에 가입할 수 있다","출생 전 태아는 피보험자로서의 지위를 가질 수 있으므로 태아를 피보험자로 하여 보험계약을 체결한다"],"a":4,"e":"출생 전 태아는 피보험자로서의 지위를 가질 수 없으므로 출생 후 피보험자로 하여 보험계약을 체결합니다."},{"id":"6-47","type":6,"n":24,"sourceN":47,"q":"다음 중 장기간병보험에서 보장이 가능한 경우에 해당하는 것은?","c":["계약 전 알릴 의무에 해당하는 질병으로 인하여 과거에 치료를 받은 경우 해당 질병으로 인한 장기간병상태","청약일 이후 5년 경과 시점에서 발생한 질병으로 인한 장기간병상태","알코올중독으로 인한 장기간병상태","계약 전 알릴 의무에 해당하는 사실을 고의로 알리지 않은 중대한 질병으로 인한 장기간병상태"],"a":2,"e":"①, ③, ④는 보장하지 않는 경우이며, 청약일 이후 5년이 지나 발생한 질병으로 인한 장기간병상태는 약관에 따라 보장할 수 있습니다."},{"id":"7-44","type":7,"n":25,"sourceN":44,"q":"김소보씨는 XX손보에서 2017.1.21.에 암보험을 가입하였다. 같은 해 2.26.에 김소보씨가 병원에서 기타피부암으로 진단을 받았을 경우, 이 암보험 상품에서 받을 수 있는 보험금은 얼마인가?\n\n(가) 보험가입금액 : 1,000만원(최초 1회 한)\n(나) 기타피부암, 경계성종양, 제자리암은 보험가입금액의 10% 보상\n(다) 가입 후 1년 미만 암진단시 보험가입금액의 50% 보상\n(라) 대기기간 : 90일","c":["0원","50만원","100만원","500만원"],"a":2,"e":"기타피부암은 대기기간 없이 보험기간 시작일로부터 보상하며 보험가입금액의 10%인 100만원을 보상하지만 가입 후 1년 미만 시점에서 암진단을 받았기 때문에 보험가입금액의 50%인 50만원을 보험금으로 보상받을 수 있음"},{"id":"7-45","type":7,"n":26,"sourceN":45,"q":"다음 보기의 (   ) 안에 들어갈 숫자로 적절한 것은?\n\n동일한 질병에 대한 입원이라도 질병입원의 최종 퇴원일로부터 (   )일이 경과하여 개시한 입원은 새로운 입원으로 본다.","c":["60","365","180","90"],"a":3,"e":"최종퇴원일로부터 180일이 경과하여 개시한 입원은 새로운 입원으로 봄"},{"id":"7-46","type":7,"n":27,"sourceN":46,"q":"CI보험에 대한 설명으로 틀린 것은?","c":["치명적 질병을 보장하는 보험이다","잔여수명이 6개월 이하인 치명적 질병 발생시 사망보험금 전액을 지급한다","잔여수명이 6개월 이하인 치명적 질병 발생시 보험료 납입이 면제된다","암, 뇌졸중, 심근경색 등 고액 치료비를 지급하는 보험이다"],"a":2,"e":"잔여수명이 6개월 이하인 치명적 질병 발생시 사망보험금의 50% 선지급 및 보험료 납입 면제 가능"},{"id":"7-47","type":7,"n":28,"sourceN":47,"q":"활동불능 또는 인식불능 등 타인의 간병을 필요로 하는 상태를 보장하는 보험에 해당하는 것은?","c":["장기간병보험","장기질병보험","치명적 질병(Critical Illness)보험","노후 실손의료보험"],"a":1,"e":"장기간병보험에 대한 설명임"},{"id":"8-44","type":8,"n":29,"sourceN":44,"q":"질병보험에서 피보험자의 보험나이와 관련된 내용으로 틀린 것은?","c":["보험나이는 계약일 현재 만 연령으로 계산하며, 매년 1월 1일에 나이가 증가하는 것으로 한다","통상 보험나이별로 보험료 차이가 있다","계약일 현재 피보험자의 나이가 만 34세인 경우 보험나이는 35세이다","회사가 잘못하여 계산한 차액은 차후 보험료 변경시 소정의 보험료를 정산한다"],"a":1,"e":"계약일 현재 만 연령으로 계산하며, 이후 매년 계약해당일에 나이가 증가함"},{"id":"8-45","type":8,"n":30,"sourceN":45,"q":"질병보험에서 보상하는 손해에 해당하는 것은?","c":["계약 전 알릴 의무에 해당하는 질병으로 과거에 진단 또는 치료를 받은 질병이 발생한 경우","알코올중독으로 발생한 정신질환","청약일로부터 7일이 지난 이후에 발생한 질병","피보험자가 정당한 이유 없이 의사의 지시를 따르지 않아 악화된 부분"],"a":3,"e":"청약일 이전에 진단 확정된 질병이라도 청약일 이후 5년(갱신형 계약의 경우에는 최초 계약의 청약일 이후 5년)이 지나는 동안 그 질병으로 추가 진단(단순 건강검진 제외) 또는 치료사실이 없을 경우, 청약일부터 5년이 지난 이후에는 약관에 따라 보장함"},{"id":"8-46","type":8,"n":31,"sourceN":46,"q":"암보험에서 지급하는 보험금에 해당하지 않는 것은?","c":["암진단보험금","암입원보험금","암요양보험금","암수술보험금"],"a":3,"e":"암수술로 인한 전신쇠약 등으로 면역력이 저하되어 발생하는 합병증의 치료를 위한 입원과 요양목적의 입원은 보험금을 지급하지 않음"},{"id":"8-47","type":8,"n":32,"sourceN":47,"q":"장기간병보험에 대한 설명으로 틀린 것은?","c":["피보험자가 심신상실상태에서 자신을 해친 경우 보험금을 지급한다","중증치매로 진단 확정되고 일정기간 중증치매상태가 계속되는 경우 보상한다","보험을 위한 계약의 경우 보험금 대리청구인을 지정할 수 있다","신체보조장구(의족, 의수, 의안, 의치 등)에 입은 손해는 고지의무를 이행한 경우 보상할 수 있다"],"a":4,"e":"신체보조장구에 입은 손해는 고지의무 이행과 관계없이 보상하지 않는 손해임"},{"id":"9-44","type":9,"n":33,"sourceN":44,"q":"암보험의 대기기간에 대한 설명으로 틀린 것은?","c":["경계성종양은 대기기간 없이 보험기간 시작일부터 보상한다","대기기간은 암보험의 경우 통상 90일로 설정된다","만 15세 미만자에 대해서는 대기기간을 설정하지 않는다","대기기간 중에 암진단이 확정되면 이미 납입한 보험료를 돌려주고 보험계약은 소멸된다"],"a":4,"e":"대기기간 중 암진단이 확정되는 경우 계약은 무효가 되고 이미 납입한 보험료를 환급함"},{"id":"9-45","type":9,"n":34,"sourceN":45,"q":"질병보험의 특징으로 맞는 것은?","c":["질병은 신체 내재적 원인에 의한 신체결함 상태뿐만 아니라 외부적 요인에 의한 것도 포함한다","질병보험에서 피보험자가 심신상실 등으로 자유로운 의사결정을 할 수 없을 때에도 고의로 자신을 해친 경우라면 보상하지 아니한다","입원급여금은 피보험자가 보험기간 중에 질병으로 진단확정되고, 그 질병의 치료를 직접적인 목적으로 입원하여 치료를 받은 경우 입원일수에 관계없이 지급한다","수술급여금은 피보험자가 보험기간 중에 질병으로 진단확정된 질병치료를 직접적인 목적으로 수술을 받은 경우에 보험금을 지급한다"],"a":4,"e":"① 외부적인 요인에 의한 것은 상해보험의 특징 ② 심신상실 등으로 자유로운 의사결정을 할 수 없을 때 자살·자해한 경우에는 보상함 ③ 입원급여금의 지급일수는 1회 입원당 180일을 한도로 함"},{"id":"9-46","type":9,"n":35,"sourceN":46,"q":"치아보험에 대한 설명으로 틀린 것은?","c":["회사별 보험상품 종류에 따라 0세부터 70세까지 가입이 가능하다","만기형과 갱신형을 운영중이다","갱신형은 연령 증가시 갱신 때마다 보험료가 조정된다","질병으로 인한 치료에 대해 면책기간 및 감액기간을 운영하고 있다"],"a":1,"e":"치아보험은 회사별 보험상품 종류에 따라 0세부터 75세까지 가입이 가능(보험회사별로 상이한 상품임)"},{"id":"9-47","type":9,"n":36,"sourceN":47,"q":"경증치매에 대한 설명으로 맞는 것은?","c":["장기요양등급 1~2등급","CDR척도 3점 이상","CDR척도 5점 이상","중증치매보다 진단보험금을 낮게 설계함"],"a":4,"e":"①, ②, ③은 중증치매 기준에 해당함"},{"id":"10-44","type":10,"n":37,"sourceN":44,"q":"타인의 사망을 보험사고로 하는 보험계약에 대한 설명으로 틀린 것은?","c":["보험계약 체결 이후 피보험자의 서면에 의한 동의도 인정한다","피보험자가 아닌 자에게 그 보험계약의 권리를 양도하는 경우에도 피보험자의 동의를 받아야 한다","보험계약 체결시까지 피보험자의 서면에 의한 동의를 얻어야 한다","단체보험의 경우 피보험자의 동의는 생략할 수 있다"],"a":1,"e":"타인의 사망을 보험사고로 하는 보험계약은 계약체결시까지 피보험자의 서면에 의한 동의를 얻지 아니한 경우 무효임"},{"id":"10-45","type":10,"n":38,"sourceN":45,"q":"피보험자가 질병보험 보장개시일 이후에 해당 질병을 진단받은 경우 지급하는 보험금으로 맞는 것은?","c":["진단보험금","수술보험금","입원보험금","요양보험금"],"a":1,"e":"진단보험금에 대한 설명임"},{"id":"10-46","type":10,"n":39,"sourceN":46,"q":"치아보험에 대한 설명으로 틀린 것은?","c":["충치, 잇몸질환 등의 질병이나 상해로 치아 보철치료나 보존치료를 보장한다","보험가입 전 치아질환을 보유한 사람이 보험금을 받을 목적으로 보험에 가입하는 것을 방지하기 위해 면책기간 및 감액기간을 운영한다","면책기간 및 감액기간은 회사별로 기간이 상이하다","보존치료에는 충전, 크라운이 있고 보철치료에는 틀니, 브릿지, 임플란트가 있다"],"a":4,"e":"보존치료에는 충전, 크라운이 있고 보철치료에는 틀니, 브릿지, 임플란트가 있음"},{"id":"10-47","type":10,"n":40,"sourceN":47,"q":"장기간병보험에서 지급하는 보험금의 종류에 해당하는 것은?","c":["장기요양급여금, 치매간병비","질병입원급여금, 장기요양급여금","치매간병비, 질병수술급여금","상해수술급여금, 장기요양급여금"],"a":1,"e":"장기간병보험의 보험금은 장기요양급여금과 치매간병비임"},{"id":"11-44","type":11,"n":41,"sourceN":44,"q":"암보험에서 대기기간을 설정할 수 있는 경우에 해당하는 것은?","c":["18세 이상자가 암보험에 가입한 경우","기타피부암을 보장하는 경우","경계성종양을 보장하는 경우","대장점막내암을 보장하는 경우"],"a":1,"e":"15세 미만자에 대해 암보험에서는 대기기간을 설정하지 않음"},{"id":"11-45","type":11,"n":42,"sourceN":45,"q":"질병보험에서 실손보상 방식을 적용하는 보험금에 해당하는 것은?","c":["통원의료비","질병간병비","수술급여금","요양급여금"],"a":1,"e":"②, ③, ④는 정액보장 상품임"},{"id":"11-46","type":11,"n":43,"sourceN":46,"q":"뇌졸중, 심근경색 등 고객의 치료비가 드는 치명적 질병을 집중적으로 보장하는 보험은?","c":["암보험","CI보험","치아보험","실손의료보험"],"a":2,"e":"CI보험에 대한 설명"},{"id":"11-47","type":11,"n":44,"sourceN":47,"q":"다음의 장기요양등급 5등급에 대한 설명 중 (   ) 안에 들어갈 말로 맞는 것은?\n\n(   )(노인장기요양보험법 시행령 제2조에 따른 노인성질병으로 한정한다)","c":["심신상실자","심신박약자","심신이상자","치매환자"],"a":4,"e":"장기요양등급 5등급에 대한 설명"},{"id":"12-44","type":12,"n":45,"sourceN":44,"q":"다음 중 질병보험의 특징으로 바르게 짝지어진 것은?\n\n(가) 만 15세 미만자, 심신상실자, 심신박약자를 피보험자로 하는 질병보험은 가입할 수 없다\n(나) 피보험자의 보험나이는 계약일 현재 만 연령을 기준으로 하며, 1년 이하는 계산하지 않는다\n(다) 대기기간이 있을 수 있다\n(라) 정신질환은 보상하지 않는다","c":["(가), (나)","(가), (다)","(나), (라)","(다), (라)"],"a":4,"e":"(가) 질병사망을 담보하는 보험은 가입할 수 없으나, 질병보험에는 가입할 수 있음 (나) 1년 이하 → 6개월 이하"},{"id":"12-45","type":12,"n":46,"sourceN":45,"q":"다음 보기의 (   ) 안에 들어갈 숫자로 알맞은 것은?\n\n질병입원급여금의 지급일수는 1회 입원당 (   )일을 한도로 하며, 동일한 질병의 치료를 직접 목적으로 보험기간 중에 2회 이상 입원한 경우에는 이를 1회 입원으로 보아 각 입원일수를 합산하여 계산한다","c":["통원의료비","질병간병비","수술급여금","요양급여금"],"a":1,"e":"질병입원급여금의 1회 입원당 한도는 180일임"},{"id":"12-46","type":12,"n":47,"sourceN":46,"q":"암입원급여금의 보상에 대한 설명으로 틀린 것은?","c":["암의 치료를 직접 목적으로 하여 병원 또는 의원에 입원시 보상한다","암에 대한 책임개시일 이후 입원하여 치료를 받던 중 보험기간이 만료되었을 때에 계속 중인 입원(최초입원일을 기준)에 대해 보상한다","암수술로 인한 전신쇠약 등으로 면역력이 저하되어 발생하는 합병증의 치료를 위한 입원시 보상한다","요양목적의 입원시에는 보상하지 않는다"],"a":3,"e":"암입원급여금 지급예외 사항에 해당함"},{"id":"12-47","type":12,"n":48,"sourceN":47,"q":"장기간병보험과 관련한 설명으로 옳은 것은?","c":["피보험자가 심신상실 상태에서 자신을 해친 경우 보험금을 지급하지 아니한다","치매상태로 진단이 확정된 경우 간병보험금은 연금의 형태로만 받을 수 있다","본인을 위한 계약의 경우 보험금 대리청구인을 지정할 수 있다","전쟁, 외우의 무력행사, 혁명 등으로 발생한 간병비용은 보상한다"],"a":3,"e":"① 피보험자가 심신상실 상태에서 자신을 해친 경우에는 보험금을 지급함 ② 연금뿐만 아니라 일시금으로도 받을 수 있음 ④ 보상한다 → 보상하지 않는다"},{"id":"13-44","type":13,"n":49,"sourceN":44,"q":"질병보험에서 대기기간을 설정하는 목적으로 올바른 것은?","c":["이득금지의 원칙 준수","합리적 계약체결","역선택 방지","보험료 할인 혜택 부여"],"a":3,"e":"대기기간의 설정 목적은 역선택을 방지하기 위함"},{"id":"13-45","type":13,"n":50,"sourceN":45,"q":"질병보험에서 보상하지 않는 손해에 해당하지 않는 것은?","c":["피보험자가 자유로운 의사결정을 할 수 없는 상태에서 자신을 해친 경우","계약자가 고의로 피보험자를 해친 경우","보험수익자가 고의로 피보험자를 해친 경우","피보험자가 정당한 이유 없이 의사의 지시를 따르지 아니하여 악화된 부분으로 발생한 치료비"],"a":1,"e":"피보험자가 심신상실 등으로 자유로운 의사결정을 할 수 없는 상태에서 자신을 해친 경우에는 보험금을 지급함"},{"id":"13-46","type":13,"n":51,"sourceN":46,"q":"CI보험에 대한 설명으로 틀린 것은?","c":["치명적 질병보험이라고도 한다","중대한 화상이 발생한 경우는 보상하지 않는다","사망보험금 선지급제도가 있다","보험료납입 면제제도가 있다"],"a":2,"e":"CI보험은 중대한 질병의 진단을 받거나 중대한 수술을 받은 경우와 중대한 화상 및 부식이 발생한 경우에 보상"},{"id":"13-47","type":13,"n":52,"sourceN":47,"q":"심신의 기능상태 장애로 일상생활에서 전적으로 다른 사람의 도움이 필요한 상태에 해당하는 장기요양등급으로 맞는 것은?","c":["3등급","인지지원등급","2등급","1등급"],"a":4,"e":"장기요양 1등급의 심신 기능상태에 대한 설명임"},{"id":"14-44","type":14,"n":53,"sourceN":44,"q":"암보험에서 대기기간을 설정할 수 없는 경우에 해당하는 연령 중 가장 올바른 것은?","c":["만 15세 미만자","만 18세 미만자","만 20세 미만자","만 24세 미만자"],"a":1,"e":"2006년 1월 1일부터 만 15세 미만자에 대해 암보험에서는 대기기간을 설정하지 않고 있음"},{"id":"14-45","type":14,"n":54,"sourceN":45,"q":"질병보험에서는 (   ) 이상 후유장해 발생시 질병사망에 준하는 금액을 후유장해보험금으로 지급한다. (   ) 안에 들어갈 말로 알맞은 것은?","c":["80%","100%","60%","50%"],"a":1,"e":"80% 이상 고도 장해 발생시 후유장해보험금 지급에 대한 설명임"},{"id":"14-46","type":14,"n":55,"sourceN":46,"q":"암보험에 대한 설명으로 틀린 것은?","c":["암보장개시일 이후에 최초로 암으로 진단확정시 암진단비를 지급한다","암입원급여금은 피보험자가 암의 치료를 직접 목적으로 병원 또는 의원에 입원시 지급된다","요양목적의 입원시에는 암입원급여금을 지급하지 않는다","치료 중 보험기간이 만료되었을 때에는 계속 중인 입원기간에 대하여 암입원급여금이 보상되지 않는다"],"a":4,"e":"입원 치료 중 보험기간이 만료되는 경우 암입원급여금을 계속 보장함"},{"id":"14-47","type":14,"n":56,"sourceN":47,"q":"치매간병비 지급을 위한 중증치매상태에 대한 설명으로 틀린 것은?","c":["피보험자가 보험기간 중에 중증치매상태로 진단 확정되고 보험기간이 끝난 이후라도 일정 기간 이상 중증치매상태가 계속되었을 때 치매간병비를 지급한다","치매관련 전문의가 실시하는 전반적인 인지기능 및 사회기능 정도를 측정하는 검사를 기준으로 치매의 중증 정도를 정한다","단기 기억상실이 발생하였으나 인지기능 장애가 발생하지 않은 경우 치매간병비는 지급하지 않는다","경증치매 진단보험금이 중증치매 진단보험금보다 높게 설계된다"],"a":4,"e":"경증치매보장의 경우 진단보험금이 ‘중증치매’ 진단보험금보다 낮게 설계됨"},{"id":"15-44","type":15,"n":57,"sourceN":44,"q":"질병보험에 대한 설명으로 틀린 것은?","c":["보험계약 체결 이전에 보험사고가 이미 객관적으로 확정된 경우는 무효이다","청약일 이전에 진단이 확정된 질병이라 하더라도 청약일 후 5년이 지나는 동안 그 질병으로 추가 진단 또는 치료사실이 없을 경우 청약일부터 5년이 지난 이후에는 보장한다","실손보상 상품으로는 개발할 수 없다","15세 미만자는 암보험에서 대기기간을 설정하지 않는다"],"a":3,"e":"질병보험은 정액보상과 실손보상 상품으로 모두 개발할 수 있음"},{"id":"15-45","type":15,"n":58,"sourceN":45,"q":"질병수술급여금에 대한 설명으로 틀린 것은?","c":["질병으로 두 종류 이상의 질병수술을 받은 경우 하나의 질병수술보험금만 지급한다","피보험자가 보험기간 중에 진단 확정된 질병의 치료를 직접적인 목적으로 수술을 받은 경우 지급한다","질병으로 두 종류 이상의 질병수술을 받은 경우 두 종류의 질병수술보험금을 모두 지급한다","질병수술급여금은 보험가입금액으로 정액보상한다"],"a":3,"e":"하나의 질병수술보험금만 지급함"},{"id":"15-46","type":15,"n":59,"sourceN":46,"q":"암보험의 암입원급여금에 대한 설명으로 맞는 것은?","c":["암수술로 인한 전신허약 등으로 면역력이 저하되어 발생하는 합병증 치료를 위한 입원시 보상한다","암의 치료를 직접 목적으로 하여 병원 또는 의원에 입원시 지급한다","요양목적의 입원시에도 보상한다","치료 중 보험기간이 만료되었을 때에는 계속 중인 입원기간에 대하여 암입원급여금이 보상되지 않는다"],"a":2,"e":"①, ③은 암입원급여금 지급 사유에 해당하지 않음 ④ 계속 중인 입원기간에 대하여 암입원급여금이 계속 보상함"},{"id":"15-47","type":15,"n":60,"sourceN":47,"q":"다음 보기의 (   ) 안에 공통으로 들어갈 숫자로 맞는 것은?\n\n장기간병보험은 청약일 이전에 진단 확정된 질병이라 하더라도 청약일 이후 (   )년이 지나는 동안 그 질병으로 추가진단 또는 치료사실이 없을 경우, 청약일부터 (   )년이 지난 이후에는 약관에 따라 보장한다","c":["5","3","7","10"],"a":1,"e":"공통으로 들어갈 숫자는 5임"},{"id":"16-44","type":16,"n":61,"sourceN":44,"q":"암보험에 대한 설명으로 틀린 것은?","c":["2006년 1월 1일부터 만 19세 미만자에 대해서는 대기기간을 설정하지 않는다","기타피부암은 대기기간 없이 보험기간 시작일로부터 보상한다","대기기간 중 암진단 확정시에는 보험계약은 무효이며, 계약무효시에는 이미 납입한 보험료를 환급한다","보험회사는 역선택이 가능한 특정 질병의 경우 일정기간 동안 보장하지 않는 대기기간을 설정할 수 있다"],"a":1,"e":"2006년 1월 1일부터 만 15세 미만자에 대해서는 암보험에서 대기기간을 설정하지 않음"},{"id":"16-45","type":16,"n":62,"sourceN":45,"q":"질병보험에서 보상하지 않는 손해에 해당하는 것은?","c":["심신상실 상태에서 피보험자가 고의로 자신을 해친 경우","계약자가 실수로 피보험자를 해친 경우 그 사실을 증명한 경우","피보험자가 질병으로 인해 의사의 지시를 따르지 아니하여 악화된 부분으로 인하여 발생한 통원치료비","고의로 피보험자를 해친 보험수익자가 일부 수익자인 경우 다른 보험수익자의 보험금"],"a":3,"e":"피보험자가 정당한 이유 없이 의사의 지시를 따르지 아니한 때에 회사는 그로 인해 악화된 부분에 대하여는 보상하지 않음 (※ 「상법」상 중과실을 담보하도록 되어 있으며 상해보험과 질병보험에서도 동일하게 적용됨)"},{"id":"16-46","type":16,"n":63,"sourceN":46,"q":"질병보험의 특징으로 올바르지 않은 것은?","c":["CI보험은 6개월 이하의 잔여수명이 남은 경우 사망보험금의 80%를 선지급할 수 있다","미모를 위한 성형수술비는 보상하지 않는다","동일한 질병으로 두 가지 이상의 후유장해가 생긴 경우 후유장해지급률을 합산하여 지급한다","암을 담보하는 특별약관에는 대기기간이 있다"],"a":1,"e":"CI보험은 잔여수명이 6개월 이하인 치명적인 질병 발생시 사망보험금의 50%를 선지급함"},{"id":"16-47","type":16,"n":64,"sourceN":47,"q":"장기요양등급 중 장기요양 인지지원등급에 해당하는 점수는?","c":["90점 미만","45점 미만","50점 이상","65점 이상"],"a":2,"e":"인지지원등급의 장기요양인정점수는 45점 미만임"},{"id":"17-44","type":17,"n":65,"sourceN":44,"q":"질병보험에서 피보험자의 보험나이 계산에 대한 설명으로 틀린 것은?","c":["직업, 직무상, 연령별로 보험료 차이가 있다","보험나이는 계약일 현재 만 연령으로 계산한다","1년 미만의 단수가 있을 경우 6개월 미만은 버리고 6개월 이상은 올려서 계산한다","계산착오인 경우에는 보험료 변경시 소정의 보험료를 정산한다"],"a":1,"e":"질병보험은 연령별로 보험료 차이가 있고 직업·직무와는 관련이 없음"},{"id":"17-45","type":17,"n":66,"sourceN":45,"q":"질병보험에서 피보험자가 일정기간 계속 입원시 1일당 가입금액을 정액으로 지급하는 급부는?","c":["입원급여금","질병진단비","간병자금","입원의료비"],"a":1,"e":"입원급여금(또는 요양급여금)에 대한 설명임"},{"id":"17-46","type":17,"n":67,"sourceN":46,"q":"치아보험에 대한 설명으로 틀린 것은?","c":["치아보험은 충치, 잇몸질환 등의 질병(또는 상해)으로 치아에 보철치료나 보존치료 등을 받을 경우 보장하는 상품이다","갱신형은 연령 증가 등에 따라 갱신할 때마다 보험료가 조정된다","임플란트 보철치료의 경우 계약일부터 90일 또는 180일 이내의 면책기간이 있다","치아보험은 회사별 보장상품 종류에 따라 75세까지 가입이 가능하다"],"a":3,"e":"90일 또는 180일 이내 → 180일 또는 1년 이내"},{"id":"17-47","type":17,"n":68,"sourceN":47,"q":"간병보험은 상해 또는 질병으로 인한 간병비용을 지급하므로 보상하지 않는 손해가 상해보험이나 질병보험과 기본적으로 동일하다. (   ) 안에 들어갈 보험은?","c":["질병보험","실손의료보험","배상책임보험","후유장해보험"],"a":1,"e":"보상하지 않는 손해는 상해보험이나 질병보험과 기본적으로 동일함"},{"id":"18-44","type":18,"n":69,"sourceN":44,"q":"보험계약의 무효사유에 해당하지 않는 것은?","c":["보험계약시 이미 보험사고가 발생한 경우","질병사망을 담보하는 계약의 피보험자가 15세 미만인 경우","타인의 사망을 보험사고로 하는 계약에서 피보험자의 서면동의가 없는 경우","질병치료비를 담보하는 계약의 피보험자가 청각장애인인 경우"],"a":4,"e":"피보험자가 청각장애인인 경우 무효사유에 해당하지 않음"},{"id":"18-45","type":18,"n":70,"sourceN":45,"q":"동일한 질병 또는 상해로 두 가지 이상의 후유장해가 생긴 경우 후유장해지급률을 산출하는 방법으로 맞는 것은?","c":["각 후유장해지급률 중 높은 것을 적용한다","각 후유장해지급률의 평균을 적용한다","각 후유장해지급률을 합산하여 적용한다","각 후유장해지급률 중 낮은 것을 적용한다"],"a":3,"e":"합산하여 적용함"},{"id":"18-46","type":18,"n":71,"sourceN":46,"q":"태아보험 관련 특약이 아닌 것은?","c":["일상생활배상책임보험","출생전후기 질환 보장특약","선천성 질환 수술특약","미숙아 육아비용보장특약"],"a":1,"e":"일상생활배상책임보험은 태아보험 관련 특약이 아님"},{"id":"18-47","type":18,"n":72,"sourceN":47,"q":"다음 중 장기요양등급 1등급의 장기요양 인정점수에 해당하는 것은?","c":["60점 이상 75점 미만","75점 이상 95점 미만","95점 이상","45점 이상 51점 미만"],"a":3,"e":"① 3등급 점수 기준 ② 2등급 점수 기준 ④ 5등급 점수 기준"},{"id":"19-44","type":19,"n":73,"sourceN":44,"q":"질병보험의 대기기간에 대한 설명으로 옳지 않은 것은?","c":["제자리암, 기타피부암 등은 대기기간 없이 보험기간 시작일부터 보상한다","암을 담보하는 특별약관에서는 대기기간 중 암 진단이 확정되는 경우에 특별약관을 무효로 한다","15세 미만자는 암보험에서 대기기간을 설정하지 않고 있다","특별약관의 계약무효시에는 이미 납입한 특별약관 보험료를 환급하지 않는다"],"a":4,"e":"특별약관 보험료를 환급함"},{"id":"19-45","type":19,"n":74,"sourceN":45,"q":"보험계약 청약일 이전에 진단 또는 치료사실이 있는 경우, 같은 질병으로 추가 진단 또는 치료사실이 발생하여도 보상받을 수 있는 시점은 청약일로부터 얼마나 경과한 때부터인가?","c":["3년","5년","10년","어떤 사유로도 보상받을 수 없다"],"a":2,"e":"청약일로부터 5년이 지난 후 진단된 경우 약관에 따라 보상함"},{"id":"19-46","type":19,"n":75,"sourceN":46,"q":"치아보험에 대한 설명으로 틀린 것은?","c":["치아보험은 충치, 잇몸질환 등의 질병(또는 상해)로 치아에 보철치료나 보존치료 등을 받을 경우 보험금을 지급받을 수 있는 보험상품이다","질병으로 인한 치료에 대하여는 면책기간이나 감액기간을 운영하고 있다","감액기간은 보험가입 전에 이미 치아질환을 보유한 사람이 보험금을 받을 목적으로 보험에 가입하는 것을 방지하기 위한 장치이다","치아보험은 갱신할 때마다 보험료가 조정되는 갱신형이 있는데 보험료 갱신은 전체 보험기간 중 3회를 초과할 수 없다"],"a":4,"e":"치아보험(갱신형)은 연령 증가 등에 따라 갱신할 때마다 보험료가 조정되며, 보험료 갱신 횟수 제한은 없음"},{"id":"19-47","type":19,"n":76,"sourceN":47,"q":"활동불능 또는 인식불능 등 타인의 간병을 필요로 하는 상태 및 이로 인한 치료 등의 위험을 보장하는 보험에 해당하지 않는 것은?","c":["장기간병보험","장기요양보험","개호보험","장애보험"],"a":4,"e":"장기간병보험에 대한 설명이며 장애보험은 간병보험에 해당하지 않음"},{"id":"20-44","type":20,"n":77,"sourceN":44,"q":"다음의 보험나이에 대한 설명에서 (   ) 안에 들어갈 말이 바르게 나열된 것은?","c":["(가) 1년, (나) 6개월, (다) 9개월, (라) 1년","(가) 1년, (나) 3개월, (다) 9개월, (라) 1년","(가) 1년, (나) 6개월, (다) 6개월, (라) 1년","(가) 1년, (나) 9개월, (다) 6개월, (라) 1년"],"a":3,"e":"보험나이의 계산에 대한 설명임"},{"id":"20-45","type":20,"n":78,"sourceN":45,"q":"다음 보기의 (   ) 안에 들어갈 말로 가장 적절한 것은?","c":["(가) 질병 (나) 회복상태 및 기능상실 상태","(가) 사고 (나) 흉터","(가) 상해 (나) 흉터","(가) 상해 또는 질병 (나) 회복상태 및 기능상실 상태"],"a":4,"e":"‘장해’에 대한 설명임"},{"id":"20-46","type":20,"n":79,"sourceN":46,"q":"어린이보험에 대한 설명으로 틀린 것은?","c":["어린이보험은 자녀의 성장과정 중 발생할 수 있는 질병, 상해로 인한 의료비와 자녀 일상생활 중 배상책임을 보장하는 보험이다","어린이보험 가입연령은 0세~15세이다","장해·기형 등 선천성 질환을 가진 신생아가 보험 혜택을 받을 수 있도록 태아도 보험에 가입할 수 있다","출생 전 태아는 법인격이 없어 원칙적으로 피보험자가 불가능하나 태아 출생을 조건으로 하는 태아가입 특별약관을 통해 보험계약을 체결한다"],"a":2,"e":"어린이보험 가입연령은 0~15세임"},{"id":"20-47","type":20,"n":80,"sourceN":47,"q":"노인장기요양등급을 판정하는 기관으로 맞는 것은?","c":["국민건강보험공단","건강보험심사평가원","한국보건사회연구원","한국보건개발원"],"a":1,"e":"국민건강보험공단 장기요양 등급판정위원회에서 등급을 판정함"}]; var questionBank = questions;
+    var totalQuestions = questionBank.length;
+    var answers = Array(totalQuestions).fill(null);
+    var cursor = 0;
+    var wrongItems = [];
+    var reviewCursor = 0;
+
+    function $(id) { return document.getElementById(id); }
+    function displayText(value) {
+      return String(value == null ? '' : value).replace(/\\n/g, '\n');
+    }
+    function showScreen(id) {
+      ['startScreen','quizScreen','resultScreen','reviewScreen','completeScreen'].forEach(function (screenId) {
+        $(screenId).classList.toggle('hidden', screenId !== id);
+      });
+      window.scrollTo(0, 0);
+    }
+    function sourceText(item) {
+      return item.type + '형 ' + item.sourceN + '번';
+    }
+    function resetStudy() {
+      answers = Array(totalQuestions).fill(null);
+      cursor = 0;
+      wrongItems = [];
+      reviewCursor = 0;
+      showScreen('startScreen');
+    }
+    function renderQuiz() {
+      var item = questionBank[cursor];
+      $('quizProgress').textContent = (cursor + 1) + ' / ' + totalQuestions;
+      $('quizSource').textContent = sourceText(item);
+      $('quizProgressFill').style.width = (((cursor + 1) / totalQuestions) * 100) + '%';
+      $('quizNumber').textContent = '문항 ' + (cursor + 1) + ' · ' + sourceText(item);
+      $('quizQuestion').textContent = displayText(item.q);
+      $('quizChoices').innerHTML = '';
+
+      item.c.forEach(function (choice, index) {
+        var button = document.createElement('button');
+        button.type = 'button';
+        button.className = 'choice' + (answers[cursor] === index + 1 ? ' selected' : '');
+        var number = document.createElement('span');
+        number.className = 'choice-number';
+        number.textContent = index + 1;
+        var text = document.createElement('span');
+        text.className = 'choice-text';
+        text.textContent = displayText(choice);
+        button.append(number, text);
+        button.addEventListener('click', function () {
+          answers[cursor] = index + 1;
+          $('validationNote').classList.add('hidden');
+          renderQuiz();
+        });
+        $('quizChoices').appendChild(button);
+      });
+
+      $('prevButton').disabled = cursor === 0;
+      $('nextButton').classList.toggle('hidden', cursor === totalQuestions - 1);
+      $('submitButton').classList.toggle('hidden', cursor !== totalQuestions - 1);
+    }
+    function beginStudy() {
+      answers = Array(totalQuestions).fill(null);
+      cursor = 0;
+      wrongItems = [];
+      showScreen('quizScreen');
+      renderQuiz();
+    }
+    function submitStudy() {
+      var missing = answers.findIndex(function (answer) { return answer == null; });
+      if (missing !== -1) {
+        cursor = missing;
+        $('validationNote').textContent = '아직 답하지 않은 문항이 있습니다. 현재 문항부터 답해 주세요.';
+        $('validationNote').classList.remove('hidden');
+        renderQuiz();
+        return;
+      }
+
+      wrongItems = [];
+      questionBank.forEach(function (item, index) {
+        if (answers[index] !== item.a) {
+          wrongItems.push({ item: item, selected: answers[index] });
+        }
+      });
+
+      var correctCount = totalQuestions - wrongItems.length;
+      $('scoreText').textContent = correctCount + ' / ' + totalQuestions;
+      $('scoreSub').textContent = '정답률 ' + Math.round(correctCount / totalQuestions * 100) + '% · 오답 ' + wrongItems.length + '문항';
+
+      if (wrongItems.length) {
+        $('wrongSummary').innerHTML = '<strong>오답 문항</strong>' + wrongItems.map(function (entry) {
+          return sourceText(entry.item);
+        }).join(', ');
+        $('reviewButton').textContent = '오답노트 시작 (' + wrongItems.length + '문항)';
+        $('reviewButton').classList.remove('hidden');
+      } else {
+        $('wrongSummary').innerHTML = '<strong>전 문항 정답</strong>틀린 문제가 없어 오답노트를 생략합니다.';
+        $('reviewButton').classList.add('hidden');
+      }
+      showScreen('resultScreen');
+    }
+    function renderReview() {
+      var entry = wrongItems[reviewCursor];
+      var item = entry.item;
+      $('reviewProgress').textContent = '오답 ' + (reviewCursor + 1) + ' / ' + wrongItems.length;
+      $('reviewSource').textContent = sourceText(item);
+      $('reviewProgressFill').style.width = (((reviewCursor + 1) / wrongItems.length) * 100) + '%';
+      $('reviewNumber').textContent = '문항 ' + sourceText(item);
+      $('reviewQuestion').textContent = displayText(item.q);
+      $('reviewChoices').innerHTML = '';
+
+      item.c.forEach(function (choice, index) {
+        var choiceNo = index + 1;
+        var isCorrect = choiceNo === item.a;
+        var isSelected = choiceNo === entry.selected;
+        var button = document.createElement('div');
+        button.className = 'review-choice' + (isCorrect ? ' correct' : '') + (isSelected ? ' wrong-selected' : '');
+        var number = document.createElement('span');
+        number.className = 'review-choice-number';
+        number.textContent = choiceNo;
+        var text = document.createElement('span');
+        text.className = 'review-choice-text';
+        text.textContent = displayText(choice);
+        var mark = document.createElement('span');
+        mark.className = 'choice-mark';
+        mark.textContent = isCorrect ? '정답' : (isSelected ? '내 답' : '');
+        button.append(number, text, mark);
+        $('reviewChoices').appendChild(button);
+      });
+
+      $('reviewStatus').textContent = '내가 고른 답: ' + entry.selected + '번 · 정답: ' + item.a + '번';
+      $('reviewExplanation').textContent = displayText(item.e);
+      $('reviewPrevButton').disabled = reviewCursor === 0;
+      $('reviewNextButton').classList.toggle('hidden', reviewCursor === wrongItems.length - 1);
+      $('reviewCompleteButton').classList.toggle('hidden', reviewCursor !== wrongItems.length - 1);
+    }
+    function beginReview() {
+      reviewCursor = 0;
+      showScreen('reviewScreen');
+      renderReview();
+    }
+    function finishStudy() {
+      $('completeText').textContent = '80문항 풀이와 ' + wrongItems.length + '개 오답의 해설 확인을 완료했습니다.';
+      showScreen('completeScreen');
+    }
+
+    $('startButton').addEventListener('click', beginStudy);
+    $('prevButton').addEventListener('click', function () {
+      if (cursor > 0) { cursor -= 1; renderQuiz(); }
+    });
+    $('nextButton').addEventListener('click', function () {
+      if (cursor < totalQuestions - 1) { cursor += 1; renderQuiz(); }
+    });
+    $('submitButton').addEventListener('click', submitStudy);
+    $('reviewButton').addEventListener('click', beginReview);
+    $('reviewPrevButton').addEventListener('click', function () {
+      if (reviewCursor > 0) { reviewCursor -= 1; renderReview(); }
+    });
+    $('reviewNextButton').addEventListener('click', function () {
+      if (reviewCursor < wrongItems.length - 1) { reviewCursor += 1; renderReview(); }
+    });
+    $('reviewCompleteButton').addEventListener('click', finishStudy);
+    function goFocusMenu(confirmFirst) {
+      if (confirmFirst && !confirm('현재 학습을 중단하고 모의고사 테스트 목록으로 돌아갈까요?')) return;
+      window.location.href = './index.html';
+    }
+    $('quitButton').addEventListener('click', function () {
+      goFocusMenu(true);
+    });
+    $('resultHomeButton').addEventListener('click', function () { goFocusMenu(false); });
+    $('completeHomeButton').addEventListener('click', function () { goFocusMenu(false); });
+
+  </script>
+</body>
+</html>

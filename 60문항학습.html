@@ -1,0 +1,385 @@
+<!doctype html>
+<html lang="ko" class="auth-pending">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f37021">
+  <meta name="description" content="1형부터 20형까지 1~3번 화재보험·손해보험 기초 60문항 집중학습">
+  <title>손해보험·화재보험 기초 60문항 집중학습</title>
+  <script>
+    (function () {
+      var authScript = document.createElement('script');
+      authScript.src = './인증설정.js';
+      authScript.onload = function () {
+        if (window.LearningAuth) window.LearningAuth.requireStudent();
+      };
+      document.head.appendChild(authScript);
+    }());
+  </script>
+  <style>
+    html.auth-pending body{visibility:hidden}
+    :root{--orange:#f37021;--orange-dark:#d95810;--ink:#202124;--muted:#6b7280;--line:#e6e8eb;--soft:#fff7f1;--green:#16803c;--green-bg:#eaf8ef;--red:#c62828;--red-bg:#fff0f0;--navy:#243247}
+    *{box-sizing:border-box}
+    html,body{margin:0;min-height:100%;background:#f5f6f8;color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Apple SD Gothic Neo","Noto Sans KR","Malgun Gothic",sans-serif}
+    body{padding:env(safe-area-inset-top) 0 env(safe-area-inset-bottom)}
+    button{font:inherit}
+    button{border:0;cursor:pointer}
+    button:disabled{cursor:default}
+    .app{width:min(760px,100%);margin:0 auto;min-height:100vh;background:#fff;box-shadow:0 0 24px rgba(0,0,0,.06)}
+    .site-header{position:sticky;top:0;z-index:10;background:#fff;border-bottom:1px solid var(--line);box-shadow:0 5px 18px rgba(32,43,60,.1)}
+    .site-title-row{height:44px;display:flex;align-items:center;background:var(--orange);color:#fff;padding:0 max(14px,calc((100% - 760px)/2 + 14px));overflow:hidden}
+    .site-title{width:100%;font-size:clamp(12px,3.6vw,16px);font-weight:900;letter-spacing:-.045em;line-height:1;white-space:nowrap;overflow-x:auto;scrollbar-width:none}
+    .site-title::-webkit-scrollbar,.top-menu::-webkit-scrollbar{display:none}
+    .top-menu{height:48px;display:flex;align-items:center;justify-content:center;gap:8px;padding:0 12px;overflow-x:auto;white-space:nowrap;background:#fff}
+    .top-menu-link{flex:0 0 auto;display:inline-flex;align-items:center;justify-content:center;min-height:34px;padding:0 14px;border:1px solid #ffd0b5;border-radius:999px;color:var(--orange-dark);font-size:13px;font-weight:900;text-align:center;background:#fff8f3;text-decoration:none}
+    .top-menu-link:hover,.top-menu-link:focus-visible,.top-menu-link.active{background:var(--orange);color:#fff;border-color:var(--orange)}
+    .social-brand{display:inline-flex;align-items:center;flex:0 0 auto;color:#6b7280;font-size:12px;font-weight:900;letter-spacing:-.04em;white-space:nowrap}
+    .social-icon-link{display:inline-flex;align-items:center;justify-content:center;flex:0 0 34px;width:34px;min-height:34px;height:34px;padding:0;border-radius:10px;color:#fff}
+    .social-icon-link svg{width:18px;height:18px;display:block}
+    .social-icon-link.instagram{background:linear-gradient(135deg,#f58529,#dd2a7b 52%,#8134af)}
+    .social-icon-link.blog{background:#03c75a}
+    .topbar{background:var(--orange);color:#fff;padding:16px 18px 15px;position:relative;z-index:1}
+    .global-nav{display:none}
+    .global-nav::-webkit-scrollbar{display:none}
+    .global-nav a{flex:0 0 auto;padding:7px 12px;border:1px solid #ffd0b5;border-radius:999px;background:#fff8f3;color:var(--orange-dark);font-size:12px;font-weight:900;text-decoration:none}
+    .global-nav a:hover,.global-nav a:focus-visible{background:var(--orange);border-color:var(--orange);color:#fff}
+    .topbar-row{display:flex;align-items:center;justify-content:space-between;gap:12px}
+    .brand{font-weight:900;font-size:18px;letter-spacing:-.06em;line-height:1.25}
+    .subbrand{margin-top:4px;font-size:12px;opacity:.92}
+    .top-actions{display:flex;align-items:center;gap:6px;white-space:nowrap}
+    .student-name{font-size:12px;font-weight:800}
+    .top-button{padding:7px 9px;border:1px solid rgba(255,255,255,.55);border-radius:9px;background:transparent;color:#fff;font-size:11px;font-weight:800}
+    .screen{padding:22px 18px 34px}
+    .hidden{display:none!important}
+    .hero{text-align:center;padding:14px 0 7px}
+    .badge{display:inline-flex;padding:6px 10px;border-radius:999px;background:#fff0e6;color:var(--orange-dark);font-size:13px;font-weight:900}
+    h1{margin:15px 0 10px;font-size:clamp(27px,6vw,38px);line-height:1.22;letter-spacing:-.075em}
+    .hero p{margin:0;color:var(--muted);font-size:14px;line-height:1.6}
+    .timeline{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin:25px 0 23px;position:relative}
+    .timeline:before{content:"";position:absolute;left:12%;right:12%;top:21px;height:2px;background:#ffd4bd}
+    .step{position:relative;z-index:1;text-align:center}
+    .step-no{display:grid;place-items:center;width:42px;height:42px;margin:0 auto 7px;border:2px solid #ffc39f;border-radius:50%;background:#fff;color:var(--orange-dark);font-weight:900}
+    .step-label{font-size:11px;line-height:1.3;font-weight:800;color:#4b5563}
+    .info-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:20px 0}
+    .info-box{padding:14px 7px;border:1px solid var(--line);border-radius:13px;background:#fff;text-align:center}
+    .info-box strong{display:block;color:var(--orange-dark);font-size:18px}
+    .info-box span{display:block;margin-top:3px;color:var(--muted);font-size:11px}
+    .notice{margin:18px 0;padding:14px 15px;border-radius:13px;background:var(--soft);color:#70411e;font-size:13px;line-height:1.55}
+    .primary{width:100%;padding:14px 16px;border-radius:12px;background:var(--orange);color:#fff;font-weight:900;font-size:15px;box-shadow:0 8px 18px rgba(243,112,33,.2)}
+    .primary:hover,.primary:focus-visible{background:var(--orange-dark)}
+    .quiz-head,.review-head{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:10px}
+    .progress-label{color:var(--orange-dark);font-size:14px;font-weight:900}
+    .source-label{color:var(--muted);font-size:12px;font-weight:800}
+    .progress-track{height:7px;margin-bottom:18px;border-radius:999px;background:#f3e5dd;overflow:hidden}
+    .progress-fill{height:100%;border-radius:inherit;background:var(--orange);transition:width .2s ease}
+    .question-card,.result-card,.review-card,.complete-card{border:1px solid var(--line);border-radius:18px;background:#fff}
+    .question-card{padding:20px 17px}
+    .question-number{margin-bottom:11px;color:var(--orange-dark);font-size:13px;font-weight:900}
+    .question-text{margin:0;white-space:pre-line;font-size:19px;line-height:1.55;letter-spacing:-.045em}
+    .choices{display:grid;gap:10px;margin-top:20px}
+    .choice{display:flex;align-items:flex-start;gap:10px;width:100%;padding:13px 12px;border:1px solid #d9dde2;border-radius:12px;background:#fff;color:var(--ink);text-align:left;line-height:1.45}
+    .choice:hover,.choice:focus-visible{border-color:#f5a678;background:#fffaf7}
+    .choice.selected{border-color:var(--orange);background:#fff3eb;box-shadow:0 0 0 2px #ffe1cd}
+    .choice-number{display:grid;place-items:center;flex:0 0 26px;width:26px;height:26px;border-radius:50%;background:#f1f3f5;color:#5b6470;font-size:12px;font-weight:900}
+    .choice.selected .choice-number{background:var(--orange);color:#fff}
+    .choice-text{font-size:14px;white-space:pre-line}
+    .quiz-nav,.review-nav{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:16px}
+    .nav-button{padding:12px 10px;border:1px solid #d9dde2;border-radius:11px;background:#fff;color:#4b5563;font-size:13px;font-weight:900}
+    .nav-button:hover:not(:disabled),.nav-button:focus-visible{border-color:#f0a272;color:var(--orange-dark)}
+    .nav-button:disabled{opacity:.4}
+    .nav-button.next,.nav-button.submit,.nav-button.complete{border-color:var(--orange);background:var(--orange);color:#fff}
+    .nav-button.submit,.nav-button.complete{grid-column:1/-1}
+    .quit-button{display:block;margin:18px auto 0;padding:5px 8px;background:transparent;color:#9aa1aa;font-size:11px;text-decoration:underline}
+    .validation-note{margin:13px 0 0;padding:11px 12px;border-radius:10px;background:#fff4df;color:#8a5a16;font-size:12px;font-weight:700}
+    .result-card{padding:21px 17px;text-align:center}
+    .result-kicker{margin:0;color:var(--muted);font-size:13px;font-weight:800}
+    .score{margin:7px 0 0;color:var(--orange-dark);font-size:42px;font-weight:950;letter-spacing:-.07em}
+    .score-sub{margin:3px 0 0;color:var(--muted);font-size:13px}
+    .wrong-summary{margin:18px 0 0;padding:14px;border-radius:12px;background:var(--red-bg);color:#7c2222;text-align:left;font-size:13px;line-height:1.55}
+    .wrong-summary strong{display:block;margin-bottom:4px;color:var(--red)}
+    .review-card{padding:19px 17px}
+    .review-choice{position:relative;display:flex;align-items:flex-start;gap:10px;width:100%;margin-top:9px;padding:12px;border:1px solid #d9dde2;border-radius:11px;background:#fff;text-align:left}
+    .review-choice.correct{border-color:#8bc99e;background:var(--green-bg);color:#155d2c}
+    .review-choice.wrong-selected{border-color:#eba0a0;background:var(--red-bg);color:#8c2424}
+    .review-choice-number{display:grid;place-items:center;flex:0 0 25px;width:25px;height:25px;border-radius:50%;background:#eef0f2;color:#5d6670;font-size:12px;font-weight:900}
+    .review-choice.correct .review-choice-number{background:var(--green);color:#fff}
+    .review-choice.wrong-selected .review-choice-number{background:var(--red);color:#fff}
+    .review-choice-text{font-size:14px;line-height:1.45;white-space:pre-line}
+    .choice-mark{margin-left:auto;flex:0 0 auto;font-size:11px;font-weight:900}
+    .review-status{margin-top:15px;padding:11px 12px;border-radius:10px;background:#f7f8fa;color:#4b5563;font-size:13px;font-weight:800}
+    .explanation{margin-top:14px;padding:14px;border-left:4px solid var(--orange);border-radius:0 11px 11px 0;background:#fff8f3}
+    .explanation strong{display:block;margin-bottom:6px;color:var(--orange-dark);font-size:13px}
+    .explanation span{display:block;white-space:pre-line;color:#4b5563;font-size:13px;line-height:1.6}
+    .complete-card{padding:31px 18px;text-align:center}
+    .complete-icon{font-size:42px}
+    .complete-card h2{margin:12px 0 7px;font-size:25px;letter-spacing:-.06em}
+    .complete-card p{margin:0;color:var(--muted);font-size:14px;line-height:1.6}
+    .footer-note{margin:21px 0 0;color:#a0a6ad;text-align:center;font-size:11px}
+    .site-footer{padding:22px 14px 34px;border-top:1px solid var(--line);color:#8a929b;text-align:center;font-size:11px}
+    .footer-nav{display:flex;justify-content:center;flex-wrap:wrap;gap:8px 14px;margin-bottom:10px;color:var(--orange-dark);font-weight:900}
+    .footer-nav a{color:inherit;text-decoration:none}
+    .footer-nav a:hover,.footer-nav a:focus-visible{text-decoration:underline}
+    @media(max-width:520px){.screen{padding:20px 14px 30px}.topbar{padding-left:14px;padding-right:14px}.brand{font-size:16px}.subbrand{font-size:11px}.student-name{display:none}.question-text{font-size:18px}.choice-text{font-size:13px}}
+    @media(max-width:370px){.timeline{gap:2px}.step-label{font-size:10px}.info-box strong{font-size:16px}.info-box span{font-size:10px}}
+    @media(prefers-reduced-motion:reduce){.progress-fill{transition:none}}
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-title-row"><div class="site-title">2026 손해보험 자격시험 온라인학습실[8월 개정판]</div></div>
+    <nav class="top-menu" aria-label="주요 메뉴">
+      <a class="top-menu-link" href="./학습실.html">홈</a>
+      <a class="top-menu-link" href="./자격시험안내.html">자격시험 안내</a>
+      <a class="top-menu-link" href="./강의목차.html">동영상 강의보기</a>
+      <a class="top-menu-link active" href="./index.html" aria-current="page">모의고사 테스트</a>
+      <span class="social-brand">강의하는 심팀장</span>
+      <a class="social-icon-link instagram" href="https://www.instagram.com/career_educator" target="_blank" rel="noopener noreferrer" aria-label="인스타그램" title="인스타그램"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"/></svg></a>
+      <a class="social-icon-link blog" href="https://blog.naver.com/magoshim" target="_blank" rel="noopener noreferrer" aria-label="네이버 블로그" title="네이버 블로그"><svg viewBox="0 0 24 24" aria-hidden="true"><text x="12" y="17" text-anchor="middle" font-family="Arial,sans-serif" font-size="15" font-weight="900" fill="currentColor">B</text></svg></a>
+    </nav>
+  </header>
+  <div class="app">
+    <main>
+      <section id="startScreen" class="screen">
+        <button id="startButton" class="primary" type="button">60문항 학습시작</button>
+      </section>
+
+      <section id="quizScreen" class="screen hidden">
+        <div class="quiz-head">
+          <span id="quizProgress" class="progress-label"></span>
+          <span id="quizSource" class="source-label"></span>
+        </div>
+        <div class="progress-track" aria-hidden="true"><div id="quizProgressFill" class="progress-fill"></div></div>
+        <article class="question-card">
+          <div id="quizNumber" class="question-number"></div>
+          <h2 id="quizQuestion" class="question-text"></h2>
+          <div id="quizChoices" class="choices"></div>
+        </article>
+        <p id="validationNote" class="validation-note hidden"></p>
+        <div class="quiz-nav">
+          <button id="prevButton" class="nav-button" type="button">이전 문제</button>
+          <button id="nextButton" class="nav-button next" type="button">다음 문제</button>
+          <button id="submitButton" class="nav-button submit hidden" type="button">60문제 제출하고 채점</button>
+        </div>
+        <button id="quitButton" class="quit-button" type="button">학습을 중단하고 처음으로</button>
+      </section>
+
+      <section id="resultScreen" class="screen hidden">
+        <div class="result-card">
+          <p class="result-kicker">60문항 학습 결과</p>
+          <div id="scoreText" class="score"></div>
+          <p id="scoreSub" class="score-sub"></p>
+          <div id="wrongSummary" class="wrong-summary"></div>
+          <button id="reviewButton" class="primary" type="button">오답노트 시작</button>
+          <button id="resultHomeButton" class="quit-button" type="button">처음으로 돌아가기</button>
+        </div>
+      </section>
+
+      <section id="reviewScreen" class="screen hidden">
+        <div class="review-head">
+          <span id="reviewProgress" class="progress-label"></span>
+          <span id="reviewSource" class="source-label"></span>
+        </div>
+        <div class="progress-track" aria-hidden="true"><div id="reviewProgressFill" class="progress-fill"></div></div>
+        <article class="review-card">
+          <div id="reviewNumber" class="question-number"></div>
+          <h2 id="reviewQuestion" class="question-text"></h2>
+          <div id="reviewChoices"></div>
+          <div id="reviewStatus" class="review-status"></div>
+          <div class="explanation"><strong>공식 해설</strong><span id="reviewExplanation"></span></div>
+        </article>
+        <div class="review-nav">
+          <button id="reviewPrevButton" class="nav-button" type="button">이전 오답</button>
+          <button id="reviewNextButton" class="nav-button next" type="button">다음 오답</button>
+          <button id="reviewCompleteButton" class="nav-button complete hidden" type="button">오답노트 완료</button>
+        </div>
+      </section>
+
+      <section id="completeScreen" class="screen hidden">
+        <div class="complete-card">
+          <div class="complete-icon">✓</div>
+          <h2>학습이 끝났습니다.</h2>
+          <p id="completeText">60문항 풀이와 오답노트 확인을 완료했습니다.</p>
+          <button id="completeHomeButton" class="primary" type="button" style="margin-top:22px">처음으로 돌아가기</button>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <nav class="footer-nav" aria-label="하단 공통 메뉴"><a href="./학습실.html">홈</a><a href="./자격시험안내.html">자격시험 안내</a><a href="./강의목차.html">동영상 강의보기</a><a href="./index.html">모의고사 테스트</a></nav>
+      개발저작권 @career_educator
+    </footer>
+  </div>
+
+  <script>
+    var questionBank = [{"id":"1-1","type":1,"n":1,"q":"화재보험에서 보상하는 비용손해에 해당하지 않는 것은?","c":["손해방지비용","대위권 보전비용","잔존물 제거비용","화재에 따른 소방손해 및 피난손해"],"a":4,"e":"화재에 따른 소방손해와 피난손해는 재산손해에 해당합니다."},{"id":"1-2","type":1,"n":2,"q":"주택화재보험에서 다른 약정이 없어도 보험의 목적에 포함되는 것은?","c":["유가증권","피보험자 소유의 건물 부속물","소프트웨어","보석"],"a":2,"e":"피보험자 소유인 건물의 부속물과 부착물(선전탑)은 자동담보물건에 해당합니다."},{"id":"1-3","type":1,"n":3,"q":"특수건물화재보험(특약 포함)에 의무적으로 가입해야 하는 자는?","c":["특수건물에 임차 영업 중인 다중이용업주","특수건물의 소유주","특수건물의 소유주와 특수 관계에 있는 자","특수건물의 소유주와 주주를 같이 하는 자"],"a":2,"e":"특수건물화재보험은 특수건물의 소유자가 의무적으로 가입해야 합니다."},{"id":"2-1","type":2,"n":1,"q":"주택화재보험 보통약관에서 보상받을 수 없는 손해는?","c":["태풍으로 인한 보일러의 난방장치가 파손됨","옆집의 가스폭발로 보험에 가입한 주택건물이 파손됨","계약자에게 원인이 있는 자가 보험계약자의 주택에 방화하여 전소됨","화재 때 피난에 해당하는 TV를 도난당함"],"a":4,"e":"화재발생시 도난손해는 보상하지 않습니다."},{"id":"2-2","type":2,"n":2,"q":"손해방지경감의무에 대한 내용으로 맞는 것은?","c":["손해방지의무는 보험계약자 또는 피보험자 모두에게 있다","손해발생통지의무를 게을리하여 손해가 증가된 때에는 증가된 손해의 50% 이내에서 보상받을 수 있다","보험사고의 발생 자체를 방지해야 하는 의무를 갖는다","보험회사에 통지했다면 손해조사를 위해 보험회사가 요구한 서류를 제출할 필요는 없다"],"a":1,"e":"손해방지의무는 보험계약자와 피보험자 모두에게 있습니다. 손해발생 통지, 사고 자체의 방지, 손해조사 서류 제출에 관한 설명은 옳지 않습니다."},{"id":"2-3","type":2,"n":3,"q":"재난배상책임보험에 대한 설명으로 틀린 것은?","c":["소유자 또는 점유자와의 계약에 따라 가입대상시설의 관리책임과 권한을 보유하는 자는 보험 가입의무자가 아니다","가입대상시설의 소유자와 점유자가 다른 경우 보험 가입의무자는 점유자이다","박물관, 미술관, 과학관은 가입대상이다","20개 업종을 대상으로 가입 의무화한 보험이다"],"a":1,"e":"소유자 또는 점유자와의 계약에 따라 가입대상시설의 관리책임과 권한을 보유하는 자가 가입의무자가 됩니다."},{"id":"3-1","type":3,"n":1,"q":"다음 보기의 (  ) 안에 공통으로 들어갈 말로 옳은 것은?\\n\\n주택화재보험에서 (  )은 손해액의 10% 한도로 보상하며, 또한 재산손해보험금과 손해방지비용은 보험가입금액을 한도로 한다.","c":["잔존물 보전비용","잔존물 제거비용","기타 협력비용","손해방지비용"],"a":2,"e":"잔존물 제거비용은 손해액의 10% 한도로 보상하며, 재산손해보험금과 손해방지비용은 보험가입금액을 한도로 합니다."},{"id":"3-2","type":3,"n":2,"q":"일반화재보험에서 보상하지 않는 손해는?","c":["피난지에서 5일 이내에 발생한 피난손해","화재, 벼락으로 인한 손해","폭발 및 파열에 따른 손해","화재진압과정에서 발생한 소방손해"],"a":3,"e":"폭발 및 파열로 인한 손해는 주택화재보험 보통약관에서 보상하는 손해입니다."},{"id":"3-3","type":3,"n":3,"q":"다중이용업소 화재배상책임보험의 의무가입 대상이 아닌 것은?","c":["산후조리원","방탈출카페","노래연습장","방송국"],"a":4,"e":"방송국(연면적 3,000㎡ 이상)은 특수건물화재보험 가입 대상입니다."},{"id":"4-1","type":4,"n":1,"q":"재물보험에서 피보험이익의 평가액을 뜻하는 용어로 알맞은 것은?","c":["보험금","보험가입금액","보험가액","보험료"],"a":3,"e":"피보험이익의 평가액은 보험가액입니다."},{"id":"4-2","type":4,"n":2,"q":"화재보험 일반물건에 해당하는 것은?","c":["공장 내의 가축사","공장 내의 작업장","15층 아파트","오피스텔"],"a":4,"e":"오피스텔은 일반물건에 해당하며, 공장 내의 가축사와 작업장은 공장물건, 15층 아파트는 주택물건에 해당합니다."},{"id":"4-3","type":4,"n":3,"q":"특수건물화재보험에서 신체손해배상책임담보 특별약관의 보상한도로 맞는 것은?","c":["1사고당 100억원","사망 1인당 8,000만원","사망 1인당 1억 5,000만원","1사고당 10억원"],"a":3,"e":"신체손해배상책임담보는 사망시 1인당 1억 5,000만원을 한도로 보상합니다."},{"id":"5-1","type":5,"n":1,"q":"보험회사가 잔존물을 보전하기 위하여 지출한 비용 또는 유익한 비용은 무엇인가?","c":["잔존물 제거비용","잔존물 보전비용","오염물질 제거비용","폐기물 처리비용"],"a":2,"e":"잔존물 보전비용입니다."},{"id":"5-2","type":5,"n":2,"q":"다음 중 주택화재보험에서 보험회사의 책임개시기는 언제인가?","c":["계약자가 청약한 날 시점부터","보험기간의 첫날 12시부터","청약의 승낙 및 제1회 보험료를 받은 때부터","청약을 승낙한 때부터"],"a":3,"e":"청약의 승낙 및 전액 또는 제1회 보험료를 받은 때부터 책임이 시작됩니다."},{"id":"5-3","type":5,"n":3,"q":"풍수해·지진재해보험의 가입대상에 해당하지 않는 것은?","c":["주택(16층 이상 아파트 제외)","온실(비닐하우스 포함)","16층 이상 아파트","소상공인 상가·공장"],"a":3,"e":"16층 이상 아파트는 특수건물화재보험 의무가입대상입니다."},{"id":"6-1","type":6,"n":1,"q":"화재보험에서 보상하는 손해에 대한 설명으로 옳은 것은?","c":["화재진압과정에서 발생하는 손해는 보상하지 않는다","피난지에서 5일 이내에 생긴 직접손해 및 소방손해는 보상하지 않는다","잔존물 제거비용은 보상한다","지진, 분화, 노동쟁의로 생긴 화재손해는 보상한다"],"a":3,"e":"①, ②는 보상하지 않는 손해를 보상하는 것으로, ④는 보상하는 손해를 보상하지 않는 것으로 설명하고 있습니다."},{"id":"6-2","type":6,"n":2,"q":"화재보험의 보험금 지급절차에 관한 설명 중 옳은 것은?","c":["보험금 청구서류를 접수받은 후 지체 없이 지급보험금을 결정하고, 결정된 날로부터 7일 이내에 보험금을 지급한다","보험금 청구서류를 접수받은 날로부터 5영업일 이내에 보험금을 지급한다","보험금 청구서류를 접수받은 날로부터 5일 이내에 보험금을 지급한다","보험금 청구서류를 접수받은 날로부터 2주일 이내에 보험금을 지급한다"],"a":1,"e":"보험금 지급기일은 보험금 지급 결정 후 7일 이내입니다."},{"id":"6-3","type":6,"n":3,"q":"다중이용업소 화재배상책임보험에 대한 설명으로 틀린 것은?","c":["26개의 다중이용업소 업종에 화재배상책임보험 가입을 의무화한다","재산피해가 발생한 경우 1사고당 10억원 한도 내에서 보상한다","사람이 사망한 경우 1인당 1억원의 한도 내에서 보상한다","다중이용업소가 특수건물에 입점한 경우에는 가입대상에서 제외된다"],"a":3,"e":"사망 보상한도는 1인당 1억원이 아니라 1억 5천만원입니다."},{"id":"7-1","type":7,"n":1,"q":"다음 보기의 (   ) 안에 들어갈 말로 알맞은 것은?\\n\\n화재보험에서 보상하는 재산손해 중 화재에 따른 피난손해는 피난지에서 (   ) 이내에 생긴 직접손해 및 소방손해이다.","c":["2일","3일","4일","5일"],"a":4,"e":"피난손해는 피난지에서 5일 이내에 발생한 직접손해 및 소방손해를 의미합니다."},{"id":"7-2","type":7,"n":2,"q":"주택화재보험의 보험목적으로 알맞지 않은 것은?","c":["오피스텔","치료소(안식·침질 등)로 사용되는 주택용 건물","피보험자 소유의 건물이 아닌 주택","피보험자와 같은 세대에 속하는 사람의 소유물인 가재도구"],"a":1,"e":"오피스텔은 일반화재보험의 보험목적에 해당합니다."},{"id":"7-3","type":7,"n":3,"q":"화재보험의 특별약관인 풍수재위험담보특약에서 보상하지 않는 손해는?","c":["폭풍우","태풍","해일","우박"],"a":4,"e":"폭설·우박으로 인한 손해는 풍수재위험담보특약에서 보상하지 않습니다."},{"id":"8-1","type":8,"n":1,"q":"다음과 같이 주택화재보험에 가입한 후 화재로 손해가 발생하였다. 지급보험금은 얼마인가?\\n\\n보험가입금액 1,000만원, 보험가액 1,000만원, 재산손해액 800만원","c":["800만원","900만원","1,000만원","600만원"],"a":1,"e":"보험가입금액이 보험가액의 80% 이상이므로 보험가입금액 한도 내에서 손해액 전액인 800만원을 보상합니다."},{"id":"8-2","type":8,"n":2,"q":"화재보험의 계약 전 알릴 의무에 관한 설명 중 틀린 것은?","c":["동일 보험의 목적에 대해 다른 보험계약이 있으면 보험회사에 알려야 한다","보험계약 체결시 장래의 주요 위험을 객관적으로 알릴 의무가 있다","고의나 중대한 과실로 계약 전 알릴 의무를 위반시 계약이 무효가 된다","건물 내 영업직업이나 건물구조는 중요한 계약 전 알릴 의무 사항이다"],"a":3,"e":"계약 전 알릴 의무 위반은 계약의 해지사유가 되며 계약이 무효가 되는 것은 아닙니다."},{"id":"8-3","type":8,"n":3,"q":"의무보험인 재난배상책임보험에 대한 설명으로 틀린 것은?","c":["인명피해는 사망·부상·후유장해시 1인당 1억 5천만원 한도 내에서 보상한다","재난배상책임보험은 화재, 폭발, 붕괴로 인한 타인의 신체 및 재산 피해를 보상한다","재산피해는 1사고당 10억원 한도 내에서 보상한다","「재난 및 안전관리 기본법」에 따라 20개 업종을 대상으로 가입을 의무화하였다"],"a":1,"e":"사망은 1인당 1억 5천만원 한도이고, 부상·후유장해는 등급별 보상한도를 적용합니다."},{"id":"9-1","type":9,"n":1,"q":"주택화재보험의 재산보험금 지급시 비례보상하는 경우로 맞는 것은?","c":["보험가입금액이 보험가액의 80% 미만인 경우","보험가입금액이 보험가액의 70% 이상인 경우","보험가입금액이 보험가액의 80% 해당보다 큰 경우","보험가입금액이 보험가액과 같은 경우"],"a":1,"e":"보험가입금액이 보험가액의 80% 미만이면 비례보상합니다."},{"id":"9-2","type":9,"n":2,"q":"다음 중 화재보험 일반물건의 가입대상이 아닌 것은?","c":["가재 이외의 재산자산이 지속적으로 수용되는 건물","병용주택의 부속건물 및 옥외설비","화물보관 및 목적으로 쓰이는 창고업자 건물","변전소 구내에 있는 건물 및 집기비품"],"a":4,"e":"공장물건에 해당합니다."},{"id":"9-3","type":9,"n":3,"q":"특수건물화재보험에서 기본적으로 보상하는 손해에 해당하지 않는 것은?","c":["신체손해배상책임담보 특별약관에서 보상하는 손해","화재대물배상 특별약관에서 보상하는 손해","화재보험 보통약관에서 보상하는 손해","특수재해 특별약관에서 보상하는 손해"],"a":4,"e":"특수재해 손해는 선택특약으로 별도 가입해야 보상합니다."},{"id":"10-1","type":10,"n":1,"q":"손해보험계약에 대한 설명으로 적절하지 않은 것은?","c":["피보험자의 우연한 사고로 생길 손해를 보상한다","피보험자의 생명에 대하여 우연한 사고로 생길 손해를 보상한다","보험사고가 발생할 때에 지급하여야 할 금액은 계약의 성립시에는 알 수 없다","보험사고가 발생하면 손해의 규모에 따른 손해액을 보상한다"],"a":2,"e":"생명에 대한 우연한 사고는 생명보험 계약의 설명입니다."},{"id":"10-2","type":10,"n":2,"q":"일반화재보험에서 보험회사가 보험계약을 해지할 수 있는 경우로 틀린 것은?","c":["계약자의 고의 또는 중대한 과실로 알릴 의무를 위반한 경우","계약자와 피보험자가 고지의무를 위반한 경우","계약자와 피보험자가 통지의무를 위반한 경우","보험회사가 보험계약자 또는 피보험자의 고지의무 위반을 알게 된 날부터 1개월 이내인 경우"],"a":1,"e":"보험계약자의 고의 또는 중대한 과실로 인한 계약 전 알릴 의무 위반은 해지사유입니다."},{"id":"10-3","type":10,"n":3,"q":"풍수해·지진재해보험에서 총 보험료의 100%를 지원받을 수 있는 대상으로 알맞은 것은?","c":["풍수해보험금을 받은 이력이 있는 고소득자","풍수해보험에 가입한 중위소득자","소득수준에 관계없이 풍수해 피해를 입은 자","풍수해보험 가입 촉진 대상 지역에 실제 거주하고 있는 저소득층"],"a":4,"e":"풍수해보험 가입 촉진 대상 지역에 실제 거주하는 저소득층은 총 보험료의 100% 지원이 가능합니다."},{"id":"11-1","type":11,"n":1,"q":"화재보험의 종류와 가입대상물건, 보험의 목적에 대한 설명으로 틀린 것은?","c":["일반화재보험의 가입대상물건에는 오피스텔·콘도미니엄이 있다","주택화재보험의 가입대상물건에는 단독주택 건물 및 소유자가재가 있다","주택화재보험의 보험목적으로 가축사료로 사용하는 연립주택이 있다","화재보험에는 일반화재보험과 주택화재보험이 있다"],"a":3,"e":"가축사료로 사용하는 연립주택은 주택화재보험 목적에 해당하지 않습니다."},{"id":"11-2","type":11,"n":2,"q":"주택화재보험의 계약 후 알릴 의무 사항이 아닌 것은?","c":["보험의 목적을 이전할 때","건물을 계속하여 30일 이상 비워두거나 휴업할 때","피보험자의 직업이나 직무가 변경되었을 때","보험의 목적을 15일 이상 수선할 때"],"a":3,"e":"피보험자의 나이·직업 변경은 주택화재보험의 계약 후 알릴 의무 사항이 아닙니다."},{"id":"11-3","type":11,"n":3,"q":"다중이용업소 화재배상책임보험에 대한 설명으로 틀린 것은?","c":["다중이용업소 안전관리에 관한 특별법에 따라 26개 업종에 가입을 의무화한다","사망·후유장해는 피해자 1인당 1억5천만원 한도 내에서 보상한다","부상의 경우 피해자 1인당 3천만원 한도 내에서 보상한다","재산피해는 1사고당 5억원 한도 내에서 보상한다"],"a":4,"e":"재산피해 보상한도는 5억원이 아니라 10억원입니다."},{"id":"12-1","type":12,"n":1,"q":"화재보험에서 보상하는 재산손해가 아닌 것은?","c":["화재에 따른 소방손해","화재에 따른 피난손해","화재에 따른 직접손해","화재에 따른 손해방지비용"],"a":4,"e":"손해방지비용은 비용손해에 해당합니다."},{"id":"12-2","type":12,"n":2,"q":"주택화재보험에 대한 설명으로 틀린 것은?","c":["서치나 골동품은 보험증권에 명기해야만 보험의 목적이 된다","오피스텔은 주택화재보험 가입할 수 없다","피보험자와 동일 세대에 속하는 사람의 소유물은 보험목적에 포함되지 않는다","건물의 부속건물이나 부속설비는 목적물에 포함된다"],"a":3,"e":"피보험자와 동일 세대에 속하는 사람의 소유물은 보험목적에 포함될 수 있습니다."},{"id":"12-3","type":12,"n":3,"q":"특수건물화재보험의 가입대상 물건에 해당하는 것은?","c":["총수가 10층인 건물","바닥면적의 합계가 1,000㎡인 학원","연면적의 합계가 3,000㎡인 병원","15층 아파트 및 부속건물"],"a":3,"e":"특수건물 가입대상 기준에 해당하는 건물은 연면적 3,000㎡인 병원입니다."},{"id":"13-1","type":13,"n":1,"q":"화재보험에서 보상하는 비용손해에 해당하지 않는 것은?","c":["사고현장 청소시 발생한 오염물질 제거비용","손해방지비용","잔존물 보전비용","대위권 보전비용"],"a":1,"e":"정답 해설: 사고현장 청소시 발생한 오염물질 제거비용"},{"id":"13-2","type":13,"n":2,"q":"화재보험에서 추가되는 주요 특별약관이 아닌 것은?","c":["풍수재위험담보특별약관","구내폭발위험담보특별약관","기업휴지손해담보특별약관","전자위험담보특별약관"],"a":4,"e":"정답 해설: 전자위험담보특별약관"},{"id":"13-3","type":13,"n":3,"q":"다음 중 정부 및 지방자치단체가 보험료의 55~100%를 지원하는 정책성보험은?","c":["재난배상책임보험","다중이용업소 화재배상책임보험","특수건물화재보험","풍수해·지진재해보험"],"a":4,"e":"정답 해설: 풍수해·지진재해보험"},{"id":"14-1","type":14,"n":1,"q":"다음 중 손해보험에 해당하지 않는 것은?","c":["자동차보험","정기보험","화재보험","배상책임보험"],"a":2,"e":"정답 해설: 정기보험"},{"id":"14-2","type":14,"n":2,"q":"화재보험 계약 전 알릴 의무의 내용이 아닌 것은?","c":["보험목적물의 종류·구조·용도","저장품의 종류와 성질","건물 내 영위 직업 또는 작업","보험목적이 동일한지와 관계없이 가입한 모든 보험계약"],"a":4,"e":"정답 해설: 보험목적이 동일한지와 관계없이 가입한 모든 보험계약"},{"id":"14-3","type":14,"n":3,"q":"재난배상책임보험에 대한 설명으로 틀린 것은?","c":["재난 및 안전관리 기본법에 따라 가입이 강제된다","화재·붕괴로 타인의 신체와 재산에 입힌 손해를 보상한다","시설의 관리책임과 권한이 있는 자가 가입대상이다","소유자와 점유자가 다르면 보험가입의무자는 항상 소유자이다"],"a":4,"e":"정답 해설: 소유자와 점유자가 다르면 보험가입의무자는 항상 소유자이다"},{"id":"15-1","type":15,"n":1,"q":"화재보험의 보험가입금액과 보험가액에 대한 설명으로 옳지 않은 것은?","c":["보험가입금액은 보험자가 부담하는 보상한도이다","보험가액은 보험목적의 평가액이다","보험가입금액이 보험가액의 80%이면 항상 전부보상한다","보험가입금액과 보험가액은 다를 수 있다"],"a":3,"e":"정답 해설: 보험가입금액이 보험가액의 80%이면 항상 전부보상한다"},{"id":"15-2","type":15,"n":2,"q":"화재보험 계약 해지에 대한 설명으로 틀린 것은?","c":["보험료를 납입하지 않으면 계약이 해지될 수 있다","보험목적의 위험이 증가하면 통지해야 한다","보험계약자는 언제나 해지 후 3개월 이내에만 해지할 수 있다","보험자의 책임이 개시된 후에도 약관에 따라 해지할 수 있다"],"a":3,"e":"정답 해설: 보험계약자는 언제나 해지 후 3개월 이내에만 해지할 수 있다"},{"id":"15-3","type":15,"n":3,"q":"다중이용업소 화재배상책임보험의 가입대상이 아닌 것은?","c":["일반음식점","PC방","주유소","키즈카페"],"a":3,"e":"정답 해설: 주유소"},{"id":"16-1","type":16,"n":1,"q":"화재보험에서 보상하는 비용손해가 아닌 것은?","c":["손해방지비용","피난 중 도난손해","잔존물 보전비용","손해배상청구권 보전비용"],"a":2,"e":"정답 해설: 피난 중 도난손해"},{"id":"16-2","type":16,"n":2,"q":"일반화재보험의 보험목적물에 해당하지 않는 것은?","c":["주택","사무실","공장","일반적인 동산"],"a":3,"e":"정답 해설: 공장"},{"id":"16-3","type":16,"n":3,"q":"특수건물화재보험에 대한 설명으로 틀린 것은?","c":["특수건물의 소유자는 가입의무가 있다","화재로 타인의 신체·재산에 입힌 손해를 보상한다","보험가입금액과 보상한도는 약관에서 정한다","사고당 보상한도는 언제나 무한이다"],"a":4,"e":"정답 해설: 사고당 보상한도는 언제나 무한이다"},{"id":"17-1","type":17,"n":1,"q":"주택화재보험 보통약관에서 보상받을 수 없는 손해는?","c":["간판시설 추락으로 수도관이 파열되어 가재도구가 침수된 손해","벼락으로 인해 집안 냉장고가 파손된 손해","피보험자에게 원인이 없는 자기 주택의 방화손해","이웃집 화재로 주택 내 가재도구가 불에 타서 소실된 손해"],"a":1,"e":"정답 해설: 간판시설 추락으로 수도관이 파열되어 가재도구가 침수된 손해"},{"id":"17-2","type":17,"n":2,"q":"화재보험 통지의무에 대한 설명에서 빈칸에 들어갈 알맞은 기간은? 계약자나 피보험자는 보험목적물의 위험이 현저하게 변경되거나 증가될 때 지체 없이 보험회사에 알리고 배서를 받아야 한다.","c":["10일","20일","30일","50일"],"a":3,"e":"정답 해설: 30일"},{"id":"17-3","type":17,"n":3,"q":"재난 및 안전관리 기본법에서 규정한 재난배상책임보험 의무가입 대상이 아닌 것은?","c":["국제회의시설","경마장","여객자동차터미널","실내골프연습장"],"a":4,"e":"정답 해설: 실내골프연습장"},{"id":"18-1","type":18,"n":1,"q":"주택화재보험과 일반화재보험에서 공통으로 보상하는 손해가 아닌 것은?","c":["피난지에서 발생한 소방손해","손해방지를 위한 급격손해","폭발 또는 파열에 따른 직접손해","화재진압과정에서 발생한 소방손해"],"a":3,"e":"정답 해설: 폭발 또는 파열에 따른 직접손해"},{"id":"18-2","type":18,"n":2,"q":"화재보험증권에 기재하지 않아도 보험의 목적이 되는 것은?","c":["피보험자 소유의 건물 부속물","귀금속·보석·골동품","원고·설계도·소프트웨어","통화·유가증권·인지·우표"],"a":1,"e":"정답 해설: 피보험자 소유의 건물 부속물"},{"id":"18-3","type":18,"n":3,"q":"특수건물화재보험의 가입대상 물건에 해당하는 것은?","c":["층수가 20층인 건물","바닥면적의 합계가 1,000㎡인 학원","연면적 합계가 2,000㎡인 공장","층수가 11층인 아파트"],"a":1,"e":"정답 해설: 층수가 20층인 건물"},{"id":"19-1","type":19,"n":1,"q":"주택화재보험에 가입할 수 없는 물건은?","c":["연립주택","주택병용 피아노 교습소","오피스텔","아파트"],"a":3,"e":"정답 해설: 오피스텔"},{"id":"19-2","type":19,"n":2,"q":"화재보험에 대한 설명으로 틀린 것은?","c":["보험기간이 시작된 후라도 보험료를 받기 전에 생긴 손해는 보상하지 않는다","보험계약자가 고의로 손해방지의무를 게을리한 때에는 보험금 청구권이 소멸한다","화재손해가 생긴 경우 보험계약자는 보험회사에 지체 없이 통지해야 한다","화재보험의 손해방지의무는 보험계약자와 피보험자 모두의 의무이다"],"a":2,"e":"정답 해설: 보험계약자가 고의로 손해방지의무를 게을리한 때에는 보험금 청구권이 소멸한다"},{"id":"19-3","type":19,"n":3,"q":"다음 중 풍수해·지진재해보험의 대상재해가 아닌 것은?","c":["태풍","홍수","지진","산불"],"a":4,"e":"정답 해설: 산불"},{"id":"20-1","type":20,"n":1,"q":"1억원의 주택화재보험에 가입된 주택이 화재로 5,000만원의 피해를 입은 경우 잔존물 제거비용의 보상한도는?","c":["100만원","500만원","1,000만원","2,000만원"],"a":2,"e":"정답 해설: 500만원"},{"id":"20-2","type":20,"n":2,"q":"화재보험 물건 중 공장물건의 가입대상이 아닌 것은?","c":["화물보관 목적으로 쓰이는 창고업 건물","공업용 구내에 있는 건물 및 수용자재","발전소 구내에 있는 건물 및 집기비품","공장 구내의 건물"],"a":1,"e":"정답 해설: 화물보관 목적으로 쓰이는 창고업 건물"},{"id":"20-3","type":20,"n":3,"q":"특수건물화재보험의 신체손해배상책임담보 특별약관에서 보상하는 손해에 대한 설명으로 틀린 것은?","c":["특수건물 소유자의 과실이 없는 경우에도 타인이 입은 신체손해를 보상한다","부상시 상해등급에 따라 최고 3천만원까지 보상한다","항공기 또는 그로부터 떨어지는 물체로 인하여 생긴 손해를 기본적으로 보상한다","사망시 1인당 1억5천만원을 한도로 보상한다"],"a":3,"e":"정답 해설: 항공기 또는 그로부터 떨어지는 물체로 인하여 생긴 손해를 기본적으로 보상한다"}];
+    var totalQuestions = questionBank.length;
+    var answers = Array(totalQuestions).fill(null);
+    var cursor = 0;
+    var wrongItems = [];
+    var reviewCursor = 0;
+
+    function $(id) { return document.getElementById(id); }
+    function displayText(value) {
+      return String(value == null ? '' : value).replace(/\\n/g, '\n');
+    }
+    function showScreen(id) {
+      ['startScreen','quizScreen','resultScreen','reviewScreen','completeScreen'].forEach(function (screenId) {
+        $(screenId).classList.toggle('hidden', screenId !== id);
+      });
+      window.scrollTo(0, 0);
+    }
+    function sourceText(item) {
+      return item.type + '형 ' + item.n + '번';
+    }
+    function resetStudy() {
+      answers = Array(totalQuestions).fill(null);
+      cursor = 0;
+      wrongItems = [];
+      reviewCursor = 0;
+      showScreen('startScreen');
+    }
+    function renderQuiz() {
+      var item = questionBank[cursor];
+      $('quizProgress').textContent = (cursor + 1) + ' / ' + totalQuestions;
+      $('quizSource').textContent = sourceText(item);
+      $('quizProgressFill').style.width = (((cursor + 1) / totalQuestions) * 100) + '%';
+      $('quizNumber').textContent = '문항 ' + (cursor + 1) + ' · ' + sourceText(item);
+      $('quizQuestion').textContent = displayText(item.q);
+      $('quizChoices').innerHTML = '';
+
+      item.c.forEach(function (choice, index) {
+        var button = document.createElement('button');
+        button.type = 'button';
+        button.className = 'choice' + (answers[cursor] === index + 1 ? ' selected' : '');
+        var number = document.createElement('span');
+        number.className = 'choice-number';
+        number.textContent = index + 1;
+        var text = document.createElement('span');
+        text.className = 'choice-text';
+        text.textContent = displayText(choice);
+        button.append(number, text);
+        button.addEventListener('click', function () {
+          answers[cursor] = index + 1;
+          $('validationNote').classList.add('hidden');
+          renderQuiz();
+        });
+        $('quizChoices').appendChild(button);
+      });
+
+      $('prevButton').disabled = cursor === 0;
+      $('nextButton').classList.toggle('hidden', cursor === totalQuestions - 1);
+      $('submitButton').classList.toggle('hidden', cursor !== totalQuestions - 1);
+    }
+    function beginStudy() {
+      answers = Array(totalQuestions).fill(null);
+      cursor = 0;
+      wrongItems = [];
+      showScreen('quizScreen');
+      renderQuiz();
+    }
+    function submitStudy() {
+      var missing = answers.findIndex(function (answer) { return answer == null; });
+      if (missing !== -1) {
+        cursor = missing;
+        $('validationNote').textContent = '아직 답하지 않은 문항이 있습니다. 현재 문항부터 답해 주세요.';
+        $('validationNote').classList.remove('hidden');
+        renderQuiz();
+        return;
+      }
+
+      wrongItems = [];
+      questionBank.forEach(function (item, index) {
+        if (answers[index] !== item.a) {
+          wrongItems.push({ item: item, selected: answers[index] });
+        }
+      });
+
+      var correctCount = totalQuestions - wrongItems.length;
+      $('scoreText').textContent = correctCount + ' / ' + totalQuestions;
+      $('scoreSub').textContent = '정답률 ' + Math.round(correctCount / totalQuestions * 100) + '% · 오답 ' + wrongItems.length + '문항';
+
+      if (wrongItems.length) {
+        $('wrongSummary').innerHTML = '<strong>오답 문항</strong>' + wrongItems.map(function (entry) {
+          return sourceText(entry.item);
+        }).join(', ');
+        $('reviewButton').textContent = '오답노트 시작 (' + wrongItems.length + '문항)';
+        $('reviewButton').classList.remove('hidden');
+      } else {
+        $('wrongSummary').innerHTML = '<strong>전 문항 정답</strong>틀린 문제가 없어 오답노트를 생략합니다.';
+        $('reviewButton').classList.add('hidden');
+      }
+      showScreen('resultScreen');
+    }
+    function renderReview() {
+      var entry = wrongItems[reviewCursor];
+      var item = entry.item;
+      $('reviewProgress').textContent = '오답 ' + (reviewCursor + 1) + ' / ' + wrongItems.length;
+      $('reviewSource').textContent = sourceText(item);
+      $('reviewProgressFill').style.width = (((reviewCursor + 1) / wrongItems.length) * 100) + '%';
+      $('reviewNumber').textContent = '문항 ' + sourceText(item);
+      $('reviewQuestion').textContent = displayText(item.q);
+      $('reviewChoices').innerHTML = '';
+
+      item.c.forEach(function (choice, index) {
+        var choiceNo = index + 1;
+        var isCorrect = choiceNo === item.a;
+        var isSelected = choiceNo === entry.selected;
+        var button = document.createElement('div');
+        button.className = 'review-choice' + (isCorrect ? ' correct' : '') + (isSelected ? ' wrong-selected' : '');
+        var number = document.createElement('span');
+        number.className = 'review-choice-number';
+        number.textContent = choiceNo;
+        var text = document.createElement('span');
+        text.className = 'review-choice-text';
+        text.textContent = displayText(choice);
+        var mark = document.createElement('span');
+        mark.className = 'choice-mark';
+        mark.textContent = isCorrect ? '정답' : (isSelected ? '내 답' : '');
+        button.append(number, text, mark);
+        $('reviewChoices').appendChild(button);
+      });
+
+      $('reviewStatus').textContent = '내가 고른 답: ' + entry.selected + '번 · 정답: ' + item.a + '번';
+      $('reviewExplanation').textContent = displayText(item.e);
+      $('reviewPrevButton').disabled = reviewCursor === 0;
+      $('reviewNextButton').classList.toggle('hidden', reviewCursor === wrongItems.length - 1);
+      $('reviewCompleteButton').classList.toggle('hidden', reviewCursor !== wrongItems.length - 1);
+    }
+    function beginReview() {
+      reviewCursor = 0;
+      showScreen('reviewScreen');
+      renderReview();
+    }
+    function finishStudy() {
+      $('completeText').textContent = '60문항 풀이와 ' + wrongItems.length + '개 오답의 해설 확인을 완료했습니다.';
+      showScreen('completeScreen');
+    }
+
+    $('startButton').addEventListener('click', beginStudy);
+    $('prevButton').addEventListener('click', function () {
+      if (cursor > 0) { cursor -= 1; renderQuiz(); }
+    });
+    $('nextButton').addEventListener('click', function () {
+      if (cursor < totalQuestions - 1) { cursor += 1; renderQuiz(); }
+    });
+    $('submitButton').addEventListener('click', submitStudy);
+    $('reviewButton').addEventListener('click', beginReview);
+    $('reviewPrevButton').addEventListener('click', function () {
+      if (reviewCursor > 0) { reviewCursor -= 1; renderReview(); }
+    });
+    $('reviewNextButton').addEventListener('click', function () {
+      if (reviewCursor < wrongItems.length - 1) { reviewCursor += 1; renderReview(); }
+    });
+    $('reviewCompleteButton').addEventListener('click', finishStudy);
+    function goFocusMenu(confirmFirst) {
+      if (confirmFirst && !confirm('현재 학습을 중단하고 모의고사 테스트 목록으로 돌아갈까요?')) return;
+      window.location.href = './index.html';
+    }
+    $('quitButton').addEventListener('click', function () {
+      goFocusMenu(true);
+    });
+    $('resultHomeButton').addEventListener('click', function () { goFocusMenu(false); });
+    $('completeHomeButton').addEventListener('click', function () { goFocusMenu(false); });
+
+  </script>
+</body>
+</html>

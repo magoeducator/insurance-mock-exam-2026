@@ -1,0 +1,372 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f37021">
+  <meta name="description" content="1형부터 20형까지 제3보험의 개요 100문항 집중학습">
+  <title>제3보험의 개요 100문항 집중학습</title>
+  
+  <style>
+    html.auth-pending body{visibility:hidden}
+    :root{--orange:#f37021;--orange-dark:#d95810;--ink:#202124;--muted:#6b7280;--line:#e6e8eb;--soft:#fff7f1;--green:#16803c;--green-bg:#eaf8ef;--red:#c62828;--red-bg:#fff0f0;--navy:#243247}
+    *{box-sizing:border-box}
+    html,body{margin:0;min-height:100%;background:#f5f6f8;color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Apple SD Gothic Neo","Noto Sans KR","Malgun Gothic",sans-serif}
+    body{padding:env(safe-area-inset-top) 0 env(safe-area-inset-bottom)}
+    button{font:inherit}
+    button{border:0;cursor:pointer}
+    button:disabled{cursor:default}
+    .app{width:min(760px,100%);margin:0 auto;min-height:100vh;background:#fff;box-shadow:0 0 24px rgba(0,0,0,.06)}
+    .site-header{position:sticky;top:0;z-index:10;background:#fff;border-bottom:1px solid var(--line);box-shadow:0 5px 18px rgba(32,43,60,.1)}
+    .site-title-row{height:44px;display:flex;align-items:center;background:var(--orange);color:#fff;padding:0 max(14px,calc((100% - 760px)/2 + 14px));overflow:hidden}
+    .site-title{width:100%;font-size:clamp(12px,3.6vw,16px);font-weight:900;letter-spacing:-.045em;line-height:1;white-space:nowrap;overflow-x:auto;scrollbar-width:none}
+    .site-title::-webkit-scrollbar,.top-menu::-webkit-scrollbar{display:none}
+    .top-menu{height:48px;display:flex;align-items:center;justify-content:center;gap:8px;padding:0 12px;overflow-x:auto;white-space:nowrap;background:#fff}
+    .top-menu-link{flex:0 0 auto;display:inline-flex;align-items:center;justify-content:center;min-height:34px;padding:0 14px;border:1px solid #ffd0b5;border-radius:999px;color:var(--orange-dark);font-size:13px;font-weight:900;text-align:center;background:#fff8f3;text-decoration:none}
+    .top-menu-link:hover,.top-menu-link:focus-visible,.top-menu-link.active{background:var(--orange);color:#fff;border-color:var(--orange)}
+    .social-brand{display:inline-flex;align-items:center;flex:0 0 auto;color:#6b7280;font-size:12px;font-weight:900;letter-spacing:-.04em;white-space:nowrap}
+    .social-icon-link{display:inline-flex;align-items:center;justify-content:center;flex:0 0 34px;width:34px;min-height:34px;height:34px;padding:0;border-radius:10px;color:#fff}
+    .social-icon-link svg{width:18px;height:18px;display:block}
+    .social-icon-link.instagram{background:linear-gradient(135deg,#f58529,#dd2a7b 52%,#8134af)}
+    .social-icon-link.blog{background:#03c75a}
+    .topbar{background:var(--orange);color:#fff;padding:16px 18px 15px;position:relative;z-index:1}
+    .global-nav{display:none}
+    .global-nav::-webkit-scrollbar{display:none}
+    .global-nav a{flex:0 0 auto;padding:7px 12px;border:1px solid #ffd0b5;border-radius:999px;background:#fff8f3;color:var(--orange-dark);font-size:12px;font-weight:900;text-decoration:none}
+    .global-nav a:hover,.global-nav a:focus-visible{background:var(--orange);border-color:var(--orange);color:#fff}
+    .topbar-row{display:flex;align-items:center;justify-content:space-between;gap:12px}
+    .brand{font-weight:900;font-size:18px;letter-spacing:-.06em;line-height:1.25}
+    .subbrand{margin-top:4px;font-size:12px;opacity:.92}
+    .top-actions{display:flex;align-items:center;gap:6px;white-space:nowrap}
+    .student-name{font-size:12px;font-weight:800}
+    .top-button{padding:7px 9px;border:1px solid rgba(255,255,255,.55);border-radius:9px;background:transparent;color:#fff;font-size:11px;font-weight:800}
+    .screen{padding:22px 18px 34px}
+    .hidden{display:none!important}
+    .hero{text-align:center;padding:14px 0 7px}
+    .badge{display:inline-flex;padding:6px 10px;border-radius:999px;background:#fff0e6;color:var(--orange-dark);font-size:13px;font-weight:900}
+    h1{margin:15px 0 10px;font-size:clamp(27px,6vw,38px);line-height:1.22;letter-spacing:-.075em}
+    .hero p{margin:0;color:var(--muted);font-size:14px;line-height:1.6}
+    .timeline{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin:25px 0 23px;position:relative}
+    .timeline:before{content:"";position:absolute;left:12%;right:12%;top:21px;height:2px;background:#ffd4bd}
+    .step{position:relative;z-index:1;text-align:center}
+    .step-no{display:grid;place-items:center;width:42px;height:42px;margin:0 auto 7px;border:2px solid #ffc39f;border-radius:50%;background:#fff;color:var(--orange-dark);font-weight:900}
+    .step-label{font-size:11px;line-height:1.3;font-weight:800;color:#4b5563}
+    .info-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:20px 0}
+    .info-box{padding:14px 7px;border:1px solid var(--line);border-radius:13px;background:#fff;text-align:center}
+    .info-box strong{display:block;color:var(--orange-dark);font-size:18px}
+    .info-box span{display:block;margin-top:3px;color:var(--muted);font-size:11px}
+    .notice{margin:18px 0;padding:14px 15px;border-radius:13px;background:var(--soft);color:#70411e;font-size:13px;line-height:1.55}
+    .primary{width:100%;padding:14px 16px;border-radius:12px;background:var(--orange);color:#fff;font-weight:900;font-size:15px;box-shadow:0 8px 18px rgba(243,112,33,.2)}
+    .primary:hover,.primary:focus-visible{background:var(--orange-dark)}
+    .quiz-head,.review-head{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:10px}
+    .progress-label{color:var(--orange-dark);font-size:14px;font-weight:900}
+    .source-label{color:var(--muted);font-size:12px;font-weight:800}
+    .progress-track{height:7px;margin-bottom:18px;border-radius:999px;background:#f3e5dd;overflow:hidden}
+    .progress-fill{height:100%;border-radius:inherit;background:var(--orange);transition:width .2s ease}
+    .question-card,.result-card,.review-card,.complete-card{border:1px solid var(--line);border-radius:18px;background:#fff}
+    .question-card{padding:20px 17px}
+    .question-number{margin-bottom:11px;color:var(--orange-dark);font-size:13px;font-weight:900}
+    .question-text{margin:0;white-space:pre-line;font-size:19px;line-height:1.55;letter-spacing:-.045em}
+    .choices{display:grid;gap:10px;margin-top:20px}
+    .choice{display:flex;align-items:flex-start;gap:10px;width:100%;padding:13px 12px;border:1px solid #d9dde2;border-radius:12px;background:#fff;color:var(--ink);text-align:left;line-height:1.45}
+    .choice:hover,.choice:focus-visible{border-color:#f5a678;background:#fffaf7}
+    .choice.selected{border-color:var(--orange);background:#fff3eb;box-shadow:0 0 0 2px #ffe1cd}
+    .choice-number{display:grid;place-items:center;flex:0 0 26px;width:26px;height:26px;border-radius:50%;background:#f1f3f5;color:#5b6470;font-size:12px;font-weight:900}
+    .choice.selected .choice-number{background:var(--orange);color:#fff}
+    .choice-text{font-size:14px;white-space:pre-line}
+    .quiz-nav,.review-nav{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:16px}
+    .nav-button{padding:12px 10px;border:1px solid #d9dde2;border-radius:11px;background:#fff;color:#4b5563;font-size:13px;font-weight:900}
+    .nav-button:hover:not(:disabled),.nav-button:focus-visible{border-color:#f0a272;color:var(--orange-dark)}
+    .nav-button:disabled{opacity:.4}
+    .nav-button.next,.nav-button.submit,.nav-button.complete{border-color:var(--orange);background:var(--orange);color:#fff}
+    .nav-button.submit,.nav-button.complete{grid-column:1/-1}
+    .quit-button{display:block;margin:18px auto 0;padding:5px 8px;background:transparent;color:#9aa1aa;font-size:11px;text-decoration:underline}
+    .validation-note{margin:13px 0 0;padding:11px 12px;border-radius:10px;background:#fff4df;color:#8a5a16;font-size:12px;font-weight:700}
+    .result-card{padding:21px 17px;text-align:center}
+    .result-kicker{margin:0;color:var(--muted);font-size:13px;font-weight:800}
+    .score{margin:7px 0 0;color:var(--orange-dark);font-size:42px;font-weight:950;letter-spacing:-.07em}
+    .score-sub{margin:3px 0 0;color:var(--muted);font-size:13px}
+    .wrong-summary{margin:18px 0 0;padding:14px;border-radius:12px;background:var(--red-bg);color:#7c2222;text-align:left;font-size:13px;line-height:1.55}
+    .wrong-summary strong{display:block;margin-bottom:4px;color:var(--red)}
+    .review-card{padding:19px 17px}
+    .review-choice{position:relative;display:flex;align-items:flex-start;gap:10px;width:100%;margin-top:9px;padding:12px;border:1px solid #d9dde2;border-radius:11px;background:#fff;text-align:left}
+    .review-choice.correct{border-color:#8bc99e;background:var(--green-bg);color:#155d2c}
+    .review-choice.wrong-selected{border-color:#eba0a0;background:var(--red-bg);color:#8c2424}
+    .review-choice-number{display:grid;place-items:center;flex:0 0 25px;width:25px;height:25px;border-radius:50%;background:#eef0f2;color:#5d6670;font-size:12px;font-weight:900}
+    .review-choice.correct .review-choice-number{background:var(--green);color:#fff}
+    .review-choice.wrong-selected .review-choice-number{background:var(--red);color:#fff}
+    .review-choice-text{font-size:14px;line-height:1.45;white-space:pre-line}
+    .choice-mark{margin-left:auto;flex:0 0 auto;font-size:11px;font-weight:900}
+    .review-status{margin-top:15px;padding:11px 12px;border-radius:10px;background:#f7f8fa;color:#4b5563;font-size:13px;font-weight:800}
+    .explanation{margin-top:14px;padding:14px;border-left:4px solid var(--orange);border-radius:0 11px 11px 0;background:#fff8f3}
+    .explanation strong{display:block;margin-bottom:6px;color:var(--orange-dark);font-size:13px}
+    .explanation span{display:block;white-space:pre-line;color:#4b5563;font-size:13px;line-height:1.6}
+    .complete-card{padding:31px 18px;text-align:center}
+    .complete-icon{font-size:42px}
+    .complete-card h2{margin:12px 0 7px;font-size:25px;letter-spacing:-.06em}
+    .complete-card p{margin:0;color:var(--muted);font-size:14px;line-height:1.6}
+    .footer-note{margin:21px 0 0;color:#a0a6ad;text-align:center;font-size:11px}
+    .site-footer{padding:22px 14px 34px;border-top:1px solid var(--line);color:#8a929b;text-align:center;font-size:11px}
+    .footer-nav{display:flex;justify-content:center;flex-wrap:wrap;gap:8px 14px;margin-bottom:10px;color:var(--orange-dark);font-weight:900}
+    .footer-nav a{color:inherit;text-decoration:none}
+    .footer-nav a:hover,.footer-nav a:focus-visible{text-decoration:underline}
+    @media(max-width:520px){.screen{padding:20px 14px 30px}.topbar{padding-left:14px;padding-right:14px}.brand{font-size:16px}.subbrand{font-size:11px}.student-name{display:none}.question-text{font-size:18px}.choice-text{font-size:13px}}
+    @media(max-width:370px){.timeline{gap:2px}.step-label{font-size:10px}.info-box strong{font-size:16px}.info-box span{font-size:10px}}
+    @media(prefers-reduced-motion:reduce){.progress-fill{transition:none}}
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-title-row"><div class="site-title">2026 손해보험 자격시험 온라인학습실[8월 개정판]</div></div>
+    <nav class="top-menu" aria-label="주요 메뉴">
+      <a class="top-menu-link" href="./학습실.html">홈</a>
+      <a class="top-menu-link" href="./자격시험안내.html">자격시험 안내</a>
+      <a class="top-menu-link" href="./강의목차.html">동영상 강의보기</a>
+      <a class="top-menu-link active" href="./index.html" aria-current="page">모의고사 테스트</a></nav>
+  </header>
+  <div class="app">
+    <main>
+      <section id="startScreen" class="screen">
+        <button id="startButton" class="primary" type="button">100문항 학습시작</button>
+      </section>
+
+      <section id="quizScreen" class="screen hidden">
+        <div class="quiz-head">
+          <span id="quizProgress" class="progress-label"></span>
+          <span id="quizSource" class="source-label"></span>
+        </div>
+        <div class="progress-track" aria-hidden="true"><div id="quizProgressFill" class="progress-fill"></div></div>
+        <article class="question-card">
+          <div id="quizNumber" class="question-number"></div>
+          <h2 id="quizQuestion" class="question-text"></h2>
+          <div id="quizChoices" class="choices"></div>
+        </article>
+        <p id="validationNote" class="validation-note hidden"></p>
+        <div class="quiz-nav">
+          <button id="prevButton" class="nav-button" type="button">이전 문제</button>
+          <button id="nextButton" class="nav-button next" type="button">다음 문제</button>
+          <button id="submitButton" class="nav-button submit hidden" type="button">100문제 제출하고 채점</button>
+        </div>
+        <button id="quitButton" class="quit-button" type="button">학습을 중단하고 처음으로</button>
+      </section>
+
+      <section id="resultScreen" class="screen hidden">
+        <div class="result-card">
+          <p class="result-kicker">100문항 학습 결과</p>
+          <div id="scoreText" class="score"></div>
+          <p id="scoreSub" class="score-sub"></p>
+          <div id="wrongSummary" class="wrong-summary"></div>
+          <button id="reviewButton" class="primary" type="button">오답노트 시작</button>
+          <button id="resultHomeButton" class="quit-button" type="button">처음으로 돌아가기</button>
+        </div>
+      </section>
+
+      <section id="reviewScreen" class="screen hidden">
+        <div class="review-head">
+          <span id="reviewProgress" class="progress-label"></span>
+          <span id="reviewSource" class="source-label"></span>
+        </div>
+        <div class="progress-track" aria-hidden="true"><div id="reviewProgressFill" class="progress-fill"></div></div>
+        <article class="review-card">
+          <div id="reviewNumber" class="question-number"></div>
+          <h2 id="reviewQuestion" class="question-text"></h2>
+          <div id="reviewChoices"></div>
+          <div id="reviewStatus" class="review-status"></div>
+          <div class="explanation"><strong>공식 해설</strong><span id="reviewExplanation"></span></div>
+        </article>
+        <div class="review-nav">
+          <button id="reviewPrevButton" class="nav-button" type="button">이전 오답</button>
+          <button id="reviewNextButton" class="nav-button next" type="button">다음 오답</button>
+          <button id="reviewCompleteButton" class="nav-button complete hidden" type="button">오답노트 완료</button>
+        </div>
+      </section>
+
+      <section id="completeScreen" class="screen hidden">
+        <div class="complete-card">
+          <div class="complete-icon">✓</div>
+          <h2>학습이 끝났습니다.</h2>
+          <p id="completeText">100문항 풀이와 오답노트 확인을 완료했습니다.</p>
+          <button id="completeHomeButton" class="primary" type="button" style="margin-top:22px">처음으로 돌아가기</button>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <nav class="footer-nav" aria-label="하단 공통 메뉴"><a href="./학습실.html">홈</a><a href="./자격시험안내.html">자격시험 안내</a><a href="./강의목차.html">동영상 강의보기</a><a href="./index.html">모의고사 테스트</a></nav>
+      개발저작권 @career_educator
+    </footer>
+  </div>
+
+  <script>
+    const questions = [{"id":"1-34","type":1,"n":1,"sourceN":34,"q":"제3보험의 특징에 대한 설명으로 맞는 것은?","c":["제3보험은 손해보험에 해당한다","제3보험은 생명보험에 해당한다","답이 없다","제3보험은 손해보험과 생명보험 중 어느 분야에 속하는지 명확하게 구분할 수 없다(Gray Zone)"],"a":4,"e":"제3보험은 손해보험과 생명보험 중 어느 분야에 속하는지 명확하게 구분할 수 없음(Gray Zone)"},{"id":"1-35","type":1,"n":2,"sourceN":35,"q":"손해보험회사가 제3보험업을 영위할 때 적용받는 법이 아닌 것은?","c":["보험업법","보험업법 시행령","의료급여법","상법"],"a":3,"e":"「의료급여법」은 적용받지 않음"},{"id":"1-36","type":1,"n":3,"sourceN":36,"q":"제3보험의 보험금 지급방식 중 정액보상방식에 대한 설명으로 틀린 것은?","c":["보험사고 발생시 미리 정해진 급부를 제공하는 것을 말한다","제3보험 중 갱신형보험 등 정액보상방식을 적용할 수 있다","정액보상방식으로 중복계약이 체결된 경우 비례보상 원칙을 적용한다","정액보상방식을 적용하는 담보에는 사망·후유장해·진단금·수술급여·입원일당급여 등이 있다"],"a":3,"e":"정액보상방식 → 실손보상방식"},{"id":"1-37","type":1,"n":4,"sourceN":37,"q":"손해보험회사의 제3보험 상품개발기준에 대한 설명으로 올바른 것은?","c":["상해보험: 저축성보험 및 보장성보험으로 개발 가능","질병사망보험: 저축성보험 및 보장성보험으로 개발 가능","간병보험: 저축성보험 및 보장성보험으로 개발 가능","질병보험: 저축성보험 및 보장성보험으로 개발 가능"],"a":1,"e":"상해보험만 보장성과 저축성(만기 15년 이내)보험으로 개발 가능함"},{"id":"1-38","type":1,"n":5,"sourceN":38,"q":"손해보험회사가 질병을 원인으로 하는 사망을 담보하는 보험을 겸영하기 위한 요건에 해당하는 것은?","c":["만기시에 지급하는 환급금이 납입보험료 합계액의 1.5배 이내일 것","보험기간이 10세 이하일 것","손해보험 보험종목 일부를 영위하는 손해보험사일 것","보험금액의 한도는 개인당 2억원 이하일 것"],"a":4,"e":"① 환급금이 납입보험료를 초과하지 않아야 함 ② 100세 → 80세 ③ 일부 → 전부"},{"id":"2-34","type":2,"n":6,"sourceN":34,"q":"다음 중 제3보험의 계약대상에 해당하는 것은?","c":["신체의 손해","재산상의 손해","법률상 배상책임","타인의 보증으로 발생한 손해"],"a":1,"e":"제3보험은 사람의 생명 또는 신체에 관한 사고(상해, 질병, 간병)를 계약대상으로 함"},{"id":"2-35","type":2,"n":7,"sourceN":35,"q":"제3보험의 특징에 대한 설명으로 틀린 것은?","c":["제3보험은 질병보험과 재해보험으로 분류된다","질병사망담보는 특약으로만 보장된다","제3보험에는 피보험이익이 존재하지 않는다","제3보험은 생명보험 상품으로 손해보험회사에서 판매할 수 없다"],"a":4,"e":"「보험업법」에서 제3보험은 독립된 하나의 보험업으로 규정하고 있으므로 생명보험 상품에 해당되지 않으며, 생명보험업이나 손해보험업에 해당하는 보험종목의 전부에 관하여 허가를 받은 자는 제3보험업을 영위할 수 있음"},{"id":"2-36","type":2,"n":8,"sourceN":36,"q":"제3보험에서 실손보상으로 지급하는 것은?","c":["진단급여","수술급여","실손의료비","입원일당"],"a":3,"e":"벌금담보는 실제 발생한 손해액만을 보상하는 실손보상방식임"},{"id":"2-37","type":2,"n":9,"sourceN":37,"q":"다음 보기의 (  ) 안에 알맞은 것은?\n\n손해보험회사의 상해보험은 저축성보험으로 개발이 가능하며 이 경우 보험기간은 (  ) 이내로 개발이 가능하다.","c":["30년","20년","15년","10년"],"a":3,"e":"손해보험회사는 주계약이 상해보험인 경우 보험기간이 15년 이내인 저축성보험으로 개발할 수 있음"},{"id":"2-38","type":2,"n":10,"sourceN":38,"q":"제3보험에서 질병으로 인한 사망을 보장하기 위한 요건에 해당하는 것은?","c":["보험기간 85세 이하","보험금액 한도는 개인당 3억원 이내","만기시에 지급하는 환급금이 납입보험료 합계액 초과","질병사망보험금 지급시 특약 보험가입금액 지급"],"a":4,"e":"질병사망 담보는 특약으로만 부가할 수 있으므로 질병사망보험금으로 질병사망 특약의 보험가입금액을 지급함"},{"id":"3-34","type":3,"n":11,"sourceN":34,"q":"손해보험회사가 제3보험의 기본계약으로 운영할 수 있는 것은?","c":["심장병으로 인한 사망","위암 및 폐암으로 인한 사망","제3자에 대한 배상책임손해","교통사고로 인한 사망"],"a":4,"e":"①, ② 질병사망은 특약으로 가능 ③ 손해보험 영역임"},{"id":"3-35","type":3,"n":12,"sourceN":35,"q":"제3보험에 대한 설명으로 틀린 것은?","c":["보험업법상 제3보험은 인보험에 해당한다","실손보상 급부가 있는 보험계약은 보험가입금액을 보험회사 간에 교환하여 비례보상한다","제3보험 상품은 보장성보험이다","사망·후유장해 담보는 대표적인 정액급부이다"],"a":1,"e":"「보험업법」 → 「상법」"},{"id":"3-36","type":3,"n":13,"sourceN":36,"q":"상해보험에서 주로 정액보상 방식을 적용하지 않는 보험금에 해당하는 것은?","c":["상해사망","상해입원의료비","상해수술비","상해후유장해"],"a":2,"e":"상해입원의료비는 실손보상 방식을 적용함"},{"id":"3-37","type":3,"n":14,"sourceN":37,"q":"제3보험의 상품개발기준에 대한 설명으로 틀린 것은?","c":["손해보험회사의 상해보험은 보험기간 15년 이내에서 저축성보험으로 개발할 수 있다","실손의료보험은 보장성보험으로 개발할 수 있다","다른 회사 가입내역에 대한 계약 전 알릴 의무에는 생명보험회사 가입사항이 포함된다","약관상 보상하지 않는 이유로 피보험자가 사망하면 만기환급금을 지급한다"],"a":4,"e":"만기환급금 → 계약자적립액"},{"id":"3-38","type":3,"n":15,"sourceN":38,"q":"손해보험회사의 질병사망 담보의 영위조건에 대한 설명으로 틀린 것은?","c":["질병사망보장은 특약으로만 가능하다","보험금액의 한도는 개인당 2억원 이내이다","보험기간은 100세 이하이다","만기시 지급하는 환급금이 납입보험료 합계액 범위 내이다"],"a":3,"e":"100세 → 80세"},{"id":"4-34","type":4,"n":16,"sourceN":34,"q":"제3보험의 종류에 해당하지 않는 것은?","c":["생명보험","상해보험","질병보험","간병보험"],"a":1,"e":"제3보험의 종류에는 상해보험, 질병보험, 간병보험이 있음"},{"id":"4-35","type":4,"n":17,"sourceN":35,"q":"피보험자에 대한 설명이 알맞게 연결된 것은?","c":["생명보험 - 보험금을 수령하는 사람","손해보험 - 보험사고의 대상이 되는 사람","종신보험 - 보험금을 수령하는 사람","제3보험 - 보험사고의 대상이 되는 사람"],"a":4,"e":"① 생명보험 - 보험사고의 대상이 되는 사람 ② 손해보험 - 손해를 보상받을 권리가 있는 자 ③ 종신보험 - 보험사고의 대상이 되는 사람"},{"id":"4-36","type":4,"n":18,"sourceN":36,"q":"다음 중 사망담보 가입제한 대상에 해당하지 않는 것은?","c":["15세 미만자","의사능력이 없는 심신박약자","65세 이상 고령자","심신상실자"],"a":3,"e":"65세 이상 고령자의 사망을 보험사고로 하는 보험계약은 유효함"},{"id":"4-37","type":4,"n":19,"sourceN":37,"q":"다음의 보기에서 설명하는 제3보험 설계기준에 해당하는 것은?\n\n생존시 지급되는 보험금 합계액 ≤ 지금까지 납부한(기납입) 보험료","c":["정액보험","보장성보험","저축성보험","실적배당형보험"],"a":2,"e":"보장성보험의 설계기준에 대한 설명임"},{"id":"4-38","type":4,"n":20,"sourceN":38,"q":"손해보험회사의 사망담보 운영에 대한 설명으로 올바른 것은?","c":["상해사망 담보: 주계약 및 특약 모두 가능 / 질병사망 담보: 주계약 및 특약 모두 가능","상해사망 담보: 주계약 및 특약 모두 가능 / 질병사망 담보: 주계약으로만 가능","상해사망 담보: 주계약 및 특약 모두 가능 / 질병사망 담보: 특약으로만 가능","상해사망 담보: 특약으로만 가능 / 질병사망 담보: 특약으로만 가능"],"a":3,"e":"질병사망만 특약 조건, 상해사망은 주계약, 특약 모두 가능"},{"id":"5-34","type":5,"n":21,"sourceN":34,"q":"제3보험에 대한 설명으로 맞는 것은?","c":["하나의 상품에서 상해담보, 질병담보, 간병담보를 2개 이상 복합적으로 운영할 수 없다","피보험자가 질병에 걸리거나, 화재로 인해 발생한 건물의 피해를 보상한다","손해보험과 생명보험 어느 한 영역으로 명확히 구분할 수 없어 ‘Gray Zone’이라고도 한다","손해보험 및 생명보험 중 한 가지 성격만 가진다"],"a":3,"e":"① 복합적인 운영 가능 ② 화재로 인해 발생한 건물의 피해보상은 손해보험에서 보장 ④ 손해보험의 실손보상적 특성과 생명보험의 정액보상적 특성을 동시에 가지는 보험"},{"id":"5-35","type":5,"n":22,"sourceN":35,"q":"보험업의 겸영에 대한 설명으로 옳지 않은 것은?","c":["생명보험업과 손해보험업은 겸영하지 못한다","생명보험의 재보험은 겸영하지 못한다","제3보험의 재보험은 겸영할 수 있다","연금보험 및 퇴직보험은 겸영할 수 있다"],"a":2,"e":"생명보험의 재보험은 겸영할 수 있음"},{"id":"5-36","type":5,"n":23,"sourceN":36,"q":"제3보험의 보상방식에 대한 설명으로 맞는 것은?","c":["실손보상과 정액보상 모두 가능하다","실손보상만 가능하다","정액보상금부가 있는 중복계약은 비례보상한다","실손보상금부가 있는 중복계약은 중복보상한다"],"a":1,"e":"② 정액보상, 실손보상 모두 가능함 ③ 정액보상금부 → 실손보상금부 ④ 실손보상금부 → 정액보상금부"},{"id":"5-37","type":5,"n":24,"sourceN":37,"q":"제3보험에서 손해보험회사가 기본계약으로 영위할 수 있는 담보는?","c":["암으로 인한 사망보험금","중대질환으로 인한 사망보험금","심혈관질환으로 인한 사망보험금","중대재해로 인한 사망보험금"],"a":4,"e":"질병사망보험금은 특약으로만 담보 가능"},{"id":"5-38","type":5,"n":25,"sourceN":38,"q":"제3보험의 특징에 대한 설명으로 올바르지 않은 것은?","c":["생명보험회사와 손해보험회사가 모두 영위할 수 있다","상해보험, 질병보험, 간병보험이 대표적인 보험종목이다","실손보상, 정액보상 모두 가능하다","제3보험 상품에는 보장성상품이 없다"],"a":4,"e":"제3보험은 보장성보험으로 개발함"},{"id":"6-34","type":6,"n":26,"sourceN":34,"q":"제3보험의 법률상 근거에 해당하는 법률로 알맞은 것은?","c":["「산업재해보상보험법」","「보험업법」","「국민건강보험법」","「금융소비자의 권익증진에 관한 법률」"],"a":2,"e":"제3보험의 법률상 근거는 「보험업법」입니다."},{"id":"6-35","type":6,"n":27,"sourceN":35,"q":"다음 중 비례보상 원칙이 적용되지 않는 것은?","c":["실손급부 질병보험","실손급부 상해보험","사망급부 생명보험","손해보험"],"a":3,"e":"생명보험은 비례보상 원칙이 적용되지 않는 정액보상 방식입니다."},{"id":"6-36","type":6,"n":28,"sourceN":36,"q":"제3보험의 보상방식에 대한 설명으로 틀린 것은?","c":["실손보상에서 중복보험은 초과이득을 얻을 수 없다","벌금담보는 정액보상 방식이다","실손보상은 도덕적 위험 등의 발생을 방지한다","실손보상은 실제 발생한 손해액을 초과하지 않는다"],"a":2,"e":"벌금담보는 정액보상 방식이 아니라 실손보상 방식에 해당합니다."},{"id":"6-37","type":6,"n":29,"sourceN":37,"q":"손해보험회사의 제3보험 상품개발기준에 대한 설명으로 틀린 것은?","c":["제3보험 상품은 보험기간이 한정되어야 한다","주계약이 상해보험인 경우 질병사망은 특약으로 개발이 가능하다","주계약이 상해보험인 경우 보험기간이 25년 이내인 저축성보험으로 개발할 수 있다","저축성보험은 생존시 지급되는 보험금 합계액이 기납입보험료를 초과한다"],"a":3,"e":"주계약이 상해보험인 경우 저축성보험의 보험기간은 25년 이내가 아니라 15년 이내입니다."},{"id":"6-38","type":6,"n":30,"sourceN":38,"q":"손해보험회사의 질병사망특약의 영위조건에 해당하지 않는 것은?","c":["보험가입금액","보험기간","환급금수준","보험료 납입방법"],"a":4,"e":"보험료 납입방법은 질병사망 보장을 위한 요건에 해당하지 않습니다."},{"id":"7-34","type":7,"n":31,"sourceN":34,"q":"「보험업법」상 제3보험업의 보험종목에 해당하는 것은?","c":["퇴직보험","화재보험","상해보험","연금보험"],"a":3,"e":"①, ④는 생명보험업의 보험종목 ②는 손해보험업의 보험종목에 해당함"},{"id":"7-35","type":7,"n":32,"sourceN":35,"q":"보험업 겸영을 제한하고 있는 법률에 해당하는 것은?","c":["보험업법","화재로 인한 재해보상과 보험가입에 관한 법률","국민건강보험법","산업재해보상보험법"],"a":1,"e":"「보험업법」(보험업의 허가)에서 생명보험과 손해보험의 겸영을 제한하고 있음"},{"id":"7-36","type":7,"n":33,"sourceN":36,"q":"제3보험에서 각 항목별 보상방법 중 보상금액을 산정하는 방법이 다른 것은?","c":["상해사망보험금","후유장해보험금","간병보험금","상해통원의료비"],"a":4,"e":"①, ②, ③은 정액보상 방식 ④는 실손보상 방식"},{"id":"7-37","type":7,"n":34,"sourceN":37,"q":"제3보험에 대한 설명으로 틀린 것은?","c":["질병으로 인한 사망을 보장하는 상품은 제3보험의 특약으로만 운영할 수 있다","개인계약 또는 단체계약으로 운영할 수 있다","상해사망을 주계약으로 하는 경우 질병사망은 반드시 주계약으로 운영하여야 한다","하나의 상품에서 상해·질병·간병담보 등을 2개 이상 복합적으로 운영할 수 있다"],"a":3,"e":"질병사망특약은 선택특약임"},{"id":"7-38","type":7,"n":35,"sourceN":38,"q":"질병보험 상품에 대한 설명으로 틀린 것은?","c":["상해보험과 개발기준이 동일하다","주계약이 질병보험인 경우 저축성보험으로 개발할 수 있다","실손보상 상품은 생명보험회사와 손해보험회사가 모두 판매할 수 있다","질병 또는 질병으로 인한 수술·입원 등을 보상할 수 있다"],"a":1,"e":"사망보장, 보험만기, 가입금액 등에서 개발기준이 다름"},{"id":"8-34","type":8,"n":36,"sourceN":34,"q":"다음 중 제3보험의 계약대상에 해당하는 것은?","c":["법률상 배상책임","재산상의 손해","신체의 질병","타인의 보증으로 발생한 손해"],"a":3,"e":"제3보험은 신체의 상해, 질병 또는 이로 인한 간병상태를 보장대상으로 함"},{"id":"8-35","type":8,"n":37,"sourceN":35,"q":"제3보험의 보상방식에 대한 설명으로 틀린 것은?","c":["상해사망보험금은 정액으로 보상할 수 있다","교통상해 사망보험금은 장래 소득상실분 및 유가족을 기준으로 지급한다","질병사망보험금은 정액으로 보상할 수 있다","상해입원의료비는 실손보상할 수 있다"],"a":2,"e":"교통상해 사망보험금은 약정한 보험가입금액으로 정액 지급함"},{"id":"8-36","type":8,"n":38,"sourceN":36,"q":"상법상 사망을 보험사고로 하는 계약에서 법률상 무효 대상에 해당하지 않는 것은?","c":["심신상실자","의사능력이 없는 심신박약자","15세 미만자","피한정후견인"],"a":4,"e":"상법상 만 15세 미만자, 심신박약자, 심신상실자를 대상으로 하는 사망담보 계약은 무효임 ※ 피한정후견인을 사망담보로 하는 보험계약은 한정후견인의 동의를 받아야 하며 한정후견인의 동의가 없는 경우 계약이 취소될 수 있음"},{"id":"8-37","type":8,"n":39,"sourceN":37,"q":"제3보험 상품개발기준에 대한 설명으로 틀린 것은?","c":["보상하는 금액은 정액과 실손을 기준으로 설계할 수 있다","제3보험의 약관상 보상하지 않는 사유로 피보험자 사망시 사망보험금을 지급한다","실제 손해를 보상하는 위험담보의 경우 다른 회사의 가입내역을 고지하도록 할 수 있다","질병으로 인한 사망보장은 특약으로만 부가할 수 있다"],"a":2,"e":"사망보험금 → 계약자적립금"},{"id":"8-38","type":8,"n":40,"sourceN":38,"q":"제3보험 상품개발기준에 대한 설명으로 틀린 것은?","c":["원칙적으로 가입연령 등의 제한사항이 없다","법률에 의한 사망담보 가입제한이 있다","상해사망 담보에 대한 가입제한이 있다","손해보험회사가 판매하는 상해보험은 만기제한이 없다"],"a":4,"e":"손해보험회사가 상해보험을 저축성보험으로 개발할 경우 보험기간이 15년 이내이어야 하고, 특약으로 질병사망 담보를 부가할 경우 보험만기는 80세 이하이어야 함"},{"id":"9-34","type":9,"n":41,"sourceN":34,"q":"다음 보기에서 제3보험업에 해당하는 보험종목을 모두 나열한 것은?\n\n(가) 상해보험  (나) 질병보험  (다) 간병보험  (라) 자동차보험","c":["(가), (나), (라)","(가), (다), (라)","(가), (나), (다)","(나), (다), (라)"],"a":3,"e":"자동차보험은 손해보험업의 보험종목에 해당함"},{"id":"9-35","type":9,"n":42,"sourceN":35,"q":"제3보험의 법령상 지위에 대한 설명으로 알맞은 것은?","c":["상법상 손해보험에 속한다","상법상 인보험에 해당된다","보험업법상 손해보험에 속한다","보험업법상 생명보험에 속한다"],"a":2,"e":"제3보험은 「상법」상 인보험에 해당됨"},{"id":"9-36","type":9,"n":43,"sourceN":36,"q":"제3보험의 보상방식에 대한 설명으로 틀린 것은?","c":["보험금은 실손보상과 정액보상 모두 가능하다","정액보상이 가능한 보험금은 보험료에 대한 대가로 보험회사가 보험사고시 지급하는 보험금이다","비례보상 방식은 실제 손해액을 넘는 초과이득이 발생하지 않도록 한다","사망·후유장해 담보는 정액보상으로 하고 질병입원·통원의료비는 실손보상으로 한다"],"a":4,"e":"실손보상 → 정액보상"},{"id":"9-37","type":9,"n":44,"sourceN":37,"q":"손해보험회사와 생명보험회사가 모두가 판매할 수 있는 보험상품에 대한 설명으로 맞는 것은?","c":["실손보상 상품만 판매할 수 있다","타 보험회사의 실손보상 계약에 대한 가입내역을 고지의무로 할 수 있다","타 보험회사의 실손보상 계약에 대한 가입내역은 포함되지 않는다","실손보상 급부가 있는 중복계약은 중복보상한다"],"a":2,"e":"① 실손보상 상품, 정액보상 상품 모두 판매할 수 있음 ③ 생명보험회사 가입내역도 포함됨 ④ 이득금지의 원칙에 따라 중복보상하지 않음"},{"id":"9-38","type":9,"n":45,"sourceN":38,"q":"손해보험회사의 질병사망 담보의 영위조건으로 알맞은 것은?","c":["보험기간은 만기 75세 이하로 한다","보험가입금액은 개인당 1억원을 한도로 한다","만기환급금이 납입보험료 합계액 범위 이내이어야 한다","생명보험회사와 동일한 조건으로 운영할 수 있다"],"a":3,"e":"① 75세 → 80세 ② 1억원 → 2억원 ④ 생명보험회사는 보험기간, 보험가입금액, 보장성보험 조건 등의 제한이 없음"},{"id":"10-34","type":10,"n":46,"sourceN":34,"q":"제3보험에 대한 설명으로 맞는 것은?","c":["손해보험의 실손보상적 성격만 갖는다","생명보험의 정액보상적 성격만 갖는다","손해보험과 생명보험의 두가지 성격을 모두 갖고 있지 않다","손해보험과 생명보험의 두가지 성격을 모두 갖고 있다"],"a":4,"e":"제3보험이란 손해보험의 실손보상적 특성과 생명보험의 정액보상적 특성을 동시에 가지는 보험을 의미함"},{"id":"10-35","type":10,"n":47,"sourceN":35,"q":"제3보험의 특징에 대한 설명으로 틀린 것은?","c":["제3보험은 「보험업법」에 정의되어 있다","「상법」상 질병보험은 인보험에 해당한다","「상법」상 상해보험은 손해보험에 해당한다","「보험업법」의 규정에 따라 생명보험회사와 손해보험회사는 제3보험업을 영위할 수 있다"],"a":3,"e":"「상법」상 상해보험은 인보험에 해당됨"},{"id":"10-36","type":10,"n":48,"sourceN":36,"q":"제3보험 상품설계기준에 대한 내용으로 틀린 것은?","c":["생명보험회사는 보장성보험으로만 상품개발이 가능하다","손해보험회사는 실손보상 및 정액보상 상품개발이 가능하다","손해보험회사는 주계약이 상해보험인 저축성보험을 개발할 수 있다","생명보험회사는 주계약이 질병보험인 상품개발이 가능하다"],"a":3,"e":"정액보상 및 실손보상 모두 가능함"},{"id":"10-37","type":10,"n":49,"sourceN":37,"q":"손해보험회사의 저축성보험 기준에 해당하는 것은?","c":["생존시 지급되는 보험금 합계액 ≥ 지급까지 납부한(기납입) 보험료","생존시 지급되는 보험금 합계액 \u003e 지급까지 납부한(기납입) 보험료","생존시 지급되는 보험금 합계액 \u003c 지급까지 납부한(기납입) 보험료","생존시 지급되는 보험금 합계액 ≤ 지급까지 납부한(기납입) 보험료"],"a":2,"e":"저축성보험의 설계기준에 대한 설명"},{"id":"10-38","type":10,"n":50,"sourceN":38,"q":"손해보험회사의 상해보험에 대한 설명으로 틀린 것은?","c":["기본계약에서 상해사망 및 질병사망을 보장하는 상품설계가 가능하다","사망보험금은 보험수익자에게 지급한다","법률상 제3자로부터 보험자의 대위권을 허용하고 있다","한시적 장해에 대해 그 기간이 5년 이상일 때 해당 장해 지급률의 20%를 보험가입금액에 곱하여 산출한 금액을 지급한다"],"a":1,"e":"질병사망 보장은 특약으로만 운용 가능"},{"id":"11-34","type":11,"n":51,"sourceN":34,"q":"제3보험에 대한 설명으로 틀린 것은?","c":["제3보험이란 손해보험의 실손보상적 특성과 생명보험의 정액보상적 특성을 동시에 가진다","손해보험과 생명보험에 모두 속한다는 의미에서 \u0027Gray Zone\u0027이라고도 한다","상해 및 질병으로 인한 손해를 보상하는 보험이다","2003년 보험업법 및 동법 시행령의 개정으로 제3보험의 정의가 신설되었다"],"a":2,"e":"손해보험과 생명보험 중 어느 분야에 속하는지 명확하게 구분할 수 없어 \u0027Gray Zone\u0027이라고 함"},{"id":"11-35","type":11,"n":52,"sourceN":35,"q":"제3보험에 대한 설명으로 틀린 것은?","c":["제3보험이라는 용어는 일본에서 처음 사용되었다","제3보험은 생명보험회사와 손해보험사 모두 판매할 수 있다","제3보험은 독립된 하나의 보험업으로 규정되고 있다","제3보험은 「상법」에 규정되어 있다"],"a":4,"e":"「상법」 → 「보험업법」"},{"id":"11-36","type":11,"n":53,"sourceN":36,"q":"다음의 상해보험 계약 중 계약의 무효에 해당하지 않는 경우는?","c":["15세 미만자를 피보험자로 사망보험계약 체결시","의사능력이 없는 심신박약자를 피보험자로 사망보험계약 체결시","타인을 위한 사망보험계약에서 타인의 서면동의를 받고 계약을 체결하는 경우","심신상실자를 피보험자로 사망보험계약 체결시"],"a":3,"e":"「상법」상 만 15세 미만자, 심신박약자, 심신상실자의 사망담보는 무효임"},{"id":"11-37","type":11,"n":54,"sourceN":37,"q":"제3보험의 상품개발기준에 대한 설명으로 틀린 것은?","c":["실손해를 보상하는 보험의 경우에는 다른 회사 가입내역을 계약 전 알릴 의무로 할 수 있다","다른 회사 가입내역에 대한 계약 전 알릴 의무 위반시에는 계약을 해지할 수 있다","다른 회사 가입내역에 대한 계약 전 알릴 의무에는 생명보험회사가 가입시향이 포함된다","실손해를 보상하는 보험에서 중복가입시에는 비례보상할 수 있다"],"a":2,"e":"다른 회사 가입내역에 대한 계약 전 알릴 의무 위반은 계약해지 사유가 될 수 없고, 「상법」의 중복보험 규정에 따라 비례보상함"},{"id":"11-38","type":11,"n":55,"sourceN":38,"q":"제3보험의 상품개발기준에 대한 설명으로 맞는 것은?","c":["질병사망은 제한 없이 보장이 가능하다","생명보험회사에서만 판매할 수 있다","상해보험을 주계약으로 하는 경우 저축성보험으로 개발할 수 있다","생명보험회사와 손해보험회사의 보장범위에는 차이가 있다"],"a":4,"e":"① 손해보험회사의 질병사망 특약은 만기, 가입금액, 보장성 여부 등 제한이 있음 ② 손해보험회사에서도 판매 가능 ③ 없다 → 있다"},{"id":"12-34","type":12,"n":56,"sourceN":34,"q":"제3보험에 대한 설명으로 틀린 것은?","c":["제3보험이란 손해보험의 실손보상적 특성과 생명보험의 정액보상적 특성을 동시에 가진다","손해보험과 생명보험에 모두 속한다는 의미에서 \u0027Gray Zone\u0027이라고도 한다","상해 및 질병으로 인한 손해를 보상하는 보험이다","2003년 보험업법 및 동법 시행령의 개정으로 제3보험의 정의가 신설되었다"],"a":1,"e":"재물보험, 배상책임보험, 도난보험은 손해보험 영역임"},{"id":"12-35","type":12,"n":57,"sourceN":35,"q":"제3보험에 대한 설명으로 틀린 것은?","c":["제3보험이라는 용어는 일본에서 처음 사용되었다","제3보험은 생명보험회사와 손해보험사 모두 판매할 수 있다","제3보험은 독립된 하나의 보험업으로 규정되고 있다","제3보험은 「상법」에 규정되어 있다"],"a":3,"e":"제3보험은 정액보상과 실손보상이 모두 가능함"},{"id":"12-36","type":12,"n":58,"sourceN":36,"q":"다음의 상해보험 계약 중 계약의 무효에 해당하지 않는 경우는?","c":["15세 미만자를 피보험자로 사망보험계약 체결시","의사능력이 없는 심신박약자를 피보험자로 사망보험계약 체결시","타인을 위한 사망보험계약에서 타인의 서면동의를 받고 계약을 체결하는 경우","심신상실자를 피보험자로 사망보험계약 체결시"],"a":3,"e":"사망과 후유장해 담보는 대표적인 정액보상 담보임"},{"id":"12-37","type":12,"n":59,"sourceN":37,"q":"제3보험 상품개발기준에 대한 설명으로 틀린 것은?","c":["원칙적으로 보장성보험으로 개발이 가능하다","손해보험사의 경우 상해사망을 주계약으로 하여 저축성보험으로 개발이 가능하다","손해보험사의 경우 질병사망을 주계약으로 개발 가능하다","손해보험사의 경우 저축성보험으로 개발시 보험기간은 15년 이내로 개발이 가능하다"],"a":3,"e":"질병사망은 특약으로만 개발 가능"},{"id":"12-38","type":12,"n":60,"sourceN":38,"q":"손해보험회사의 질병사망 담보에 대한 설명으로 틀린 것은?","c":["보험기간은 80세 만기 이내로 한다","제3보험에 부가하는 특약의 형식으로 영위가 가능하다","보장성보험으로만 영위하여야 한다","사망보험금의 한도는 개인당 5억원 이내인 경우 기본계약으로 영위할 수 있다"],"a":4,"e":"5억원 → 2억원, 기본계약으로 → 특약으로"},{"id":"13-34","type":13,"n":61,"sourceN":34,"q":"제3보험의 질병보험 주계약에서 보장하지 않는 것은?","c":["질병입원보험금","질병수술보험금","질병사망보험금","질병후유장해보험금"],"a":3,"e":"질병보험은 질병에 걸리거나 질병으로 인해 발생되는 입원·수술·통원 등을 보장하는 보험으로 질병사망은 특약으로만 보장받을 수 있음"},{"id":"13-35","type":13,"n":62,"sourceN":35,"q":"제3보험에 대한 설명으로 틀린 것은?","c":["손해보험 및 생명보험의 성격을 동시에 지닌다","상법상 인보험에 해당한다","주요 종목으로 상해보험, 질병보험, 간병보험이 해당한다","실손보상 및 정액보상 모두 가능하다"],"a":2,"e":"「상법」상 인보험에 해당됨"},{"id":"13-36","type":13,"n":63,"sourceN":36,"q":"제3보험계약의 무효 요건에 대한 내용으로 틀린 것은?","c":["사망을 보험사고로 하는 보험계약의 무효 요건은 보험업법에 규정되어 있다","만 15세 미만자의 사망을 보험사고로 하는 보험계약은 무효이다","심신상실자의 사망을 보험사고로 하는 보험계약은 무효이다","의사능력이 없는 심신박약자의 사망을 보험사고로 하는 보험계약은 무효이다"],"a":1,"e":"「보험업법」 → 「상법」"},{"id":"13-37","type":13,"n":64,"sourceN":37,"q":"보장성보험의 설계기준에 대한 설명으로 맞는 것은?","c":["생존시 지급되는 보험금 합계액이 기납입보험료보다 크다","생존시 지급되는 보험금 합계액이 보험가액을 초과하지 않는다","생존시 지급되는 보험금은 이미 납입한 보험료 이내이다","생존시 지급되는 보험금이 0원이 되어야 한다"],"a":3,"e":"① 크다 → 작거나 같다 ② 보험가액 → 기납입보험료 ④ 순수보장성보험 기준에 대한 설명"},{"id":"13-38","type":13,"n":65,"sourceN":38,"q":"손해보험회사의 질병사망특약 영위조건으로 옳지 않은 것은?","c":["만기시 지급하는 환급금이 납입보험료 합계액의 범위 내일 것","저축성보험일 것","보험만기 80세 이하","보험금액의 한도는 개인당 2억원 이내"],"a":2,"e":"보장성보험의 요건을 충족해야 함"},{"id":"14-34","type":14,"n":66,"sourceN":34,"q":"제3보험에 대한 설명으로 맞는 것은?","c":["화재로 인한 상해뿐만 아니라 배상책임손해를 보장하는 제3보험 상품이 있다","제3보험 중 대표적으로 비례보상을 적용하는 것에 사망·후유장해 담보가 있다","제3보험 상품은 실손보상방식과 정액보상방식이 모두 가능하다","손해보험과 생명보험의 성격을 모두 갖지 못하여 ‘Gray Zone’이라고도 한다"],"a":3,"e":"① 배상책임손해는 손해보험에서 보장 ② 비례보상 → 정액보상 ④ 두 성격을 모두 가짐"},{"id":"14-35","type":14,"n":67,"sourceN":35,"q":"제3보험의 겸영에 대한 설명으로 틀린 것은?","c":["제3보험의 보험종목에 부가하는 보험은 겸영할 수 있다","제3보험의 재보험은 겸영할 수 있다","생명보험의 재보험은 겸영할 수 있다","신용보증보험의 재보험은 겸영할 수 있다"],"a":4,"e":"신용보증보험의 재보험은 겸영할 수 없음"},{"id":"14-36","type":14,"n":68,"sourceN":36,"q":"제3보험의 보상방식에 대한 설명으로 알맞은 것은?","c":["제3보험은 실손보상방식만 가능하다","도덕적 위험의 발생을 방지하기 위해 정액보상방식을 사용한다","실손보상 급부가 있는 계약은 보험회사 간에 가입내역을 교환하여 비례보상한다","초과이득 방지를 위해 상해보험에서는 정액보상방식을 사용한다"],"a":3,"e":"① 제3보험은 실손보상방식과 정액보상방식이 모두 가능 ② 정액보상방식 → 실손보상방식 ④ 정액보상방식 → 실손보상방식"},{"id":"14-37","type":14,"n":69,"sourceN":37,"q":"다음 보기의 (   ) 안에 들어갈 알맞은 단어는?\n\n제3보험 약관에서 보상하지 않은 사고로 피보험자가 사망하는 경우 보험회사에서는 (   )을/를 지급하게 된다","c":["계약자적립액","사망보험금","해약환급금","기납입보험료"],"a":1,"e":"제3보험에서는 보상하지 않은 사고로 피보험자 사망시 계약자적립액을 지급하고 계약은 소멸함"},{"id":"14-38","type":14,"n":70,"sourceN":38,"q":"제3보험에 대한 설명으로 틀린 것은?","c":["주계약에서 질병으로 인한 입원치료를 보장한다","주계약에서 상해로 인한 사망보험금을 보장한다","주계약에서 질병사망보험금을 보장한다","주계약이 상해보험인 경우 저축성보험으로 개발할 수 있다"],"a":3,"e":"질병사망에 대해서는 특약으로 보장함"},{"id":"15-34","type":15,"n":71,"sourceN":34,"q":"제3보험의 보험종목에 해당하는 것은?","c":["간병보험","보증보험","연금보험","배상책임보험"],"a":1,"e":"②, ④는 손해보험 ③은 생명보험에 해당하는 보험종목"},{"id":"15-35","type":15,"n":72,"sourceN":35,"q":"제3보험의 특징에 대한 설명으로 틀린 것은?","c":["상해보험, 질병보험, 간병보험으로 구분된다","손해보험과 생명보험 중 어느 분야에 속하는지 명확하게 구분할 수 없다","손해보험회사와 생명보험회사가 모두 영위할 수 있다","손해보험회사는 실손보상만 가능하다"],"a":4,"e":"실손보상과 정액보상 모두 가능함"},{"id":"15-36","type":15,"n":73,"sourceN":36,"q":"다음 보험계약 중 계약의 무효에 해당하지 않는 경우는?","c":["10세 남아가 사망보험의 피보험자가 되는 경우","심신상실자가 사망보험의 피보험자가 되는 경우","심신상실자가 단체보험의 피보험자가 되는 경우","의사능력이 있는 심신박약자가 단체보험의 피보험자가 되는 경우"],"a":4,"e":"심신박약자가 「상법」 제735조의3에 따른 단체보험의 피보험자가 될 때에 의사능력이 있는 경우에는 보험계약은 유효함"},{"id":"15-37","type":15,"n":74,"sourceN":37,"q":"손해보험회사에서 저축성보험으로 상품개발이 가능한 경우에 해당하는 것은?","c":["100세 만기 질병보험","70세 만기 질병보험","20년 만기 상해보험","10년 만기 상해보험"],"a":4,"e":"손해보험회사는 상해보험을 보험기간 15년 이내의 저축성보험으로 개발할 수 있음"},{"id":"15-38","type":15,"n":75,"sourceN":38,"q":"손해보험회사의 질병사망 담보에 대한 설명으로 올바른 것은?","c":["보험기간과 보험가입금액에 대한 제한이 없다","겸영이 가능하기 때문에 손해보험회사와 생명보험회사가 동일한 조건으로 운영할 수 있다","기본계약은 물론 특약으로도 운영할 수 있다","만기환급금은 납입보험료 합계액을 초과하여 설계할 수 있다"],"a":1,"e":"② 생명보험회사의 설계기준에는 제한이 없음 ③ 특약으로만 운영할 수 있음 ④ 초과하여 → 초과하지 않도록"},{"id":"16-34","type":16,"n":76,"sourceN":34,"q":"제3보험의 보상하는 영역에 해당하는 것은?","c":["질병치료로 발생한 의료비","화재사고로 발생한 재산손해를 보상","자동차사고로 발생한 치료비","중풍으로 발생한 농작물 손해를 보상"],"a":1,"e":"②, ③, ④는 손해보험에서 보상하는 영역에 해당"},{"id":"16-35","type":16,"n":77,"sourceN":35,"q":"제3보험의 보상방식에 대한 설명으로 틀린 것은?","c":["질병사망보험금은 정액보상한다","의료비에 대해서는 정액보상 또는 실손보상할 수 있다","2개 이상의 실손의료비 보험계약이 있는 경우 비례보상한다","질병보험은 실손보상만 가능하다"],"a":4,"e":"정액보상(질병사망보험금, 진단급여금)과 실손보상(통원, 외래의료비) 모두 가능함"},{"id":"16-36","type":16,"n":78,"sourceN":36,"q":"제3보험에서 실손보상방식으로 지급하는 것은?","c":["질병사망보험금","교통사고 후유장해보험금","질병 입원일당 급여","질병통원의료비"],"a":4,"e":"①, ②, ③은 정액보상방식으로 지급함"},{"id":"16-37","type":16,"n":79,"sourceN":37,"q":"제3보험의 설계기준에 대한 설명으로 틀린 것은?","c":["만기시 지급되는 만기환급금은 납입한 보험료를 초과할 수 없다","보험계약대출 원리금 상계 전 지급되는 환급금은 납입한 보험료를 초과할 수 없다","사고보험금액은 만기환급금을 초과할 수 없다","중도해지시 지급되는 보험금은 납입한 보험료를 초과할 수 없다"],"a":3,"e":"사고보험금은 위험보장 목적으로 약정한 금액을 지급하거나 실제 손해액을 지급하는 것이므로 일반적으로 만기환급금을 초과할 수 있음"},{"id":"16-38","type":16,"n":80,"sourceN":38,"q":"제3보험 상품에 대한 설명으로 틀린 것은?","c":["손해보험회사는 주계약이 상해보험인 경우 15년 이내의 보험기간으로 저축성보험을 개발할 수 있다","실손보상 급부의 경우 다른 회사의 가입내역을 고지의무 사항으로 추가할 수 있다","손해보험회사의 질병사망특약에 대한 가입제한이 없다","생명보험회사와 손해보험회사가 모두 영위할 수 있다"],"a":3,"e":"손해보험회사의 질병사망 특약은 보험기간 80세 이하, 보험금액의 한도는 개인당 2억원 이내, 보장성보험 요건을 충족하여야 함"},{"id":"17-34","type":17,"n":81,"sourceN":34,"q":"제3보험에 대한 설명으로 틀린 것은?","c":["손해보험과 생명보험 중 어느 분야에 속하는지 명확하게 구분할 수 있다","손해보험회사와 생명보험회사가 모두 영위할 수 있다","실손보상과 정액보상이 모두 가능하다","상해 및 질병으로 인한 의료비 등을 보상하는 보험이다"],"a":1,"e":"손해보험과 생명보험 중 어느 분야에 속하는지 명확하게 구분할 수 없어 ‘Gray Zone’이라고 함"},{"id":"17-35","type":17,"n":82,"sourceN":35,"q":"제3보험의 정의를 규정하고 있는 법률은?","c":["의료법","국민건강보험법","보험업법","상법"],"a":3,"e":"「보험업법」에 제3보험의 정의가 규정되어 있음"},{"id":"17-36","type":17,"n":83,"sourceN":36,"q":"다음 중 제3보험의 상품개발기준으로 틀린 것은?","c":["손해보험회사는 정액보상 상품으로 개발할 수 있다","생명보험회사는 정액보상 상품으로 개발할 수 있다","생명보험회사는 실손보상 상품으로 개발할 수 없다","손해보험회사는 주계약이 상해보험인 보험기간 15년 이내의 저축성보험을 개발할 수 있다"],"a":3,"e":"정액보상과 실손보상 상품 모두 개발할 수 있음"},{"id":"17-37","type":17,"n":84,"sourceN":37,"q":"손해보험회사에서 판매할 수 없는 상품으로 알맞은 것은?","c":["질병이나 상해가 원인이 되어 간병이 필요한 상태를 보장하는 상품","질병입원비를 보장하는 상품","주계약으로 상해사망을 보장하는 상품","주계약으로 질병사망을 보장하는 상품"],"a":4,"e":"제3보험에서 질병으로 인한 사망보장은 특약으로만 부가할 수 있음"},{"id":"17-38","type":17,"n":85,"sourceN":38,"q":"제3보험에서 질병사망 보장을 위한 요건으로 틀린 것은?","c":["보험기간이 80세 이하","보험금액의 한도는 개인당 2억원 이내","만기시에 지급하는 환급금이 납입보험료 합계액 이내","보험료 일시납"],"a":4,"e":"보험료 일시납은 제3보험에서 질병사망 보장을 위한 요건에 해당하지 않음"},{"id":"18-34","type":18,"n":86,"sourceN":34,"q":"제3보험을 가장 바르게 설명한 것은?","c":["생명보험에서 보상하지 않는 손해를 보상하는 보험","재해를 보장하는 보험","상해, 질병 또는 이로 인한 간병에 관하여 보상하는 보험","화재보험, 자동차보험에서 보상하지 않는 손해를 보상하는 보험"],"a":3,"e":"제3보험은 사람이 질병에 걸리거나 상해를 입었을 때 또는 질병이나 상해가 원인이 되어 간병이 필요한 상태가 되었을 때 보장하는 보험으로 상해보험·질병보험·간병보험으로 구분"},{"id":"18-35","type":18,"n":87,"sourceN":35,"q":"제3보험의 특징에 대한 설명으로 틀린 것은?","c":["제3보험의 보험사고는 신체의 상해, 질병, 간병이다","제3보험은 원칙적으로 피보험이익이 없다","제3보험의 피보험자는 보험사고의 대상이 되는 사람이다","제3보험은 신체가 대상이므로 중복보험이 되지 않는다"],"a":4,"e":"정액보상만인 경우 중복보상이 가능함"},{"id":"18-36","type":18,"n":88,"sourceN":36,"q":"상해사망 담보에서 가입이 제한되는 연령 조건으로 알맞은 것은?","c":["만 19세 미만","만 17세 미만","만 16세 미만","만 15세 미만"],"a":4,"e":"상해보험에서 만 15세 미만인 자를 대상으로 하는 사망담보는 무효임"},{"id":"18-37","type":18,"n":89,"sourceN":37,"q":"다음 중 손해보험회사에서 설계가 가능한 제3보험은?","c":["사망보험금을 이미 납입한 보험료 이하로 설계한 상해보험","보험기간이 16년인 저축성보험","질병사망을 90세까지 보장하는 특약이 부가된 상해보험","기본계약을 실손보장형 담보로 개발하는 경우"],"a":4,"e":"① 사망보험금은 이미 납입한 보험료 합계액 이상이 되도록 설계하여야 함(보험업감독규정, 7-60조) ② 16년 → 15년 ③ 질병사망특약은 보험기간 80세 이하로 설계가 가능함"},{"id":"18-38","type":18,"n":90,"sourceN":38,"q":"다음 표의 (   ) 안에 들어갈 알맞은 것은?\n\n손해보험회사가 제3보험의 특약으로만 영위할 수 있는 질병사망보장의 보험금액 한도는 개인당 (   ) 이내이다","c":["1억원","1.5억원","2억원","3억원"],"a":3,"e":"질병사망 특약의 보험금액 한도는 개인당 2억원 이내임"},{"id":"19-34","type":19,"n":91,"sourceN":34,"q":"제3보험에 대한 설명으로 틀린 것은?","c":["생명보험과 손해보험의 성격을 공통적으로 가지고 있다","실손보상 성격과 정액보상 성격을 동시에 가지고 있다","생명보험회사와 손해보험회사가 모두 영위할 수 있다","실손보상 성격을 가지고 있어 손해보험 성격에 가깝다"],"a":4,"e":"제3보험은 생명보험과 손해보험 중 어느 분야에 속한다고 할 수 없음"},{"id":"19-35","type":19,"n":92,"sourceN":35,"q":"제3보험에 대한 설명으로 옳은 것은?","c":["질병보험, 상해보험을 연금보험으로 구분한다","정액보상만 가능하다","심신상실자의 사망을 담보하는 계약을 보장한다","실손보상 상품에 중복가입시 비례보상한다"],"a":4,"e":"① 연금보험 → 간병보험 ② 정액보상과 실손보상 모두 가능함 ③ 계약의 무효사유에 해당함"},{"id":"19-36","type":19,"n":93,"sourceN":36,"q":"제3보험의 보상방식에 대한 설명으로 틀린 것은?","c":["질병사망보험금은 실손보상방식으로 지급한다","의료실비는 실손보상방식으로 지급한다","후유장해보험금은 정액보상방식으로 지급한다","입원일당 급여는 정액보상방식으로 지급한다"],"a":1,"e":"질병사망보험금은 정액보상함"},{"id":"19-37","type":19,"n":94,"sourceN":37,"q":"다음에서 제3보험에 대한 설명으로 틀린 것은?","c":["제3보험은 보장성보험이다","질병으로 인한 사망보장은 특약으로만 부가할 수 있다","80세 이상은 제3보험에 가입할 수 없다","손해보험회사는 주계약이 상해보험인 경우 저축성보험으로 개발이 가능하다"],"a":3,"e":"원칙적으로 가입연령 등의 제한이 없음"},{"id":"19-38","type":19,"n":95,"sourceN":38,"q":"손해보험회사의 질병사망 영위조건에 대한 설명으로 틀린 것은?","c":["제3보험의 특약 형식으로 운영한다","보험가입금액은 개인당 2억원까지 설계할 수 있다","보험기간은 80세 이하로 한다","생명보험회사와 동일한 조건으로 제한 없이 운영할 수 있다"],"a":4,"e":"생명보험회사는 보험기간, 보험가입금액, 보장성보험 조건 등의 제한이 없음"},{"id":"20-34","type":20,"n":96,"sourceN":34,"q":"제3보험과 관련이 없는 것은?","c":["일상생활 중 실수로 제3자를 다치게 하여 이에 따른 배상책임을 보상하는 보험","상해사고로 인한 치료비를 보장하는 보험","암에 걸려 입원했을 때의 입원비를 지급하는 보험","생존·질병으로 인한 간병비를 지급하는 보험"],"a":1,"e":"배상책임을 보상하는 보험은 손해보험에 해당함"},{"id":"20-35","type":20,"n":97,"sourceN":35,"q":"다음 중 제3보험에 대한 설명으로 틀린 것은?","c":["상해보험의 재보험은 겸영할 수 있다","간병보험의 재보험은 겸영할 수 있다","보험업법에서 보험업의 겸영을 규정하고 있다","제3보험의 보험종목에 부가되는 보험은 겸영할 수 없다"],"a":4,"e":"없다 → 있다"},{"id":"20-36","type":20,"n":98,"sourceN":36,"q":"실손의료보험이 중복계약으로 체결되어 개별 계약에서 보상하는 보험금의 합계가 실제 손해액보다 큰 경우에 적용되는 보상방식으로 알맞은 것은?","c":["각 보험계약 보험금의 합계액 보상","각 보험계약 중 보험금이 큰 계약의 보험금 보상","각 보험계약의 보험가입금액 비율에 따른 보상","독립책임액 비례보상"],"a":4,"e":"독립책임액 비례보상 방식으로 비례보상함"},{"id":"20-37","type":20,"n":99,"sourceN":37,"q":"다음에서 설명하는 제3보험 설계기준에 해당하는 것은?","c":["순수보장성보험","보장성보험","저축성보험","실적배당형보험"],"a":3,"e":"저축성보험의 설계기준에 대한 설명"},{"id":"20-38","type":20,"n":100,"sourceN":38,"q":"손해보험회사의 질병사망 담보의 영위조건에 대한 설명으로 옳지 않은 것은?","c":["보험가입금액은 개인당 2억원까지 설계할 수 있다","보험만기는 90세 이하로 제한되어 있다","보장성보험으로 설계하여야 한다","제3보험의 특약의 형태로 운영하여야 한다"],"a":2,"e":"90세 → 80세"}]; var questionBank = questions;
+    var totalQuestions = questionBank.length;
+    var answers = Array(totalQuestions).fill(null);
+    var cursor = 0;
+    var wrongItems = [];
+    var reviewCursor = 0;
+
+    function $(id) { return document.getElementById(id); }
+    function displayText(value) {
+      return String(value == null ? '' : value).replace(/\\n/g, '\n');
+    }
+    function showScreen(id) {
+      ['startScreen','quizScreen','resultScreen','reviewScreen','completeScreen'].forEach(function (screenId) {
+        $(screenId).classList.toggle('hidden', screenId !== id);
+      });
+      window.scrollTo(0, 0);
+    }
+    function sourceText(item) {
+      return item.type + '형 ' + item.sourceN + '번';
+    }
+    function resetStudy() {
+      answers = Array(totalQuestions).fill(null);
+      cursor = 0;
+      wrongItems = [];
+      reviewCursor = 0;
+      showScreen('startScreen');
+    }
+    function renderQuiz() {
+      var item = questionBank[cursor];
+      $('quizProgress').textContent = (cursor + 1) + ' / ' + totalQuestions;
+      $('quizSource').textContent = sourceText(item);
+      $('quizProgressFill').style.width = (((cursor + 1) / totalQuestions) * 100) + '%';
+      $('quizNumber').textContent = '문항 ' + (cursor + 1) + ' · ' + sourceText(item);
+      $('quizQuestion').textContent = displayText(item.q);
+      $('quizChoices').innerHTML = '';
+
+      item.c.forEach(function (choice, index) {
+        var button = document.createElement('button');
+        button.type = 'button';
+        button.className = 'choice' + (answers[cursor] === index + 1 ? ' selected' : '');
+        var number = document.createElement('span');
+        number.className = 'choice-number';
+        number.textContent = index + 1;
+        var text = document.createElement('span');
+        text.className = 'choice-text';
+        text.textContent = displayText(choice);
+        button.append(number, text);
+        button.addEventListener('click', function () {
+          answers[cursor] = index + 1;
+          $('validationNote').classList.add('hidden');
+          renderQuiz();
+        });
+        $('quizChoices').appendChild(button);
+      });
+
+      $('prevButton').disabled = cursor === 0;
+      $('nextButton').classList.toggle('hidden', cursor === totalQuestions - 1);
+      $('submitButton').classList.toggle('hidden', cursor !== totalQuestions - 1);
+    }
+    function beginStudy() {
+      answers = Array(totalQuestions).fill(null);
+      cursor = 0;
+      wrongItems = [];
+      showScreen('quizScreen');
+      renderQuiz();
+    }
+    function submitStudy() {
+      var missing = answers.findIndex(function (answer) { return answer == null; });
+      if (missing !== -1) {
+        cursor = missing;
+        $('validationNote').textContent = '아직 답하지 않은 문항이 있습니다. 현재 문항부터 답해 주세요.';
+        $('validationNote').classList.remove('hidden');
+        renderQuiz();
+        return;
+      }
+
+      wrongItems = [];
+      questionBank.forEach(function (item, index) {
+        if (answers[index] !== item.a) {
+          wrongItems.push({ item: item, selected: answers[index] });
+        }
+      });
+
+      var correctCount = totalQuestions - wrongItems.length;
+      $('scoreText').textContent = correctCount + ' / ' + totalQuestions;
+      $('scoreSub').textContent = '정답률 ' + Math.round(correctCount / totalQuestions * 100) + '% · 오답 ' + wrongItems.length + '문항';
+
+      if (wrongItems.length) {
+        $('wrongSummary').innerHTML = '<strong>오답 문항</strong>' + wrongItems.map(function (entry) {
+          return sourceText(entry.item);
+        }).join(', ');
+        $('reviewButton').textContent = '오답노트 시작 (' + wrongItems.length + '문항)';
+        $('reviewButton').classList.remove('hidden');
+      } else {
+        $('wrongSummary').innerHTML = '<strong>전 문항 정답</strong>틀린 문제가 없어 오답노트를 생략합니다.';
+        $('reviewButton').classList.add('hidden');
+      }
+      showScreen('resultScreen');
+    }
+    function renderReview() {
+      var entry = wrongItems[reviewCursor];
+      var item = entry.item;
+      $('reviewProgress').textContent = '오답 ' + (reviewCursor + 1) + ' / ' + wrongItems.length;
+      $('reviewSource').textContent = sourceText(item);
+      $('reviewProgressFill').style.width = (((reviewCursor + 1) / wrongItems.length) * 100) + '%';
+      $('reviewNumber').textContent = '문항 ' + sourceText(item);
+      $('reviewQuestion').textContent = displayText(item.q);
+      $('reviewChoices').innerHTML = '';
+
+      item.c.forEach(function (choice, index) {
+        var choiceNo = index + 1;
+        var isCorrect = choiceNo === item.a;
+        var isSelected = choiceNo === entry.selected;
+        var button = document.createElement('div');
+        button.className = 'review-choice' + (isCorrect ? ' correct' : '') + (isSelected ? ' wrong-selected' : '');
+        var number = document.createElement('span');
+        number.className = 'review-choice-number';
+        number.textContent = choiceNo;
+        var text = document.createElement('span');
+        text.className = 'review-choice-text';
+        text.textContent = displayText(choice);
+        var mark = document.createElement('span');
+        mark.className = 'choice-mark';
+        mark.textContent = isCorrect ? '정답' : (isSelected ? '내 답' : '');
+        button.append(number, text, mark);
+        $('reviewChoices').appendChild(button);
+      });
+
+      $('reviewStatus').textContent = '내가 고른 답: ' + entry.selected + '번 · 정답: ' + item.a + '번';
+      $('reviewExplanation').textContent = displayText(item.e);
+      $('reviewPrevButton').disabled = reviewCursor === 0;
+      $('reviewNextButton').classList.toggle('hidden', reviewCursor === wrongItems.length - 1);
+      $('reviewCompleteButton').classList.toggle('hidden', reviewCursor !== wrongItems.length - 1);
+    }
+    function beginReview() {
+      reviewCursor = 0;
+      showScreen('reviewScreen');
+      renderReview();
+    }
+    function finishStudy() {
+      $('completeText').textContent = '100문항 풀이와 ' + wrongItems.length + '개 오답의 해설 확인을 완료했습니다.';
+      showScreen('completeScreen');
+    }
+
+    $('startButton').addEventListener('click', beginStudy);
+    $('prevButton').addEventListener('click', function () {
+      if (cursor > 0) { cursor -= 1; renderQuiz(); }
+    });
+    $('nextButton').addEventListener('click', function () {
+      if (cursor < totalQuestions - 1) { cursor += 1; renderQuiz(); }
+    });
+    $('submitButton').addEventListener('click', submitStudy);
+    $('reviewButton').addEventListener('click', beginReview);
+    $('reviewPrevButton').addEventListener('click', function () {
+      if (reviewCursor > 0) { reviewCursor -= 1; renderReview(); }
+    });
+    $('reviewNextButton').addEventListener('click', function () {
+      if (reviewCursor < wrongItems.length - 1) { reviewCursor += 1; renderReview(); }
+    });
+    $('reviewCompleteButton').addEventListener('click', finishStudy);
+    function goFocusMenu(confirmFirst) {
+      if (confirmFirst && !confirm('현재 학습을 중단하고 모의고사 테스트 목록으로 돌아갈까요?')) return;
+      window.location.href = './index.html';
+    }
+    $('quitButton').addEventListener('click', function () {
+      goFocusMenu(true);
+    });
+    $('resultHomeButton').addEventListener('click', function () { goFocusMenu(false); });
+    $('completeHomeButton').addEventListener('click', function () { goFocusMenu(false); });
+
+  </script>
+</body>
+</html>

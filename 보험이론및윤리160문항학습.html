@@ -1,0 +1,372 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f37021">
+  <meta name="description" content="1형부터 20형까지 보험이론 및 윤리 160문항 집중학습">
+  <title>보험이론 및 윤리 160문항 집중학습</title>
+  
+  <style>
+    html.auth-pending body{visibility:hidden}
+    :root{--orange:#f37021;--orange-dark:#d95810;--ink:#202124;--muted:#6b7280;--line:#e6e8eb;--soft:#fff7f1;--green:#16803c;--green-bg:#eaf8ef;--red:#c62828;--red-bg:#fff0f0;--navy:#243247}
+    *{box-sizing:border-box}
+    html,body{margin:0;min-height:100%;background:#f5f6f8;color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Apple SD Gothic Neo","Noto Sans KR","Malgun Gothic",sans-serif}
+    body{padding:env(safe-area-inset-top) 0 env(safe-area-inset-bottom)}
+    button{font:inherit}
+    button{border:0;cursor:pointer}
+    button:disabled{cursor:default}
+    .app{width:min(760px,100%);margin:0 auto;min-height:100vh;background:#fff;box-shadow:0 0 24px rgba(0,0,0,.06)}
+    .site-header{position:sticky;top:0;z-index:10;background:#fff;border-bottom:1px solid var(--line);box-shadow:0 5px 18px rgba(32,43,60,.1)}
+    .site-title-row{height:44px;display:flex;align-items:center;background:var(--orange);color:#fff;padding:0 max(14px,calc((100% - 760px)/2 + 14px));overflow:hidden}
+    .site-title{width:100%;font-size:clamp(12px,3.6vw,16px);font-weight:900;letter-spacing:-.045em;line-height:1;white-space:nowrap;overflow-x:auto;scrollbar-width:none}
+    .site-title::-webkit-scrollbar,.top-menu::-webkit-scrollbar{display:none}
+    .top-menu{height:48px;display:flex;align-items:center;justify-content:center;gap:8px;padding:0 12px;overflow-x:auto;white-space:nowrap;background:#fff}
+    .top-menu-link{flex:0 0 auto;display:inline-flex;align-items:center;justify-content:center;min-height:34px;padding:0 14px;border:1px solid #ffd0b5;border-radius:999px;color:var(--orange-dark);font-size:13px;font-weight:900;text-align:center;background:#fff8f3;text-decoration:none}
+    .top-menu-link:hover,.top-menu-link:focus-visible,.top-menu-link.active{background:var(--orange);color:#fff;border-color:var(--orange)}
+    .social-brand{display:inline-flex;align-items:center;flex:0 0 auto;color:#6b7280;font-size:12px;font-weight:900;letter-spacing:-.04em;white-space:nowrap}
+    .social-icon-link{display:inline-flex;align-items:center;justify-content:center;flex:0 0 34px;width:34px;min-height:34px;height:34px;padding:0;border-radius:10px;color:#fff}
+    .social-icon-link svg{width:18px;height:18px;display:block}
+    .social-icon-link.instagram{background:linear-gradient(135deg,#f58529,#dd2a7b 52%,#8134af)}
+    .social-icon-link.blog{background:#03c75a}
+    .topbar{background:var(--orange);color:#fff;padding:16px 18px 15px;position:relative;z-index:1}
+    .global-nav{display:none}
+    .global-nav::-webkit-scrollbar{display:none}
+    .global-nav a{flex:0 0 auto;padding:7px 12px;border:1px solid #ffd0b5;border-radius:999px;background:#fff8f3;color:var(--orange-dark);font-size:12px;font-weight:900;text-decoration:none}
+    .global-nav a:hover,.global-nav a:focus-visible{background:var(--orange);border-color:var(--orange);color:#fff}
+    .topbar-row{display:flex;align-items:center;justify-content:space-between;gap:12px}
+    .brand{font-weight:900;font-size:18px;letter-spacing:-.06em;line-height:1.25}
+    .subbrand{margin-top:4px;font-size:12px;opacity:.92}
+    .top-actions{display:flex;align-items:center;gap:6px;white-space:nowrap}
+    .student-name{font-size:12px;font-weight:800}
+    .top-button{padding:7px 9px;border:1px solid rgba(255,255,255,.55);border-radius:9px;background:transparent;color:#fff;font-size:11px;font-weight:800}
+    .screen{padding:22px 18px 34px}
+    .hidden{display:none!important}
+    .hero{text-align:center;padding:14px 0 7px}
+    .badge{display:inline-flex;padding:6px 10px;border-radius:999px;background:#fff0e6;color:var(--orange-dark);font-size:13px;font-weight:900}
+    h1{margin:15px 0 10px;font-size:clamp(27px,6vw,38px);line-height:1.22;letter-spacing:-.075em}
+    .hero p{margin:0;color:var(--muted);font-size:14px;line-height:1.6}
+    .timeline{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin:25px 0 23px;position:relative}
+    .timeline:before{content:"";position:absolute;left:12%;right:12%;top:21px;height:2px;background:#ffd4bd}
+    .step{position:relative;z-index:1;text-align:center}
+    .step-no{display:grid;place-items:center;width:42px;height:42px;margin:0 auto 7px;border:2px solid #ffc39f;border-radius:50%;background:#fff;color:var(--orange-dark);font-weight:900}
+    .step-label{font-size:11px;line-height:1.3;font-weight:800;color:#4b5563}
+    .info-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:20px 0}
+    .info-box{padding:14px 7px;border:1px solid var(--line);border-radius:13px;background:#fff;text-align:center}
+    .info-box strong{display:block;color:var(--orange-dark);font-size:18px}
+    .info-box span{display:block;margin-top:3px;color:var(--muted);font-size:11px}
+    .notice{margin:18px 0;padding:14px 15px;border-radius:13px;background:var(--soft);color:#70411e;font-size:13px;line-height:1.55}
+    .primary{width:100%;padding:14px 16px;border-radius:12px;background:var(--orange);color:#fff;font-weight:900;font-size:15px;box-shadow:0 8px 18px rgba(243,112,33,.2)}
+    .primary:hover,.primary:focus-visible{background:var(--orange-dark)}
+    .quiz-head,.review-head{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:10px}
+    .progress-label{color:var(--orange-dark);font-size:14px;font-weight:900}
+    .source-label{color:var(--muted);font-size:12px;font-weight:800}
+    .progress-track{height:7px;margin-bottom:18px;border-radius:999px;background:#f3e5dd;overflow:hidden}
+    .progress-fill{height:100%;border-radius:inherit;background:var(--orange);transition:width .2s ease}
+    .question-card,.result-card,.review-card,.complete-card{border:1px solid var(--line);border-radius:18px;background:#fff}
+    .question-card{padding:20px 17px}
+    .question-number{margin-bottom:11px;color:var(--orange-dark);font-size:13px;font-weight:900}
+    .question-text{margin:0;white-space:pre-line;font-size:19px;line-height:1.55;letter-spacing:-.045em}
+    .choices{display:grid;gap:10px;margin-top:20px}
+    .choice{display:flex;align-items:flex-start;gap:10px;width:100%;padding:13px 12px;border:1px solid #d9dde2;border-radius:12px;background:#fff;color:var(--ink);text-align:left;line-height:1.45}
+    .choice:hover,.choice:focus-visible{border-color:#f5a678;background:#fffaf7}
+    .choice.selected{border-color:var(--orange);background:#fff3eb;box-shadow:0 0 0 2px #ffe1cd}
+    .choice-number{display:grid;place-items:center;flex:0 0 26px;width:26px;height:26px;border-radius:50%;background:#f1f3f5;color:#5b6470;font-size:12px;font-weight:900}
+    .choice.selected .choice-number{background:var(--orange);color:#fff}
+    .choice-text{font-size:14px;white-space:pre-line}
+    .quiz-nav,.review-nav{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:16px}
+    .nav-button{padding:12px 10px;border:1px solid #d9dde2;border-radius:11px;background:#fff;color:#4b5563;font-size:13px;font-weight:900}
+    .nav-button:hover:not(:disabled),.nav-button:focus-visible{border-color:#f0a272;color:var(--orange-dark)}
+    .nav-button:disabled{opacity:.4}
+    .nav-button.next,.nav-button.submit,.nav-button.complete{border-color:var(--orange);background:var(--orange);color:#fff}
+    .nav-button.submit,.nav-button.complete{grid-column:1/-1}
+    .quit-button{display:block;margin:18px auto 0;padding:5px 8px;background:transparent;color:#9aa1aa;font-size:11px;text-decoration:underline}
+    .validation-note{margin:13px 0 0;padding:11px 12px;border-radius:10px;background:#fff4df;color:#8a5a16;font-size:12px;font-weight:700}
+    .result-card{padding:21px 17px;text-align:center}
+    .result-kicker{margin:0;color:var(--muted);font-size:13px;font-weight:800}
+    .score{margin:7px 0 0;color:var(--orange-dark);font-size:42px;font-weight:950;letter-spacing:-.07em}
+    .score-sub{margin:3px 0 0;color:var(--muted);font-size:13px}
+    .wrong-summary{margin:18px 0 0;padding:14px;border-radius:12px;background:var(--red-bg);color:#7c2222;text-align:left;font-size:13px;line-height:1.55}
+    .wrong-summary strong{display:block;margin-bottom:4px;color:var(--red)}
+    .review-card{padding:19px 17px}
+    .review-choice{position:relative;display:flex;align-items:flex-start;gap:10px;width:100%;margin-top:9px;padding:12px;border:1px solid #d9dde2;border-radius:11px;background:#fff;text-align:left}
+    .review-choice.correct{border-color:#8bc99e;background:var(--green-bg);color:#155d2c}
+    .review-choice.wrong-selected{border-color:#eba0a0;background:var(--red-bg);color:#8c2424}
+    .review-choice-number{display:grid;place-items:center;flex:0 0 25px;width:25px;height:25px;border-radius:50%;background:#eef0f2;color:#5d6670;font-size:12px;font-weight:900}
+    .review-choice.correct .review-choice-number{background:var(--green);color:#fff}
+    .review-choice.wrong-selected .review-choice-number{background:var(--red);color:#fff}
+    .review-choice-text{font-size:14px;line-height:1.45;white-space:pre-line}
+    .choice-mark{margin-left:auto;flex:0 0 auto;font-size:11px;font-weight:900}
+    .review-status{margin-top:15px;padding:11px 12px;border-radius:10px;background:#f7f8fa;color:#4b5563;font-size:13px;font-weight:800}
+    .explanation{margin-top:14px;padding:14px;border-left:4px solid var(--orange);border-radius:0 11px 11px 0;background:#fff8f3}
+    .explanation strong{display:block;margin-bottom:6px;color:var(--orange-dark);font-size:13px}
+    .explanation span{display:block;white-space:pre-line;color:#4b5563;font-size:13px;line-height:1.6}
+    .complete-card{padding:31px 18px;text-align:center}
+    .complete-icon{font-size:42px}
+    .complete-card h2{margin:12px 0 7px;font-size:25px;letter-spacing:-.06em}
+    .complete-card p{margin:0;color:var(--muted);font-size:14px;line-height:1.6}
+    .footer-note{margin:21px 0 0;color:#a0a6ad;text-align:center;font-size:11px}
+    .site-footer{padding:22px 14px 34px;border-top:1px solid var(--line);color:#8a929b;text-align:center;font-size:11px}
+    .footer-nav{display:flex;justify-content:center;flex-wrap:wrap;gap:8px 14px;margin-bottom:10px;color:var(--orange-dark);font-weight:900}
+    .footer-nav a{color:inherit;text-decoration:none}
+    .footer-nav a:hover,.footer-nav a:focus-visible{text-decoration:underline}
+    @media(max-width:520px){.screen{padding:20px 14px 30px}.topbar{padding-left:14px;padding-right:14px}.brand{font-size:16px}.subbrand{font-size:11px}.student-name{display:none}.question-text{font-size:18px}.choice-text{font-size:13px}}
+    @media(max-width:370px){.timeline{gap:2px}.step-label{font-size:10px}.info-box strong{font-size:16px}.info-box span{font-size:10px}}
+    @media(prefers-reduced-motion:reduce){.progress-fill{transition:none}}
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-title-row"><div class="site-title">2026 손해보험 자격시험 온라인학습실[8월 개정판]</div></div>
+    <nav class="top-menu" aria-label="주요 메뉴">
+      <a class="top-menu-link" href="./학습실.html">홈</a>
+      <a class="top-menu-link" href="./자격시험안내.html">자격시험 안내</a>
+      <a class="top-menu-link" href="./강의목차.html">동영상 강의보기</a>
+      <a class="top-menu-link active" href="./index.html" aria-current="page">모의고사 테스트</a></nav>
+  </header>
+  <div class="app">
+    <main>
+      <section id="startScreen" class="screen">
+        <button id="startButton" class="primary" type="button">160문항 학습시작</button>
+      </section>
+
+      <section id="quizScreen" class="screen hidden">
+        <div class="quiz-head">
+          <span id="quizProgress" class="progress-label"></span>
+          <span id="quizSource" class="source-label"></span>
+        </div>
+        <div class="progress-track" aria-hidden="true"><div id="quizProgressFill" class="progress-fill"></div></div>
+        <article class="question-card">
+          <div id="quizNumber" class="question-number"></div>
+          <h2 id="quizQuestion" class="question-text"></h2>
+          <div id="quizChoices" class="choices"></div>
+        </article>
+        <p id="validationNote" class="validation-note hidden"></p>
+        <div class="quiz-nav">
+          <button id="prevButton" class="nav-button" type="button">이전 문제</button>
+          <button id="nextButton" class="nav-button next" type="button">다음 문제</button>
+          <button id="submitButton" class="nav-button submit hidden" type="button">160문제 제출하고 채점</button>
+        </div>
+        <button id="quitButton" class="quit-button" type="button">학습을 중단하고 처음으로</button>
+      </section>
+
+      <section id="resultScreen" class="screen hidden">
+        <div class="result-card">
+          <p class="result-kicker">160문항 학습 결과</p>
+          <div id="scoreText" class="score"></div>
+          <p id="scoreSub" class="score-sub"></p>
+          <div id="wrongSummary" class="wrong-summary"></div>
+          <button id="reviewButton" class="primary" type="button">오답노트 시작</button>
+          <button id="resultHomeButton" class="quit-button" type="button">처음으로 돌아가기</button>
+        </div>
+      </section>
+
+      <section id="reviewScreen" class="screen hidden">
+        <div class="review-head">
+          <span id="reviewProgress" class="progress-label"></span>
+          <span id="reviewSource" class="source-label"></span>
+        </div>
+        <div class="progress-track" aria-hidden="true"><div id="reviewProgressFill" class="progress-fill"></div></div>
+        <article class="review-card">
+          <div id="reviewNumber" class="question-number"></div>
+          <h2 id="reviewQuestion" class="question-text"></h2>
+          <div id="reviewChoices"></div>
+          <div id="reviewStatus" class="review-status"></div>
+          <div class="explanation"><strong>공식 해설</strong><span id="reviewExplanation"></span></div>
+        </article>
+        <div class="review-nav">
+          <button id="reviewPrevButton" class="nav-button" type="button">이전 오답</button>
+          <button id="reviewNextButton" class="nav-button next" type="button">다음 오답</button>
+          <button id="reviewCompleteButton" class="nav-button complete hidden" type="button">오답노트 완료</button>
+        </div>
+      </section>
+
+      <section id="completeScreen" class="screen hidden">
+        <div class="complete-card">
+          <div class="complete-icon">✓</div>
+          <h2>학습이 끝났습니다.</h2>
+          <p id="completeText">160문항 풀이와 오답노트 확인을 완료했습니다.</p>
+          <button id="completeHomeButton" class="primary" type="button" style="margin-top:22px">처음으로 돌아가기</button>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <nav class="footer-nav" aria-label="하단 공통 메뉴"><a href="./학습실.html">홈</a><a href="./자격시험안내.html">자격시험 안내</a><a href="./강의목차.html">동영상 강의보기</a><a href="./index.html">모의고사 테스트</a></nav>
+      개발저작권 @career_educator
+    </footer>
+  </div>
+
+  <script>
+    const questions = [{"id":"1-22","type":1,"n":1,"sourceN":22,"q":"보험계약의 체결을 중개 또는 대리하는 행위를 무엇이라고 하는가?","c":["보험의 모집","보험의 인수","보험의 체결","보험의 청약"],"a":1,"e":"보험계약의 체결을 중개 또는 대리하는 행위를 보험의 모집이라고 정의함"},{"id":"1-23","type":1,"n":2,"sourceN":23,"q":"보험설계사 직접 말소시 제출서류에 대한 설명 중 틀린 것은?","c":["보험회사가 발행한 해촉증명서를 제출해야 한다","본인 신분증을 제출해야 한다","해촉증명서가 없는 경우, 발송 후 10일이 경과한 내용증명우편 원본으로 대체 가능하다","보험설계사 등록증 원본을 제출해야 한다"],"a":4,"e":"말소관련 증빙서류는 해촉증명서(보험회사 발행) 또는 내용증명우편(발송 후 10일 경과) 원본, 신분증이며 보험설계사 등록증 원본은 관련이 없음"},{"id":"1-24","type":1,"n":3,"sourceN":24,"q":"다음 중 보험대리점 등록기관에 해당하는 것은?","c":["금융감독원","금융위원회","보험연수원","지방자치위원회"],"a":2,"e":"금융위원회에 등록함(손해보험협회 위탁)"},{"id":"1-25","type":1,"n":4,"sourceN":25,"q":"보험모집 프로세스 중 가망고객 발굴에 대한 설명으로 틀린 것은?","c":["보험판매 활동의 가장 기초적인 단계이다","연고를 이용하는 방법이 가장 기본적이다","개척과 정보리스트를 활용하는 방법도 해당된다","보험에 대한 니즈가 없고 소득이 없는 사람도 가망고객에 해당된다"],"a":4,"e":"가망고객은 상담이 가능하고 쉽게 만날 수 있거나, 보험의 니즈가 있고 보험료를 지속적으로 납입할 수 있는 경제적 능력을 보유한 자로 회사가 정한 가입 자격을 충족하는 사람이어야 함"},{"id":"1-26","type":1,"n":5,"sourceN":26,"q":"다음 중 물리적 위험에 해당하지 않는 것은?","c":["타인을 속이는 행위","도로상의 빙판","공장 내 기름걸레가 흩어져 있는 상태","주택 내에 휘발유가 저장된 상태"],"a":1,"e":"타인을 속이는 행위는 감정이 적극적으로 작용하여 사고의 빈도나 정도를 증가시키는 도덕적 위험에 해당함"},{"id":"1-27","type":1,"n":6,"sourceN":27,"q":"동일한 사고를 대상으로 관찰할 경우 사고 발생확률이 통계적으로 추출되고 예측될 수 있다는 보험원칙과 가장 관련이 깊은 것은?","c":["대수의 법칙","Lexis의 법칙","적재성의 원칙","비례보상의 원칙"],"a":1,"e":"대수의 법칙에 대한 설명임"},{"id":"1-28","type":1,"n":7,"sourceN":28,"q":"보험설계 전문가로서의 직업윤리에 대한 설명으로 알맞지 않은 것은?","c":["기본에 충실한 판매프로세스를 준수한다","고객정보를 소중하게 생각하고 철저하게 보호한다","영업실적을 최고 우선시하여 고객서비스에 최선을 다한다","전문 금융인으로서 역량향상을 위해 학습과 훈련을 지속한다"],"a":3,"e":"영업실적을 최고 우선시하여 → 고객을 내 가족처럼 여기며"},{"id":"1-29","type":1,"n":8,"sourceN":29,"q":"보험범죄의 사회적 피해에 대한 설명으로 틀린 것은?","c":["보험범죄자들에게 부당하게 보험금을 지급하도록 보험회사의 손해율이 악화된다","보험범죄로 인한 보험금 누수로 다수의 보험계약자에게 보험료 인하의 결과를 초래한다","청소년 등이 무의식적으로 범죄에 동조하거나 이익을 공유하는 등 모방범죄가 증가한다","친족 살인·방화 등과 같은 반인륜적인 범죄로 건전한 윤리의식이 훼손된다"],"a":2,"e":"보험료 인하 → 보험료 인상"},{"id":"2-22","type":2,"n":9,"sourceN":22,"q":"계약체결권, 고지의무수령권, 보험료수령권을 모두 갖는 자에 해당하지 않는 자는?","c":["보험설계사","보험자","보험대리점","보험회사의 대리권을 받은 직원"],"a":1,"e":"보험설계사는 보험계약의 체결을 중개하는 자로서 계약체결권, 고지의무수령권, 보험료수령권이 없음"},{"id":"2-23","type":2,"n":10,"sourceN":23,"q":"다음 중 보험대리점의 분류 중 옳지 않은 것은?","c":["영업유형별: 전속대리점 / 비전속대리점","영업종목별: 전업대리점 / 겸업대리점","영업종목별: 생명보험대리점 / 손해보험대리점 / 제3보험대리점","운영주체별: 개인대리점 / 법인대리점"],"a":1,"e":"유형별 분류에 해당함"},{"id":"2-24","type":2,"n":11,"sourceN":24,"q":"다음 중 금융기관보험대리점으로 등록할 수 없는 금융기관은?","c":["신용카드회사(겸업은행사업자)","상호저축은행","중소기업은행","공제조합"],"a":4,"e":"공제조합은 보험대리점 등록이 가능한 금융기관에 해당하지 않음 (별도의 보험기능을 수행하고 있음)"},{"id":"2-25","type":2,"n":12,"sourceN":25,"q":"불완전판매방지교육에 대한 설명으로 틀린 것은?","c":["보험협회에서 보험회사 등으로부터 소속 보험설계사에게 안내하고 있다","교육대상자는 전년도 불완전판매비율 10% 이상이면서 불완전판매 보험계약이 10건 이상인 모집종사자이다","모집종사자의 불완전판매 재발 방지 및 준법의식 향상을 위해 실시하는 특별교육이다","보험협회에서 보험회사 등으로부터 불완전판매자 대상자를 선정한다"],"a":2,"e":"10% → 1%, 10건 → 3건"},{"id":"2-26","type":2,"n":13,"sourceN":26,"q":"다음 중 위험의 분류에 대한 설명으로 틀린 것은?","c":["주관적 위험은 개인이 위험을 수용하는 태도에 따라 위험의 정도가 상이하다","객관적 위험은 통계적 특징이 가능한 위험이다","주관적 위험은 구체화되고 명확한 자료를 근거로 한 것이다","객관적 위험은 기업의 위험관리자에게 매우 유용한 개념이다"],"a":3,"e":"주관적 위험은 구체화되고 명확한 자료를 근거로 하는 것이 아니라 자신의 직감 등을 통한 위험을 말함"},{"id":"2-27","type":2,"n":14,"sourceN":27,"q":"법률상으로 보험에 관해 잘못 설명된 것은?","c":["보험업과 관련한 법으로 상법과 보험업법이 있다","상법에 따르면 보험계약은 기본적 상행위의 하나로 규정된다","보험업법상 보험은 생명보험, 손해보험, 제3보험으로 구분된다","보험사업은 정부의 허가를 얻어야 영위할 수 있는데 이를 규정하는 법은 상법이다"],"a":4,"e":"상법 → 보험업법"},{"id":"2-28","type":2,"n":15,"sourceN":28,"q":"「보험사기방지특별법」에 대한 설명으로 틀린 것은?","c":["보험사기의 가중처벌 규정에 따라 보험사기이득액이 5억원 이상인 때에는 보험사기이득액 이하에 상당하는 벌금을 병과할 수 있다","보험사기미수죄는 10년 이하의 징역 또는 2천만원 이하의 벌금에 처한다","보험사기이득액이 3억원인 경우 가중처벌한다","보험사기죄로 인한 보험계약자 등의 피해를 방지할 수 있는 규정이 마련되어 있다"],"a":2,"e":"2천만원 → 5천만원"},{"id":"2-29","type":2,"n":16,"sourceN":29,"q":"의료기관의 교통사고 관련 기록관리를 위한 「자동차손해배상 보장법」의 내용 중 맞는 것은?","c":["교통사고로 인한 환자는 외출·외박시 의료기관과 보험회사의 허락을 받아야 한다","의료기관은 교통사고 입원환자의 외출·외박 관련 사항을 기록하고 이를 3년간 보관해야 한다","외출·외박 기록에는 환자의 서명·날인은 필요하지만 의료인의 서명·날인은 불필요하다","외출·외박 기록은 개인의 진료정보이므로 환자의 동의 없이는 보험회사에서 열람할 수 없다"],"a":2,"e":"① 의료기관과 보험회사의 허락 → 의료기관의 허락 ③ 의료인의 서명·날인 필요 ④ 환자 동의 없이 보험회사의 열람 가능"},{"id":"3-22","type":3,"n":17,"sourceN":22,"q":"모집종사자와 모집중개자의 권한에 대한 설명으로 맞는 것은?","c":["보험대리점은 고지의무수령권이 없다","보험설계사는 계약체결권은 있으나 보험료수령권은 없다","보험중개사는 보험회사에 소속되지 않고 독립적으로 보험계약의 체결을 중개한다","보험중개사는 고지의무수령권이 있다"],"a":3,"e":"① 없다 → 있다 ②, ④ 보험설계사와 보험중개사는 계약체결권, 고지의무수령권, 보험료수령권이 없음"},{"id":"3-23","type":3,"n":18,"sourceN":23,"q":"손해보험대리점 등록 제한사유에 해당하는 자는?","c":["중고차 판매업자","수입차 판매업자","자동차판매업을 하면서 방송채널을 운영하는 경우","보험설계사 등록제한 사유에 해당하는 자"],"a":4,"e":"보험설계사 등록 제한사유에 해당하는 자는 보험대리점으로 등록할 수 없음"},{"id":"3-24","type":3,"n":19,"sourceN":24,"q":"금융기관보험대리점의 보험모집시 금지행위에 해당하지 않는 것은?","c":["보험설계사가 아닌 금융기관 임직원이 모집하는 행위","금융거래를 통해 취득한 개인정보를 동의 없이 모집에 활용하는 행위","보험인 모집 전담창구를 해당 금융기관에 설치하는 행위","보험인 모집 전담창구 외의 장소에서 모집하는 행위"],"a":3,"e":"금융기관보험대리점의 보험모집시 준수사항에 해당함"},{"id":"3-25","type":3,"n":20,"sourceN":25,"q":"보험모집 프로세스 중 고객의 니즈 및 재무상황 분석결과를 바탕으로 최적의 보장설계를 제안하는 단계는?","c":["가입권유","정보수집","계약체결","소개확보"],"a":1,"e":"가입권유 단계는 고객의 니즈(Needs) 및 재무상황을 분석한 결과를 바탕으로 최적의 보장설계를 제안하여 고객의 이익, 가입욕구, 가입가치를 알고 느끼게 하는 단계"},{"id":"3-26","type":3,"n":21,"sourceN":26,"q":"보험의 성립요건에 대한 설명으로 틀린 것은?","c":["손해보험은 특정한 우연적 사고에 대한 불안정을 제거·경감하기 위한 사회적 경제제도이다","보험은 다수의 이질적인 위험의 결합을 필요로 한다","위험발생을 대수의 법칙에 의해 예측하고 산정한다","보험사고는 우연적이고 불확실한 것이어야 한다"],"a":2,"e":"다수의 이질적인 위험 → 다수의 동질적인 위험"},{"id":"3-27","type":3,"n":22,"sourceN":27,"q":"다음 중 보험의 분류에 따른 설명으로 올바른 것은?","c":["단기보험은 보험기간이 1년 이하인 소멸성 보험이다","장기보험은 통상 5년 이상 20년 이하의 장기간을 보장한다","제3보험은 인수한 위험을 다른 제3보험사에 전가할 수 없다","초과보험의 경우 비례보상원칙에 따라 보상해야 한다"],"a":1,"e":"② 5년 이상 20년 이하 → 3년 이상 ③ 제3보험사도 인수한 위험을 다른 재보험사에 전가할 수 있음 ④ 이득금지의 원칙에 따라 실손보상함"},{"id":"3-28","type":3,"n":23,"sourceN":28,"q":"「보험사기방지특별법」에 대한 설명으로 맞는 것은?","c":["보험사기행위란 보험사고의 발생·원인 또는 내용에 관하여 보험자를 기망하여 보험금을 청구하는 행위를 말한다","연성사기는 고의적으로 발생한 보험사고에 대해 보험금을 과잉청구하는 행위를 말한다","경성사기는 보험금을 수령할 목적으로 우연히 발생한 보험사고에 대해 보험금을 청구하는 행위를 말한다","보험범죄는 보험금을 편취할 목적으로 고의성 없이 행동하는 일체의 불법행위를 말한다"],"a":1,"e":"② 고의적으로 → 우연히 ③ 우연히 → 고의로 ④ 고의성 없이 → 고의적으로"},{"id":"3-29","type":3,"n":24,"sourceN":29,"q":"「보험사기방지특별법」에 대한 설명으로 틀린 것은?","c":["보험사기죄를 범한 자는 10년 이하의 징역 또는 5천만원 이하의 벌금에 처한다","보험회사는 보험계약자의 행위가 보험사기행위로 의심할 만한 합리적인 근거가 있는 경우 금융위원회에 보고할 수 있다","보험사기죄로 인한 보험계약자 등의 피해를 방지할 수 있는 규정이 마련되어 있다","보험회사 직원은 보험사기 의심이 있는 경우 수사기관과 동일한 강제수사권을 행사할 수 있다"],"a":4,"e":"보험회사는 보험계약자 등의 보험사기 의심행위 발견시 금융위원회에 보고할 수 있고, 진술청구권을 행사할 수 있는 것은 아님"},{"id":"4-22","type":4,"n":25,"sourceN":22,"q":"「보험업법」상 보험설계사로 등록할 수 없는 경우를 모두 고른 것은?\n\na. 「보험업법」 위반으로 선고받은 벌금형이 면제되고 1년이 지난 자\nb. 등록이 취소된 이후 2년이 경과한 자\nc. 파산자로 복권되지 아니한 자\nd. 과거 보험료를 다른 용도로 유용한 후 3년이 지난 자","c":["a, b","a, c","b, c","c, d"],"a":2,"e":"a는 벌금형 집행종료 또는 집행 면제 후 2년이 경과되지 않은 자, c는 파산선고를 받은 자로서 복권되지 아니한 자에 해당되어 보험설계사로 등록할 수 없음"},{"id":"4-23","type":4,"n":26,"sourceN":23,"q":"다음 중 보험설계사의 등록취소 및 업무정지 사유로 옳지 않은 것은?","c":["업무정지 1회 이상","보험사기 행위","「보험업법」상 명령·처분 위반","「금융소비자보호법」상 시정명령 위반"],"a":1,"e":"1회 → 2회"},{"id":"4-24","type":4,"n":27,"sourceN":24,"q":"보험대리점의 업무폐지 절차를 순서대로 나열한 것은?","c":["보험회사에 업무폐지 신청 → 타 보험회사 이직 → 보험회사와 계약해지 → 보험협회로 업무폐지 신청","보험협회로 업무폐지 신청 → 타 보험회사 이직 → 보험회사와 계약해지 → 보험회사에 업무폐지 신청","보험회사에 업무폐지 신청 → 보험회사와 계약해지 → 보험협회로 업무폐지 신청 → 타 보험회사 이직","타 보험회사 이직 → 보험회사와 계약해지 → 보험협회로 업무폐지 신청 → 보험회사에 업무폐지 신청"],"a":3,"e":"보험회사에 업무폐지 신청 → 보험회사와 계약해지 → 보험협회로 업무폐지 신청 → 타 보험회사 이직"},{"id":"4-25","type":4,"n":28,"sourceN":25,"q":"손해보험 우수인증 설계사 제도에 관하여 바르게 설명한 것은?","c":["동일 회사에서 최소 5년 이상 근속하여야 한다","신청일로부터 1년 이내 보험업법 및 금융 관련 법령 위반으로 처벌받은 경력이 없어야 한다","불완전판매비율은 연간 1% 이하 요건을 충족해야 한다","보험회사 소속 보험설계사 및 전속 개인대리점에 대해 적용한다"],"a":4,"e":"① 5년 → 3년 ② 1년 → 3년 ③ 불완전판매 및 모집질서 위반 사실이 없어야 함"},{"id":"4-26","type":4,"n":29,"sourceN":26,"q":"강도, 사기 등은 어떠한 위험에 해당하는가?","c":["정신적 위태","기망적 위태","물리적 위태","도덕적 위태"],"a":4,"e":"도덕적 위험에 해당됨"},{"id":"4-27","type":4,"n":30,"sourceN":27,"q":"비례보상의 원칙에 대한 설명으로 옳은 것은?","c":["손해보험계약에 있어 보험가액에 대한 보험가입금액의 비율(부보비율)로 손해를 보상한다는 원칙","보험가액에 있어 보험료와 보험회사의 이익이 비례하여야 한다는 원칙","생명보험계약에서 사망률과 보험금은 비례하여야 한다는 원칙","생명보험계약에서 보험료와 보험금은 비례하여야 한다는 원칙"],"a":1,"e":"비례보상의 원칙에 대한 설명임"},{"id":"4-28","type":4,"n":31,"sourceN":28,"q":"보험범죄의 특성으로 틀린 것은?","c":["범죄의 복합성","범죄의 단순성","범죄입증의 곤란성","범죄자의 조직화"],"a":2,"e":"단순성 → 다양성"},{"id":"4-29","type":4,"n":32,"sourceN":29,"q":"정비업체 보험사기 방지를 위한 「자동차관리법」에 대한 설명으로 틀린 것은?","c":["정비의뢰자 등의 없는 정비업체의 업무지시를 금한다","정비업체는 정비하기 전에 사전견적서를 교부하여야 한다","정비업체는 정비가 끝난 후에 정비내역서를 교부하여야 한다","재생품 사용시 정비의뢰자에게 사전에 알려야 하며, 위반시 200만원 이하의 과태료를 부과한다"],"a":4,"e":"200만원 → 100만원"},{"id":"5-22","type":5,"n":33,"sourceN":22,"q":"다음 중 모집종사자에 대한 설명으로 옳지 않은 것은?","c":["보험중개사는 독립적으로 보험계약의 체결을 중개하는 자이다","보험설계사는 보험회사, 보험대리점 또는 보험중개사에 소속되어 보험계약의 체결을 대리하는 자이다","보험회사의 임원 또는 직원(대표이사, 사외이사, 감사 및 감사위원 제외)은 보험을 모집할 수 있다","보험대리점은 보험회사를 위하여 보험계약의 체결을 대리하는 자이다"],"a":2,"e":"대리 → 중개"},{"id":"5-23","type":5,"n":34,"sourceN":23,"q":"보험대리점에 관한 설명으로 틀린 것은?","c":["보험대리점은 영업종목별로 생명보험·손해보험·제3보험 대리점으로 구분한다","개인보험대리점은 관계 업무에 1년 이상 종사한 경력이 있으면 등록할 수 있다","임직원수가 100명 이상인 법인보험대리점의 경우 소속 임직원의 10분의 1 이상이 보험설계사 등록요건을 갖추고 있어야 한다","비전속 법인대리점 소속 설계사는 소속 보험대리점과 별도로 보험중개사가 될 수 없다"],"a":2,"e":"1년 → 2년"},{"id":"5-24","type":5,"n":35,"sourceN":24,"q":"「금융소비자보호법」상 금융상품직접판매업자에 해당하는 것은?","c":["보험회사","보험설계사","보험대리점","보험중개사"],"a":1,"e":"보험설계사, 보험대리점, 보험중개사는 금융상품판매대리·중개업자에 해당함"},{"id":"5-25","type":5,"n":36,"sourceN":25,"q":"보험모집 프로세스에 대해 잘못된 설명은?","c":["반복적인 훈련을 통해 자연스럽게 실행하는 습관을 형성한다","보험판매란 고객의 필요사항을 이해하고 그에 맞는 해결책을 제시하여 가입을 유도하는 과정이다","성공적인 보험설계사들은 이 과정을 체계화하여 일정한 판매절차로 정립한다","프로세스의 각 단계가 반드시 독립적으로 순차적으로 진행되어야 한다"],"a":4,"e":"고객과의 면담과정에서 상황에 따라 일부 단계가 생략되거나 통합될 수 있으며 첫 만남에서 제안과 계약체결까지 진행되는 경우도 있음"},{"id":"5-26","type":5,"n":37,"sourceN":26,"q":"투기위험에 대한 설명으로 틀린 것은?","c":["손해와 이익이 모두 상존하는 위험이다","주식투자, 신규 사업 등이 해당된다","대수의 법칙 적용이 가능하다","개인이나 기업은 손해를 입어도 사회에 이익을 얻을 수 있다"],"a":3,"e":"투기위험은 대수의 법칙을 적용하는 것이 어려워 특수한 경우를 제외하고는 보험의 대상이 될 수 없음"},{"id":"5-27","type":5,"n":38,"sourceN":27,"q":"보험가입금액에 따른 보험의 분류에 대한 설명으로 옳은 것은?","c":["전부보험, 일부보험, 초과보험, 중복보험으로 분류할 수 있다","전부보험은 보험가입금액과 보험가액이 일치하는 경우를 말한다","초과보험은 보험가입금액이 보험가액보다 큰 경우를 말한다","일부보험은 보험가액에 대한 보험가입금액의 비율에 따라 비례보상한다"],"a":3,"e":"초과보험은 보험가입금액이 보험가액을 초과하는 경우를 말함"},{"id":"5-28","type":5,"n":39,"sourceN":28,"q":"보험사기에 대한 설명 중 틀린 것은?","c":["보험사기방지특별법상 보험사기행위란 보험사고의 발생 원인 또는 내용에 관하여 보험자를 기망하여 보험금을 청구하는 행위를 말한다","보험사기방지특별법상 보험사기를 상습으로 범한 자에 대해서는 그 죄에 정해진 형량의 1/3까지 가중 처벌한다","보험사기로 인한 이득액이 5억원 이상 고액인 경우 가중 처벌된다","보험사기방지특별법에서는 보험사기의 미수범도 처벌한다"],"a":2,"e":"1/3 → 1/2"},{"id":"5-29","type":5,"n":40,"sourceN":29,"q":"교통사고 관련 보험사고의 특징에 대한 설명으로 틀린 것은?","c":["병원·정비업체와의 이해관계 부합","위장사고·고의사고 유발 가능","혐의 입증 용이","가해자 불명사고 발생 가능"],"a":3,"e":"혐의 입증이 난해함"},{"id":"6-22","type":6,"n":41,"sourceN":22,"q":"보험설계사의 등록 제한사유에 해당하지 않는 경우는?","c":["등록이 취소된 후 2년이 경과되지 아니한 자","「보험업법」에 따라 벌금 이상의 형을 선고받고 그 집행이 종료된 후 2년이 경과된 자","파산선고를 받고 복권되지 아니한 채 2년이 경과된 자","「보험업법」에 따라 금고 이상의 형을 선고받고 그 유예기간에 있는 자"],"a":2,"e":"「보험업법」에 따라 벌금 이상의 형을 선고받고 그 집행이 종료된 후 2년이 경과된 자는 등록할 수 있습니다."},{"id":"6-23","type":6,"n":42,"sourceN":23,"q":"보험설계사가 타 보험회사로 이직하기 위한 말소절차로 알맞은 것은?","c":["보험회사 해촉신청 → 보험협회에 말소신청 → 보험회사 위촉계약 종료 → 타 보험회사 이직","보험협회에 말소신청 → 보험회사에 해촉신청 → 위촉계약 종료 → 타 보험회사 이직","보험회사에 해촉신청 → 보험회사 위촉계약 종료 → 보험협회에 말소신청 → 타 보험회사 이직","보험협회에 말소신청 → 보험회사 위촉계약 종료 → 보험회사에 해촉신청 → 타 보험회사 이직"],"a":3,"e":"타 보험회사로 이직하기 위해서는 먼저 현재 소속 보험회사에 해촉신청을 하고 위촉계약을 종료한 후 보험협회에 말소신청을 해야 합니다."},{"id":"6-24","type":6,"n":43,"sourceN":24,"q":"보험대리점의 등록에 관한 설명으로 올바르지 않은 것은?","c":["법인보험대리점은 영위하고자 하는 종목별로 법인보험대리점 유자격자를 1명 이상 보유해야 등록이 가능하다","개인보험대리점은 계약을 체결한 보험회사에 3억원 한도 내에서 영업보증금을 예탁하여야 한다","간단보험대리점은 등록시 자격시험 합격 요건이 면제된다","화물자동차 운송사업자는 손해보험대리점 등록이 제한된다"],"a":2,"e":"개인보험대리점의 영업보증금은 3억원이 아니라 1억원입니다. 법인보험대리점은 3억원입니다."},{"id":"6-25","type":6,"n":44,"sourceN":25,"q":"보험모집 프로세스에 대한 설명으로 올바른 것은?","c":["정보수집 : 고객의 니즈 및 재무상황 분석결과를 바탕으로 한 최적의 보장설계 제안 단계","가입권유 : 고객의 재정적인 목표 및 완전판매의 실현 단계","계약체결 : 영업활동의 최종 단계이자 고객과의 새로운 관계의 시작 단계","증권전달 : 고객에 대한 정확하고 체계적인 정보 파악 단계"],"a":3,"e":"① 정보수집은 가입권유, ② 가입권유는 증권전달 및 사후관리, ④ 증권전달은 정보수집에 대한 설명입니다."},{"id":"6-26","type":6,"n":45,"sourceN":26,"q":"교통사고는 무슨 위험에 해당하는가?","c":["순수위험","주관적 위험","투기위험","정신적 위험"],"a":1,"e":"상해, 사망, 화재, 교통사고 등은 순수위험에 해당합니다."},{"id":"6-27","type":6,"n":46,"sourceN":27,"q":"다음 중 구간보험에 해당하는 것은?","c":["운송보험과 적하보험","자동차보험과 여행자보험","조립보험과 건설공사보험","자동차보험과 화재보험"],"a":1,"e":"자동차보험과 화재보험은 기간보험이며, 운송보험과 적하보험은 구간보험입니다."},{"id":"6-28","type":6,"n":47,"sourceN":28,"q":"보험회사 영업방침 윤리준칙에 대한 설명으로 옳지 않은 것은?","c":["보험회사는 보험상품을 판매하고 서비스하는 일련의 과정에서 보험소비자의 권익이 침해되는 일이 발생하지 않도록 노력하여야 한다","모집종사자는 금융인으로서 성실성과 윤리의식을 가져야 한다","보험상품 판매를 최우선 가치로 삼고 영업활동을 수행한다","보험산업의 신뢰도 제고 및 건전한 시장질서의 확립에 기여함을 목적으로 한다"],"a":3,"e":"보험상품 판매를 최우선 가치로 삼는 것이 아니라 보험소비자의 권익 보호를 우선해야 합니다."},{"id":"6-29","type":6,"n":48,"sourceN":29,"q":"「보험사기방지특별법」에 관한 설명으로 틀린 것은?","c":["보험사기행위로 보험금을 취득하게 한 자는 10년 이하의 징역 또는 5천만원 이하의 벌금에 처한다","보험회사는 보험사고의 진위 여부를 조사하는 과정에서 보험계약자 등의 개인정보를 침해하지 않도록 노력해야 한다","교통사고 입원환자에 대한 의료기관의 외출·외박 사항의 기록 및 관리 의무를 규정하고 있다","보험회사는 대통령령으로 정하는 사유 없이 보험금의 지급을 지체 또는 거절하거나 삭감하여 지급해서는 안 된다"],"a":3,"e":"교통사고 입원환자의 외출·외박 사항 기록 및 관리 의무는 자동차손해배상 보장법에서 규정하고 있습니다."},{"id":"7-22","type":7,"n":49,"sourceN":22,"q":"모집종사자의 권한에 대한 설명으로 틀린 것은?","c":["보험설계사는 계약체결권은 있으나 보험료수령권은 없다","보험대리점은 계약체결권이 있으나 보험설계사는 계약체결권이 없다","보험설계사와 보험중개사는 보험료수령권이 없다","보험중개사는 고지의무수령권이 없다"],"a":1,"e":"보험설계사와 보험중개사는 계약체결권, 보험료수령권, 고지의무수령권이 모두 없음"},{"id":"7-23","type":7,"n":50,"sourceN":23,"q":"손해보험대리점 등록과 관련하여 사실과 다른 것은?","c":["전세버스운송사업자는 손해보험대리점으로 등록할 수 없다","수입차 판매업자는 손해보험대리점으로 등록할 수 있다","단체계약판매자 및 주유소는 손해보험대리점으로 등록할 수 없다","국가기관의 퇴직자로 구성된 법인은 손해보험대리점으로 등록할 수 있다"],"a":4,"e":"국가기관과 특별법에 의하여 설립된 기관 및 동 기관의 퇴직자로 구성된 법인 또는 단체는 \u0027불공정한 모집행위와 관련하여 대통령령으로 정하는 자\u0027에 해당되어 손해보험대리점으로 등록할 수 없음"},{"id":"7-24","type":7,"n":51,"sourceN":24,"q":"모집종사자의 법정교육 중 등록교육에 대한 설명으로 맞는 것은?","c":["「상법」상 보험회사 직원이 이수하여야 하는 교육이다","「보험업법」에 따라 모집종사자가 되려면 이수하여야 하는 교육이다","교육등급은 난이도에 따라 상, 중, 하급으로 구분된다","「금융소비자보호법」에 따라 금융상품 판매자가 이수하여야 하는 교육이다"],"a":2,"e":"① 「상법」 → 「보험업법」, 직원 → 모집종사자 ③ 보험설계사 등록요건인 연수과정 중 하나의 절차이며 등급제로 구분하지 않음 ④ 「금융소비자보호법」 → 「보험업법」, 금융상품 판매자 → 모집종사자"},{"id":"7-25","type":7,"n":52,"sourceN":25,"q":"손해보험 우수인증 설계사의 인증기준으로 맞는 것은?","c":["불완전판매건이 0건일 것","보험설계사 및 법인보험대리점 소속 설계사","동일 보험회사 또는 보험대리점에 2년 이상 재직","손해율이 일정 수준 이하일 것"],"a":1,"e":"② 보험설계사 및 전속 개인대리점 ③ 동일 회사에서 3년 이상 근속 ④ 손해율은 인증기준과 관련이 없음"},{"id":"7-26","type":7,"n":53,"sourceN":26,"q":"위험과 관련된 개념 중 위태에 대한 설명으로 틀린 것은?","c":["특정한 사고로부터 발생될 수 있는 손해의 직접적인 원인이 되는 것을 말한다","물리적 위태, 도덕적 위태, 정신적 위태 등이 있다","정신적 위태를 기강적 위태라고도 한다","고의방화, 강도, 사기 등은 도덕적 위태에 해당한다"],"a":1,"e":"손해의 직접적인 원인이 되는 것은 사고에 대한 설명임"},{"id":"7-27","type":7,"n":54,"sourceN":27,"q":"다음 중 보험원칙에 대한 설명으로 틀린 것은?","c":["대수의 법칙은 우연적 사건의 발생에 대해서 일정한 비율이 통계적으로 추출되고 예측할 수 있다는 법칙이다","수지상응의 원칙은 보험사업의 수지 전체에 관한 원칙이다","실손보상의 원칙과 비례보상의 원칙은 동일한 보험계약에서 공존하지 않는다","상해보험은 이득금지의 원칙이 적용되지 않아 실손보상의 경우에도 이득을 인정한다"],"a":3,"e":"공동보험·중복보험의 경우 실손보상의 원칙과 비례보상의 원칙이 공존함"},{"id":"7-28","type":7,"n":55,"sourceN":28,"q":"보험사기이득액(제3자로 하여금 취득하게 한 보험금 없음)이 50억원 이상일 때 처벌기준으로 맞는 것은?","c":["무기징역 또는 5년 이상의 징역","3년 이상 징역","무기징역 또는 5년 이상의 징역","5년 이상의 징역"],"a":3,"e":"「보험사기방지특별법」의 가중 처벌 규정에 의한 형량임 (※ 제3자로 하여금 취득하게 한 보험금도 보험사기이득액에 포함됨)"},{"id":"7-29","type":7,"n":56,"sourceN":29,"q":"모집종사자의 보험사기 적발시 제재 조치에 대한 설명으로 틀린 것은?","c":["등록이 취소될 수 있다","6개월 이내의 기간을 정하여 업무정지가 될 수 있다","형사 고발될 수 있다","형사 고발되기 때문에 민사적 책임은 지지 않는다"],"a":4,"e":"피해자 손해에 대해 민사적 책임도 부담함"},{"id":"8-22","type":8,"n":57,"sourceN":22,"q":"다음 중 모집종사자에 대한 설명으로 맞는 것은?","c":["보험설계사는 독립적으로 보험계약의 체결을 대리하는 자이다","보험설계사는 보험회사를 위하여 보험계약의 체결을 대리하는 자이다","보험설계사는 보험회사, 보험대리점 또는 보험중개사에 소속되어 보험계약의 체결을 중개하는 자이다","보험중개사는 보험회사에 소속되어 보험계약의 체결을 대리하는 자이다"],"a":3,"e":"①, ② 보험설계사는 보험회사, 보험대리점 또는 보험중개사에 소속되어 보험계약의 체결을 중개하는 자 ④ 보험중개사는 독립적으로 보험계약의 체결을 중개하는 자"},{"id":"8-23","type":8,"n":58,"sourceN":23,"q":"다음 중 모집종사자에 대한 설명으로 맞는 것은?","c":["보험대리점은 금융감독원에 영업보증금을 예탁하여야 한다","보험설계사는 보험계약의 인수 여부를 최종 결정할 수 있다","법인보험대리점은 여러 보험회사와 위탁계약을 체결할 수 있다","보험중개사는 특정 보험회사의 보험상품만을 모집할 수 있다"],"a":3,"e":"① 금융감독원 → 보험회사 ② 보험인수 여부나 청약거절 권한은 금융상품직접판매업자인 보험회사에만 있음 ④ 보험중개사는 보험회사에 소속되지 않고 독립적으로 보험계약의 체결을 중개하므로 다수의 불특정 보험회사의 보험상품을 모집할 수 있음"},{"id":"8-24","type":8,"n":59,"sourceN":24,"q":"모집종사자의 전문성 향상을 목적으로 최신 보험 관련 지식 습득 및 윤리 의식 향상을 위해 실시하는 정기교육은 무엇인가?","c":["불완전판매방지교육","등록교육","보수교육","금융소비자보호교육"],"a":3,"e":"보수교육에 대한 설명임"},{"id":"8-25","type":8,"n":60,"sourceN":25,"q":"보험모집 프로세스 중 정보수집에 관하여 가장 잘못된 설명은?","c":["보험에 대한 니즈 외에도 관심사나 인생목표 등도 수집한다","상품에 대한 설명과 가입에 필요한 정보만을 수집하는 것이 효과적이다","고객에 대한 체계적인 정보를 파악한다","가족사항 등 일반정보뿐 아니라 보유자산에 대한 정보도 수집 내용에 포함된다"],"a":2,"e":"정보수집은 고객의 일반정보, 재정정보, 고객의 보험 니즈와 감정까지 파악하는 과정임"},{"id":"8-26","type":8,"n":61,"sourceN":26,"q":"보험가입 대상 위험의 특성으로 올바른 것만 짝지어 놓은 것은?\n\na. 다수의 이질적 위험\nb. 보험회사가 감당할 정도의 위험\nc. 경제적 부담이 가능한 보험료\nd. 손실발생의 시간과 장소·정도가 명확한 위험\ne. 과거의 경험통계가 없어 발생이 우연한 위험","c":["a, c, d","b, c, d","a, b, e","b, d, e"],"a":2,"e":"a. 다수의 동질적 위험, e. 과거의 경험통계에 의해 확률적으로 사고발생률을 예측할 수 있고, 발생이 우연한 위험"},{"id":"8-27","type":8,"n":62,"sourceN":27,"q":"보험업법상 제3보험의 분류에 해당하지 않는 것은?","c":["상해보험","질병보험","간병보험","보장보험"],"a":4,"e":"보증보험은 손해보험에 해당함"},{"id":"8-28","type":8,"n":63,"sourceN":28,"q":"다음 중 보험사기에 대한 설명 중 틀린 것은?","c":["보험사기는 일반적으로 보험사고로 위장하기 위해 살인, 방화, 폭행 등 다른 범죄와 함께 복합적으로 발생한다","인보험(생명보험), 화재보험, 자동차보험 등 보험종목이 다양함에 따라 보험사기의 수법도 다양하게 나타난다","보험사는 보험사기범과 보험회사의 문제일 뿐 대다수의 선량한 보험계약자들에게 영향을 미치지 않는다","조직폭력배가 개입하는 등 보험사기가 조직화·대형화되는 추세이다"],"a":3,"e":"부정한 보험금 지급으로 인한 손해를 증가로 보험료가 인상되어 선량한 계약자의 부담이 증가함"},{"id":"8-29","type":8,"n":64,"sourceN":29,"q":"「자동차관리법」상 정비의뢰자에게 사전견적서를 교부하지 않은 경우 부과되는 과태료 기준은?","c":["100만원 이하","200만원 이하","300만원 이하","500만원 이하"],"a":1,"e":"정비 전 사전견적서 교부의무 위반시 100만원 이하의 과태료를 부과함"},{"id":"9-22","type":9,"n":65,"sourceN":22,"q":"보험설계사의 등록 제한사유로 옳지 않은 것은?","c":["피성년후견인 또는 피한정후견인","파산선고를 받은 자로서 복권되지 아니한 자","등록이 취소된 후 3년이 경과되지 아니한 자","등록 이전에 모집과 관련하여 받은 보험료·대출금 또는 보험금을 다른 용도에 유용한 후 3년이 지나지 아니한 자"],"a":3,"e":"3년 → 2년"},{"id":"9-23","type":9,"n":66,"sourceN":23,"q":"보험대리점 등록요건에 대한 설명으로 틀린 것은?","c":["간단보험대리점은 보험연수원에서 연수과정 이수시 자격시험이 면제된다","법인보험대리점은 법인보험대리점 유자격자 1명 이상을 보유해야 한다","개인보험대리점은 보험업무에 종사한 경력 2년 이상이어야 한다","간단보험대리점은 보험연수원에서 연수과정 이수시 자격시험을 통과해야 한다"],"a":4,"e":"간단보험대리점은 보험연수원에서 연수과정 이수시 자격시험이 면제됨"},{"id":"9-24","type":9,"n":67,"sourceN":24,"q":"보험중개사에 대한 설명으로 가장 알맞은 것은?","c":["1개 회사에 소속되어 보험계약 체결을 중개하는 자","특정 보험회사에 소속되지 않고 독립적으로 보험계약 체결을 중개하는 자","1개 금융회사에 소속되어 보험계약 체결을 중개하는 자","1개의 보험회사에 소속되어 보험계약 체결을 중개하는 자"],"a":2,"e":"보험중개자는 보험회사 등으로부터 독립적으로 보험계약 체결을 중개하는 것이 가장 큰 특징임"},{"id":"9-25","type":9,"n":68,"sourceN":25,"q":"보험모집 프로세스 중 고객의 니즈 재확인 및 완전판매의 실현단계에 해당하는 것은?","c":["정보수집","가입권유","증권전달","계약체결"],"a":3,"e":"증권전달은 고객과의 신뢰 강화와 니즈 재확인 및 완전판매의 실현단계임"},{"id":"9-26","type":9,"n":69,"sourceN":26,"q":"다음 중 위험에 관한 개념으로 잘못 설명한 것은?","c":["우연한 사고로 인해 입은 경제적 가치의 상실을 손해라고 하며 손상·손실·멸실이라는 엄격히 구분된다","예기치 않은 화재로 건물이 멸실되었을 경우 화재가 사고에 해당한다","무관심 또는 부주의로 인한 위태는 정신적 위태에 해당한다","위태로 인한 사고발생의 가능성을 위험이라 한다"],"a":1,"e":"손해는 손실, 손상, 훼손, 일실, 상실, 멸실 등 여러 가지 의미로 사용됨"},{"id":"9-27","type":9,"n":70,"sourceN":27,"q":"다음은 보험의 경영주체에 의해 보험을 분류한 것이다. 성격이 다른 하나는?","c":["자동차보험","상해보험","화재보험","건강보험"],"a":4,"e":"①, ②, ③은 민영보험 ④는 공영보험"},{"id":"9-28","type":9,"n":71,"sourceN":28,"q":"보험사기에 대한 설명으로 틀린 것은?","c":["보험사기란 보험사고의 발생 원인 또는 내용에 관하여 보험자를 기망하여 보험금을 청구하는 행위이다","보험사기방지특별법이 시행되기 이전에는 형법상의 사기죄로 처벌되었다","우연히 발생한 보험사고에 대해 보험금을 과잉청구하는 행위도 연성사기에 해당한다","보험금을 편취할 목적으로 방화, 살인 등 고의로 보험사고를 일으키는 행위는 연성사기에 해당한다"],"a":4,"e":"연성사기 → 경성사기"},{"id":"9-29","type":9,"n":72,"sourceN":29,"q":"나이롱환자 근절을 위한 「자동차손해배상보장법」의 내용 중 틀린 것은?","c":["의료기관이 외출·외박 기록의무를 위반한 경우 300만원 이하의 과태료가 부과된다","의료기관은 교통사고 환자가 더 이상 입원치료가 불필요한 경우 퇴원이나 전원 지시를 할 수 있다","외출·외박 기록에는 환자의 서명·날인은 필요하지만 의료인의 서명·날인은 필요하지 않다","의료기관이 외출·외박 기록의 열람을 거부한 경우 300만원 이하의 과태료가 부과된다"],"a":3,"e":"의료인의 서명·날인이 필요하다"},{"id":"10-22","type":10,"n":73,"sourceN":22,"q":"보험의 모집에서 중개와 대리의 차이에 대한 설명으로 옳은 것은?","c":["중개란 제3자가 두 당사자 간의 계약을 알선하거나 주선하는 것으로 법률상 효력은 중개인에게 직접 발생하지 않는다","중개와 대리에는 차이가 없다","보험계약과 같은 복잡한 계약은 중개를 통해서만 할 수 있다","보험계약과 같은 복잡한 계약은 대리를 통해서만 할 수 있다"],"a":1,"e":"② 보험계약체결 대리권 여부와 법률상 효력 등에 차이가 있음\n③, ④ 중개와 대리를 통해서 할 수 있음"},{"id":"10-23","type":10,"n":74,"sourceN":23,"q":"보험설계사의 등록취소 사유에 해당하지 않는 것은?","c":["등록 후 피한정후견인으로 판정된 자","등록 당시 피성년후견인임을 숨기고 등록한 자","보험업법에 따라 등록이 취소 된 후 2년이 경과한 자","보험업 종사 경력이 없음에도 허위 경력으로 등록한 자"],"a":3,"e":"①은 보험설계사 등록제한 사유 해당자 ②는 등록 당시 보험설계사 등록제한 사유 해당자임이 확인된 경우 ④는 거짓 또는 부정한 방법으로 등록한 경우로 등록취소 사유에 해당됨"},{"id":"10-24","type":10,"n":75,"sourceN":24,"q":"보험중개사에 대한 설명으로 틀린 것은?","c":["부채가 자산을 초과하는 법인도 보험중개사로 등록할 수 있다","보험중개사는 금융감독원에 등록한다","보험중개사는 영업보증금을 금융감독원에 예탁한다","보험중개사 소속 보험설계사는 보험협회에 등록 및 말소사항을 신고한다"],"a":1,"e":"부채가 자산을 초과하는 법인은 보험중개사가 될 수 없음"},{"id":"10-25","type":10,"n":76,"sourceN":25,"q":"가망고객의 조건에 해당하지 않는 것은?","c":["쉽게 만날 수 있는 사람","보험에 대한 니즈가 있는 사람","보험회사가 정한 가입 자격을 충족하는 사람","보험료를 지속적으로 납입할 수 있는 경제적 능력이 없는 사람"],"a":4,"e":"없는 → 있는"},{"id":"10-26","type":10,"n":77,"sourceN":26,"q":"다음 설명 중 가장 올바른 것은?","c":["보험은 통계적으로 추출되고 예측할 수 있도록 동질의 위험을 가진 특정 소수집단이 결합하여야 한다","보험료와 마찬가지로 보험금 또한 위험발생 확률을 예측하여 산정한다","보험사고 발생시기는 우연히 발생하여야 한다","보험사고의 발생정도나 규모는 우연적이고 전부 확정성을 가져야 한다"],"a":2,"e":"① 특정 소수집단 → 다수집단 ③, ④ 발생여부, 발생시기, 발생정도(규모) 등의 전부 또는 일부가 불확실(우연적)하여야 함"},{"id":"10-27","type":10,"n":78,"sourceN":27,"q":"각종 법에 의해 보험가입이 의무화된 보험에 해당하지 않는 것은?","c":["자동차책임보험","영업배상책임보험","특수건물화재보험","원자력보험"],"a":2,"e":"영업배상책임보험은 임의보험에 해당됨"},{"id":"10-28","type":10,"n":79,"sourceN":28,"q":"다음 중 보험범죄의 특성에 해당하지 않는 것은?","c":["범죄의 개인화","범죄입증의 곤란성","범죄조직의 조직화","범죄의 다양성"],"a":1,"e":"보험범죄는 복합성, 다양성, 입증 곤란성, 조직화, 대형화 등의 특성이 있음"},{"id":"10-29","type":10,"n":80,"sourceN":29,"q":"보험사기 예방을 위한 보험설계사의 실천사항에 대해 잘못 설명한 것은?","c":["고지의무 및 면책사항을 반드시 설명한다","고객이 고의로 잘못 기재한 사실을 인지한 경우 반드시 수정을 요청한다","청약서 및 설명의무 관련 문서 등은 직접 서명받고 기록을 유지한다","보험사기 발생사실을 인지한 경우에는 보험설계사가 직접 해결하는 노력을 해야 한다"],"a":4,"e":"보험설계사는 보험사기를 해결하는 역할을 하는 것이 아니므로 보험범죄신고센터에 신고해야 함"},{"id":"11-22","type":11,"n":81,"sourceN":22,"q":"보험설계사의 분류상 성격이 다른 하나는?","c":["전속보험설계사","생명보험설계사","손해보험설계사","제3보험설계사"],"a":1,"e":"전속보험설계사와 교차모집보험설계사는 유형별 분류에 해당함 (②, ③, ④는 영위종목별 분류에 해당)"},{"id":"11-23","type":11,"n":82,"sourceN":23,"q":"손해보험대리점 등록 제한사유에 해당하는 자는?","c":["화물자동차 운송사업자","수입차 판매업자","중고차 판매업자","업무정지 처분을 받은 보험대리점 소속 임직원이었던 자로서 업무정지 처분이 있었던 날로부터 2년이 경과한 자"],"a":1,"e":"손해보험대리점의 경우 화물자동차운송사업자 또는 여객자동차운송사업자 및 그 소속 임직원은 등록이 제한됨"},{"id":"11-24","type":11,"n":83,"sourceN":24,"q":"모집종사자의 법정교육에 대한 설명으로 틀린 것은?","c":["등록교육이란 모집종사자가 되려는 자가 이수하여야 하는 교육을 말한다","보수교육이란 모집종사자의 전문성 향상을 위해 실시하는 정기교육을 말한다","보험설계사는 등록일로부터 매년 보수교육을 이수하여야 한다","불완전판매방지교육이란 불완전판매 재발 방지를 위해 실시하는 특별교육을 말한다"],"a":3,"e":"매년 → 2년이 경과할 때마다"},{"id":"11-25","type":11,"n":84,"sourceN":25,"q":"손해보험 우수인증 설계사 인증기준에 대한 설명으로 옳은 것은?","c":["품질보증해지 건이 0건이어야 함","보험계약 유지율은 포함되지 않는다","모든 회사 및 전근무자 3년 이상이어야 함","직전년도 1월부터 12월까지 보험설계사의 실적을 기준으로 한다"],"a":4,"e":"① 품질보증해지 건이 0건이어야 함 ② 보험계약 유지율, 보험설계사 소득도 포함됨 ③ 동일 회사에서 3년 이상 근속이어야 함"},{"id":"11-26","type":11,"n":85,"sourceN":26,"q":"위험을 순수위험과 투기위험으로 구분할 때 차이점을 잘못 설명한 것은?","c":["순수위험은 위험이 현실화되면 언제나 손해이지만 투기위험은 경우에 따라 이익이 될 수도 있다","순수위험은 일반적으로 대수의 법칙이 적용되는데 투기위험은 대수의 법칙이 적용되는 경우가 드물다","순수위험은 범위의 한정이 가능하여 제어가 쉬운데 투기위험은 대수의 법칙을 적용하는 것이 어렵다","순수위험은 우발적이기 때문에 통제하기 어려우나 투기위험은 주식과 같이 징후가 나타난다"],"a":3,"e":"순수위험은 범위의 한정이 불가능하고 전조 없이 우발적으로 발생되어 제어가 어려움"},{"id":"11-27","type":11,"n":86,"sourceN":27,"q":"손해보험의 기본원칙에 대한 설명으로 틀린 것은?","c":["피보험자는 보험사고 발생시 실제 손해액 이상으로 보상받을 수 없다","초과보험·중복보험에 관한 규정은 이득금지의 원칙에 따라 도입된 것이다","실손보상의 원칙은 이득금지의 원칙에 입각한 보상 방식이다","이득금지의 원칙에 따라 상해보험에서는 정액보상 방식을 적용한다"],"a":4,"e":"상해보험에서 실손보상의 경우 이득금지의 원칙이 적용됨"},{"id":"11-28","type":11,"n":87,"sourceN":28,"q":"보험설계 전문직업윤리에 해당하지 않는 것은?","c":["고객서비스를 위해 동료와 고객정보를 공유한다","보험인으로서 사회보장의 숭고한 사명을 다한다","전문금융인으로서 끊임없는 자기개발에 힘쓴다","고객을 내 가족처럼 여기며 고객서비스에 최선을 다한다"],"a":1,"e":"고객정보를 소중하게 다루고 철저히 보호해야 하며 다른 사람과 공유해서는 안 됨"},{"id":"11-29","type":11,"n":88,"sourceN":29,"q":"「보험사기방지특별법」상 보험회사가 법령에서 정한 사유 없이 보험금의 지급을 지체 또는 거절하거나 삭감하여 지급한 경우 과태료 부과기준은?","c":["500만원 이하","1천만원 이하","3천만원 이하","2천만원 이하"],"a":2,"e":"법령에서 정한 사유 없이 보험회사가 보험금의 지급을 지체·거절·삭감하여 지급할 경우 1천만원 이하의 과태료 부과"},{"id":"12-22","type":12,"n":89,"sourceN":22,"q":"보험설계사 등록과 말소에 관한 내용으로 틀린 것은?","c":["보험설계사는 「보험업법」에 따라 금융위원회에 등록하여야 한다","현재 보험설계사 등록에 관한 업무는 보험협회에 위탁하고 있다","등록 후라도 등록 제한사유에 해당하게 된 때에는 등록이 취소된다","보험회사와 위촉계약이 종료되면 자동으로 말소 처리된다"],"a":4,"e":"위촉계약 종료 후 보험협회에 등록말소 신청을 해야 말소 처리됨"},{"id":"12-23","type":12,"n":90,"sourceN":23,"q":"교차모집에 관한 설명으로 틀린 설명은?","c":["보험회사가 아닌 보험대리점 등에는 적용되지 않는다","손해보험설계사가 1개의 제3보험업을 영위하는 보험회사를 위하여 모집하는 경우는 해당되지 않는다","생명보험을 모집하고자 하는 손해보험설계사는 생명보험설계사 등록요건을 갖추어야 한다","소속 보험회사 외에 1개의 이종 보험회사 상품만을 판매할 수 있다"],"a":2,"e":"생명보험회사 또는 손해보험회사에 속한 설계사가 1개의 제3보험업을 영위하는 보험회사를 위해 모집을 하는 경우도 포함"},{"id":"12-24","type":12,"n":91,"sourceN":24,"q":"개인대리점 직전 업무폐지 절차에서 필요한 증빙서류가 아닌 것은?","c":["업무폐지통지서(계약체결 보험회사 전부)","대리점등록증 원본","임대차계약서","신분증"],"a":3,"e":"임대차계약서는 개인대리점 직접 업무폐지 절차에 필요한 증빙서류에 해당하지 않음"},{"id":"12-25","type":12,"n":92,"sourceN":25,"q":"손해보험 우수인증 설계사 제도에서 인증효력이 상실되는 경우가 아닌 것은?","c":["보험설계사의 등록이 말소된 경우","보험대리점의 등록이 말소되거나 회사와 계약이 해지된 경우","점포관리자가 다른 손해보험사로 이동하게 된 경우","보험설계사의 소득이 3억원을 초과하거나 보험설계사 외의 다른 직업을 병행하는 경우"],"a":4,"e":"보험설계사의 고소득 여부와 다른 직업 병행여부는 우수인증설계사의 인증 효력 상실과 관련이 없음"},{"id":"12-26","type":12,"n":93,"sourceN":26,"q":"보험의 정의에 대한 설명으로 틀린 것은?","c":["서로 다른 위험에 놓여있는 다수 경제주체의 결합","미리 일정금액의 공탁을 준비하여 공동 준비자금을 마련","현실적으로 재해를 입은 사람에게 일정한 금액 또는 기타의 급부 제공","경제생활상의 불안 제거 또는 경감"],"a":1,"e":"서로 다른 위험 → 동질의 위험"},{"id":"12-27","type":12,"n":94,"sourceN":27,"q":"위험의 분담관계에 따른 보험의 분류에 대한 설명으로 틀린 것은?","c":["원보험은 보험회사가 보험계약자에게 보험계약을 직접 인수하는 것을 말한다","항공기 사고와 같이 위험 부담이 큰 경우 재보험을 가입한다","재보험사는 인수한 위험을 다른 재보험사에 전가할 수 없다","재보험사와 원보험사는 자기가 인수한 위험 부분만큼 보상한다"],"a":3,"e":"재보험사도 인수한 위험을 다른 재보험사에 전가할 수 있음"},{"id":"12-28","type":12,"n":95,"sourceN":28,"q":"「보험사기방지특별법」에 대한 설명으로 틀린 것은?","c":["보험사기의 가중처벌 규정에 따라 보험사기이득액이 5억원 이상일 때에는 보험사기이득액 이하에 상당하는 벌금을 병과할 수 있다","사기범은 5년 이하의 징역 또는 2천만원 이하의 벌금형에 처하고 미수범도 처벌하지 않는다","보험사기이득액이 고액인 경우 가중 처벌하는 조항이 규정되어 있다","보험사기 조사로 인한 계약자 등의 피해를 방지할 수 있는 규정이 마련되어 있다"],"a":2,"e":"10년 이하의 징역 또는 5천만원 이하의 벌금형에 처하고 미수범도 처벌함"},{"id":"12-29","type":12,"n":96,"sourceN":29,"q":"보험사기에 대한 설명으로 틀린 것은?","c":["보험사기범죄에는 모든 고의적 계약과 청구·사고유발 행위가 포함된다","상법상의 경우 가중처벌도 가능하다","보험사기가 행해진 경우 형사처벌만 가능하다","미수범도 처벌한다"],"a":3,"e":"보험사기방지특별법상 보험사기행위에 해당할 경우 10년 이하의 징역 또는 5천만원 이하의 벌금에 처함"},{"id":"13-22","type":13,"n":97,"sourceN":22,"q":"보험업법상 보험모집을 할 수 없는 자는?","c":["보험설계사","보험대리점","보험회사 사외이사","보험중개사"],"a":3,"e":"보험회사의 대표이사, 사외이사, 감사 및 감사위원은 보험모집을 할 수 없음"},{"id":"13-23","type":13,"n":98,"sourceN":23,"q":"보험대리점 등록제한에 해당하지 않는 사람은?","c":["보험중개사로 등록된 자","파산자로서 복권되어 1년이 지난 자","다른 보험회사의 임직원","금융감독원장으로부터 정직처분을 받고 2년이 경과하지 않은 자"],"a":2,"e":"파산자로서 복권된 자는 보험대리점으로 등록할 수 있음"},{"id":"13-24","type":13,"n":99,"sourceN":24,"q":"「금융소비자보호법」상 보험설계사는 (   )의 (   )이다.","c":["예금성 금융상품의 직접판매업자","투자성 금융상품의 판매대리·중개업자","보장성 금융상품의 직접판매업자","보장성 금융상품의 판매대리·중개업자"],"a":4,"e":"「금융소비자보호법」상 보험설계사는 보장성 상품의 금융상품판매대리·중개업자임"},{"id":"13-25","type":13,"n":100,"sourceN":25,"q":"보험모집 프로세스의 정보수집 단계에서 고객의 5대 필요자금에 해당하지 않는 것은?","c":["생활비","교육비 및 결혼자금","주택구입자금","주식 등 위험자산 투자자금"],"a":4,"e":"5대 필요자금은 생활비, 양육비, 주택구입비, 노후자금, 긴급예비자금"},{"id":"13-26","type":13,"n":101,"sourceN":26,"q":"다음 중 위태에 대한 설명으로 옳은 것은?","c":["강도와 사기로 인한 손해가능성을 내재한 것은 물리적 위태이다","손해의 직접적인 원인이 위태이다","개인의 특성과 정신상태에 따른 손해발생 가능성은 물리적 위태이다","고의와 부주의로 손해발생 가능성을 높이는 것은 정신적 위태이다"],"a":4,"e":"① 강도, 사기 등은 도덕적 위태에 해당함 ② 위태 → 사고 ③ 물리적 위태 → 도덕적 위태"},{"id":"13-27","type":13,"n":102,"sourceN":27,"q":"다음 중 보험의 분류에 대한 설명으로 맞는 것은?","c":["전부보험은 보험가입금액과 보험가액이 일치하지 않는 보험을 말한다","보험목적이 동일하면 피보험자가 달라도 중복보험이 성립될 수 있다","동일한 보험목적에 대해 병존하는 2개 이상의 보험계약에서 보험가입금액 합계액이 보험가액을 초과하는 경우를 공동보험이라고 한다","보험가입금액이 보험가액보다 적은 보험은 보험가액에 대한 보험가입금액의 비율에 따라 비례보상한다"],"a":4,"e":"① 전부보험은 보험가입금액과 보험가액이 일치하는 보험임 ② 동일한 보험의 목적에 대하여 피보험자가 동일한 경우 중복보험이 성립될 수 있음 ③ 공동보험 → 중복보험"},{"id":"13-28","type":13,"n":103,"sourceN":28,"q":"보험사기에 대한 설명으로 틀린 것은?","c":["보험사기를 저지른 사람은 법적 처벌 외에 사회적 불이익이 없다","보험금을 노린 친족 자해와 방화 등 반인륜적 범죄가 발생한다","보험사기는 다수의 선량한 계약자에게 보험료 증가를 초래한다","보험사기방지특별법 등이 적용될 수 있다"],"a":1,"e":"보험사기를 저지른 사람은 법적 처벌 외에도 신용도 하락, 계약 해지, 형사기록, 취업 제한 등 다양한 사회적 불이익을 감수해야 함"},{"id":"13-29","type":13,"n":104,"sourceN":29,"q":"나이롱환자 근절을 위한 「자동차손해배상보장법」의 내용 중 틀린 것은?","c":["입원환자가 무단 외출·외박을 한 경우, 해당 의료기관뿐 아니라 입원환자에게도 300만원 이하의 과태료가 부과된다","의료기관이 교통사고 입원환자의 외출·외박 관련 사항을 기록·관리하지 않은 경우 300만원 이하의 과태료가 부과된다","보험회사의 교통사고 입원환자의 외출·외박기록 열람청구를 거부할 경우 300만원 이하의 과태료가 부과된다","과거 보험사기는 「형법」상 사기죄에 따라 처벌했었으나 이제는 「보험사기방지특별법」에 따라 처벌한다"],"a":1,"e":"입원환자는 과태료 부과대상 아님"},{"id":"14-22","type":14,"n":105,"sourceN":22,"q":"보험설계사의 등록에 대한 설명으로 틀린 것은?","c":["등록이 취소된 후 2년이 지나지 않은 자는 등록이 제한된다","보험회사를 통하여 금융위원회에 등록하여야 한다","파산선고를 받고 복권되지 아니한 자는 등록이 제한된다","고령자는 등록이 제한된다"],"a":4,"e":"보험설계사 등록제한 사유에 고령자 여부는 해당되지 않음"},{"id":"14-23","type":14,"n":106,"sourceN":23,"q":"보험대리점의 분류에 대한 설명으로 틀린 것은?","c":["전속대리점은 1개 보험회사와만 대리점계약을 체결한 보험대리점을 말한다","비전속대리점은 2개 이상의 보험회사와 대리점계약을 체결한 보험대리점을 말한다","전업대리점은 생명보험회사, 손해보험회사 또는 제3보험회사와만 대리점계약을 체결한 보험대리점을 말한다","개인대리점은 5인 이하의 소속 설계사를 보유한 보험대리점을 말한다"],"a":4,"e":"개인대리점은 개인이 영위하는 보험대리점으로 소속 설계사 수와는 관련이 없음"},{"id":"14-24","type":14,"n":107,"sourceN":24,"q":"손해보험대리점 등록절차와 관련하여 맞는 것은?","c":["보험업법에 따라 손해보험대리점은 보험연수원에 등록해야 한다","보험대리점은 손해보험, 생명보험, 제3보험의 각 영위종목별로 등록하여야 한다","금융위원회로부터 위탁받은 금융감독원에서 등록에 관한 업무를 진행하고 있다","은행이나 카드는 보험대리점 등록이 불가능하다"],"a":2,"e":"① 보험연수원 → 금융위원회(보험협회에 위탁) ③ 금융감독원 → 보험협회 ④ 은행, 카드는 보험대리점 등록이 가능함"},{"id":"14-25","type":14,"n":108,"sourceN":25,"q":"우수인증 설계사 제도에 대한 설명으로 (   ) 안에 들어갈 숫자가 바르게 나열된 것은?\n\n• 우수인증 설계사 제도는 (   )년부터 시행하고 있다\n• 직전년도 (   )월부터 (   )월까지의 실적을 기준으로 인증을 부여한다\n• 동일회사에 (   )년 이상 근속 조건을 충족해야 한다","c":["2006, 6, 5, 2","2008, 6, 5, 3","2008, 1, 12, 3","2006, 3, 4, 3"],"a":3,"e":"우수인증 설계사 제도 : 1) 2008년부터 시행 2) 직전년도 1월부터 12월까지 실적을 기준으로 함 3) 동일회사에 3년 이상 근속 4) 매년 6월부터 익년 5월까지 1년간 인증 부여 등"},{"id":"14-26","type":14,"n":109,"sourceN":26,"q":"사고의 개념에 대한 설명으로 맞는 것은?","c":["사고는 손해의 직접적인 원인이다","사고는 우연한 사고로 인하여 발생하는 예기치 않은 경제적·재산적 가치의 상실이나 감소를 말한다","사고는 특정한 사고로부터 발생될 수 있는 손해의 가능성을 새로이 만들어 내거나 증가시키는 상태를 말한다","사고는 물리적 위태, 도덕적 위태, 정신적 위태로 구분할 수 있다"],"a":1,"e":"② 사고 → 손해 ③ 사고 → 위태 ④ 사고 → 위태"},{"id":"14-27","type":14,"n":110,"sourceN":27,"q":"다음 보험의 분류 중 옳지 않은 것은?","c":["상법상의 분류 : 생명보험, 화재보험","보험가입금액에 따른 분류 : 초과보험, 중복보험","보험기간에 따른 분류 : 기간보험, 구간보험","운영형태에 따른 분류 : 강제(의무)보험, 임의보험"],"a":1,"e":"상법상 보험은 손해보험과 인보험으로 구분함"},{"id":"14-28","type":14,"n":111,"sourceN":28,"q":"보험사기에 대한 설명으로 옳지 않은 것은?","c":["우연히 발생한 보험사고에 대해 보험금을 과잉 청구하는 것을 연성사기라고 한다","보험금을 편취할 목적으로 고의로 보험사고를 일으키는 것을 경성사기라고 한다","정비업체 관련 보험사기는 「보험사기방지특별법」에 추가로 「자동차관리법」의 적용을 받아 가중 처벌된다","보험설계사 등이 개입된 보험사기단, 브로커 등 보험사기의 유형이 대형화되는 추세이다"],"a":3,"e":"고액이나 상습 여부에 따라 「보험사기방지특별법」에 의해 가중 처벌되며, 위반시 과태료를 부과하는 「자동차관리법」은 가중 처벌의 근거가 아님"},{"id":"14-29","type":14,"n":112,"sourceN":29,"q":"보험범죄(사기)에 대한 설명 중 틀린 것은?","c":["보험범죄의 용이성이 부각되면서 보험사기단, 브로커들이 개입하는 등 조직화 형태를 보인다","가해자와 피해자가 공모하여 고의로 사고를 내는 것을 고의사고, 발생하지 않은 보험사고를 발생한 것으로 허위 신고하는 것을 위장사고라고 한다","살인·방화·폭행 등 다른 범죄와 결합한 형태의 보험범죄가 발생하고 있다","보험범죄는 모방범죄의 증가 등 사회적 피해를 초래하지만 보험계약자들에게 보험료 인상의 결과로는 이어지지 않는다"],"a":4,"e":"부정한 보험금 지급으로 인한 손해율 증가로 보험계약자들에게 보험료 인상의 결과로 이어짐"},{"id":"15-22","type":15,"n":113,"sourceN":22,"q":"보험업법상 보험설계사란 (   )에 소속되어 보험계약의 체결을 중개하는 자이다. 이때 (   ) 안에 들어갈 내용으로 옳은 것을 모두 고르시오\n\na. 보험회사\nb. 보험대리점\nc. 보험중개사","c":["a, b","b, c","a, c","a, b, c"],"a":4,"e":"보험설계사는 보험회사, 보험대리점 또는 보험중개사에 소속되어 보험계약의 체결을 중개하는 자임"},{"id":"15-23","type":15,"n":114,"sourceN":23,"q":"모집종사자의 등록에 대한 설명으로 옳지 않은 것은?","c":["보험모집에 관한 연수과정은 자격시험과 등록교육을 말한다","모집종사자는 등록이 취소된 후 2년이 지나면 등록할 수 있다","모집종사자 등록 후 등록취소 사유가 발생하여도 등록은 계속 유효하다","보험업법상 업무정지 2회 이상자는 등록취소 사유에 해당한다"],"a":3,"e":"모집종사자는 등록 후라도 등록취소 사유가 발생하면 등록이 취소됨"},{"id":"15-24","type":15,"n":115,"sourceN":24,"q":"다음의 보험모집인 중 등록기관이 다른 하나는?","c":["보험대리점 소속 보험설계사","법인보험대리점","개인보험중개사","교차모집설계사"],"a":3,"e":"①, ②, ④는 보험협회(금융위원회에서 위탁)에 등록 ③은 금융감독원(금융위원회에서 위탁)에 등록"},{"id":"15-25","type":15,"n":116,"sourceN":25,"q":"다음 중 보험모집 프로세스의 순서가 올바르게 나열된 것은?","c":["소개확보 → 정보수집 → 가입권유 → 계약체결","정보수집 → 소개확보 → 가입권유 → 계약체결","가망고객 발굴 → 정보수집 → 가입권유 → 계약체결","접근 → 가망고객 발굴 → 가입권유 → 계약체결"],"a":3,"e":"보험모집 프로세스는 가망고객 발굴 → 접근 → 정보수집 → 가입권유 → 계약체결 → 소개확보의 순서임"},{"id":"15-26","type":15,"n":117,"sourceN":26,"q":"다음에서 위험과 관련된 설명으로 맞는 것은?","c":["보험가능위험은 인적위험과 재산적 위험뿐이다","순수위험 모두가 보험가입 가능한 위험이다","보험기술상 인수가 가능한 순수위험을 보험가능위험이라고 한다","투기위험은 보험가능위험에 해당한다"],"a":3,"e":"① 인적위험, 자산적위험 이외에 배상책임위험에도 해당함 ② 모두가 → 위험 중 일부가 가능하고 보험회사의 담보력 등 일정 조건이 충족된 경우 ④ 투기위험 → 보험가능위험"},{"id":"15-27","type":15,"n":118,"sourceN":27,"q":"다음 중 보험기간에 따른 보험의 분류에 대한 설명으로 옳은 것은?","c":["구간보험은 보험기간이 어디서부터 어디까지라는 장소로 정해지는 보험이다","장기보험은 보험기간이 통상 5년 이상인 보험이다","연금보험은 단기보험에 해당한다","단기보험은 보험기간이 2년 이하인 소멸성 보험이다"],"a":1,"e":"② 5년 → 3년 ③ 단기보험 → 장기보험 ④ 2년 → 1년"},{"id":"15-28","type":15,"n":119,"sourceN":28,"q":"보험사기에 대한 처벌내용 중 맞지 않는 것은?","c":["「보험사기방지특별법」에서는 보험사기를 저지른 자에게 10년 이하의 징역 또는 5천만원 이하의 벌금에 처한다","보험사기이득액이 5억원 이상 50억원 미만인 경우 3년 이상의 유기징역에 처해진다","보험사기이득액이 3억원 이상인 경우 보험사기자의 가중 처벌을 받는다","보험사기이득액이 50억원 이상인 경우 무기 또는 5년 이상의 징역에 처해진다"],"a":3,"e":"3억원 → 5억원"},{"id":"15-29","type":15,"n":120,"sourceN":29,"q":"「자동차손해배상보장법」에 따른 의료기관의 입원환자 관리에 대한 설명으로 틀린 것은?","c":["교통사고 입원환자가 외출·외박시 의료기관의 허락을 받아야 한다","의료기관은 교통사고 입원환자의 외출·외박에 대한 기록 및 관리의무가 있다","의료기관이 외출 또는 외박에 관한 기록·관리의무를 위반할 경우 300만원 이하의 과태료를 부과한다","의료기관이 보험회사의 외출·외박기록 열람청구를 거부할 경우 500만원 이하의 과태료를 부과한다"],"a":4,"e":"500만원 → 300만원"},{"id":"16-22","type":16,"n":121,"sourceN":22,"q":"보험설계사의 등록 및 말소에 대한 설명으로 틀린 것은?","c":["보험설계사 등록을 말소하기 전에 해촉이 먼저 이루어져야 한다","금융위원회에 등록된 사항을 말소하는 것을 해촉이라고 한다","위촉은 보험회사와 보험설계사가 위탁계약을 체결하는 것을 말한다","말소는 금융위원회(보험협회에 위탁)에 신청하여야 한다"],"a":2,"e":"해촉 → 말소"},{"id":"16-23","type":16,"n":122,"sourceN":23,"q":"법인보험대리점의 등록에 관한 설명으로 올바른 것은?","c":["법인보험대리점 유자격자를 2명 이상 보유해야 등록할 수 있다","금융감독원에 영업보증금을 예탁하여야 한다","임직원 수가 100명 이상인 경우 임직원의 10분의 1 이상이 보험설계사 등록요건을 갖추어야 한다","보험대리점의 감사를 법인보험대리점 유자격자로 보유해야 한다"],"a":3,"e":"① 2명 → 1명 ② 금융감독원 → 보험회사 ④ 감사의 법인보험대리점 유자격자 요건 없음"},{"id":"16-24","type":16,"n":123,"sourceN":24,"q":"모집종사자의 법정교육에 대한 설명으로 틀린 것은?","c":["등록교육은 신규 등록교육만 있으며 보험설계사 등의 등록요건인 연수과정 중 하나의 절차이다","불완전판매방지교육의 대상자는 보험협회에서 선정한다","보수교육의 이수기한은 6개월 이내이다","보험설계사는 등록일자로부터 2년이 경과할 때마다 보수교육을 이수해야 한다"],"a":1,"e":"등록교육은 신규 등록교육과 경력자 등록교육으로 나뉨"},{"id":"16-25","type":16,"n":124,"sourceN":25,"q":"성공적인 보험판매를 위한 보험모집 프로세스에 대한 설명으로 알맞은 것은?","c":["접근은 고객과의 첫 만남 단계로 잠재고객에 대해 상세하고 체계적인 정보를 미리 수집해야 한다","계약체결은 보험영업의 최종목표이자 완전판매의 실현 단계이다","소개확보는 새로운 시장을 개척함으로써 영업활동의 원동력이 된다","고객의 재무상황과는 무관하게 고객의 니즈를 반영한 위험보장설계를 제안해야 한다"],"a":3,"e":"① 접근은 가망고객과 첫 만남의 단계로 상담과 상품 제안을 위한 유리한 분위기를 조성하는 과정 ② 계약체결은 영업활동의 최종단계이자 새로운 관계의 시작 단계 ④ 위험보장설계는 고객의 니즈 및 재무상황을 분석한 결과를 바탕으로 제안해야 함"},{"id":"16-26","type":16,"n":125,"sourceN":26,"q":"위험과 관련된 개념들이 현실화되는 과정을 순서대로 나열한 것은?","c":["사고 → 손해 → 위태","위태 → 손해 → 사고","위태 → 사고 → 손해","손해 → 사고 → 위태"],"a":3,"e":"위험(현실화 과정) : 위태 → 사고 → 손해"},{"id":"16-27","type":16,"n":126,"sourceN":27,"q":"손해보험이 성립되기 위한 기본원칙에 해당하지 않는 것은?","c":["보험회사의 이득우선의 원칙","위험의 분담원칙","실손보상의 원칙","비례보상의 원칙"],"a":1,"e":"손해보험이 성립되기 위한 기본원칙에는 위험의 분담원칙, 대수의 법칙, 수지상등의 원칙, 이득금지의 원칙, 실손보상의 원칙, 비례보상의 원칙, 급부·반대급부 균등의 원칙이 있음"},{"id":"16-28","type":16,"n":127,"sourceN":28,"q":"보험회사 영업행위 윤리준칙에서 보험소비자의 정보 불균형 해소에 관한 설명 중 잘못된 것은?","c":["보험소비자의 권익을 침해하거나 오도하는 부당영업행위를 해서는 안 된다","보험상품을 권유할 때 보험상품의 특징, 유의사항 등을 충분하고 명확하게 설명해야 한다","보험계약 관련 정보를 적시에 안내하고 적극적으로 관리하여 보험소비자의 만족도와 계약 유지율을 높이는데 노력해야 한다","모집종사자는 보험소비자의 연령, 직업 및 가입목적 등에 대한 정보를 파악해서는 안 된다"],"a":4,"e":"보험소비자의 연령, 보험가입목적, 보험상품 가입경험 및 이해수준 등에 대한 충분한 정보를 파악하고 고려하여 최적의 상품을 권유해야 함"},{"id":"16-29","type":16,"n":128,"sourceN":29,"q":"보험사기에 대한 설명으로 맞는 것은?","c":["우연한 보험사고에 대해 보험금을 과잉 청구하는 것은 ‘경성사기’이다","「보험사기방지특별법」상 보험사기행위에 해당할 경우 「형법」상 보험사기죄와 동일하게 처벌받는다","보험사기행위로 보험금을 취득하거나 제3자에게 보험금을 취득하게 한 자도 보험사기에 해당한다","가중처벌하는 보험사기이득액의 기준은 10억원 이상이다"],"a":3,"e":"① 경성사기 → 연성사기 ② 보험사기방지특별법을 통해 보험사기에 대한 처벌이 강화됨 ④ 10억원 → 5억원"},{"id":"17-22","type":17,"n":129,"sourceN":22,"q":"다음 중 보험설계사에 대한 설명으로 틀린 것은?","c":["계약체결권이 없다","보험료수령권이 없으나 초회 보험료수령권을 인정하는 대법원 판례가 있다","「보험업법」에 따라 금융위원회에 등록하여야 하나 현재는 등록에 관한 업무를 위탁받은 보험협회에서 등록사무를 처리하고 있다","고지의무수령권이 있다"],"a":4,"e":"보험설계사에게는 고지의무수령권이 없음"},{"id":"17-23","type":17,"n":130,"sourceN":23,"q":"교차모집설계사로 등록할 수 있는 경우는?","c":["A보험대리점 소속 손해보험설계사가 A보험대리점 생명보험설계사로 겸하고자 하는 경우","A보험대리점 소속 손해보험설계사가 B보험대리점 생명보험설계사로 겸하고자 하는 경우","A손해보험사 설계사가 C손해보험사 설계사로 등록하고자 하는 경우","A생명보험사 설계사가 A손해보험사 설계사로 등록하고자 하는 경우"],"a":4,"e":"교차모집설계사는 소속 보험회사 외의 1개의 다른 업종의 보험회사 상품을 추가로 판매할 수 있는 설계사임"},{"id":"17-24","type":17,"n":131,"sourceN":24,"q":"다음 보기의 보험대리점 업무폐지에 대한 설명에서 (   ) 안에 들어갈 말로 적절한 것은?\n\n보험대리점 업무폐지는 원칙적으로 (가)의 신청에 의해 업무폐지가 가능하나 (나)의 경우 직접 업무폐지가 가능하다","c":["(가) 보험회사 (나) 개인대리점","(가) 보험회사 (나) 법인대리점","(가) 보험협회 (나) 개인대리점","(가) 보험협회 (나) 법인대리점"],"a":1,"e":"보험대리점 업무폐지에 대한 설명임"},{"id":"17-25","type":17,"n":132,"sourceN":25,"q":"다음은 보험모집 프로세스 중에서 어느 단계를 설명한 것인가?\n\n가망고객과의 첫 만남 단계로 상담과 상품 제안을 위한 유리한 분위기를 조성하는 과정","c":["가망고객 발굴","접근","정보수집","가입권유"],"a":2,"e":"접근에 대한 설명임"},{"id":"17-26","type":17,"n":133,"sourceN":26,"q":"순수위험에 대한 설명으로 틀린 것은?","c":["이익과 손해가 모두 상존하는 위험이다","대수의 법칙이 적용 가능하여 보험의 대상이 될 수 있다","보험회사는 순수위험을 대상으로 발생빈도와 손해액의 크기를 합리적으로 측정하여 보험사업을 영위한다","개별 주체가 손해를 입은 경우 사회 전체적으로 동일한 손해를 입는다"],"a":1,"e":"투기위험에 대한 설명임"},{"id":"17-27","type":17,"n":134,"sourceN":27,"q":"보험가입금액에 따른 분류에 대한 설명으로 옳지 않은 것은?","c":["중복보험은 동일한 보험의 목적에 대하여 보험사고의 피보험이익이 동일하다","일부보험은 보험가입금액이 보험가액보다 적은 보험이다","일부보험의 경우 보험가액에 대한 보험가입금액의 비율에 따라 비례보상한다","초과보험은 보험가입금액이 보험가액을 초과하는 보험으로 이득금지의 원칙이 적용되지 않는다"],"a":4,"e":"초과보험은 이득금지의 원칙에 따라 실손보상함"},{"id":"17-28","type":17,"n":135,"sourceN":28,"q":"보험범죄에 대한 설명으로 틀린 것은?","c":["모방범죄가 증가하고 있어 사회적 문제가 되고 있다","부당한 보험금이 지급됨으로써 손해율 악화로 이어져 보험료 인상에 따른 선량한 피해자가 발생한다","반인륜적인 범죄로 인해 건전한 윤리의식이 훼손된다","보험범죄는 다양한 수법, 복합적, 입증의 용이성, 대형화되어 가는 특성을 가진다"],"a":4,"e":"입증의 용이성 → 입증의 곤란성"},{"id":"17-29","type":17,"n":136,"sourceN":29,"q":"보험사기 예방을 위한 보험설계사의 윤리적 책임에 대한 설명으로 틀린 것은?","c":["보험설계사가 직접 보험사기에 가담하는 유형이 발생하고 있다","단순 방조는 법적 처벌 대상이 되지 않는다","보험사기는 보험계약의 체결, 유지, 청구 등 전 과정에서 발생 가능하다","고객에게 보험금이 잘 나올 수 있도록 허위로 병력 사실을 숨기도록 조언하는 것은 보험사기 행위에 해당한다"],"a":2,"e":"단순 방조도 법적 처벌 대상이 됨"},{"id":"18-22","type":18,"n":137,"sourceN":22,"q":"다음 보기의 (   ) 안에 들어갈 알맞은 용어로 짝지어진 것은?\n\n보험계약 체결의 대리권 (   )을/를 대리하여 보험계약을 체결하는 행위로 (   )이/가 수행한다","c":["보험회사 - 보험설계사","보험회사 - 보험대리점","보험회사 - 보험중개사","보험계약자 - 보험대리점"],"a":2,"e":"보험계약 체결의 대리권인 보험회사를 대리하여 보험계약을 체결하는 행위로 보험대리점이 수행함"},{"id":"18-23","type":18,"n":138,"sourceN":23,"q":"다음 중 보험대리점으로 등록할 수 없는 사람은?","c":["최근 4년 이내 보험영업경력이 26개월 이상인 등록교육을 이수한 자","파산자로서 복권되어 6개월이 지난 자","과거에 보험대리점 등록취소를 받은 날로부터 4년이 지난 자","다른 보험회사의 임직원"],"a":4,"e":"다른 보험회사의 임직원은 보험대리점으로 등록할 수 없음"},{"id":"18-24","type":18,"n":139,"sourceN":24,"q":"다음 중 금융기관보험대리점의 보험모집시 준수행위가 아닌 것은?","c":["보험민원 전담창구를 해당 금융기관의 본점에 설치·운영할 것","대출받는 자를 대상으로 모집하는 경우 보험계약체결 여부가 대출에 영향이 없다는 것을 알릴 것","해당 금융기관이 보험대리점인 것과 보험금 지급책임은 보험회사에 있음을 알릴 것","보험모집 장소와 대출 취급 장소를 명확하게 분리하지 않아도 된다"],"a":4,"e":"보험모집 장소와 대출 취급 장소를 명확하게 분리해야 함"},{"id":"18-25","type":18,"n":140,"sourceN":25,"q":"우수인증 설계사 제도에 대한 설명으로 틀린 것은?","c":["생명보험협회와 손해보험협회가 공동으로 운영한다","직전년도 1월부터 12월까지 보험설계사의 실적을 기준으로 한다","매년 4월 중에 신청을 받아 다음해 5월까지 인증을 부여한다","동일회사에서 1년 이상 근속하여야 한다"],"a":4,"e":"1년 → 3년"},{"id":"18-26","type":18,"n":141,"sourceN":26,"q":"보험가입 대상이 되는 위험의 특성이 아닌 것은?","c":["명확하고 측정 가능한 위험","우연적 사고위험","다수의 동질적 위험","경제적 부담이 가능한 보험료"],"a":4,"e":"불가능한 → 가능한"},{"id":"18-27","type":18,"n":142,"sourceN":27,"q":"기업휴지보험에 대한 설명으로 알맞은 것은?","c":["기업의 이익감소로 발생한 손실을 보상한다","공장에 생긴 직접손해(공장건물의 파손 등을 보상한다","공장에 생긴 간접손해(공장 가동중단으로 인해 상실된 영업이익)를 보상한다","기업의 매출이 급감함으로 인해 발생하는 손실을 보상한다"],"a":3,"e":"기업휴지보험이 보상하는 내용임"},{"id":"18-28","type":18,"n":143,"sourceN":28,"q":"다음 중 연성사기에 해당하는 것은?","c":["우연히 발생한 보험사고에 대해 보험금을 과잉 청구하는 행위","계약자가 고의로 피보험자를 해치는 행위","청소년과 공모하여 보험사기를 조작하는 행위","보험금을 청구하기 위해 살인, 방화 등을 저지르는 행위"],"a":1,"e":"연성사기의 개념임"},{"id":"18-29","type":18,"n":144,"sourceN":29,"q":"나이롱환자 근절을 위한 「자동차손해배상보장법」의 내용으로 맞는 것은?","c":["의료기관은 교통사고 환자가 6일 이상 입원치료가 불필요한 경우에도 퇴원이나 전원 지시를 할 수 없다","교통사고 입원환자는 외출·외박시 의료기관의 허락을 받을 필요는 없다","의료기관에게 교통사고 입원환자의 외출·외박사항에 대한 기록 및 관리를 의무화하고 있다","보험회사의 외출·외박기록 열람청구권을 인정하지 않는다"],"a":3,"e":"① 의료기관은 입원 치료가 불필요한 경우 퇴원이나 전원 지시를 할 수 있음 ② 의료기관의 허락 필요 → 인정하고 있다 ④ 인정하지 않는다 → 인정하고 있다"},{"id":"19-22","type":19,"n":145,"sourceN":22,"q":"보험설계사 등록 신청에 대한 설명으로 맞는 것은?","c":["보험설계사 자격시험 합격 후 금융감독원에 직접 등록신청할 수 있다","최근 3년 이내 1년 이상의 관계업무 종사 경력이 있는 경우 소정의 교육 이수 후 등록신청할 수 있다","보험대리점 자격시험 합격 후 금융감독원에 직접 등록신청할 수 있다","보험설계사는 자격시험에 합격하고 보험회사에서 주관하는 교육을 이수하여야 한다"],"a":2,"e":"①, ③ 금융위원회가 등록업무를 위탁한 보험협회에 직접 등록신청할 수 없고 보험회사를 통하여 등록해야 함 ④ 보험협회 → 보험회사, 교육 자격사 등"},{"id":"19-23","type":19,"n":146,"sourceN":23,"q":"보험대리점의 유형별 분류로 알맞은 것은?","c":["전업대리점, 겸업대리점","개인대리점, 법인대리점","생명보험대리점, 손해보험대리점, 제3보험대리점","전속대리점, 비전속대리점"],"a":4,"e":"① 영위업종별 분류임 ② 운영주체별 분류임 ③ 영위종목별 분류임"},{"id":"19-24","type":19,"n":147,"sourceN":24,"q":"보험대리점 등록취소 사유에 해당하지 않는 것은?","c":["등록 후 등록 제한사유가 발생한 자","등록 후 다단계판매업자로 등록한 자","등록 후 중고차판매업자로 등록한 자","등록 후 파산선고를 받은 자"],"a":3,"e":"등록 후 등록 제한사유 발생시 등록이 취소되며 중고차·수입차 판매업자로 등록한 자는 보험대리점 등록취소 사유에 해당하지 않음"},{"id":"19-25","type":19,"n":148,"sourceN":25,"q":"보험모집 프로세스에 대한 설명으로 틀린 것은?","c":["가입권유시 고객의 재무상황보다는 고객의 니즈를 우선 반영해야 한다","계약체결은 영업활동의 최종 단계이자 새로운 관계의 시작 단계이다","소개확보는 기존 고객의 만족을 바탕으로 새로운 가망고객을 확보하는 단계이다","증권전달은 고객과의 신뢰를 강화하고 니즈를 재확인하는 기회이다"],"a":1,"e":"고객의 니즈와 재무상황을 분석한 결과를 모두 반영하여 최적의 보장설계를 제안해야 함"},{"id":"19-26","type":19,"n":149,"sourceN":26,"q":"투기위험에 해당하지 않는 것은?","c":["주식투자","신규 사업 진출","교통사고","도박"],"a":3,"e":"교통사고는 순수위험에 해당함"},{"id":"19-27","type":19,"n":150,"sourceN":27,"q":"보험기간에 따른 보험의 분류에 대한 설명으로 틀린 것은?","c":["단기보험은 보험기간이 1년 이하인 소멸성 보험이다","장기보험은 보험기간이 통상 3년 이상이다","단기보험은 위험보장과 저축기능을 가진다","장기보험은 만기시나 중도해지시 해약환급금을 지급한다"],"a":3,"e":"단기보험 → 장기보험"},{"id":"19-28","type":19,"n":151,"sourceN":28,"q":"보험사기의 처벌에 관한 설명 중 틀린 것은?","c":["「보험사기방지특별법」상 보험사기행위라 함은 보험사고의 발생 원인 또는 내용에 관하여 보험자를 기망하여 보험금을 청구하는 행위를 말한다","교통사고 관련 보험사기는 「보험사기방지특별법」 외에 「자동차손해배상보장법」에 따라 가중 처벌될 수 있다","보험사기로 인한 이득액이 5억원 이상 50억원 미만인 때 3년 이상 유기징역에 처해진다","보험사기로 인한 이득액이 50억원 이상인 경우 무기징역 또는 5년 이상의 징역에 처해진다"],"a":2,"e":"「보험사기방지특별법」의 가중 처벌 외에 「자동차손해배상보장법」에 따른 가중 처벌은 없음"},{"id":"19-29","type":19,"n":152,"sourceN":29,"q":"정비업체의 보험사기 방지를 위한 「자동차관리법」의 내용 중 틀린 것은?","c":["정비업체는 정비의뢰자의 동의 없이 임의로 차량을 정비해서는 안 된다","정비업체는 정비하기 전에 정비의뢰자에게 사전견적서를 교부하여야 한다","정비업체는 정비가 끝난 후에는 정비의뢰자에게 정비내역서를 교부하여야 한다","정비 전 사전견적서 교부의무 등을 위반한 경우 정비업체는 300만원 이하의 과태료로 처해진다"],"a":4,"e":"300만원 → 100만원"},{"id":"20-22","type":20,"n":153,"sourceN":22,"q":"보험모집종사자에 대한 설명으로 옳지 않은 것은?","c":["보험설계사는 보험회사를 위하여 보험계약의 체결을 중개한다","보험설계사는 계약체결권이 없다","보험대리점은 보험계약자를 위하여 보험계약의 체결을 대리한다","보험설계사는 「보험업법」에 따라 금융위원회에 등록하여야 한다"],"a":3,"e":"보험계약자 → 보험회사"},{"id":"20-23","type":20,"n":154,"sourceN":23,"q":"보험설계사의 등록에 대한 설명으로 틀린 것은?","c":["등록이 취소된 후 2년이 경과되지 아니한 자는 등록이 제한된다","손해보험 모집에 관한 연수교육에는 자격시험과 등록교육이 있다","보험설계사로 등록 후 보험설계사 등록제한 사유가 확인된 경우에도 등록은 유효하다","일반적인 등록취소 기간은 2년이다"],"a":3,"e":"보험설계사로 등록 후 보험설계사 등록제한 사유에 해당하는 경우 등록이 취소됨"},{"id":"20-24","type":20,"n":155,"sourceN":24,"q":"(   ) 안에 들어갈 알맞은 용어는 무엇인가?","c":["10/100","30/100","50/100","60/100"],"a":3,"e":"자기계약 대리점에 대한 설명으로 자기계약 대리점은 불공정 모집행위자에 해당되어 대리점 등록 제한사유에 해당함"},{"id":"20-25","type":20,"n":156,"sourceN":25,"q":"가망고객에 대한 설명으로 틀린 것은?","c":["가망고객은 보험을 가입할 조건을 갖추고 향후 보험을 가입할 가능성이 있는 사람을 말한다","가망고객은 쉽게 만날 수 있거나 보험에 대한 니즈가 있는 사람이며","가망고객의 발굴은 판매활동의 원천이 되며 소득적인 활동에 직접적인 영향을 미친다","가망고객의 발굴시 학연, 지연 등 연고를 활용해서는 안된다"],"a":4,"e":"가망고객의 발굴 기법 중 가장 기본적인 것은 학연, 지연 등 연고를 이용하는 방법임"},{"id":"20-26","type":20,"n":157,"sourceN":26,"q":"다음 보기의 설명은 어떤 위태에 해당하는가?","c":["도덕적 위태","정신적 위태","물리적 위태","기강적 위태"],"a":1,"e":"도덕적 위태에 대한 설명"},{"id":"20-27","type":20,"n":158,"sourceN":27,"q":"보험의 기본원칙 중 손해보험 고유의 원칙에 해당하는 것은?","c":["이득금지의 원칙","급부·반대급부 균등의 원칙","수지상등의 원칙","대수의 법칙"],"a":1,"e":"손해보험 고유의 원칙은 이득금지의 원칙임"},{"id":"20-28","type":20,"n":159,"sourceN":28,"q":"보험설계사의 직업윤리에 대한 설명으로 올바르지 않은 것은?","c":["자신의 직업에 대한 사명과 자긍심을 가져야 한다","소명의식과 전문의식이 있어야 한다","회사의 이익을 고객의 이익보다 우선해야 한다","직분의식과 봉사정신이 있어야 한다"],"a":3,"e":"회사의 이익이 아닌 보험소비자 보호를 최우선 가치로 영업활동을 수행해야 함"},{"id":"20-29","type":20,"n":160,"sourceN":29,"q":"보험사기방지특별법에 대한 설명으로 틀린 것은?","c":["증가하는 보험사기에 효율적으로 대응하기 위해 지난 2016년에 제정되었다","보험사기에 대해 「형법」상 사기죄보다 가중 처벌하도록 규정하고 있다","보험사기가 기수범에 한하여 처벌할 수 있고 미수범은 처벌 규정이 없다","보험사기가 의심되는 행위별 벌금형이 부과될 수 있다"],"a":3,"e":"미수범에 대한 처벌규정이 있음"}]; var questionBank = questions;
+    var totalQuestions = questionBank.length;
+    var answers = Array(totalQuestions).fill(null);
+    var cursor = 0;
+    var wrongItems = [];
+    var reviewCursor = 0;
+
+    function $(id) { return document.getElementById(id); }
+    function displayText(value) {
+      return String(value == null ? '' : value).replace(/\\n/g, '\n');
+    }
+    function showScreen(id) {
+      ['startScreen','quizScreen','resultScreen','reviewScreen','completeScreen'].forEach(function (screenId) {
+        $(screenId).classList.toggle('hidden', screenId !== id);
+      });
+      window.scrollTo(0, 0);
+    }
+    function sourceText(item) {
+      return item.type + '형 ' + item.sourceN + '번';
+    }
+    function resetStudy() {
+      answers = Array(totalQuestions).fill(null);
+      cursor = 0;
+      wrongItems = [];
+      reviewCursor = 0;
+      showScreen('startScreen');
+    }
+    function renderQuiz() {
+      var item = questionBank[cursor];
+      $('quizProgress').textContent = (cursor + 1) + ' / ' + totalQuestions;
+      $('quizSource').textContent = sourceText(item);
+      $('quizProgressFill').style.width = (((cursor + 1) / totalQuestions) * 100) + '%';
+      $('quizNumber').textContent = '문항 ' + (cursor + 1) + ' · ' + sourceText(item);
+      $('quizQuestion').textContent = displayText(item.q);
+      $('quizChoices').innerHTML = '';
+
+      item.c.forEach(function (choice, index) {
+        var button = document.createElement('button');
+        button.type = 'button';
+        button.className = 'choice' + (answers[cursor] === index + 1 ? ' selected' : '');
+        var number = document.createElement('span');
+        number.className = 'choice-number';
+        number.textContent = index + 1;
+        var text = document.createElement('span');
+        text.className = 'choice-text';
+        text.textContent = displayText(choice);
+        button.append(number, text);
+        button.addEventListener('click', function () {
+          answers[cursor] = index + 1;
+          $('validationNote').classList.add('hidden');
+          renderQuiz();
+        });
+        $('quizChoices').appendChild(button);
+      });
+
+      $('prevButton').disabled = cursor === 0;
+      $('nextButton').classList.toggle('hidden', cursor === totalQuestions - 1);
+      $('submitButton').classList.toggle('hidden', cursor !== totalQuestions - 1);
+    }
+    function beginStudy() {
+      answers = Array(totalQuestions).fill(null);
+      cursor = 0;
+      wrongItems = [];
+      showScreen('quizScreen');
+      renderQuiz();
+    }
+    function submitStudy() {
+      var missing = answers.findIndex(function (answer) { return answer == null; });
+      if (missing !== -1) {
+        cursor = missing;
+        $('validationNote').textContent = '아직 답하지 않은 문항이 있습니다. 현재 문항부터 답해 주세요.';
+        $('validationNote').classList.remove('hidden');
+        renderQuiz();
+        return;
+      }
+
+      wrongItems = [];
+      questionBank.forEach(function (item, index) {
+        if (answers[index] !== item.a) {
+          wrongItems.push({ item: item, selected: answers[index] });
+        }
+      });
+
+      var correctCount = totalQuestions - wrongItems.length;
+      $('scoreText').textContent = correctCount + ' / ' + totalQuestions;
+      $('scoreSub').textContent = '정답률 ' + Math.round(correctCount / totalQuestions * 100) + '% · 오답 ' + wrongItems.length + '문항';
+
+      if (wrongItems.length) {
+        $('wrongSummary').innerHTML = '<strong>오답 문항</strong>' + wrongItems.map(function (entry) {
+          return sourceText(entry.item);
+        }).join(', ');
+        $('reviewButton').textContent = '오답노트 시작 (' + wrongItems.length + '문항)';
+        $('reviewButton').classList.remove('hidden');
+      } else {
+        $('wrongSummary').innerHTML = '<strong>전 문항 정답</strong>틀린 문제가 없어 오답노트를 생략합니다.';
+        $('reviewButton').classList.add('hidden');
+      }
+      showScreen('resultScreen');
+    }
+    function renderReview() {
+      var entry = wrongItems[reviewCursor];
+      var item = entry.item;
+      $('reviewProgress').textContent = '오답 ' + (reviewCursor + 1) + ' / ' + wrongItems.length;
+      $('reviewSource').textContent = sourceText(item);
+      $('reviewProgressFill').style.width = (((reviewCursor + 1) / wrongItems.length) * 100) + '%';
+      $('reviewNumber').textContent = '문항 ' + sourceText(item);
+      $('reviewQuestion').textContent = displayText(item.q);
+      $('reviewChoices').innerHTML = '';
+
+      item.c.forEach(function (choice, index) {
+        var choiceNo = index + 1;
+        var isCorrect = choiceNo === item.a;
+        var isSelected = choiceNo === entry.selected;
+        var button = document.createElement('div');
+        button.className = 'review-choice' + (isCorrect ? ' correct' : '') + (isSelected ? ' wrong-selected' : '');
+        var number = document.createElement('span');
+        number.className = 'review-choice-number';
+        number.textContent = choiceNo;
+        var text = document.createElement('span');
+        text.className = 'review-choice-text';
+        text.textContent = displayText(choice);
+        var mark = document.createElement('span');
+        mark.className = 'choice-mark';
+        mark.textContent = isCorrect ? '정답' : (isSelected ? '내 답' : '');
+        button.append(number, text, mark);
+        $('reviewChoices').appendChild(button);
+      });
+
+      $('reviewStatus').textContent = '내가 고른 답: ' + entry.selected + '번 · 정답: ' + item.a + '번';
+      $('reviewExplanation').textContent = displayText(item.e);
+      $('reviewPrevButton').disabled = reviewCursor === 0;
+      $('reviewNextButton').classList.toggle('hidden', reviewCursor === wrongItems.length - 1);
+      $('reviewCompleteButton').classList.toggle('hidden', reviewCursor !== wrongItems.length - 1);
+    }
+    function beginReview() {
+      reviewCursor = 0;
+      showScreen('reviewScreen');
+      renderReview();
+    }
+    function finishStudy() {
+      $('completeText').textContent = '160문항 풀이와 ' + wrongItems.length + '개 오답의 해설 확인을 완료했습니다.';
+      showScreen('completeScreen');
+    }
+
+    $('startButton').addEventListener('click', beginStudy);
+    $('prevButton').addEventListener('click', function () {
+      if (cursor > 0) { cursor -= 1; renderQuiz(); }
+    });
+    $('nextButton').addEventListener('click', function () {
+      if (cursor < totalQuestions - 1) { cursor += 1; renderQuiz(); }
+    });
+    $('submitButton').addEventListener('click', submitStudy);
+    $('reviewButton').addEventListener('click', beginReview);
+    $('reviewPrevButton').addEventListener('click', function () {
+      if (reviewCursor > 0) { reviewCursor -= 1; renderReview(); }
+    });
+    $('reviewNextButton').addEventListener('click', function () {
+      if (reviewCursor < wrongItems.length - 1) { reviewCursor += 1; renderReview(); }
+    });
+    $('reviewCompleteButton').addEventListener('click', finishStudy);
+    function goFocusMenu(confirmFirst) {
+      if (confirmFirst && !confirm('현재 학습을 중단하고 모의고사 테스트 목록으로 돌아갈까요?')) return;
+      window.location.href = './index.html';
+    }
+    $('quitButton').addEventListener('click', function () {
+      goFocusMenu(true);
+    });
+    $('resultHomeButton').addEventListener('click', function () { goFocusMenu(false); });
+    $('completeHomeButton').addEventListener('click', function () { goFocusMenu(false); });
+
+  </script>
+</body>
+</html>

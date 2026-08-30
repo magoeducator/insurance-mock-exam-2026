@@ -1,0 +1,372 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f37021">
+  <meta name="description" content="1형부터 20형까지 연금저축보험 관련 39문항 집중학습">
+  <title>연금저축보험 39문항 집중학습</title>
+  <style>
+    html.auth-pending body{visibility:hidden}
+    :root{--orange:#f37021;--orange-dark:#d95810;--ink:#202124;--muted:#6b7280;--line:#e6e8eb;--soft:#fff7f1;--green:#16803c;--green-bg:#eaf8ef;--red:#c62828;--red-bg:#fff0f0;--navy:#243247}
+    *{box-sizing:border-box}
+    html,body{margin:0;min-height:100%;background:#f5f6f8;color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Apple SD Gothic Neo","Noto Sans KR","Malgun Gothic",sans-serif}
+    body{padding:env(safe-area-inset-top) 0 env(safe-area-inset-bottom)}
+    button{font:inherit}
+    button{border:0;cursor:pointer}
+    button:disabled{cursor:default}
+    .app{width:min(760px,100%);margin:0 auto;min-height:100vh;background:#fff;box-shadow:0 0 24px rgba(0,0,0,.06)}
+    .site-header{position:sticky;top:0;z-index:10;background:#fff;border-bottom:1px solid var(--line);box-shadow:0 5px 18px rgba(32,43,60,.1)}
+    .site-title-row{height:44px;display:flex;align-items:center;background:var(--orange);color:#fff;padding:0 max(14px,calc((100% - 760px)/2 + 14px));overflow:hidden}
+    .site-title{width:100%;font-size:clamp(12px,3.6vw,16px);font-weight:900;letter-spacing:-.045em;line-height:1;white-space:nowrap;overflow-x:auto;scrollbar-width:none}
+    .site-title::-webkit-scrollbar,.top-menu::-webkit-scrollbar{display:none}
+    .top-menu{height:48px;display:flex;align-items:center;justify-content:center;gap:8px;padding:0 12px;overflow-x:auto;white-space:nowrap;background:#fff}
+    .top-menu-link{flex:0 0 auto;display:inline-flex;align-items:center;justify-content:center;min-height:34px;padding:0 14px;border:1px solid #ffd0b5;border-radius:999px;color:var(--orange-dark);font-size:13px;font-weight:900;text-align:center;background:#fff8f3;text-decoration:none}
+    .top-menu-link:hover,.top-menu-link:focus-visible,.top-menu-link.active{background:var(--orange);color:#fff;border-color:var(--orange)}
+    .social-brand{display:inline-flex;align-items:center;flex:0 0 auto;color:#6b7280;font-size:12px;font-weight:900;letter-spacing:-.04em;white-space:nowrap}
+    .social-icon-link{display:inline-flex;align-items:center;justify-content:center;flex:0 0 34px;width:34px;min-height:34px;height:34px;padding:0;border-radius:10px;color:#fff}
+    .social-icon-link svg{width:18px;height:18px;display:block}
+    .social-icon-link.instagram{background:linear-gradient(135deg,#f58529,#dd2a7b 52%,#8134af)}
+    .social-icon-link.blog{background:#03c75a}
+    .topbar{background:var(--orange);color:#fff;padding:16px 18px 15px;position:relative;z-index:1}
+    .global-nav{display:none}
+    .global-nav::-webkit-scrollbar{display:none}
+    .global-nav a{flex:0 0 auto;padding:7px 12px;border:1px solid #ffd0b5;border-radius:999px;background:#fff8f3;color:var(--orange-dark);font-size:12px;font-weight:900;text-decoration:none}
+    .global-nav a:hover,.global-nav a:focus-visible{background:var(--orange);border-color:var(--orange);color:#fff}
+    .topbar-row{display:flex;align-items:center;justify-content:space-between;gap:12px}
+    .brand{font-weight:900;font-size:18px;letter-spacing:-.06em;line-height:1.25}
+    .subbrand{margin-top:4px;font-size:12px;opacity:.92}
+    .top-actions{display:flex;align-items:center;gap:6px;white-space:nowrap}
+    .student-name{font-size:12px;font-weight:800}
+    .top-button{padding:7px 9px;border:1px solid rgba(255,255,255,.55);border-radius:9px;background:transparent;color:#fff;font-size:11px;font-weight:800}
+    .screen{padding:22px 18px 34px}
+    .hidden{display:none!important}
+    .hero{text-align:center;padding:14px 0 7px}
+    .badge{display:inline-flex;padding:6px 10px;border-radius:999px;background:#fff0e6;color:var(--orange-dark);font-size:13px;font-weight:900}
+    h1{margin:15px 0 10px;font-size:clamp(27px,6vw,38px);line-height:1.22;letter-spacing:-.075em}
+    .hero p{margin:0;color:var(--muted);font-size:14px;line-height:1.6}
+    .timeline{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin:25px 0 23px;position:relative}
+    .timeline:before{content:"";position:absolute;left:12%;right:12%;top:21px;height:2px;background:#ffd4bd}
+    .step{position:relative;z-index:1;text-align:center}
+    .step-no{display:grid;place-items:center;width:42px;height:42px;margin:0 auto 7px;border:2px solid #ffc39f;border-radius:50%;background:#fff;color:var(--orange-dark);font-weight:900}
+    .step-label{font-size:11px;line-height:1.3;font-weight:800;color:#4b5563}
+    .info-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:20px 0}
+    .info-box{padding:14px 7px;border:1px solid var(--line);border-radius:13px;background:#fff;text-align:center}
+    .info-box strong{display:block;color:var(--orange-dark);font-size:18px}
+    .info-box span{display:block;margin-top:3px;color:var(--muted);font-size:11px}
+    .notice{margin:18px 0;padding:14px 15px;border-radius:13px;background:var(--soft);color:#70411e;font-size:13px;line-height:1.55}
+    .primary{width:100%;padding:14px 16px;border-radius:12px;background:var(--orange);color:#fff;font-weight:900;font-size:15px;box-shadow:0 8px 18px rgba(243,112,33,.2)}
+    .primary:hover,.primary:focus-visible{background:var(--orange-dark)}
+    .quiz-head,.review-head{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:10px}
+    .progress-label{color:var(--orange-dark);font-size:14px;font-weight:900}
+    .source-label{color:var(--muted);font-size:12px;font-weight:800}
+    .progress-track{height:7px;margin-bottom:18px;border-radius:999px;background:#f3e5dd;overflow:hidden}
+    .progress-fill{height:100%;border-radius:inherit;background:var(--orange);transition:width .2s ease}
+    .question-card,.result-card,.review-card,.complete-card{border:1px solid var(--line);border-radius:18px;background:#fff}
+    .question-card{padding:20px 17px}
+    .question-number{margin-bottom:11px;color:var(--orange-dark);font-size:13px;font-weight:900}
+    .question-text{margin:0;white-space:pre-line;font-size:19px;line-height:1.55;letter-spacing:-.045em}
+    .choices{display:grid;gap:10px;margin-top:20px}
+    .choice{display:flex;align-items:flex-start;gap:10px;width:100%;padding:13px 12px;border:1px solid #d9dde2;border-radius:12px;background:#fff;color:var(--ink);text-align:left;line-height:1.45}
+    .choice:hover,.choice:focus-visible{border-color:#f5a678;background:#fffaf7}
+    .choice.selected{border-color:var(--orange);background:#fff3eb;box-shadow:0 0 0 2px #ffe1cd}
+    .choice-number{display:grid;place-items:center;flex:0 0 26px;width:26px;height:26px;border-radius:50%;background:#f1f3f5;color:#5b6470;font-size:12px;font-weight:900}
+    .choice.selected .choice-number{background:var(--orange);color:#fff}
+    .choice-text{font-size:14px;white-space:pre-line}
+    .quiz-nav,.review-nav{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:16px}
+    .nav-button{padding:12px 10px;border:1px solid #d9dde2;border-radius:11px;background:#fff;color:#4b5563;font-size:13px;font-weight:900}
+    .nav-button:hover:not(:disabled),.nav-button:focus-visible{border-color:#f0a272;color:var(--orange-dark)}
+    .nav-button:disabled{opacity:.4}
+    .nav-button.next,.nav-button.submit,.nav-button.complete{border-color:var(--orange);background:var(--orange);color:#fff}
+    .nav-button.submit,.nav-button.complete{grid-column:1/-1}
+    .quit-button{display:block;margin:18px auto 0;padding:5px 8px;background:transparent;color:#9aa1aa;font-size:11px;text-decoration:underline}
+    .validation-note{margin:13px 0 0;padding:11px 12px;border-radius:10px;background:#fff4df;color:#8a5a16;font-size:12px;font-weight:700}
+    .result-card{padding:21px 17px;text-align:center}
+    .result-kicker{margin:0;color:var(--muted);font-size:13px;font-weight:800}
+    .score{margin:7px 0 0;color:var(--orange-dark);font-size:42px;font-weight:950;letter-spacing:-.07em}
+    .score-sub{margin:3px 0 0;color:var(--muted);font-size:13px}
+    .wrong-summary{margin:18px 0 0;padding:14px;border-radius:12px;background:var(--red-bg);color:#7c2222;text-align:left;font-size:13px;line-height:1.55}
+    .wrong-summary strong{display:block;margin-bottom:4px;color:var(--red)}
+    .review-card{padding:19px 17px}
+    .review-choice{position:relative;display:flex;align-items:flex-start;gap:10px;width:100%;margin-top:9px;padding:12px;border:1px solid #d9dde2;border-radius:11px;background:#fff;text-align:left}
+    .review-choice.correct{border-color:#8bc99e;background:var(--green-bg);color:#155d2c}
+    .review-choice.wrong-selected{border-color:#eba0a0;background:var(--red-bg);color:#8c2424}
+    .review-choice-number{display:grid;place-items:center;flex:0 0 25px;width:25px;height:25px;border-radius:50%;background:#eef0f2;color:#5d6670;font-size:12px;font-weight:900}
+    .review-choice.correct .review-choice-number{background:var(--green);color:#fff}
+    .review-choice.wrong-selected .review-choice-number{background:var(--red);color:#fff}
+    .review-choice-text{font-size:14px;line-height:1.45;white-space:pre-line}
+    .choice-mark{margin-left:auto;flex:0 0 auto;font-size:11px;font-weight:900}
+    .review-status{margin-top:15px;padding:11px 12px;border-radius:10px;background:#f7f8fa;color:#4b5563;font-size:13px;font-weight:800}
+    .explanation{margin-top:14px;padding:14px;border-left:4px solid var(--orange);border-radius:0 11px 11px 0;background:#fff8f3}
+    .explanation strong{display:block;margin-bottom:6px;color:var(--orange-dark);font-size:13px}
+    .explanation span{display:block;white-space:pre-line;color:#4b5563;font-size:13px;line-height:1.6}
+    .complete-card{padding:31px 18px;text-align:center}
+    .complete-icon{font-size:42px}
+    .complete-card h2{margin:12px 0 7px;font-size:25px;letter-spacing:-.06em}
+    .complete-card p{margin:0;color:var(--muted);font-size:14px;line-height:1.6}
+    .footer-note{margin:21px 0 0;color:#a0a6ad;text-align:center;font-size:11px}
+    .site-footer{padding:22px 14px 34px;border-top:1px solid var(--line);color:#8a929b;text-align:center;font-size:11px}
+    .footer-nav{display:flex;justify-content:center;flex-wrap:wrap;gap:8px 14px;margin-bottom:10px;color:var(--orange-dark);font-weight:900}
+    .footer-nav a{color:inherit;text-decoration:none}
+    .footer-nav a:hover,.footer-nav a:focus-visible{text-decoration:underline}
+    @media(max-width:520px){.screen{padding:20px 14px 30px}.topbar{padding-left:14px;padding-right:14px}.brand{font-size:16px}.subbrand{font-size:11px}.student-name{display:none}.question-text{font-size:18px}.choice-text{font-size:13px}}
+    @media(max-width:370px){.timeline{gap:2px}.step-label{font-size:10px}.info-box strong{font-size:16px}.info-box span{font-size:10px}}
+    @media(prefers-reduced-motion:reduce){.progress-fill{transition:none}}
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-title-row"><div class="site-title">2026 손해보험 자격시험 온라인학습실[8월 개정판]</div></div>
+    <nav class="top-menu" aria-label="주요 메뉴">
+      <a class="top-menu-link" href="./학습실.html">홈</a>
+      <a class="top-menu-link" href="./자격시험안내.html">자격시험 안내</a>
+      <a class="top-menu-link" href="./강의목차.html">동영상 강의보기</a>
+      <a class="top-menu-link active" href="./index.html" aria-current="page">모의고사 테스트</a>
+    </nav>
+  </header>
+  <div class="app">
+    <main>
+      <section id="startScreen" class="screen">
+        <button id="startButton" class="primary" type="button">연금저축보험 39문항 학습시작</button>
+      </section>
+
+      <section id="quizScreen" class="screen hidden">
+        <div class="quiz-head">
+          <span id="quizProgress" class="progress-label"></span>
+          <span id="quizSource" class="source-label"></span>
+        </div>
+        <div class="progress-track" aria-hidden="true"><div id="quizProgressFill" class="progress-fill"></div></div>
+        <article class="question-card">
+          <div id="quizNumber" class="question-number"></div>
+          <h2 id="quizQuestion" class="question-text"></h2>
+          <div id="quizChoices" class="choices"></div>
+        </article>
+        <p id="validationNote" class="validation-note hidden"></p>
+        <div class="quiz-nav">
+          <button id="prevButton" class="nav-button" type="button">이전 문제</button>
+          <button id="nextButton" class="nav-button next" type="button">다음 문제</button>
+          <button id="submitButton" class="nav-button submit hidden" type="button">39문제 제출하고 채점</button>
+        </div>
+        <button id="quitButton" class="quit-button" type="button">학습을 중단하고 처음으로</button>
+      </section>
+
+      <section id="resultScreen" class="screen hidden">
+        <div class="result-card">
+          <p class="result-kicker">연금저축보험 39문항 학습 결과</p>
+          <div id="scoreText" class="score"></div>
+          <p id="scoreSub" class="score-sub"></p>
+          <div id="wrongSummary" class="wrong-summary"></div>
+          <button id="reviewButton" class="primary" type="button">오답노트 시작</button>
+          <button id="resultHomeButton" class="quit-button" type="button">처음으로 돌아가기</button>
+        </div>
+      </section>
+
+      <section id="reviewScreen" class="screen hidden">
+        <div class="review-head">
+          <span id="reviewProgress" class="progress-label"></span>
+          <span id="reviewSource" class="source-label"></span>
+        </div>
+        <div class="progress-track" aria-hidden="true"><div id="reviewProgressFill" class="progress-fill"></div></div>
+        <article class="review-card">
+          <div id="reviewNumber" class="question-number"></div>
+          <h2 id="reviewQuestion" class="question-text"></h2>
+          <div id="reviewChoices"></div>
+          <div id="reviewStatus" class="review-status"></div>
+          <div class="explanation"><strong>공식 해설</strong><span id="reviewExplanation"></span></div>
+        </article>
+        <div class="review-nav">
+          <button id="reviewPrevButton" class="nav-button" type="button">이전 오답</button>
+          <button id="reviewNextButton" class="nav-button next" type="button">다음 오답</button>
+          <button id="reviewCompleteButton" class="nav-button complete hidden" type="button">오답노트 완료</button>
+        </div>
+      </section>
+
+      <section id="completeScreen" class="screen hidden">
+        <div class="complete-card">
+          <div class="complete-icon">✓</div>
+          <h2>학습이 끝났습니다.</h2>
+          <p id="completeText">39문항 풀이와 오답노트 확인을 완료했습니다.</p>
+          <button id="completeHomeButton" class="primary" type="button" style="margin-top:22px">처음으로 돌아가기</button>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <nav class="footer-nav" aria-label="하단 공통 메뉴"><a href="./학습실.html">홈</a><a href="./자격시험안내.html">자격시험 안내</a><a href="./강의목차.html">동영상 강의보기</a><a href="./index.html">모의고사 테스트</a></nav>
+      개발저작권 @career_educator
+    </footer>
+  </div>
+
+  <script>
+    const questions = [{"id":"1-11","type":1,"n":1,"sourceN":11,"q":"종합소득금액이 4,500만원 초과인 자가 연금저축보험료 납부시 적용되는 세액공제비율(지방소득세 포함)은?","c":["5.5%","13.2%","15.4%","16.5%"],"a":2,"e":"종합소득금액 4,500만원 초과시 세액공제비율은 13.2%임 (지방소득세 포함)"},{"id":"2-11","type":2,"n":2,"sourceN":11,"q":"다음 중 장기손해보험에서 연금수령시 적용되는 연령별 연금소득세율에 대한 내용으로 틀린 것은?(지방소득세 제외)","c":["70세 이전 수령시 5%","70세 이전 수령시 7%","80세 이전 수령시 4%","80세 이후 수령시 3%"],"a":2,"e":"70세 이전 수령시 5%(지방소득세 제외)의 원천세율 적용"},{"id":"2-12","type":2,"n":3,"sourceN":12,"q":"연간 연금수령한도 금액 산출식으로 올바른 것은?","c":["(연금계좌 평가액) ÷ (11 - 연금수령연차) × (130 ÷ 100)","(연금계좌 평가액) ÷ (11 - 연금수령연차) × (110 ÷ 100)","(연금계좌 평가액) ÷ (11 - 연금수령연차) × (100 ÷ 100)","(연금계좌 평가액) ÷ (11 - 연금수령연차) × (120 ÷ 100)"],"a":4,"e":"연간 연금수령한도 산출식 : (연금계좌 평가액) ÷ (11 - 연금수령연차) × (120 ÷ 100)"},{"id":"3-10","type":3,"n":4,"sourceN":10,"q":"연금저축의 세제적격요건에 해당하는 가입기간으로 알맞은 것은?","c":["3년 이상","4년 이상","5년 이상","2년 이상"],"a":3,"e":"가입기간에 대한 세제적격요건은 5년 이상임"},{"id":"3-11","type":3,"n":5,"sourceN":11,"q":"연금저축보험의 세제에 대한 설명으로 바른 것은? (지방소득세 제외)","c":["연금수령 요건을 충족하지 못하는 경우 기타소득세 12%가 부과된다","연금저축보험의 연간 세액공제 한도는 300만원이다","연금저축에 부가된 특약의 특약보험료는 다른 보험의 보장성보험료와 합산하여 세액공제 된다","연간 총 급여가 5,500만원 이하인 경우 연금저축보험 연간 납입보험료에 대한 세액공제율은 10%"],"a":3,"e":"① 12% → 15%(지방소득세 제외) ② 300만원 → 600만원 ④ 10% → 15%(지방소득세 제외)"},{"id":"4-11","type":4,"n":6,"sourceN":11,"q":"연금저축보험에서 13.2%(지방소득세 포함)의 세액공제 비율을 적용하는 연간 기준 종합소득금액은?","c":["종합소득금액 3천만원 이하","종합소득금액 3천 5백만원 초과","종합소득금액 4천만원 이하","종합소득금액 4천 5백만원 초과"],"a":4,"e":"종합소득금액 4천 5백만원 초과시 13.2%(지방소득세 포함)의 세액공제 비율을 적용함"},{"id":"4-12","type":4,"n":7,"sourceN":12,"q":"다음 중 연금저축 해지시 종합과세 대상이 되는 경우는?","c":["생활비 이용 목적으로 해지시","계약자의 사망 또는 해외이주로 인한 해지시","천재지변으로 인한 해지시","계약자의 파산선고 또는 개인회생절차 개시로 인한 해지시"],"a":1,"e":"연금저축 해지의 부득이한 사유에 해당하지 않아 종합과세 대상이 됨 ②, ③, ④는 부득이한 사유로 연금저축을 해지하는 경우로 종합과세 대상에 포함되지 않음"},{"id":"5-10","type":5,"n":8,"sourceN":10,"q":"연금저축보험의 세액공제를 받기 위한 납입금액의 한도는?","c":["분기당 100만원 이내","분기당 300만원 이내","연간 1,800만원 이내","연간 600만원 이내"],"a":3,"e":"연간 납입한도는 1,800만원임"},{"id":"5-11","type":5,"n":9,"sourceN":11,"q":"연금저축보험의 연금수령시 과세에 대한 설명으로 맞는 것은?","c":["70세 이전 연금수령시 기타소득세 15%를 부과한다","연간 연금수령금액이 1,500만원 이하인 경우 분리과세로 납세의무를 종결한다","연간 연금수령금액이 1,500만원을 초과하는 경우 무조건 분리과세로 납세의무를 종결한다","연금수령요건을 충족하지 못한 경우 3%의 연금소득세를 부과한다"],"a":2,"e":"① 70세 이전 연금수령시 5%의 연금소득세 부과 ③ 연간 연금수령금액 1,500만원 초과시 다른 소득과 합산하여 종합과세 또는 16.5%(지방소득세 포함) 분리과세 중 선택함 ④ 연금수령요건을 충족하지 못하는 경우 기타소득세(15%, 지방소득세 제외)를 부과함"},{"id":"6-11","type":6,"n":10,"sourceN":11,"q":"연금저축보험 가입자가 만 70세 이상 80세 미만의 기간에 연금으로 수령할 때 적용되는 세율은? (지방소득세 별도)","c":["5%","3%","6%","4%"],"a":4,"e":"연금소득세율은 70세 이전 5%, 80세 이전 4%, 80세 이후 3%입니다."},{"id":"6-12","type":6,"n":11,"sourceN":12,"q":"연금저축보험 계약자가 질병에 걸려 3개월 이상 요양이 필요한 경우 계약해지시 부담하는 세금으로 올바른 것은?","c":["연금소득세(13~15%, 지방소득세 제외)를 납입하게 되고 종합과세 대상에는 미포함","연금소득세(6~7%, 지방소득세 제외)를 납입하게 되고 종합과세 대상에는 미포함","연금소득세(13~15%, 지방소득세 제외)를 납입하게 되고 종합과세 대상에도 포함","연금소득세(3~5%, 지방소득세 제외)를 납입하게 되고 종합과세 대상에는 미포함"],"a":4,"e":"부득이한 사유로 연금계약을 해지하거나 연금 외의 방식으로 지급받는 경우에는 연금소득세 3~5%(지방소득세 제외)를 납부하며 종합과세 대상에는 포함되지 않습니다."},{"id":"7-10","type":7,"n":12,"sourceN":10,"q":"연금저축보험에 대한 설명으로 틀린 것은?","c":["70세 이전 연금수령시 부과되는 연금소득세는 5%(지방소득세 제외)이다","가입대상은 만 20세 이상이다","계약자가 질병 등 3개월 이상 요양이 필요하여 계약을 해지한 경우에는 종합과세 대상에 미포함한다","세액공제를 받기 위해서는 5년 이상 가입이 필요하다"],"a":2,"e":"가입대상의 연령제한 요건 없음"},{"id":"7-11","type":7,"n":13,"sourceN":11,"q":"연금저축보험의 연금수령요건을 충족하지 못하는 금액에 대한 기타소득세율 (지방소득세 제외)에 해당하는 것은?(부득이한 사유가 아닌 경우)","c":["2%","12%","15%","32%"],"a":3,"e":"연금수령요건을 충족하지 못하는 금액은 기타소득세 15%(지방소득세 제외) 부과"},{"id":"8-10","type":8,"n":14,"sourceN":10,"q":"연금저축의 보험료 납입시 세액공제를 받을 수 있는 요건으로 알맞은 것은?","c":["보험료 납입기간 10년 이상","연금지급기간 15년 이상","만 55세 이후 연금 수령","만 30세 이후 가입"],"a":3,"e":"① 가입기간(보험료 납입기간) 5년 이상 ② 연금지급기간에 대한 요건 없음 ④ 가입대상에 대한 연령제한 요건 없음"},{"id":"8-11","type":8,"n":15,"sourceN":11,"q":"퇴직연금 추가납입액이 있는 근로자가 연금저축을 납입할 때 연간 세액공제를 받을 수 있는 합계 한도금액은 얼마인가?","c":["400만원","600만원","900만원","700만원"],"a":3,"e":"퇴직연금 추가납입액과 연금저축 납입액을 합산할 경우 세액공제 한도는 900만원임"},{"id":"9-10","type":9,"n":16,"sourceN":10,"q":"생활수준의 향상과 의료기술의 발달로 인하여 노령인구가 급속히 증가하여 고령화 사회로 변화함에 따라 개인의 노후소득을 보장하기 위한 보험으로 알맞은 것은?","c":["연금저축보험","상해보험","질병보험","간병보험"],"a":1,"e":"연금저축보험에 대한 설명임"},{"id":"9-11","type":9,"n":17,"sourceN":11,"q":"연금저축보험에 대한 설명으로 틀린 것은?","c":["연금수령요건을 충족하지 못하는 금액은 기타소득세 12%(지방소득세 제외)를 부과한다","천재지변으로 계약을 해지하는 경우 연금소득세를 납입하고 종합과세 대상에는 미포함한다","연간 연금수령금액이 1,500만원을 초과하는 경우 계약자의 다른 소득과 합산하여 종합과세 또는 16.5% 분리과세 중 선택할 수 있다","계약자가 질병으로 3개월 이상의 요양이 필요하여 계약을 해지한 경우에는 종합과세 대상에 포함된다"],"a":1,"e":"12% → 15%"},{"id":"10-11","type":10,"n":18,"sourceN":11,"q":"다음 중 연금저축보험의 세액공제에 대한 설명으로 틀린 것은?","c":["연금저축 세액공제 한도 금액은 600만원이다","퇴직연금과 합산하여 연간 900만원까지 세액공제된다","세액공제비율은 총 급여액과 상관없이 동일하다","총 급여액 기준은 5,500만원 이하, 5,500만원 초과 구간으로만 운영된다"],"a":3,"e":"총 급여액 5천 5백만원 이하는 16.5%, 5천 5백만원 초과는 13.2%의 세액공제비율을 적용함(지방소득세 포함)"},{"id":"10-12","type":10,"n":19,"sourceN":12,"q":"연금계좌에서 인출하는 연간 연금수령금액이 1,500만원을 초과하는 경우 분리과세 적용세율은? (지방소득세 포함)","c":["15.4%","16.5%","22.0%","24.0%"],"a":2,"e":"연금계좌에서 인출하는 연간 연금수령금액이 1,500만원을 초과하는 경우 계약자의 다른 소득과 합산하여 종합과세 또는 16.5% 분리과세 중 선택할 수 있음"},{"id":"11-10","type":11,"n":20,"sourceN":10,"q":"연금저축보험의 세제적격요건에 대한 설명으로 맞는 것은?","c":["가입대상 : 만 18세 이상 국내거주자","가입기간 : 15년 이상","납입한도 : 매월 300만원 이내","연금수령요건 : 가입일로부터 5년 이후 수령"],"a":4,"e":"① 연령제한 요건 없음 ② 15년 → 5년 ③ 연간 1,800만원 한도"},{"id":"11-11","type":11,"n":21,"sourceN":11,"q":"연금저축보험의 세제에 관한 설명 중 맞는 것은?","c":["기본계약보험료는 연간 400만원까지 세액공제된다","특약보험료는 연간 300만원 한도로 세액공제된다","연금수령시 연금수령금액은 소득세 과세대상이다","6년차 연금수령자부터 연금수령한도가 적용되지 않는다"],"a":3,"e":"① 400만원 → 600만원 ② 300만원 → 100만원(연금저축보험의 특약보험료 + 다른 보험의 보장성보험료) ④ 6년차 → 11년차"},{"id":"12-11","type":12,"n":22,"sourceN":11,"q":"연금저축보험의 보험료 납부시 세액공제되는 연간 세액공제 한도는(퇴직연금 제외)?","c":["600만원","800만원","900만원","1,800만원"],"a":1,"e":"연금저축보험의 연간 세액공제 한도는 600만원이며 퇴직연금에 납입한 부담금을 합산하여 900만원까지 세액공제됨"},{"id":"12-12","type":12,"n":23,"sourceN":12,"q":"연금저축 계약을 해지하거나 연금 외의 형태로 지급받더라도, 연금소득세(3~5%, 지방소득세 제외)를 납입하고 종합과세 대상에는 포함되지 않는 경우에 해당하지 않는 것은?","c":["천재지변","계약자의 사망 또는 해외이주","계약자의 파산선고","계약자의 질병·부상에 따라 2주 이상의 요양이 필요한 경우"],"a":4,"e":"2주 → 3개월"},{"id":"13-10","type":13,"n":24,"sourceN":10,"q":"연금저축의 세제적격요건에 부합하지 않는 것은?","c":["가입기간 5년 이상","연간 1,800만원 납입","연금수령한도를 초과하여 수령","55세 이전 수령"],"a":2,"e":"연금저축 세제적격요건은 가입기간 5년 이상, 55세 이후 수령, 연간수령한도 이내 수령, 연간납입한도 1,800만원임"},{"id":"13-11","type":13,"n":25,"sourceN":11,"q":"연금저축 연금수령시 종합과세 기준에 대한 설명으로 맞는 것은?","c":["과세대상 연금소득 합계가 연간 1,500만원 이하이면 항상 종합과세한다","연금계좌 인출금액이 연간 1,500만원을 초과하면 종합과세 대상이 될 수 있다","소득공제를 받지 못한 금액도 모두 연금소득으로 과세한다","연금 외 인출금액이 연간 1,200만원을 초과하면 종합과세한다"],"a":2,"e":"연금계좌에서 인출하는 연간 연금수령금액이 1,500만원을 초과하는 경우 계약자의 다른 소득과 합산하여 종합과세 또는 16.5% 분리과세 중 선택 가능함"},{"id":"14-10","type":14,"n":26,"sourceN":10,"q":"노후보장을 위한 3층 보장제도에 대한 연결이 옳지 않은 것은?","c":["개인보장 - 연금저축보험","개인보장 - 여유있는 생활보장","기업보장 - 기본적인 생활보장","사회보장 - 국민연금"],"a":3,"e":"기본적인 → 표준적인"},{"id":"14-11","type":14,"n":27,"sourceN":11,"q":"연금저축 가입 후 연금수령시 연금소득세율로 맞는 것은?","c":["70세 이전 15%(지방소득세 제외)","70세 이전 5%(지방소득세 제외)","70세 이전 20%(지방소득세 제외)","비과세"],"a":2,"e":"70세 이전 : 5% / 80세 이전 : 4% / 80세 이후 : 3% (지방소득세 제외)"},{"id":"15-10","type":15,"n":28,"sourceN":10,"q":"다음은 연금저축보험 세제적격요건에 대한 설명으로 (   ) 안에 들어갈 내용을 올바르게 나열한 것은?\n\n연금수령 요건 : (   )세 이후 수령, 가입일로부터 (   )년 이후 수령, 연간수령한도 이내 수령","c":["55, 5","55, 10","60, 5","65, 5"],"a":1,"e":"연금수령요건 : 55세 이후 수령, 가입일로부터 5년 이후 수령"},{"id":"15-11","type":15,"n":29,"sourceN":11,"q":"연금저축보험의 세액공제에 대한 설명으로 틀린 것은?","c":["특약보험료는 다른 보험의 보장성보험료와 합산하여 세액공제를 받을 수 있다","종합소득금액이 4,500만원을 초과하는 거주자의 경우 600만원을 한도로 세액공제가 가능하다","총 급여소득이 5,500만원을 초과하는 경우 16.5%(지방소득세 포함)의 세액공제를 적용한다","퇴직연금의 근로자 추가 납입액과 합산하여 세액공제를 적용한다(퇴직연금에 납입한 부담금은 300만원 추가 공제)"],"a":3,"e":"16.5% → 13.2%(지방소득세 포함)"},{"id":"16-11","type":16,"n":30,"sourceN":11,"q":"연금저축보험의 세제에 대한 설명으로 틀린 것은?(지방소득세 포함)","c":["연금수령 요건을 충족하지 못하는 금액은 기타소득세 16.5%가 부과된다","퇴직연금과 합산하여 연간 900만원까지 소득공제된다","연금저축에 부과된 특약의 보험료는 다른 보험의 보장성 보험료와 합산하여 세액공제된다","총 급여가 5,500만원 초과인 경우, 연금저축보험의 연간 납입보험료에 대한 세액공제율은 연간 13.2%이다"],"a":2,"e":"소득공제 → 세액공제"},{"id":"16-12","type":16,"n":31,"sourceN":12,"q":"연금저축보험에 대한 설명으로 틀린 것은?","c":["연금수령요건을 충족하지 못하는 금액은 기타소득세(15%, 지방소득세 제외)를 부과한다","연금계좌에서 인출하는 연간 연금수령금액이 1,500만원을 초과하는 경우 계약자의 다른 소득과 합산하여 종합과세 또는 분리과세 선택이 가능하다","천재지변으로 계약을 해지하는 경우 연금소득세를 납입하고, 종합과세 대상에는 미포함한다","계약자 또는 그 부양가족의 질병, 부상에 따라 1개월 이상의 요양이 필요한 경우 연금수령시 연금소득세를 납입하게 되며 종합과세 대상에는 포함하지 않는다"],"a":4,"e":"1개월 → 3개월"},{"id":"17-10","type":17,"n":32,"sourceN":10,"q":"연금저축보험 제도의 목적에 대한 설명으로 틀린 것은?","c":["가계저축 증대 목적","노후소득 보장 목적","고령화 사회 대비 목적","적립된 사망보험금의 연금전환 목적"],"a":4,"e":"보장성보험의 유동화에 대한 설명임"},{"id":"17-11","type":17,"n":33,"sourceN":11,"q":"소득세 과세대상 연금소득(연간 1,500만원 이하)이 분리과세로 납세의무가 종결될 경우 적용세율은?(지방소득세 포함)","c":["2.2% ~ 4.4%","4.4% ~ 6.6%","3.3% ~ 5.5%","5.5% ~ 7.7%"],"a":3,"e":"소득세 과세대상 연금소득의 합계가 연간 1,500만원 이하인 경우 분리과세로 납세의무를 종결할 경우 적용세율은 3.3%~5.5% (지방소득세 포함임)"},{"id":"18-11","type":18,"n":34,"sourceN":11,"q":"연금저축 가입자가 만 83세에 연금수령시 적용되는 연금소득세율은?\n(지방소득세 제외)","c":["5%","4%","3%","2%"],"a":3,"e":"70세 이전 : 5% / 80세 이전 : 4% / 80세 이후 : 3% (지방소득세 제외)"},{"id":"18-12","type":18,"n":35,"sourceN":12,"q":"연금저축에서 부득이한 사유로 연금 외 수령시 3%~5%의 세율을 적용(일반적인 경우 15% 적용)하는 경우로 틀린 것은?","c":["연금계좌 가입자가 질병·부상에 따라 2개월 이상의 요양이 필요한 경우","계약자의 파산선고가 개시된 경우","가입자의 사망 또는 해외 이주하는 경우","천재지변시"],"a":1,"e":"① 2개월 → 3개월 ②, ③, ④는 부득이한 사유에 해당함"},{"id":"19-10","type":19,"n":36,"sourceN":10,"q":"연금저축의 가입대상에 대한 세제적격요건으로 알맞은 것은?","c":["19세 이상","20세 이상","직장인","연령 제한 요건 없음"],"a":4,"e":"연금저축은 가입대상에 대한 연령제한 요건은 없음"},{"id":"19-11","type":19,"n":37,"sourceN":11,"q":"종합소득이 5,000만원인 거주자가 연금저축보험에 100만원을 납입하였을 때 세액공제액은 얼마인가?(지방소득세 포함)","c":["12만원","13.2만원","24만원","16.5만원"],"a":2,"e":"종합소득 4,500만원 초과에 해당되어 세액공제비율이 13.2%(지방소득세 포함)이므로 13.2만원을 세액공제 받을 수 있음"},{"id":"20-11","type":20,"n":38,"sourceN":11,"q":"연금저축보험에 대한 설명으로 틀린 것은?","c":["연금저축보험은 소득공제 혜택이 있다","가입자가 질병으로 3개월 이상의 요양이 필요하여 계약을 해지한 경우에는 종합과세 대상에 포함된다","세제적격요건을 갖추기 위해서는 5년 이상 가입이 필요하다","70세 이전 연금수령시 부과되는 연금소득세율은 5%(지방소득세 제외)이다"],"a":1,"e":"소득공제 → 세액공제"},{"id":"20-12","type":20,"n":39,"sourceN":12,"q":"연금저축보험의 세제에 대한 설명으로 틀린 것은?","c":["연금수령 요건을 충족하지 못하는 금액은 기타소득세 15%(지방소득세 제외)가 부과된다","계약자의 사망 등 부득이한 사유로 연금을 중도해지하는 경우에는 연금소득세가 부과되지 않는다","연금저축에 부가된 특약의 특약보험료는 다른 보험의 보장성 보험료와 합산하여 세액공제된다","연간 총 급여가 5,500만원을 초과하는 경우 연금저축보험의 세액공제비율은 13.2%이다"],"a":2,"e":"연금소득세(3~5%, 지방소득세 제외)가 부과되며, 종합과세 대상에 포함되지 않음"}]; var questionBank = questions;
+    var totalQuestions = questionBank.length;
+    var answers = Array(totalQuestions).fill(null);
+    var cursor = 0;
+    var wrongItems = [];
+    var reviewCursor = 0;
+
+    function $(id) { return document.getElementById(id); }
+    function displayText(value) {
+      return String(value == null ? '' : value).replace(/\\n/g, '\n');
+    }
+    function showScreen(id) {
+      ['startScreen','quizScreen','resultScreen','reviewScreen','completeScreen'].forEach(function (screenId) {
+        $(screenId).classList.toggle('hidden', screenId !== id);
+      });
+      window.scrollTo(0, 0);
+    }
+    function sourceText(item) {
+      return item.type + '형 ' + item.sourceN + '번';
+    }
+    function resetStudy() {
+      answers = Array(totalQuestions).fill(null);
+      cursor = 0;
+      wrongItems = [];
+      reviewCursor = 0;
+      showScreen('startScreen');
+    }
+    function renderQuiz() {
+      var item = questionBank[cursor];
+      $('quizProgress').textContent = (cursor + 1) + ' / ' + totalQuestions;
+      $('quizSource').textContent = sourceText(item);
+      $('quizProgressFill').style.width = (((cursor + 1) / totalQuestions) * 100) + '%';
+      $('quizNumber').textContent = '문항 ' + (cursor + 1) + ' · ' + sourceText(item);
+      $('quizQuestion').textContent = displayText(item.q);
+      $('quizChoices').innerHTML = '';
+
+      item.c.forEach(function (choice, index) {
+        var button = document.createElement('button');
+        button.type = 'button';
+        button.className = 'choice' + (answers[cursor] === index + 1 ? ' selected' : '');
+        var number = document.createElement('span');
+        number.className = 'choice-number';
+        number.textContent = index + 1;
+        var text = document.createElement('span');
+        text.className = 'choice-text';
+        text.textContent = displayText(choice);
+        button.append(number, text);
+        button.addEventListener('click', function () {
+          answers[cursor] = index + 1;
+          $('validationNote').classList.add('hidden');
+          renderQuiz();
+        });
+        $('quizChoices').appendChild(button);
+      });
+
+      $('prevButton').disabled = cursor === 0;
+      $('nextButton').classList.toggle('hidden', cursor === totalQuestions - 1);
+      $('submitButton').classList.toggle('hidden', cursor !== totalQuestions - 1);
+    }
+    function beginStudy() {
+      answers = Array(totalQuestions).fill(null);
+      cursor = 0;
+      wrongItems = [];
+      showScreen('quizScreen');
+      renderQuiz();
+    }
+    function submitStudy() {
+      var missing = answers.findIndex(function (answer) { return answer == null; });
+      if (missing !== -1) {
+        cursor = missing;
+        $('validationNote').textContent = '아직 답하지 않은 문항이 있습니다. 현재 문항부터 답해 주세요.';
+        $('validationNote').classList.remove('hidden');
+        renderQuiz();
+        return;
+      }
+
+      wrongItems = [];
+      questionBank.forEach(function (item, index) {
+        if (answers[index] !== item.a) {
+          wrongItems.push({ item: item, selected: answers[index] });
+        }
+      });
+
+      var correctCount = totalQuestions - wrongItems.length;
+      $('scoreText').textContent = correctCount + ' / ' + totalQuestions;
+      $('scoreSub').textContent = '정답률 ' + Math.round(correctCount / totalQuestions * 100) + '% · 오답 ' + wrongItems.length + '문항';
+
+      if (wrongItems.length) {
+        $('wrongSummary').innerHTML = '<strong>오답 문항</strong>' + wrongItems.map(function (entry) {
+          return sourceText(entry.item);
+        }).join(', ');
+        $('reviewButton').textContent = '오답노트 시작 (' + wrongItems.length + '문항)';
+        $('reviewButton').classList.remove('hidden');
+      } else {
+        $('wrongSummary').innerHTML = '<strong>전 문항 정답</strong>틀린 문제가 없어 오답노트를 생략합니다.';
+        $('reviewButton').classList.add('hidden');
+      }
+      showScreen('resultScreen');
+    }
+    function renderReview() {
+      var entry = wrongItems[reviewCursor];
+      var item = entry.item;
+      $('reviewProgress').textContent = '오답 ' + (reviewCursor + 1) + ' / ' + wrongItems.length;
+      $('reviewSource').textContent = sourceText(item);
+      $('reviewProgressFill').style.width = (((reviewCursor + 1) / wrongItems.length) * 100) + '%';
+      $('reviewNumber').textContent = '문항 ' + sourceText(item);
+      $('reviewQuestion').textContent = displayText(item.q);
+      $('reviewChoices').innerHTML = '';
+
+      item.c.forEach(function (choice, index) {
+        var choiceNo = index + 1;
+        var isCorrect = choiceNo === item.a;
+        var isSelected = choiceNo === entry.selected;
+        var button = document.createElement('div');
+        button.className = 'review-choice' + (isCorrect ? ' correct' : '') + (isSelected ? ' wrong-selected' : '');
+        var number = document.createElement('span');
+        number.className = 'review-choice-number';
+        number.textContent = choiceNo;
+        var text = document.createElement('span');
+        text.className = 'review-choice-text';
+        text.textContent = displayText(choice);
+        var mark = document.createElement('span');
+        mark.className = 'choice-mark';
+        mark.textContent = isCorrect ? '정답' : (isSelected ? '내 답' : '');
+        button.append(number, text, mark);
+        $('reviewChoices').appendChild(button);
+      });
+
+      $('reviewStatus').textContent = '내가 고른 답: ' + entry.selected + '번 · 정답: ' + item.a + '번';
+      $('reviewExplanation').textContent = displayText(item.e);
+      $('reviewPrevButton').disabled = reviewCursor === 0;
+      $('reviewNextButton').classList.toggle('hidden', reviewCursor === wrongItems.length - 1);
+      $('reviewCompleteButton').classList.toggle('hidden', reviewCursor !== wrongItems.length - 1);
+    }
+    function beginReview() {
+      reviewCursor = 0;
+      showScreen('reviewScreen');
+      renderReview();
+    }
+    function finishStudy() {
+      $('completeText').textContent = '39문항 풀이와 ' + wrongItems.length + '개 오답의 해설 확인을 완료했습니다.';
+      showScreen('completeScreen');
+    }
+
+    $('startButton').addEventListener('click', beginStudy);
+    $('prevButton').addEventListener('click', function () {
+      if (cursor > 0) { cursor -= 1; renderQuiz(); }
+    });
+    $('nextButton').addEventListener('click', function () {
+      if (cursor < totalQuestions - 1) { cursor += 1; renderQuiz(); }
+    });
+    $('submitButton').addEventListener('click', submitStudy);
+    $('reviewButton').addEventListener('click', beginReview);
+    $('reviewPrevButton').addEventListener('click', function () {
+      if (reviewCursor > 0) { reviewCursor -= 1; renderReview(); }
+    });
+    $('reviewNextButton').addEventListener('click', function () {
+      if (reviewCursor < wrongItems.length - 1) { reviewCursor += 1; renderReview(); }
+    });
+    $('reviewCompleteButton').addEventListener('click', finishStudy);
+    function goFocusMenu(confirmFirst) {
+      if (confirmFirst && !confirm('현재 학습을 중단하고 모의고사 테스트 목록으로 돌아갈까요?')) return;
+      window.location.href = './index.html';
+    }
+    $('quitButton').addEventListener('click', function () {
+      goFocusMenu(true);
+    });
+    $('resultHomeButton').addEventListener('click', function () { goFocusMenu(false); });
+    $('completeHomeButton').addEventListener('click', function () { goFocusMenu(false); });
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,373 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f37021">
+  <meta name="description" content="1형부터 20형까지 자동차보험 관련 112문항 집중학습">
+  <title>자동차보험 112문항 집중학습</title>
+  
+  <style>
+    html.auth-pending body{visibility:hidden}
+    :root{--orange:#f37021;--orange-dark:#d95810;--ink:#202124;--muted:#6b7280;--line:#e6e8eb;--soft:#fff7f1;--green:#16803c;--green-bg:#eaf8ef;--red:#c62828;--red-bg:#fff0f0;--navy:#243247}
+    *{box-sizing:border-box}
+    html,body{margin:0;min-height:100%;background:#f5f6f8;color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Apple SD Gothic Neo","Noto Sans KR","Malgun Gothic",sans-serif}
+    body{padding:env(safe-area-inset-top) 0 env(safe-area-inset-bottom)}
+    button{font:inherit}
+    button{border:0;cursor:pointer}
+    button:disabled{cursor:default}
+    .app{width:min(760px,100%);margin:0 auto;min-height:100vh;background:#fff;box-shadow:0 0 24px rgba(0,0,0,.06)}
+    .site-header{position:sticky;top:0;z-index:10;background:#fff;border-bottom:1px solid var(--line);box-shadow:0 5px 18px rgba(32,43,60,.1)}
+    .site-title-row{height:44px;display:flex;align-items:center;background:var(--orange);color:#fff;padding:0 max(14px,calc((100% - 760px)/2 + 14px));overflow:hidden}
+    .site-title{width:100%;font-size:clamp(12px,3.6vw,16px);font-weight:900;letter-spacing:-.045em;line-height:1;white-space:nowrap;overflow-x:auto;scrollbar-width:none}
+    .site-title::-webkit-scrollbar,.top-menu::-webkit-scrollbar{display:none}
+    .top-menu{height:48px;display:flex;align-items:center;justify-content:center;gap:8px;padding:0 12px;overflow-x:auto;white-space:nowrap;background:#fff}
+    .top-menu-link{flex:0 0 auto;display:inline-flex;align-items:center;justify-content:center;min-height:34px;padding:0 14px;border:1px solid #ffd0b5;border-radius:999px;color:var(--orange-dark);font-size:13px;font-weight:900;text-align:center;background:#fff8f3;text-decoration:none}
+    .top-menu-link:hover,.top-menu-link:focus-visible,.top-menu-link.active{background:var(--orange);color:#fff;border-color:var(--orange)}
+    .social-brand{display:inline-flex;align-items:center;flex:0 0 auto;color:#6b7280;font-size:12px;font-weight:900;letter-spacing:-.04em;white-space:nowrap}
+    .social-icon-link{display:inline-flex;align-items:center;justify-content:center;flex:0 0 34px;width:34px;min-height:34px;height:34px;padding:0;border-radius:10px;color:#fff}
+    .social-icon-link svg{width:18px;height:18px;display:block}
+    .social-icon-link.instagram{background:linear-gradient(135deg,#f58529,#dd2a7b 52%,#8134af)}
+    .social-icon-link.blog{background:#03c75a}
+    .topbar{background:var(--orange);color:#fff;padding:16px 18px 15px;position:relative;z-index:1}
+    .global-nav{display:none}
+    .global-nav::-webkit-scrollbar{display:none}
+    .global-nav a{flex:0 0 auto;padding:7px 12px;border:1px solid #ffd0b5;border-radius:999px;background:#fff8f3;color:var(--orange-dark);font-size:12px;font-weight:900;text-decoration:none}
+    .global-nav a:hover,.global-nav a:focus-visible{background:var(--orange);border-color:var(--orange);color:#fff}
+    .topbar-row{display:flex;align-items:center;justify-content:space-between;gap:12px}
+    .brand{font-weight:900;font-size:18px;letter-spacing:-.06em;line-height:1.25}
+    .subbrand{margin-top:4px;font-size:12px;opacity:.92}
+    .top-actions{display:flex;align-items:center;gap:6px;white-space:nowrap}
+    .student-name{font-size:12px;font-weight:800}
+    .top-button{padding:7px 9px;border:1px solid rgba(255,255,255,.55);border-radius:9px;background:transparent;color:#fff;font-size:11px;font-weight:800}
+    .screen{padding:22px 18px 34px}
+    .hidden{display:none!important}
+    .hero{text-align:center;padding:14px 0 7px}
+    .badge{display:inline-flex;padding:6px 10px;border-radius:999px;background:#fff0e6;color:var(--orange-dark);font-size:13px;font-weight:900}
+    h1{margin:15px 0 10px;font-size:clamp(27px,6vw,38px);line-height:1.22;letter-spacing:-.075em}
+    .hero p{margin:0;color:var(--muted);font-size:14px;line-height:1.6}
+    .timeline{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin:25px 0 23px;position:relative}
+    .timeline:before{content:"";position:absolute;left:12%;right:12%;top:21px;height:2px;background:#ffd4bd}
+    .step{position:relative;z-index:1;text-align:center}
+    .step-no{display:grid;place-items:center;width:42px;height:42px;margin:0 auto 7px;border:2px solid #ffc39f;border-radius:50%;background:#fff;color:var(--orange-dark);font-weight:900}
+    .step-label{font-size:11px;line-height:1.3;font-weight:800;color:#4b5563}
+    .info-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:20px 0}
+    .info-box{padding:14px 7px;border:1px solid var(--line);border-radius:13px;background:#fff;text-align:center}
+    .info-box strong{display:block;color:var(--orange-dark);font-size:18px}
+    .info-box span{display:block;margin-top:3px;color:var(--muted);font-size:11px}
+    .notice{margin:18px 0;padding:14px 15px;border-radius:13px;background:var(--soft);color:#70411e;font-size:13px;line-height:1.55}
+    .primary{width:100%;padding:14px 16px;border-radius:12px;background:var(--orange);color:#fff;font-weight:900;font-size:15px;box-shadow:0 8px 18px rgba(243,112,33,.2)}
+    .primary:hover,.primary:focus-visible{background:var(--orange-dark)}
+    .quiz-head,.review-head{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:10px}
+    .progress-label{color:var(--orange-dark);font-size:14px;font-weight:900}
+    .source-label{color:var(--muted);font-size:12px;font-weight:800}
+    .progress-track{height:7px;margin-bottom:18px;border-radius:999px;background:#f3e5dd;overflow:hidden}
+    .progress-fill{height:100%;border-radius:inherit;background:var(--orange);transition:width .2s ease}
+    .question-card,.result-card,.review-card,.complete-card{border:1px solid var(--line);border-radius:18px;background:#fff}
+    .question-card{padding:20px 17px}
+    .question-number{margin-bottom:11px;color:var(--orange-dark);font-size:13px;font-weight:900}
+    .question-text{margin:0;white-space:pre-line;font-size:19px;line-height:1.55;letter-spacing:-.045em}
+    .choices{display:grid;gap:10px;margin-top:20px}
+    .choice{display:flex;align-items:flex-start;gap:10px;width:100%;padding:13px 12px;border:1px solid #d9dde2;border-radius:12px;background:#fff;color:var(--ink);text-align:left;line-height:1.45}
+    .choice:hover,.choice:focus-visible{border-color:#f5a678;background:#fffaf7}
+    .choice.selected{border-color:var(--orange);background:#fff3eb;box-shadow:0 0 0 2px #ffe1cd}
+    .choice-number{display:grid;place-items:center;flex:0 0 26px;width:26px;height:26px;border-radius:50%;background:#f1f3f5;color:#5b6470;font-size:12px;font-weight:900}
+    .choice.selected .choice-number{background:var(--orange);color:#fff}
+    .choice-text{font-size:14px;white-space:pre-line}
+    .quiz-nav,.review-nav{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:16px}
+    .nav-button{padding:12px 10px;border:1px solid #d9dde2;border-radius:11px;background:#fff;color:#4b5563;font-size:13px;font-weight:900}
+    .nav-button:hover:not(:disabled),.nav-button:focus-visible{border-color:#f0a272;color:var(--orange-dark)}
+    .nav-button:disabled{opacity:.4}
+    .nav-button.next,.nav-button.submit,.nav-button.complete{border-color:var(--orange);background:var(--orange);color:#fff}
+    .nav-button.submit,.nav-button.complete{grid-column:1/-1}
+    .quit-button{display:block;margin:18px auto 0;padding:5px 8px;background:transparent;color:#9aa1aa;font-size:11px;text-decoration:underline}
+    .validation-note{margin:13px 0 0;padding:11px 12px;border-radius:10px;background:#fff4df;color:#8a5a16;font-size:12px;font-weight:700}
+    .result-card{padding:21px 17px;text-align:center}
+    .result-kicker{margin:0;color:var(--muted);font-size:13px;font-weight:800}
+    .score{margin:7px 0 0;color:var(--orange-dark);font-size:42px;font-weight:950;letter-spacing:-.07em}
+    .score-sub{margin:3px 0 0;color:var(--muted);font-size:13px}
+    .wrong-summary{margin:18px 0 0;padding:14px;border-radius:12px;background:var(--red-bg);color:#7c2222;text-align:left;font-size:13px;line-height:1.55}
+    .wrong-summary strong{display:block;margin-bottom:4px;color:var(--red)}
+    .review-card{padding:19px 17px}
+    .review-choice{position:relative;display:flex;align-items:flex-start;gap:10px;width:100%;margin-top:9px;padding:12px;border:1px solid #d9dde2;border-radius:11px;background:#fff;text-align:left}
+    .review-choice.correct{border-color:#8bc99e;background:var(--green-bg);color:#155d2c}
+    .review-choice.wrong-selected{border-color:#eba0a0;background:var(--red-bg);color:#8c2424}
+    .review-choice-number{display:grid;place-items:center;flex:0 0 25px;width:25px;height:25px;border-radius:50%;background:#eef0f2;color:#5d6670;font-size:12px;font-weight:900}
+    .review-choice.correct .review-choice-number{background:var(--green);color:#fff}
+    .review-choice.wrong-selected .review-choice-number{background:var(--red);color:#fff}
+    .review-choice-text{font-size:14px;line-height:1.45;white-space:pre-line}
+    .choice-mark{margin-left:auto;flex:0 0 auto;font-size:11px;font-weight:900}
+    .review-status{margin-top:15px;padding:11px 12px;border-radius:10px;background:#f7f8fa;color:#4b5563;font-size:13px;font-weight:800}
+    .explanation{margin-top:14px;padding:14px;border-left:4px solid var(--orange);border-radius:0 11px 11px 0;background:#fff8f3}
+    .explanation strong{display:block;margin-bottom:6px;color:var(--orange-dark);font-size:13px}
+    .explanation span{display:block;white-space:pre-line;color:#4b5563;font-size:13px;line-height:1.6}
+    .complete-card{padding:31px 18px;text-align:center}
+    .complete-icon{font-size:42px}
+    .complete-card h2{margin:12px 0 7px;font-size:25px;letter-spacing:-.06em}
+    .complete-card p{margin:0;color:var(--muted);font-size:14px;line-height:1.6}
+    .footer-note{margin:21px 0 0;color:#a0a6ad;text-align:center;font-size:11px}
+    .site-footer{padding:22px 14px 34px;border-top:1px solid var(--line);color:#8a929b;text-align:center;font-size:11px}
+    .footer-nav{display:flex;justify-content:center;flex-wrap:wrap;gap:8px 14px;margin-bottom:10px;color:var(--orange-dark);font-weight:900}
+    .footer-nav a{color:inherit;text-decoration:none}
+    .footer-nav a:hover,.footer-nav a:focus-visible{text-decoration:underline}
+    @media(max-width:520px){.screen{padding:20px 14px 30px}.topbar{padding-left:14px;padding-right:14px}.brand{font-size:16px}.subbrand{font-size:11px}.student-name{display:none}.question-text{font-size:18px}.choice-text{font-size:13px}}
+    @media(max-width:370px){.timeline{gap:2px}.step-label{font-size:10px}.info-box strong{font-size:16px}.info-box span{font-size:10px}}
+    @media(prefers-reduced-motion:reduce){.progress-fill{transition:none}}
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-title-row"><div class="site-title">2026 손해보험 자격시험 온라인학습실[8월 개정판]</div></div>
+    <nav class="top-menu" aria-label="주요 메뉴">
+      <a class="top-menu-link" href="./학습실.html">홈</a>
+      <a class="top-menu-link" href="./자격시험안내.html">자격시험 안내</a>
+      <a class="top-menu-link" href="./강의목차.html">동영상 강의보기</a>
+      <a class="top-menu-link active" href="./index.html" aria-current="page">모의고사 테스트</a>
+    </nav>
+  </header>
+  <div class="app">
+    <main>
+      <section id="startScreen" class="screen">
+        <button id="startButton" class="primary" type="button">112문항 학습시작</button>
+      </section>
+
+      <section id="quizScreen" class="screen hidden">
+        <div class="quiz-head">
+          <span id="quizProgress" class="progress-label"></span>
+          <span id="quizSource" class="source-label"></span>
+        </div>
+        <div class="progress-track" aria-hidden="true"><div id="quizProgressFill" class="progress-fill"></div></div>
+        <article class="question-card">
+          <div id="quizNumber" class="question-number"></div>
+          <h2 id="quizQuestion" class="question-text"></h2>
+          <div id="quizChoices" class="choices"></div>
+        </article>
+        <p id="validationNote" class="validation-note hidden"></p>
+        <div class="quiz-nav">
+          <button id="prevButton" class="nav-button" type="button">이전 문제</button>
+          <button id="nextButton" class="nav-button next" type="button">다음 문제</button>
+          <button id="submitButton" class="nav-button submit hidden" type="button">112문제 제출하고 채점</button>
+        </div>
+        <button id="quitButton" class="quit-button" type="button">학습을 중단하고 처음으로</button>
+      </section>
+
+      <section id="resultScreen" class="screen hidden">
+        <div class="result-card">
+          <p class="result-kicker">112문항 학습 결과</p>
+          <div id="scoreText" class="score"></div>
+          <p id="scoreSub" class="score-sub"></p>
+          <div id="wrongSummary" class="wrong-summary"></div>
+          <button id="reviewButton" class="primary" type="button">오답노트 시작</button>
+          <button id="resultHomeButton" class="quit-button" type="button">처음으로 돌아가기</button>
+        </div>
+      </section>
+
+      <section id="reviewScreen" class="screen hidden">
+        <div class="review-head">
+          <span id="reviewProgress" class="progress-label"></span>
+          <span id="reviewSource" class="source-label"></span>
+        </div>
+        <div class="progress-track" aria-hidden="true"><div id="reviewProgressFill" class="progress-fill"></div></div>
+        <article class="review-card">
+          <div id="reviewNumber" class="question-number"></div>
+          <h2 id="reviewQuestion" class="question-text"></h2>
+          <div id="reviewChoices"></div>
+          <div id="reviewStatus" class="review-status"></div>
+          <div class="explanation"><strong>공식 해설</strong><span id="reviewExplanation"></span></div>
+        </article>
+        <div class="review-nav">
+          <button id="reviewPrevButton" class="nav-button" type="button">이전 오답</button>
+          <button id="reviewNextButton" class="nav-button next" type="button">다음 오답</button>
+          <button id="reviewCompleteButton" class="nav-button complete hidden" type="button">오답노트 완료</button>
+        </div>
+      </section>
+
+      <section id="completeScreen" class="screen hidden">
+        <div class="complete-card">
+          <div class="complete-icon">✓</div>
+          <h2>학습이 끝났습니다.</h2>
+          <p id="completeText">112문항 풀이와 오답노트 확인을 완료했습니다.</p>
+          <button id="completeHomeButton" class="primary" type="button" style="margin-top:22px">처음으로 돌아가기</button>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <nav class="footer-nav" aria-label="하단 공통 메뉴"><a href="./학습실.html">홈</a><a href="./자격시험안내.html">자격시험 안내</a><a href="./강의목차.html">동영상 강의보기</a><a href="./index.html">모의고사 테스트</a></nav>
+      개발저작권 @career_educator
+    </footer>
+  </div>
+
+  <script>
+    const questions = [{"id":"1-13","type":1,"n":1,"sourceN":13,"q":"자동차보험에서 무면허 운전에 해당하는 경우가 아닌 것은?","c":["운전면허 정지기간이나 취소 중에 운전하는 것","외국에서 운전면허를 취득하고 국내면허 또는 국제면허로 변경해서 운전하는 것","운전면허를 취득하지 않은 상태에서 운전하는 것","면허에서 허가된 차종 이외의 차량을 운행하는 것"],"a":2,"e":"외국에서 운전면허를 취득하고 국내면허, 국제면허로 미변경한 상태로 운전하는 것은 무면허 운전에 해당됨"},{"id":"1-14","type":1,"n":2,"sourceN":14,"q":"자동차보험 대인배상Ⅰ의 보상한도에 대한 설명으로 틀린 것은?","c":["사망시 1인당 최고 1억 5천만원, 최저 2천만원을 보상한다","부상시 1인당 최고 3천만원, 최저 50만원을 보상한다","치료 중 사망시 1인당 최고 1억 5천만원을 보상한다","후유장해시 1인당 최고 1억 5천만원, 최저 1천만원을 보상한다"],"a":3,"e":"1억 5천만원 → 1억 8천만원(사망 1억 5천만원 + 부상 1급 3천만원)"},{"id":"1-15","type":1,"n":3,"sourceN":15,"q":"자동차보험의 보험료 산정에 대한 설명으로 알맞은 것은?","c":["기본보험료는 사고건수별 특성요율 및 법규위반경력 등이 반영된 보험료이다","사고건수별 특성요율은 직전 1년간 사고유무 및 사고건수에 따라 적용되는 요율이다","기업특성요율은 관공서 및 법인체 등에서 운전직으로 근무한 기간을 보험가입경력으로 인정한다","교통법규위반 경력요율은 법인소유자동차에도 동일하게 적용한다"],"a":3,"e":"① 기본보험료는 차량의 종류, 배기량, 용도 및 성별, 연령 등에 따라 미리 정해 놓은 기본적인 보험료임 ② 1년 → 3년 ④ 법인소유자동차에는 적용하지 않음"},{"id":"1-16","type":1,"n":4,"sourceN":16,"q":"자동차보험 대인배상에서 부상보험금의 보상내용에 해당하지 않는 것은?","c":["간병비","가정간호비","위자료","휴업손해"],"a":2,"e":"가정간호비는 후유장해보험금 지급항목에 해당"},{"id":"1-17","type":1,"n":5,"sourceN":17,"q":"자동차손해배상보장사업 대상에서 제외되는 경우에 해당하지 않는 것은?","c":["도로가 아닌 장소에서 운행하는 자동차 사고 피해자","책임보험에 가입하지 않은 자동차 사고 피해자","산재보험에 의해 보상받을 수 있는 사고 피해자","보험가입을 요하지 않는 차량에 의한 사고 피해자(국군 보유차, 미군 보유차)"],"a":2,"e":"사고를 야기한 자동차가 「자동차손해배상보장법」에서 규정하고 있는 책임보험에 가입하지 않은 상태인 경우 보장사업 대상이 됨"},{"id":"2-13","type":2,"n":6,"sourceN":13,"q":"「교통사고처리특례법」에 대한 설명 중 맞는 것은?","c":["책임보험에 가입한 경우에는 가해자와 피해자 간 합의가 이루어지지 않더라도 공소를 제기할 수 없다","사망사고 또는 교통사고처리특례법에 의해 공소를 제기할 수 없다","피해자의 생명유지에 반드시 필요한 뇌에 중대한 손상이 발생한 경우에는 보험가입의 특례가 적용되지 않는다","어린이보호구역 안전운전의무 위반의 경우 보험가입의 특례가 적용된다"],"a":3,"e":"① 책임보험 → 종합보험 ② 사망사고는 「교통사고처리특례법」의 반의사불벌 또는 보험가입의 특례가 적용되지 않아 공소를 제기할 수 있음 ④ 어린이보호구역 안전운전의무 위반은 12대 중과실 사고에 해당되어 「교통사고처리특례법」의 반의사불벌 또는 보험가입의 특례가 적용되지 않음"},{"id":"2-14","type":2,"n":7,"sourceN":14,"q":"대인배상Ⅰ의 보상한도에 대한 설명으로 틀린 것은?","c":["사망 1인당 최고 1억 5천만원이고 최저 2천만원이다","후유장해 1인당 최고 1억 5천만원이다","부상 1인당 최고 3천만원이다","치료 중 사망한 경우 1인당 최고 1억 8천만원이다"],"a":3,"e":"대인배상Ⅰ에서 부상의 경우 보상한도는 50만원(14급)부터 3,000만원(1급)까지로 급별 한도에 따라 다름"},{"id":"2-15","type":2,"n":8,"sourceN":15,"q":"자동차보험 우량할인·불량할증의 사고내용별 점수에 대한 설명으로 맞는 것은?","c":["대인사고의 경우 부상등급에 관계없이 1건당 3점이 부과된다","자기신체사고, 자동차상해의 경우 부상등급에 관계없이 건당 1점이 부과된다","장기무사고 보험가입자의 경우 사고점수는 0점으로 한다","자기차량손해사고 손해액이 1억원 이하인 경우 사고점수에는 영향이 없다"],"a":2,"e":"① 대인사고의 경우 부상등급에 따라 사고점수가 차등 부과됨 (13급→14급 사고건당 1점에서 부상 1급 및 사망사고 사고건당 4점) ③ 장기무사고보호등급에 해당하는 경우 사고점수 1점 이하의 사고시에는 등급의 차감 없고 사고점수 2점 이상의 사고시에는 최초 1점을 뺀 나머지 점수로 등급을 계산함 ④ 자기차량손해사고 손해액이 1억원 이하이고 물적사고 할증기준금액을 초과하는 사고의 경우 사고건당 1점을 부과함"},{"id":"2-16","type":2,"n":9,"sourceN":16,"q":"자동차보험 자기신체사고에 대한 설명으로 틀린 것은?","c":["단독사고(또는 일방과실사고)와 쌍방과실사고의 지급보험금 산출방법에는 차이가 없다","단독사고(또는 일방과실사고)로 인한 후유장해의 경우 후유장해 보험가입금액을 한도로 지급한다","전쟁, 내란 등으로 인한 손해는 보상하지 않는다","피보험자동차등을 요금이나 대가를 목적으로 계속적·반복적으로 사용하거나 대여해 생긴 손해는 보상하지 않는다"],"a":1,"e":"쌍방과실사고의 경우 실제손해액에 비율을 더한 금액에서 공제액을 차감한 후 한도 내에서 지급함"},{"id":"2-17","type":2,"n":10,"sourceN":17,"q":"자동차손해배상보장사업에 대한 설명으로 맞는 것은?","c":["보상내용과 보상금액은 자동차보험 대인배상Ⅰ의 약관상 지급기준이 적용된다","무보험차에 의한 자동차 사고에 대해서는 자동차손해배상 보장사업의 보상이 적용되지 않는다","사망의 경우 보상금액은 최저금액이 없으며 최고 2억원 한도 내에서 보상된다","대물피해가 발생한 경우 1,000만원 한도 내에서 실제 발생한 손해액을 보상한다"],"a":1,"e":"② 사망, 부상, 후유장해 등 보장사업과 자동차사고 피해가족 지원이 목적이므로 자동차 파손손해 등은 보상하지 않음 ③ 최저 2,000만원~최고 1억 5천만원(대인배상Ⅰ기준) ④ 대물(물적)피해는 보상 제외"},{"id":"3-13","type":3,"n":11,"sourceN":13,"q":"피보험자의 자녀가 새벽에 걷다가 뺑소니 사고로 부상을 입은 경우 보상받을 수 있는 담보는?","c":["대인배상","무보험자동차상해","자기차량손해","자기신체사고"],"a":2,"e":"대인배상Ⅱ(종합계약 포함)에 가입하지 않거나 보상하지 않는 자동차, 뺑소니 자동차 등에 의하여 생긴 사고에 해당하는 경우 무보험자동차에 의한 상해로 보상하며, 기명피보험자의 배우자와 자녀는 보상받을 수 있는 피보험자에 해당함"},{"id":"3-14","type":3,"n":12,"sourceN":14,"q":"자동차보험의 피보험자에 대한 설명으로 틀린 것은?","c":["기명피보험자의 승낙을 얻어 피보험자동차를 사용 또는 관리 중인 자를 승낙피보험자라 한다","대인Ⅱ·대물의 경우 자동차를 취급하는 것을 업으로 하는 자가 업무로서 위탁받은 피보험자동차를 사용 또는 관리하는 경우에도 승낙피보험자로 본다","기명피보험자의 사용자 또는 계약에 따라 사용자에 준하는 지위를 얻은 자를 피보험자로 본다","다른 피보험자를 위하여 피보험자동차를 운전 중인 자를 운전자피보험자라 한다"],"a":2,"e":"자동차를 취급하는 것을 업으로 하는 자가 업무로서 위탁받은 피보험자동차를 사용 또는 관리하는 경우에는 대인Ⅱ, 대물의 승낙피보험자로 보지 않음"},{"id":"3-15","type":3,"n":13,"sourceN":15,"q":"자동차보험 단체할인 및 할증의 평가대상기간은?","c":["역년 기준 1년","역년 기준 2년","역년 기준 3년","역년 기준 5년"],"a":3,"e":"단체할인·할증 평가대상기간은 역년 기준 3년임"},{"id":"3-16","type":3,"n":14,"sourceN":16,"q":"다음 표에서 피보험자의 사고부담금은? (’22.7.28. 이후 의무보험)\n\n30대 남성 승낙피보험자가 주취 상태로 운전 중 차량 1대와 충돌하여 피해자 1명이 골절(부상 1급) 등의 수술비용(상해 2,500만원)이 발생하고, 차량 전손(손해액 1,500만원)한 경우","c":["대인 1,000만원, 대물 500만원","대인 1,500만원, 대물 1,000만원","대인 2,000만원, 대물 1,000만원","대인 2,500만원, 대물 1,500만원"],"a":4,"e":"대인배상Ⅰ과 대물배상(의무)의 경우 보상액 전액을 사고부담금으로 납부해야 하므로 대인 2,500만원, 대물 1,500만원이 사고부담금이 됨"},{"id":"3-17","type":3,"n":15,"sourceN":17,"q":"자동차사고 과실비율분쟁시 과실비율분쟁 처리기관이 아닌 것은?","c":["손해보험협회 자동차사고 과실비율분쟁 심의위원회","경찰","금융감독원","법원"],"a":2,"e":"경찰은 과실비율을 결정하지 않으며, 경찰의 사고조사기록은 과실비율 산정에 필요한 객관적 참고자료로 활용됨"},{"id":"4-13","type":4,"n":16,"sourceN":13,"q":"자동차보험 의무보험에 대한 설명으로 맞는 것은?","c":["자동차보험 의무보험은 가입해야 한다","대인배상Ⅰ의 보상금액은 무한이다","자기신체손해는 종합보험에 해당하며 실제손해액을 보험가입금액 한도로 보상한다","무보험자동차에 의한 상해는 종합보험 가입 여부를 임의로 선택할 수 없다"],"a":1,"e":"② 대인배상Ⅰ의 피해자 1인에 대한 보상한도는 유한함 ③ 자기신체손해는 종합보험에 해당하는 임의보험이며 실제손해액을 보험가입금액을 한도로 보상하며 중복하여 보상하지 않음 ④ 무보험자동차에 의한 상해담보는 종합보험에 해당하며 가입 여부를 임의로 선택할 수 있음"},{"id":"4-14","type":4,"n":17,"sourceN":14,"q":"개인용자동차보험의 다른자동차운전담보 특별약관에 대한 설명으로 틀린 것은?","c":["피보험자는 무보험자동차에 의한 상해의 피보험자와 동일하다","기명피보험자와 그 부모, 배우자 또는 자녀가 소유하는 자동차는 다른 자동차에 해당하지 않는다","다른 자동차보험계약에 의하여 지급될 수 있는 금액을 초과하는 때에 한하여 그 초과금액을 보상한다","다른 자동차 운전 중 생긴 대인배상Ⅱ, 대물배상, 자기신체사고에 대하여 보상한다"],"a":1,"e":"피보험자는 기명피보험자, 기명피보험자의 배우자만 인정되므로 무보험자동차에 의한 상해 피보험자보다 범위가 좁음"},{"id":"4-15","type":4,"n":18,"sourceN":15,"q":"자동차보험에 적용되는 특별할증에 대한 설명으로 틀린 것은?","c":["자동차보험 특별할증 적용대상기간에 해당하는 계약을 대상으로 한다","개인용자동차보험·업무용자동차보험·영업용자동차보험 계약을 대상으로 한다","각 그룹별 최고할증률 한도 내에서 보험료를 할증한다","이륜자동차보험에도 특별할증을 적용한다"],"a":4,"e":"이륜자동차보험에는 특별할증을 적용하지 않음"},{"id":"4-16","type":4,"n":19,"sourceN":16,"q":"자동차보험의 자기차량손해 담보에 대한 설명으로 틀린 것은?","c":["피보험자동차에 직접적으로 생긴 손해는 보험가입금액을 한도로 보상한다","보험가입금액이 보험가액보다 많은 경우에는 보험가액을 한도로 보상한다","도난으로 인해 보험금을 지급받은 후 도난자동차를 찾은 경우 이미 받은 보험금을 반환하고 자동차를 회수할 수 있다","일부도난(부분도난)의 경우 보상한다"],"a":4,"e":"자기차량손해 담보에서 일부도난(부분도난)은 보상하지 않음"},{"id":"4-17","type":4,"n":20,"sourceN":17,"q":"음주운전으로 대인사고를 위험운전치사상죄로 처벌하고 있는 법률로 알맞은 것은?","c":["자동차손해배상보장법","도로교통법","특정범죄가중처벌법","교통사고처리특례법"],"a":3,"e":"「특정범죄가중처벌법」에서 음주운전 대인사고를 위험운전치사상죄로 처벌하고 있음"},{"id":"5-13","type":5,"n":21,"sourceN":13,"q":"자동차보험에 처음으로 가입하는 경우 적용되는 보험기간은?","c":["보험기간 첫날 오후 4시부터 마지막 날 오후 4시","보험기간 첫날 0시부터 마지막 날 0시","보험기간 첫날 24시부터 마지막 날 24시","보험료를 받은 때부터 마지막 날 24시"],"a":4,"e":"자동차보험에 처음으로 가입하는 경우 보험기간은 보험료를 받은 때부터 마지막 날 24시까지임"},{"id":"5-14","type":5,"n":22,"sourceN":14,"q":"자동차보험의 임의보험에 대한 설명 중 맞는 것은?","c":["보험가입자의 보험가입 의사에 대해서 보험회사가 거절할 수 없다","대인배상Ⅱ는 책임보험(대인배상Ⅰ)의 초과 손해를 보상한다","종합보험에 가입하면 무면허 사고도 교통사고처리특례법상 특례를 적용받을 수 있다","가족운전자 한정특약 위반시에도 손해에 대해서는 보상한다"],"a":2,"e":"① 임의보험이므로 보험회사가 가입 의사를 거절할 수 있음 ③ 무면허, 뺑소니, 12대 중과실, 중상해 사고의 경우 교통사고처리특례법의 특례가 적용되지 않음 ④ 가족운전자 한정특약 및 운전자 연령한정특약 위반시 보장하지 않음"},{"id":"5-15","type":5,"n":23,"sourceN":15,"q":"자동차보험 보험요율의 반영요소가 아닌 것은?","c":["무보험차·불량화물요율","특약요율","사고건수별 특성요율","장기요율"],"a":4,"e":"장기요율은 자동차보험 보험요율 반영요소에 해당되지 않음"},{"id":"5-16","type":5,"n":24,"sourceN":16,"q":"다음 표와 같이 차량사고가 생겼다면 자동차 사고처리상 손해로 인한 보험금은 얼마인가?\n\n사고 전 자동차 가액은 2,000만원(출고 후 1년 6개월 경과), 수리비는 800만원, 무과실","c":["65만원","80만원","120만원","160만원"],"a":3,"e":"자동차 시세하락 손해는 수리비용(800만원)이 사고 전 가액의 20%(400만원) 초과시 보상하며, 출고된 지 1~2년 이내인 자동차(1년 6개월)는 수리비용(800만원)의 15%를 지급하므로 120만원을 지급함"},{"id":"5-17","type":5,"n":25,"sourceN":17,"q":"자동차손해배상보장사업에 대한 설명으로 맞는 것은?","c":["자동차사고 피해자 가족에 대한 지원금은 피해자가 반드시 사고로 피해를 입은 경우에만 지급된다","청구권자는 부상 또는 장애의 경우 피해자 본인이다","무보험 또는 미등록 자동차가 피해자는 차량소유주(보유자)가 손해배상책임이 있는 경우에도 보장사업 청구가 가능하다","피해자가 기초생활보장 수급을 받는 경우에도 보장사업 청구가 가능하다"],"a":2,"e":"① 무보험자동차, 도난자동차 및 무단운전 자동차사고, 차량 낙하물 사고 피해자도 보장사업 대상임 ③ 보유자가 손해배상책임을 면한 경우에만 해당 ④ 손해배상을 받은 경우에는 청구 불가"},{"id":"6-13","type":6,"n":26,"sourceN":13,"q":"「교통사고처리특례법」에서 형사처벌 특례를 적용받을 수 없는 12대 중과실에 해당하지 않는 것은?","c":["어린이 보호구역 안전운전의무 위반","고속도로 사고","건널목 통과방법위반","개문발차"],"a":2,"e":"고속도로 사고는 12대 중과실에 해당하지 않습니다."},{"id":"6-14","type":6,"n":27,"sourceN":14,"q":"자동차보험 대인배상Ⅰ에서 사망보험금의 최고 보상한도는?","c":["1억원","2억원","1.5억원","3억원"],"a":3,"e":"대인배상Ⅰ의 사망보험금 보상한도는 최저 2천만원, 최고 1억 5천만원입니다."},{"id":"6-15","type":6,"n":28,"sourceN":15,"q":"자동차보험 무사고할인 및 불량할증에 관한 설명으로 맞는 것은?","c":["개별할인 및 할증은 담보종목별로 구분하여 피보험자 단위로 사고실적을 평가하여 적용한다","단체할인 및 할증의 평가대상기간은 역년 기준 5년이다","단체할인 및 할증 적용시의 보험료는 평가대상기간 말일의 익년 4월 1일부터 익년 3월 31일 사이에 시작되는 계약에 적용한다","영업용자동차보험은 운전자 단위로 평가 적용한다"],"a":3,"e":"단체할인 및 할증 적용시의 보험료는 평가대상기간 말일의 익년 4월 1일부터 익년 3월 31일 사이에 시작되는 계약에 적용합니다."},{"id":"6-16","type":6,"n":29,"sourceN":16,"q":"자동차보험에서 무면허 운전에 대한 설명으로 틀린 것은?","c":["운전면허 정지기간 중 운전은 무면허 운전에 해당한다","면허에서 허가된 차종 이외의 차량을 운행하는 것은 무면허 운전에 해당한다","외국에서 운전면허를 취득하고 국내면허나 국제면허로 변경하지 않은 운전자는 무면허 운전에 해당한다","무면허 운전 중 사고는 대인배상Ⅱ에서 보상하지 않는다"],"a":4,"e":"무면허 운전 사고시에도 대인배상Ⅱ에서 보상하며, 가해자인 피보험자는 사고부담금을 납부해야 합니다."},{"id":"6-17","type":6,"n":30,"sourceN":17,"q":"음주운전 처벌기준 중 틀린 것은?","c":["혈중알코올농도가 0.08% 이상인 경우, 사고발생여부를 불문하고 면허가 취소된다","음주측정에 불응한 경우 사고발생 여부를 불문하고 면허가 취소된다","혈중알코올농도가 0.05% 미만인 경우에는 단속이 되더라도 처벌 없이 훈방된다","혈중알코올농도가 0.2% 이상인 경우 2~5년 이하의 징역 또는 1천만원~2천만원 이하의 벌금에 처해진다"],"a":3,"e":"음주운전 처벌기준의 혈중알코올농도 기준은 0.05%가 아니라 0.03%입니다."},{"id":"7-13","type":7,"n":31,"sourceN":13,"q":"자동차보험 담보종목에 대한 설명으로 틀린 것은?","c":["대인배상Ⅰ은 「자동차손해배상보장법」에 의한 손해배상책임에 한하여 보상한다","대물배상은 피보험자동차를 소유, 사용, 관리하는 동안에 생긴 피보험자동차의 사고로 인하여 타인의 재물을 없애거나 훼손한 때에 법률상 손해배상책임을 짐으로써 입은 손해를 보상한다","무보험자동차에 의한 상해는 피보험자가 무보험자동차에 의하여 생긴 사고로 사망하거나 다친 때 그 손해에 대하여 배상의무자의 유무를 불문하고 보상한다","무보험자동차에 의한 상해에서 배상의무자는 무보험자동차의 사고로 인하여 피보험자를 죽게 하거나 다치게 한 사람을 말한다"],"a":3,"e":"무보험자동차에 의한 상해는 배상의무자가 있는 경우에 보상함"},{"id":"7-14","type":7,"n":32,"sourceN":14,"q":"「자동차관리법」의 적용을 받는 자동차에 해당하지 않는 것은?","c":["승용자동차, 승합자동차","특수자동차","화물자동차","트랙터 등 농업기계"],"a":4,"e":"트랙터 등 농업기계는 「농업기계화촉진법」의 적용을 받음"},{"id":"7-15","type":7,"n":33,"sourceN":15,"q":"운전자연령 한정운전특약 위반시에 보상되는 담보에 해당하는 것은?","c":["대인배상Ⅰ","대물배상(가입금액 2천만원 초과)","대인배상Ⅱ","대물배상(가입금액 2천만원)"],"a":1,"e":"운전자연령 한정운전특약 위반시에는 대인배상Ⅰ만 보상"},{"id":"7-16","type":7,"n":34,"sourceN":16,"q":"자동차보험 과실상계에 대한 설명으로 옳지 않은 것은?","c":["대인배상Ⅰ·Ⅱ, 대물배상은 보험금 지급기준에 따라 산출한 보험금에서 피해자측의 과실비율에 따라 상계한다","무보험자동차에 의한 상해는 피해자측 과실에 따라 상계한다","승용차 함께타기 실시차량의 운행 중 사고의 경우에는 동승자감액을 적용하지 않는다","대인배상Ⅰ에서의 사망보험금은 과실상계한 후의 금액이 2,000만원에 미달하면 1,500만원을 보상한다"],"a":4,"e":"1,500만원 → 2,000만원"},{"id":"7-17","type":7,"n":35,"sourceN":17,"q":"교통사고 발생 및 교통법규 위반사항에 따라 부과되는 벌점에서 면허가 정지되는 누적점수의 기준으로 맞는 것은?","c":["20점","30점","40점","50점"],"a":3,"e":"면허가 정지되는 누적점수 기준은 40점임"},{"id":"8-13","type":8,"n":36,"sourceN":13,"q":"자동차보험 의무보험의 담보종목에 대한 설명으로 틀린 것은?","c":["비사업용 자동차는 대인배상Ⅰ과 대물배상(2천만원 이상)에 가입하여야 한다","사업용 자동차는 대인배상Ⅰ, 대인배상Ⅱ(1억원 이상), 대물배상(2천만원 이상)에 가입하여야 한다","비사업용 자동차는 대인배상Ⅰ, 대인배상Ⅱ(2천만원 이상)에 가입하여야 한다","사업용 자동차는 대물배상 2천만원 이상에 가입하여야 한다"],"a":3,"e":"비사업용 자동차는 대인배상Ⅰ과 대물배상(2천만원 이상)에 가입해야 함"},{"id":"8-14","type":8,"n":37,"sourceN":14,"q":"자동차보험의 담보 및 가입 의무에 대한 설명으로 틀린 것은?","c":["대물배상은 피보험자가 타인의 차량이나 재물을 파손시켰을 때 손해를 배상해 주는 담보이다","자동차손해배상 담보는 운전자의 차량 손해를 보상하지만 의무가입 대상은 아니다","대인배상Ⅰ은 「자동차손해배상 보장법」에 따라 의무적으로 가입해야 하는 책임보험이다","무보험자동차에 의한 상해담보는 의무적으로 가입하여야 한다"],"a":4,"e":"무보험자동차에 의한 상해담보는 무보험 차량에 의해 입은 상해를 보상하는 임의담보로 의무가입 대상이 아님"},{"id":"8-15","type":8,"n":38,"sourceN":15,"q":"교통법규위반 경력요율에 대한 설명으로 틀린 것은?","c":["교통법규위반 경력요율의 적용대상은 기명피보험인 모두를 말한다","교통법규위반 경력요율의 대상자동차는 개인소유자동차에 한한다","법인소유자동차에도 교통법규위반 경력요율을 적용한다","교통법규위반 경력요율은 보험회사별로 자율적으로 적용한다"],"a":3,"e":"법인소유자동차는 교통법규위반 경력요율을 적용하지 않음"},{"id":"8-16","type":8,"n":39,"sourceN":16,"q":"자동차보험 대물배상의 보험금 지급기준에 대한 설명 중 옳은 것은?","c":["휴차료는 비사업용 차량이 운행 불가한 경우 영업손해를 휴차일수에 따라 보상한다","수리비 및 열처리 도장료의 합계는 피해물의 사고 전 가액의 100% 한도로 보상한다","차량의 제작이 종료되어 단종된 경우 정비소까지 운반되는 비용은 보상하지 않는다","출고 후 1년 이내인 자동차의 수리비용이 사고 전 자동차가액의 20%를 초과하는 경우 수리비용의 20%를 지급한다"],"a":4,"e":"① 비사업용 차량 → 사업용 차량 ② 100% → 120% (열처리 도장료는 차량에 관계없이 전액 지급) ③ 정비소까지 운반되는 비용(견인비용)은 보상함"},{"id":"8-17","type":8,"n":40,"sourceN":17,"q":"자동차손해배상보장사업의 청구가능 기간에 대한 설명으로 맞는 것은?","c":["통상 사고일로부터 3년 이내에 청구권을 행사하지 않으면 그 권리가 소멸된다","손해를 인지한 지 4년이 되어도 가해자를 알 수 없으면 청구가 가능하다","2024.4.1 이후 발생한 사고의 보장사업 청구기간은 5년이다","뺑소니사고의 특성상 뺑소니사고는 사고 후 5년 이내 청구할 수 있다"],"a":1,"e":"청구가능 기간은 통상 사고발생일(손해의 사실을 안 날)로부터 3년 이내임"},{"id":"9-13","type":9,"n":41,"sourceN":13,"q":"다음 중 12대 중과실에 해당하지 않는 것은?","c":["중앙선 침범","음주·무면허 운전","안전표지 지시위반","물피도주"],"a":2,"e":"물피도주는 물적 피해 교통사고 후 도주를 말하는 것으로 12대 중과실에 해당하지 않음"},{"id":"9-14","type":9,"n":42,"sourceN":14,"q":"자동차 양도시 자동차보험계약의 승계와 관련된 설명으로 틀린 것은?","c":["자동차의 명의를 변경한 경우 양수인은 반드시 새로운 보험계약을 체결해야 한다","양도인의 계약이 자동차승계인 경우 양도인은 승계기간에 해당하는 보험료를 양수인에게 청구할 수 있다","양도인은 자동차 양도시 보험계약 잔여기간에 대한 보험료를 환급받을 수 있다","자동차 양도시 양도인의 자동차종합보험계약에 대한 권리의무는 양수인에게 자동승계된다"],"a":4,"e":"자동차종합보험계약은 자동승계되지 않고, 양도인의 계약승계 요청과 보험회사의 승인으로 승계가 가능함"},{"id":"9-15","type":9,"n":43,"sourceN":15,"q":"자동차보험 대인배상의 보험금 지급기준에 대한 설명 중 옳은 것은?","c":["장례비는 300만원이 지급된다","사망보험금은 대인배상Ⅰ에서 최대 1억 5,000만원, 대인배상Ⅱ에서 장례비, 위자료 등 최대 1억 5,000만원, 총 3억원을 지급한다","부상보험금 보상항목은 치료비, 위자료, 휴업손해, 간병비, 기타비용 등이다","사망보험금 중 위자료는 4,500만원이다"],"a":3,"e":"① 300만원 → 500만원 ② 사망보험금은 총 지급액 중 최대 1억 5,000만원은 대인배상Ⅰ 담보에서 지급하고 초과하는 금액은 대인배상Ⅱ의 보험가입금액 한도 내에서 지급함 ④ 사망 당시 피해자 나이가 만 65세 미만인 경우 8천만원, 만 65세 이상일 경우 5천만원을 지급함"},{"id":"9-16","type":9,"n":44,"sourceN":16,"q":"자동차손해배상보장사업에 대한 설명으로 틀린 것은?","c":["뺑소니차나 무보험차 사고로 사망하거나 부상당한 피해자가 어디에서도 보상받지 못한 경우 정부에서 보상하는 사회보장제도이다","관련 주무부처는 금융위원회이다","차량 낙하물 사고 피해자도 보장대상에 해당된다","청구권자는 사망의 경우 상속권자이며 부상 또는 장애의 경우 피해자 본인이다"],"a":2,"e":"금융위원회 → 국토교통부"},{"id":"9-17","type":9,"n":45,"sourceN":17,"q":"음주운전으로 인한 위험운전치사상죄의 처벌에 대한 설명으로 맞는 것은?","c":["음주운전으로 인한 상해사고시 1년 이상 15년 이하의 징역 또는 1천만원 이상 3천만원 이하의 벌금","음주운전으로 인한 사망사고시 1천만원 이상 1억원 이하의 벌금","음주운전으로 인한 상해사고시 1년 이상의 징역 또는 무기징역","음주운전으로 인한 사망사고시 10년 이상의 징역 또는 무기징역"],"a":1,"e":"음주운전으로 인한 상해사고는 1년 이상 15년 이하의 징역 또는 1천만원 이상 3천만원 이하의 벌금, 사망사고는 무기 또는 3년 이상의 징역에 처함"},{"id":"10-13","type":10,"n":46,"sourceN":13,"q":"자동차보험 의무보험 계약을 해지할 수 있는 요건이 아닌 것은?","c":["자동차의 말소등록","자동차의 양도","자동차의 상속","의무보험 계약을 중복으로 체결한 경우"],"a":3,"e":"상속 자동차에 대한 의무보험 해지 불가 ①, ②, ④는 의무보험 해지 가능"},{"id":"10-14","type":10,"n":47,"sourceN":14,"q":"「자동차관리법」의 적용을 받는 자동차에 해당하지 않는 것은?","c":["덤프트럭","견인 고리 장착 등 특수자동차","화물자동차","승용자동차"],"a":1,"e":"덤프트럭은 「건설기계관리법」의 적용을 받는 의무가입 9종 건설기계임"},{"id":"10-15","type":10,"n":48,"sourceN":15,"q":"특약요율에 대한 설명으로 틀린 것은?","c":["대인배상Ⅰ은 특약요율을 적용하지 않는다","대인배상Ⅰ 및 대물배상(의무보험)과 단기계약의 경우 분할납입이 가능하다","운전자연령 한정운전특약은 사고당시 만 연령 기준을 적용한다","영업용의 경우 대인배상Ⅰ 및 대물배상도 분할납입할 수 있다"],"a":2,"e":"대인배상Ⅰ 및 대물배상(의무보험)과 단기계약의 경우 반드시 일괄 납입해야 함"},{"id":"10-16","type":10,"n":49,"sourceN":16,"q":"아래의 경우 자동차보험 자기차량손해 최종 자기부담금은 얼마인가?\n\n할증기준금액 200만원, 정률 20%(자기부담금 최소 20만원, 최대 50만원 기준).\n차량손해액 500만원","c":["20만원","100만원","50만원","0원"],"a":3,"e":"자기부담금 = 정률 × 차량손해액(20% × 500만원 = 100만원) 최대한도가 50만원이므로 50만원 적용"},{"id":"10-17","type":10,"n":50,"sourceN":17,"q":"자동차사고 과실비율분쟁 심의위원회의 결정에 불복할 경우 처리방법에 대한 설명으로 맞는 것은?","c":["과실비율분쟁 심의위원회에 심의를 재청구한다","법원에 소송을 제기하여 확정판결을 받는다","과실비율분쟁 심의위원회에 새로운 사건으로 접수한다","경찰에 과실비율 결정을 요청한다"],"a":2,"e":"과실비율분쟁 심의위원회의 심의결과를 수용하지 않을 경우 법원의 소송 및 재판을 통해 과실비율을 최종 확정함"},{"id":"11-13","type":11,"n":51,"sourceN":13,"q":"「자동차손해배상보장법」에 의하여 의무보험에 반드시 가입해야 하는 자동차가 아닌 것은?","c":["승용자동차","덤프트럭","도로가 아닌 장소에 한하여 운행하는 자동차","타이어식 기중기"],"a":3,"e":"도로가 아닌 장소에 한하여 운행하는 자동차는 의무보험 가입대상이 아님"},{"id":"11-14","type":11,"n":52,"sourceN":14,"q":"자동차보험 대인배상Ⅱ의 피보험자 범위에 해당하지 않는 것은?","c":["자동차를 취급하는 것을 업으로 하는 자가 업무로서 위탁받은 피보험자동차를 사용·관리하는 자","기명피보험자와 같이 살거나 살림을 같이하는 친족으로 피보험자동차를 사용 또는 관리 중인 자","기명피보험자의 승낙을 얻어 피보험자동차를 사용 또는 관리 중인 자","기명피보험자가 피보험자동차를 사용자의 업무에 사용하고 있는 때의 기명피보험자의 사용자"],"a":1,"e":"대인Ⅱ, 대물의 경우 자동차를 취급하는 것을 업으로 하는 자가 업무로서 위탁받은 피보험자동차를 사용 또는 관리하는 경우에는 승낙피보험자로 보지 않음"},{"id":"11-15","type":11,"n":53,"sourceN":15,"q":"자동차보험료의 \u0027기본보험료\u0027 산출시 고려하는 사항에 해당하지 않는 것은?","c":["차량의 종류","차량의 용도","배기량","사고건수별 할인·할증"],"a":4,"e":"기본보험료는 차량의 종류, 배기량, 용도, 보험가입금액, 성별, 연령 등을 고려하여 산출함"},{"id":"11-16","type":11,"n":54,"sourceN":16,"q":"자동차보험 대물배상에서 수리가 가능한 경우(160시간 미만 수리)에 지급하는 대차료의 인정기간으로 맞는 것은?","c":["25일을 한도로 한다","30일을 한도로 한다","35일을 한도로 한다","40일을 한도로 한다"],"a":1,"e":"수리가 가능한 경우(160시간 미만 수리) 대차료 인정기간은 25일을 한도로 하며, 수리가 불가능한 경우 10일을 인정함"},{"id":"11-17","type":11,"n":55,"sourceN":17,"q":"자동차손해배상보장사업에 대한 설명 중 틀린 것은?","c":["자동차손해배상보장사업에서 자동차 등 물적손해는 보상하지 않음","차량이 파손된 경우에도 보상하여 준다","자동차사고 피해자 가족에 대한 지원금제도가 있다","보장사업을 청구할 수 있는 기간은 통상 사고일로부터 3년이다"],"a":2,"e":"자동차손해배상보장사업에서 자동차 등 물적손해는 보상하지 않음"},{"id":"12-13","type":12,"n":56,"sourceN":13,"q":"「교통사고처리특례법」에서 규정하고 있는 12대 중과실 사고에 해당하지 않는 것은?","c":["중앙선 침범","신호위반 및 지시위반","제한속도 10km/h 초과","앞지르기 규정 위반"],"a":3,"e":"10km/h → 20km/h"},{"id":"12-14","type":12,"n":57,"sourceN":14,"q":"「자동차손해배상 보장법」에 의한 대인배상Ⅰ의 보상한도에 대한 설명으로 틀린 것은?","c":["사망의 경우 최고 보상한도는 1억 5천만원이다","부상의 경우 최저 보상한도는 14급 50만원이다","후유장해의 경우 최저 보상한도는 1급 5천만원이다","후유장해의 경우 최저 보상한도는 14급 1,000만원이다"],"a":4,"e":"후유장해의 경우 최저 보상한도는 14급 1,000만원임"},{"id":"12-15","type":12,"n":58,"sourceN":15,"q":"다음은 사고내용별 점수이다. 대인사고시 부상 1급 사고에 대한 건당 점수는?","c":["3점","2점","4점","1점"],"a":3,"e":"대인 사망사고와 부상사고 1급은 건당 4점임"},{"id":"12-16","type":12,"n":59,"sourceN":16,"q":"과실상계, 동승자감액, 기왕증에 대한 설명으로 틀린 것은?","c":["대인배상Ⅰ·Ⅱ, 대물배상의 보험금 지급기준에 따라 산출한 보험금에서 피해자측 과실비율에 따라 상계한다","보험사고로 다른 이익을 받는 경우 이를 상계하는 손익상계 제도가 있다","보험자동차에 동승한 자에 대하여는 동승자 유형별로 감액된다","당해 자동차사고가 있기 전에 이미 가지고 있는 증상에 대해서는 보상하지 않는다"],"a":4,"e":"당해 자동차사고가 있기 전에 이미 가지고 있는 증상에 대해서는 보상하지 않음"},{"id":"12-17","type":12,"n":60,"sourceN":17,"q":"비가 내려 노면이 젖어 있는 경우 또는 눈이 20mm 미만 쌓인 경우 규정 속도에서 감속해야 하는 비율은?","c":["10%","20%","30%","50%"],"a":2,"e":"제한속도의 20%를 감속해서 운전해야 함"},{"id":"13-13","type":13,"n":61,"sourceN":13,"q":"자동차보험의 의무보험에 대한 설명 중 맞는 것은?","c":["대인배상Ⅰ·Ⅱ를 말한다","대물배상의 보상한도는 1사고당 1천만원 한도이다","보험계약자의 임의 해지권이 제한된다","피해자는 실손해 범위 내에서 무한으로 보상받을 수 있다"],"a":3,"e":"① 대인배상Ⅱ → 대물배상(1사고당 2천만원) ② 1천만원 → 2천만원 ④ 대인배상Ⅰ에서 피해자 1인에 대한 보상한도는 유한임(1사고당 한도는 없음)"},{"id":"13-14","type":13,"n":62,"sourceN":14,"q":"아스팔트 살포기, 타이어식 기중기, 타이어식 굴삭기, 트럭지게차 등의 자동차 종류로 알맞은 것은?","c":["의무가입건설기계","일반건설기계","특수작업용 자동차","농기계"],"a":1,"e":"덤프트럭, 콘크리트믹서트럭, 트럭적재식 콘크리트펌프/아스팔트 살포기, 타이어식 기중기/굴삭기, 트럭지게차, 도로보수트럭, 노면측정장비는 의무가입 9종 건설기계에 해당됨"},{"id":"13-15","type":13,"n":63,"sourceN":15,"q":"대인배상Ⅱ에서 보상하는 보험금 지급사유가 아닌 것은?","c":["사망","위로금","부상","후유장해"],"a":2,"e":"대인배상Ⅱ의 보상항목은 사망보험금, 부상보험금, 후유장해보험금"},{"id":"13-16","type":13,"n":64,"sourceN":16,"q":"자동차보험 대물배상 보험금 지급기준에 대한 설명으로 옳지 않은 것은?","c":["수리비 및 열처리 도장료의 합계는 피해물 가액의 150% 한도로 보상한다","자동차 시세하락 손해는 출고 후 5년 이내의 자동차에 적용한다","폐차한 경우 사고 전 차량가액 또는 동종 대체물 취득비용을 지급한다","피해물의 수리는 원상회복이 목적이므로 한도 없이 보상한다"],"a":2,"e":"① 150% → 120% ③ 사고 전 가액 또는 동종 대체물 취득비용을 보상함 ④ 폐차물의 수리비용은 열처리 도장료와 합산하여 사고직전 가액의 120%를 한도로 지급"},{"id":"13-17","type":13,"n":65,"sourceN":17,"q":"자동차사고 과실비율분쟁에 대한 설명으로 옳은 것은?","c":["사고유형이 과실비율 인정기준에 없거나 과실기준 적용이 곤란한 경우에는 적용하지 않는다","과실비율 인정기준은 참고기준에 해당하며, 법적 구속력은 없다","속도위반, 선 진입 등 수정요소에 대하여는 과실비율의 가감이 가능하다","소송이 제기된 경우에는 확정판결에 의한 과실비율을 적용한다"],"a":3,"e":"① 적용하지 않는다 → 판례를 참작하여 적용한다 ② 과실비율 인정기준은 참고기준에 해당하며, 법적 구속력은 없음 ④ 소송이 제기된 경우에는 확정판결에 의한 과실비율을 적용함"},{"id":"14-13","type":14,"n":66,"sourceN":13,"q":"「자동차손해배상보장법」에 따른 의무보험의 특징에 대한 설명으로 틀린 것은?","c":["가입의 강제","계약해지의 제한","피해자 직접청구권 인정","가입금액 및 가입조건 임의 결정"],"a":4,"e":"「자동차손해배상보장법」 및 동 시행령에서 의무보험에 대한 가입금액 및 가입조건 등을 규정하고 있음"},{"id":"14-14","type":14,"n":67,"sourceN":14,"q":"이륜자동차보험에 대한 설명으로 틀린 것은?","c":["가정용, 업무용 이륜자동차가 유상운송 중 발생한 사고에 대해서 보상하지 않는다","자기차량손해 담보에서 도난손해를 보상한다","대인배상Ⅰ, 대물배상의 경우 가입시 자기부담금(0원, 25만원, 50만원, 75만원, 100만원 등을 선택할 수 있다","사용용도, 배기량, 연령대에 따라 보험회사별로 보험료를 차등 적용한다"],"a":2,"e":"자기차량손해 담보에서 도난손해는 보상하지 않음"},{"id":"14-15","type":14,"n":68,"sourceN":15,"q":"자동차보험의 가족운전자 한정운전특약에 대한 설명으로 틀린 것은?","c":["기명피보험자의 조부모는 운전할 수 없는 가족의 범위에 포함된다","기명피보험자의 부모 및 자녀는 운전할 수 있는 가족에 포함된다","기명피보험자의 배우자의 부모는 운전할 수 있는 가족에 포함된다","기명피보험자의 계자녀는 운전할 수 있는 가족에 해당되지 않는다"],"a":4,"e":"계자녀도 운전할 수 있는 가족에 포함됨"},{"id":"14-16","type":14,"n":69,"sourceN":16,"q":"20대 여성 B씨가 주취상태로 차량운행 중 보행자 1명을 충돌하여 피해자가 현장에서 사망한 경우 대인배상Ⅰ에서 피보험자의 사고부담금은 얼마인가?(2022년 7월 28일 개정약관, 손해액 2억원)","c":["1,000만원","3,000만원","1억원","1억 5,000만원"],"a":4,"e":"음주, 무면허, 뺑소니 사고의 대인배상Ⅰ 사고부담금은 보상한도액 전액이므로 대인배상Ⅰ 보상한도에 해당하는 1억 5,000만원임"},{"id":"14-17","type":14,"n":70,"sourceN":17,"q":"음주운전 처벌기준 중 맞는 것은?","c":["혈중알코올농도가 0.08% 이상인 경우이더라도 사고가 발생하지 않는다면 면허정지에 그친다","음주측정을 불응한 경우 사고발생 여부를 불문하여 면허정지된다","혈중알코올농도가 0.03%~0.08% 미만인 경우에는 대인사고가 발생하더라도 면허취소는 되지 않는다","혈중알코올농도가 0.08% 이상인 경우에는 사고발생 여부를 불문하고 면허취소 및 형사 입건된다"],"a":4,"e":"① 0.08% 이상인 경우 사고 발생 유무와 관계없이 면허취소 ② 면허정지 → 면허취소 ③ 대인사고가 난 경우 면허취소"},{"id":"15-13","type":15,"n":71,"sourceN":13,"q":"다음 중 자동차보험에서 청약철회가 가능한 것은?","c":["비사업용인 개인이 보험증권을 받은 날로부터 20일 이내인 계약","보험증권을 받은 날로부터 15일과 청약을 한 날부터 30일 중 먼저 도래하는 기간 이내인 계약","보험기간이 90일 이내인 보험계약","자동차손해배상보장법에 따른 의무보험"],"a":2,"e":"① 20일 → 15일 ③, ④는 청약철회가 불가능한 계약임"},{"id":"15-14","type":15,"n":72,"sourceN":14,"q":"개인용자동차보험 가입대상 자동차에 해당하는 것은?","c":["법정정원 10인승 이하의 개인소유 자가용승용차","법정정원 11인승의 개인소유 자가용승용차","자동차 운전학원 대표자 소유의 도로주행 연습용 승용차","자동차 운전학원 소유의 도로주행 교육용 9인승 승합차"],"a":1,"e":"② 법정정원 10인승 이하의 개인소유 자가용승용차를 제외한 모든 비사업용 자동차는 업무용자동차보험 가입대상임 ③, ④는 개인용자동차보험 가입대상 자동차에서 제외되므로 업무용자동차보험에 가입해야 함"},{"id":"15-15","type":15,"n":73,"sourceN":15,"q":"자동차보험 우량할인·불량할증에 대한 설명 중 맞는 것은?","c":["개별할인·할증에서 과거 사고유무 및 내용은 할인·할증의 등급 결정에 영향이 없다","할인·할증 최저적용률 도달기간 및 등급별 적용률은 보험회사별로 모두 동일하게 적용한다","장기무사고 보험가입자를 보호하기 위한 장기무사고보험등급이 마련되어 있다","사고에 따른 할증은 사고점수가 최소 2점 이상인 경우에만 적용된다"],"a":3,"e":"① 과거 사고유무 및 내용에 따라 등급 결정 ② 보험회사별로 다르게 적용 ④ 2점 → 1점 및 사고점수 1점 이하의 사고시에는 등급의 차감이 없으며 사고점수 2점 이상의 사고시에는 최초 1점을 뺀 나머지 점수로 등급 계산"},{"id":"15-16","type":15,"n":74,"sourceN":16,"q":"자동차보험 자기신체사고 담보에서 보상하는 손해에 해당하는 것은?","c":["피보험자의 고의, 범죄 등으로 인한 사고","피보험자동차를 요금이나 대가를 목적으로 계속적·반복적으로 사용하다가 일어난 사고","태풍, 홍수, 해일 등 자연재해로 인한 사고","전쟁, 폭동 등으로 인하여 발생한 사고"],"a":3,"e":"①, ②, ④는 자기신체사고 담보에서 보상하지 않음"},{"id":"15-17","type":15,"n":75,"sourceN":17,"q":"음주운전으로 인한 대인사고시 위험운전치사죄에 대한 처벌로 알맞은 것은?","c":["20년 이하의 징역 또는 1천만원 이상 3천만원 이하의 벌금","10년 이하의 징역","5년 이하의 징역 또는 5백만원 이상 2천만원 이하의 벌금","무기 또는 3년 이상의 징역"],"a":4,"e":"「특정범죄가중처벌법」의 음주운전으로 인한 위험운전치사죄에 대한 처벌 규정임"},{"id":"16-13","type":16,"n":76,"sourceN":13,"q":"자동차보험의 법적 책임관계에 대한 설명으로 틀린 것은?","c":["형사상 책임은 「형법」 및 「도로교통법」의 특별법인 「교통사고처리특례법」의 우선 적용을 받게 된다","「민법」의 특별법으로서 「자동차손해배상보장법」을 우선 적용한다","민사상 책임과 형사상 책임은 원칙적으로 별도로 구분한다","중상해 사고는 「교통사고처리특례법」에 의하여 보험가입의 특례를 무조건 적용받는다"],"a":4,"e":"사망사고·중상해 사고, 사고 후 도주(뺑소니), 12대 중과실 사고인 경우 반의사불벌 또는 보험가입의 특례가 적용되지 않음"},{"id":"16-14","type":16,"n":77,"sourceN":14,"q":"자동차 양도시 양도인의 책임보험이 양수인에게 자동승계되는 것으로 인정하는 기간은?","c":["양도된 날로부터 5일","양도된 날로부터 10일","양도된 날로부터 15일","양도된 당일부터"],"a":3,"e":"책임보험은 일시적인 무보험상태를 방지하기 위해 양도된 날로부터 소유권 이전등록 만료일인 15일까지 또는 날의 24시까지 자동차 소유권이 자동승계되는 것으로 간주함"},{"id":"16-15","type":16,"n":78,"sourceN":15,"q":"자동차보험의 보험료 산정 요소에 해당하지 않는 것은?","c":["자동차의 용도","교통법규 위반 경력","운전자의 직업","자동차의 배기량"],"a":3,"e":"운전자의 직업은 자동차보험의 보험료 산정 요소에 해당하지 않음"},{"id":"16-16","type":16,"n":79,"sourceN":16,"q":"자동차보험 대물배상에서 보상하는 것은?","c":["피해자 휴대품 손해","피보험자 소유 건물의 손해","견인비용","피보험자동차에 의해 운송 중인 물건의 파손"],"a":3,"e":"①, ②, ④는 보상하지 않음"},{"id":"16-17","type":16,"n":80,"sourceN":17,"q":"자동차손해배상보장사업의 청구 방법 등에 대한 설명으로 틀린 것은?","c":["보상금의 청구는 일정서류를 구비하여 국토교통부에 청구하여야 한다","부상의 경우 급수(1~14급)에 따라 차등 적용한다","보상금은 자동차손해배상진흥원에서 자동차보험 대인배상Ⅰ의 약관지급기준에 따라 지급한다","현행 자동차손해배상보장법상 보상금의 지급을 청구할 수 있는 기간은 3년이다"],"a":1,"e":"국토교통부 → 자동차손해배상진흥원"},{"id":"17-13","type":17,"n":81,"sourceN":13,"q":"「자동차손해배상보장법」에 의한 의무보험의 특징에 대한 설명으로 틀린 것은?","c":["자동차 보유자는 의무적으로 가입해야 한다","보험회사는 특별한 사유가 없는 한 계약을 거절하지 못한다","피해자의 직접청구권이 인정된다","피해자 1인에 대한 보상한도는 무한이다"],"a":4,"e":"피해자 1인에 대한 보상한도는 유한이며 1사고당 한도는 없음"},{"id":"17-14","type":17,"n":82,"sourceN":14,"q":"자동차보험의 무보험자동차에 의한 상해담보에 대한 설명으로 틀린 것은?","c":["피보험자 1인당 보험증권에 기재된 보험가입금액을 한도로 지급한다","대인배상Ⅰ·대인배상Ⅱ·대물배상 및 자기신체사고가 함께 체결된 경우에만 가입이 가능하다","기명피보험자가 2대 이상의 자동차를 소유한 경우 각각의 자동차마다 무보험자동차에 의한 상해를 가입하더라도 사고시 각 보험의 가입금액 한도 내에서 비례적으로 보상된다","전동킥보드 등에 의한 사고는 보상에서 제외된다"],"a":4,"e":"전동킥보드 등 개인형 이동장치에 의한 사고는 대인배상Ⅰ 보상한도로 보상함"},{"id":"17-15","type":17,"n":83,"sourceN":15,"q":"자동차보험의 대인배상 보험금에 대한 설명으로 옳은 것은?","c":["사망보험금은 2천만원을 지급한다","사망보험금에는 장례비가 포함되지 않는다","65세 이상 사망 피해자에 대한 위자료는 5,000만원을 지급한다","장례비는 600만원을 지급한다"],"a":3,"e":"① 사망보험금은 대인배상Ⅰ에서 최소 2천만원, 최대 1억 5천만원을 지급하고 대인배상Ⅱ 지급한도를 초과하는 손해는 대인배상Ⅱ에서 보험가입금액을 한도로 보상함 ② 사망보험금에는 장례비, 위자료, 상실수익액이 포함됨 ④ 600만원 → 500만원"},{"id":"17-16","type":17,"n":84,"sourceN":16,"q":"다음 중 자동차사고에서 과실상계가 적용되지 않는 담보는?","c":["자기신체사고","대인배상Ⅱ","대물배상","대인배상Ⅰ"],"a":1,"e":"과실상계는 대인배상Ⅰ·Ⅱ, 대물배상, 무보험자동차에 의한 상해담보에 적용됨"},{"id":"17-17","type":17,"n":85,"sourceN":17,"q":"음주운전 및 관련 처벌에 관한 설명으로 옳지 않은 것은?","c":["술에 취한 상태에서 운전한 것이 확실함에도 경찰의 음주측정 요구에 불응한 경우에는 5천만원 이상 1억원 이하의 벌금에 처해진다","음주운전 사고로 위험운전치사상죄가 성립되었을 때 무기 또는 3년 이상의 유기징역에 처해진다","운전이 금지되는 술에 취한 상태의 기준은 혈중알코올농도 0.03% 이상인 경우로 한다","음주운전으로 1회 적발된 자가 다시 음주운전으로 적발되어 운전면허 정지사유에 해당한 경우 면허가 취소될 수 있다"],"a":1,"e":"음주측정 요구에 불응한 경우 면허취소(1년간 면허 취득 불가), 1년 이상~5년 이하 징역, 5백만원 이상~2천만원 이하 벌금에 처함"},{"id":"18-13","type":18,"n":86,"sourceN":13,"q":"자동차보험의 담보종목에 대한 설명으로 맞는 것은?","c":["대인배상Ⅰ은 모든 법률상 손해배상책임을 보상한다","무보험자동차에 의한 상해는 무보험자동차에 의하여 생긴 사고로 발생한 자기차량의 손해를 보상한다","자기신체사고는 피보험자동차의 사고로 인하여 타인이 입은 신체손해를 보상한다","대물배상은 피보험자동차의 사고로 인하여 타인의 재산에 손해를 입힌 경우 보상한다"],"a":4,"e":"① 「자동차손해배상보장법」에 의한 손해배상책임에 한하여 보상함 ② 자기차량의 손해 → 피보험자의 신체 손해 ③ 타인 → 피보험자"},{"id":"18-14","type":18,"n":87,"sourceN":14,"q":"다음 중 사용피보험자에 대하여 바르게 설명한 것은?","c":["보험증권의 기명피보험자란에 기재되어 있는 자","기명피보험자의 승낙을 얻어 피보험자동차를 사용 또는 관리 중인 자","기명피보험자의 사용자의 지위에 따라 피보험자동차의 사용에 준하는 지위를 얻은 자","다른 피보험자를 위하여 피보험자동차를 운전 중인 자"],"a":3,"e":"① 기명피보험자 ② 승낙피보험자 ④ 운전피보험자"},{"id":"18-15","type":18,"n":88,"sourceN":15,"q":"자동차보험의 자동차보험료 적용요율 중 단체할인·할증에 대한 내용으로 틀린 것은?","c":["영업용자동차보험은 단체할인·할증 평가대상기간의 최종 연도 1년간 평균유효대수가 10대 이상인 경우에 적용한다","업무용자동차보험은 관용자동차가 포함된다","평가대상기간은 역년 기준 3년이다","영업용자동차보험은 피보험자 단위로 평가 적용한다"],"a":2,"e":"관용자동차는 제외됨"},{"id":"18-16","type":18,"n":89,"sourceN":16,"q":"사업용 자동차를 대상으로 하는 휴차료에 대한 설명으로 틀린 것은?","c":["휴차료는 (1일 영업수입-운행경비) × 휴차기간으로 계산한다","비영업용 자동차의 대차료 산정기준 및 계산과 동일하다","수리 가능시 인정기간은 최대 30일을 한도로 한다","수리가 불가능한 경우 10일의 기간을 인정한다"],"a":2,"e":"사업용 자동차가 운행이 불가능한 경우 영업손해를 휴차료로 지급하며, 비사업용 자동차의 경우에는 수리기간 동안 대여 차량 이용시 대차료를 지급하므로 산정기준이 다름"},{"id":"18-17","type":18,"n":90,"sourceN":17,"q":"자동차사고 과실비율 인정기준에 대한 설명으로 틀린 것은?","c":["자동차사고 발생시 사고당사자의 책임정도를 나타내는 지수를 자동차사고 과실비율이라고 한다","경찰은 과실비율을 결정하지 않는다","경찰의 사고조사기록은 과실비율 산정에 필요한 객관적 참고자료로 활용된다","자동차사고 과실비율분쟁 심의위원회는 인지주변을 인정기준 과실비율로 결정한다"],"a":4,"e":"과실비율분쟁 심의위원회는 보험사 간 합의에 따른 1차적 과실비율분쟁을 심의하는 기관이며, 위원회 결정 불수용 등의 경우 법원의 재판을 통해 최종 확정됨"},{"id":"19-13","type":19,"n":91,"sourceN":13,"q":"「자동차손해배상보장법」의 의무보험에 대한 설명으로 틀린 것은?","c":["자동차에 대한 행정업무 처리관계에서 의무보험 가입여부를 확인한다","보험회사는 특별한 사유가 없는 한 계약을 거절하지 못한다","피해자가 가해자의 보험회사에 보험금을 청구할 수 있도록 인정한다","모두 틀린 설명이다"],"a":4,"e":"①, ②, ③ 모두 맞는 설명임"},{"id":"19-14","type":19,"n":92,"sourceN":14,"q":"자동차보험에서 의무보험의 가입의무가 면제되는 경우는?","c":["수리비가 차량가액에 버금가는 큰 사고로 자동차정비 공장에 입고한 경우","자동차 성능검사에서 판정된 자동차의 기능 이상으로 자동차 정비공장에 입고한 경우","자동차를 도난당하여 관할경찰서에 도난신고를 한 사실을 당해 행정기관에 서류로서 입증한 경우","새로운 자동차를 구입하고 옛 자동차를 친구에게 빌려준 경우"],"a":3,"e":"자동차를 더 이상 운행할 수 없게 된 경우에 해당되어 의무보험 가입의무가 면제됨"},{"id":"19-15","type":19,"n":93,"sourceN":15,"q":"다음 중 사고내용별 점수가 2점에 해당하는 사고내용을 모두 나열한 것은?","c":["(가), (나), (다), (라)","(나), (다), (라)","(다), (라), (마)","(나), (마)"],"a":4,"e":"(가) 사망사고는 건당 4점 (다) 부상사고 13급~14급은 건당 1점 (라) 자기신체사고는 건당 1점 적용"},{"id":"19-16","type":19,"n":94,"sourceN":16,"q":"○○시에 사는 78세 A는 자동차 사고로 사망하였다. A에게 지급될 대인배상 보험금은?","c":["9,000만원","5,000만원","2,000만원","1,000만원"],"a":3,"e":"A과실이 90%이므로 손해액에서 공제 후 1,000만원이 대인배상 보험금이지만 대인배상Ⅰ에서의 사망보험금은 과실상계한 후 금액이 2,000만원에 미달하더라도 2,000만원을 보상하므로 A에게 지급될 대인배상 보험금은 2,000만원임"},{"id":"19-17","type":19,"n":95,"sourceN":17,"q":"자동차손해배상보장사업의 보상대상에 해당되지 않는 것은?","c":["국제연합군대가 보유한 자동차에 의한 사고","자동차보유자를 알 수 없는 자동차의 운행 중 해당 자동차로부터 낙하된 물체로 인하여 사고를 당한 경우","도난자동차에 의한 사고로 보유자가 책임보험으로 보상할 수 없는 경우","뺑소니 자동차에 의한 사고로 자동차의 보유자와 등록번호가 모두 불명인 경우"],"a":1,"e":"자동차손해배상보장사업의 대상에서 제외되는 경우임"},{"id":"20-13","type":20,"n":96,"sourceN":13,"q":"교통사고처리특례법상 12대 중과실 사고에 해당하지 않는 것은?","c":["신호위반","안전거리 미확보","음주운전","중앙선 침범"],"a":2,"e":"안전거리 미확보는 「교통사고처리특례법」상 형사처벌 특례를 적용받을 수 없는 12대 중과실에 해당되지 않음"},{"id":"20-14","type":20,"n":97,"sourceN":14,"q":"자동차보험 대인배상Ⅰ의 보상한도에 관한 설명 중 틀린 것은?","c":["사망사고시 보상한도는 최저 2,000만원, 최고 1억 5천만원이다","후유장해시 최고 보상한도는 1억 5천만원이다","부상사고시 보상한도는 최저 100만원, 최고 2천만원이다","부상사고시 최고 보상한도는 3,000만원이다"],"a":3,"e":"부상사고시 보상한도는 최저 50만원, 최고 3,000만원임"},{"id":"20-15","type":20,"n":98,"sourceN":15,"q":"자동차보험에서 가입자특성요율에 대한 설명으로 틀린 것은?","c":["자기를 피보험자로 하여 과거 자동차보험에 가입한 경과기간에 따라 적용한다","외국에서의 보험가입경력은 인정되지 않는다","요율적용방법은 보험회사별로 자율적으로 적용한다","군 운전병 근무경력은 인정된다"],"a":2,"e":"외국에서의 보험가입경력도 가입경력으로 인정됨"},{"id":"20-16","type":20,"n":99,"sourceN":16,"q":"자동차보험 대물배상 보험금 지급기준에 대한 설명으로 틀린 것은?","c":["대차료는 비사업용자동차가 운행불가한 경우 지급한다","수리비용은 피해물의 사고직전 가액의 150% 한도로 지급한다","내연수리기간은 사고차량 수리기간의 130% 한도로 지급한다","출고 후 5년이 지나지 않은 사고차량의 시세하락 손해를 보상한다"],"a":2,"e":"수리비용은 수리비와 열처리 도장료의 합계이며 피해물의 사고직전 가액의 120% 한도로 지급함"},{"id":"20-17","type":20,"n":100,"sourceN":17,"q":"자동차손해배상보장사업에 대한 설명으로 틀린 것은?","c":["보장사업업무를 지도·감독하는 기관은 국토교통부이다","자동차사고 피해자 구제 등에 대한 지원사업을 수행하는 기관은 보건복지부이다","보장사업은 부상자의 경우 최고 3,000만원을 지원한다","보장사업은 사망의 경우 최고 1억 5,000만원, 최저 2,000만원을 지원한다"],"a":2,"e":"보건복지부 → 자동차손해배상진흥원"},{"id":"1-12","type":1,"n":101,"sourceN":12,"q":"「민법」 제750조의 불법행위책임에 대한 설명으로 틀린 것은?","c":["불법행위로 타인에게 손해를 가한 경우 그 손해를 배상할 책임이 있다","불법행위로 인해 타인의 재산상 손해 또는 정신적 손해가 발생한 경우 배상책임이 발생한다","고의·과실이 없어도 제3자가 입은 손해를 배상할 책임이 발생한다","고의·과실이 있는 경우 제3자의 손해에 대한 배상책임이 발생한다"],"a":3,"e":"불법행위에 대한 고의, 과실이 있고 이로 인해 타인이 손해를 입은 경우 배상책임이 발생함"},{"id":"3-12","type":3,"n":102,"sourceN":12,"q":"「민법」과 「자동차손해배상 보장법」에 대한 설명 중 틀린 것은?","c":["「민법」 제750조는 불법행위에 따른 손해배상책임에 대한 규정이다","「자동차손해배상 보장법」은 피해자의 입증책임을 경감한다","「자동차손해배상 보장법」은 민법을 보완하여 자동차 사고 피해자를 보호한다","「민법」은 「자동차손해배상 보장법」에 우선하여 적용된다"],"a":4,"e":"「자동차손해배상보장법」은 「민법」보다 우선 적용되는 특별법임"},{"id":"5-12","type":5,"n":103,"sourceN":12,"q":"다음 중 자동차보험의 사고로 인한 형사상 책임에 해당하는 것은?","c":["면허 정지·취소","불법주차","사용자책임","과실치사상"],"a":4,"e":"면허 정지·취소는 행정상 책임, 불법행위책임 및 사용자책임은 민사상 책임에 해당함"},{"id":"7-12","type":7,"n":104,"sourceN":12,"q":"자동차를 운행하다 사고를 낸 운전자의 책임에 대한 설명으로 틀린 것은?","c":["피해자에 대한 손해배상 등 민사상의 책임을 진다","범칙금 통고처분, 면허정지·취소 등의 행정상 책임을 진다","업무상과실치사상죄 등의 형사상의 책임을 진다","대인배상으로 종합보험에 가입한 운전자는 모든 민·형사상의 책임을 면제받을 수 있다"],"a":4,"e":"사망사고, 중상해 사고, 사고 후 도주(뺑소니), 12대 중과실 사고 등은 보험가입의 특례가 적용되지 않음"},{"id":"8-12","type":8,"n":105,"sourceN":12,"q":"「자동차손해배상보장법」상 책임관계에 대한 설명 중 틀린 것은?","c":["피해자는 직접청구권을 행사할 수 있다","법률상 손해배상책임의 주체는 운행자이다","책임관계의 입증책임은 피해자에게 있다","「자동차손해배상보장법」은 민법보다 우선하여 적용된다"],"a":3,"e":"피해자 → 가해자(운전자)"},{"id":"9-12","type":9,"n":106,"sourceN":12,"q":"일정한 조건의 경우 운전자가 배상책임을 지지 않는다는 자동차손해배상책임의 책임원칙은?","c":["조건부무과실책임주의","무과실책임주의","업무배상책임주의","과실책임주의"],"a":1,"e":"조건부무과실책임주의에 대한 설명"},{"id":"11-12","type":11,"n":107,"sourceN":12,"q":"「자동차손해배상보장법」상 주요 용어에 대한 설명으로 틀린 것은?","c":["자동차란 「자동차관리법」상의 자동차와 「건설기계관리법」상의 9종 건설기계를 말한다","운행이란 자동차를 그 용법에 따라 사용 또는 관리하는 것을 말한다","자동차보유자란 자동차의 소유자와 동일한 개념이다","운전자는 다른 사람을 위하여 자동차의 운전이나 운전의 보조에 종사하는 자를 말한다"],"a":3,"e":"자동차보유자는 자동차의 소유자 또는 자동차를 사용할 정당한 권리가 있는 자로서 소유자보다 넓은 개념"},{"id":"13-12","type":13,"n":108,"sourceN":12,"q":"「자동차손해배상보장법」상 자동차 사고에 대한 손해배상책임의 주체는?","c":["운행자","피보험자","운전자","보험회사"],"a":1,"e":"「자동차손해배상보장법」상 자동차 사고에 대한 손해배상책임의 주체는 운행자임"},{"id":"14-12","type":14,"n":109,"sourceN":12,"q":"「자동차손해배상보장법」에 따른 제도에서 자동차 사고의 피해자를 보호하기 위한 것으로 보기 어려운 것은?","c":["자동차 보유자의 의무보험 가입 강제화","보험료 할인·할증제도","피해자 직접청구권 제도","가지급금 제도"],"a":2,"e":"①, ③, ④는 피해자보호 제도이고, 보험료 할인·할증제도는 사고예방을 위한 제도임"},{"id":"15-12","type":15,"n":110,"sourceN":12,"q":"자동차 사고로 인한 책임과 관련하여 다음 예시는 어떤 책임을 설명하는 것인가?\n\n고의 또는 과실로 인한 위법행위로 타인에게 손해를 가한 자가 그 손해를 배상할 책임이 있다","c":["민사상의 책임","형사상의 책임","행정상의 책임","도덕상의 책임"],"a":1,"e":"민사상 불법행위책임에 대한 설명"},{"id":"17-12","type":17,"n":111,"sourceN":12,"q":"「자동차손해배상보장법」에서 승객 이외의 자가 사상한 경우 운행자가 손해배상책임을 면할 수 있는 조건에 해당하지 않는 것은?","c":["자기와 운전자가 자동차의 운행에 관하여 주의를 게을리하지 않았음을 증명","자동차의 구조상 결함 또는 기능의 장해가 없었음을 증명","피해자 또는 자기 및 운전자가 아닌 제3자에게 고의 또는 과실이 있음을 증명","운전자가 중대 교통법규를 위반하지 않았음을 증명"],"a":4,"e":"조건부무과실책임주의에 따른 손해배상책임의 면책조건은 ①, ②, ③의 3가지이며, 중대 교통법규를 위반하지 않은 것은 운행자의 승객 이외의 자가 입은 사상고에 대한 면책요건으로 볼 수 없음"},{"id":"19-12","type":19,"n":112,"sourceN":12,"q":"자동차보험의 특성에 관한 설명 중 옳은 것으로 짝지어진 것은?","c":["(가), (나), (마)","(나), (라), (마)","(나), (다), (라)","(가), (나), (라)"],"a":4,"e":"(다) 무사고자에 대한 할인제도 운영 (마) 종합보험에 가입하면 「교통사고처리특례법」상의 형사처벌의 특례를 인정받아 형사책임이 완화될 수 있으나 사망사고, 뺑소니, 중상해, 12대 중과실 사고의 경우 형사합의와 상관 없이 형사처벌 받음"}]; var questionBank = questions;
+    var totalQuestions = questionBank.length;
+    var answers = Array(totalQuestions).fill(null);
+    var cursor = 0;
+    var wrongItems = [];
+    var reviewCursor = 0;
+
+    function $(id) { return document.getElementById(id); }
+    function displayText(value) {
+      return String(value == null ? '' : value).replace(/\\n/g, '\n');
+    }
+    function showScreen(id) {
+      ['startScreen','quizScreen','resultScreen','reviewScreen','completeScreen'].forEach(function (screenId) {
+        $(screenId).classList.toggle('hidden', screenId !== id);
+      });
+      window.scrollTo(0, 0);
+    }
+    function sourceText(item) {
+      return item.type + '형 ' + item.sourceN + '번';
+    }
+    function resetStudy() {
+      answers = Array(totalQuestions).fill(null);
+      cursor = 0;
+      wrongItems = [];
+      reviewCursor = 0;
+      showScreen('startScreen');
+    }
+    function renderQuiz() {
+      var item = questionBank[cursor];
+      $('quizProgress').textContent = (cursor + 1) + ' / ' + totalQuestions;
+      $('quizSource').textContent = sourceText(item);
+      $('quizProgressFill').style.width = (((cursor + 1) / totalQuestions) * 100) + '%';
+      $('quizNumber').textContent = '문항 ' + (cursor + 1) + ' · ' + sourceText(item);
+      $('quizQuestion').textContent = displayText(item.q);
+      $('quizChoices').innerHTML = '';
+
+      item.c.forEach(function (choice, index) {
+        var button = document.createElement('button');
+        button.type = 'button';
+        button.className = 'choice' + (answers[cursor] === index + 1 ? ' selected' : '');
+        var number = document.createElement('span');
+        number.className = 'choice-number';
+        number.textContent = index + 1;
+        var text = document.createElement('span');
+        text.className = 'choice-text';
+        text.textContent = displayText(choice);
+        button.append(number, text);
+        button.addEventListener('click', function () {
+          answers[cursor] = index + 1;
+          $('validationNote').classList.add('hidden');
+          renderQuiz();
+        });
+        $('quizChoices').appendChild(button);
+      });
+
+      $('prevButton').disabled = cursor === 0;
+      $('nextButton').classList.toggle('hidden', cursor === totalQuestions - 1);
+      $('submitButton').classList.toggle('hidden', cursor !== totalQuestions - 1);
+    }
+    function beginStudy() {
+      answers = Array(totalQuestions).fill(null);
+      cursor = 0;
+      wrongItems = [];
+      showScreen('quizScreen');
+      renderQuiz();
+    }
+    function submitStudy() {
+      var missing = answers.findIndex(function (answer) { return answer == null; });
+      if (missing !== -1) {
+        cursor = missing;
+        $('validationNote').textContent = '아직 답하지 않은 문항이 있습니다. 현재 문항부터 답해 주세요.';
+        $('validationNote').classList.remove('hidden');
+        renderQuiz();
+        return;
+      }
+
+      wrongItems = [];
+      questionBank.forEach(function (item, index) {
+        if (answers[index] !== item.a) {
+          wrongItems.push({ item: item, selected: answers[index] });
+        }
+      });
+
+      var correctCount = totalQuestions - wrongItems.length;
+      $('scoreText').textContent = correctCount + ' / ' + totalQuestions;
+      $('scoreSub').textContent = '정답률 ' + Math.round(correctCount / totalQuestions * 100) + '% · 오답 ' + wrongItems.length + '문항';
+
+      if (wrongItems.length) {
+        $('wrongSummary').innerHTML = '<strong>오답 문항</strong>' + wrongItems.map(function (entry) {
+          return sourceText(entry.item);
+        }).join(', ');
+        $('reviewButton').textContent = '오답노트 시작 (' + wrongItems.length + '문항)';
+        $('reviewButton').classList.remove('hidden');
+      } else {
+        $('wrongSummary').innerHTML = '<strong>전 문항 정답</strong>틀린 문제가 없어 오답노트를 생략합니다.';
+        $('reviewButton').classList.add('hidden');
+      }
+      showScreen('resultScreen');
+    }
+    function renderReview() {
+      var entry = wrongItems[reviewCursor];
+      var item = entry.item;
+      $('reviewProgress').textContent = '오답 ' + (reviewCursor + 1) + ' / ' + wrongItems.length;
+      $('reviewSource').textContent = sourceText(item);
+      $('reviewProgressFill').style.width = (((reviewCursor + 1) / wrongItems.length) * 100) + '%';
+      $('reviewNumber').textContent = '문항 ' + sourceText(item);
+      $('reviewQuestion').textContent = displayText(item.q);
+      $('reviewChoices').innerHTML = '';
+
+      item.c.forEach(function (choice, index) {
+        var choiceNo = index + 1;
+        var isCorrect = choiceNo === item.a;
+        var isSelected = choiceNo === entry.selected;
+        var button = document.createElement('div');
+        button.className = 'review-choice' + (isCorrect ? ' correct' : '') + (isSelected ? ' wrong-selected' : '');
+        var number = document.createElement('span');
+        number.className = 'review-choice-number';
+        number.textContent = choiceNo;
+        var text = document.createElement('span');
+        text.className = 'review-choice-text';
+        text.textContent = displayText(choice);
+        var mark = document.createElement('span');
+        mark.className = 'choice-mark';
+        mark.textContent = isCorrect ? '정답' : (isSelected ? '내 답' : '');
+        button.append(number, text, mark);
+        $('reviewChoices').appendChild(button);
+      });
+
+      $('reviewStatus').textContent = '내가 고른 답: ' + entry.selected + '번 · 정답: ' + item.a + '번';
+      $('reviewExplanation').textContent = displayText(item.e);
+      $('reviewPrevButton').disabled = reviewCursor === 0;
+      $('reviewNextButton').classList.toggle('hidden', reviewCursor === wrongItems.length - 1);
+      $('reviewCompleteButton').classList.toggle('hidden', reviewCursor !== wrongItems.length - 1);
+    }
+    function beginReview() {
+      reviewCursor = 0;
+      showScreen('reviewScreen');
+      renderReview();
+    }
+    function finishStudy() {
+      $('completeText').textContent = '112문항 풀이와 ' + wrongItems.length + '개 오답의 해설 확인을 완료했습니다.';
+      showScreen('completeScreen');
+    }
+
+    $('startButton').addEventListener('click', beginStudy);
+    $('prevButton').addEventListener('click', function () {
+      if (cursor > 0) { cursor -= 1; renderQuiz(); }
+    });
+    $('nextButton').addEventListener('click', function () {
+      if (cursor < totalQuestions - 1) { cursor += 1; renderQuiz(); }
+    });
+    $('submitButton').addEventListener('click', submitStudy);
+    $('reviewButton').addEventListener('click', beginReview);
+    $('reviewPrevButton').addEventListener('click', function () {
+      if (reviewCursor > 0) { reviewCursor -= 1; renderReview(); }
+    });
+    $('reviewNextButton').addEventListener('click', function () {
+      if (reviewCursor < wrongItems.length - 1) { reviewCursor += 1; renderReview(); }
+    });
+    $('reviewCompleteButton').addEventListener('click', finishStudy);
+    function goFocusMenu(confirmFirst) {
+      if (confirmFirst && !confirm('현재 학습을 중단하고 모의고사 테스트 목록으로 돌아갈까요?')) return;
+      window.location.href = './index.html';
+    }
+    $('quitButton').addEventListener('click', function () {
+      goFocusMenu(true);
+    });
+    $('resultHomeButton').addEventListener('click', function () { goFocusMenu(false); });
+    $('completeHomeButton').addEventListener('click', function () { goFocusMenu(false); });
+
+  </script>
+</body>
+</html>
