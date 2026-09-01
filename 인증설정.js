@@ -2,7 +2,7 @@
 (function (window, document) {
   'use strict';
 
-  var API_URL = 'https://script.google.com/macros/s/AKfycbyuUAuhMC3K19B6nhzT4ikve2WIlGPkWkn8aTUbg0lu5wYq45jzYaFLVuS0LFLt0OWp/exec';
+ var API_URL = 'https://script.google.com/macros/s/AKfycbw5SHkNzU8AswqucW7Jhzqs6wcl-gD4M7Uktkd1Woj4_sN__1liz4SxQrI2Ml0S-3iP/exec';
   var TOKEN_KEY = 'career_educator_learning_token';
   var STATE_KEY = 'career_educator_learning_state';
   function request(action, params) {
