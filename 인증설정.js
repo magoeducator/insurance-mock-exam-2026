@@ -2,7 +2,7 @@
 (function (window, document) {
   'use strict';
 
- var API_URL = 'https://script.google.com/macros/s/AKfycbw5SHkNzU8AswqucW7Jhzqs6wcl-gD4M7Uktkd1Woj4_sN__1liz4SxQrI2Ml0S-3iP/exec';
+  var API_URL = 'https://script.google.com/macros/s/AKfycbw5SHkNzU8AswqucW7Jhzqs6wcl-gD4M7Uktkd1Woj4_sN__1liz4SxQrI2Ml0S-3iP/exec';
   var TOKEN_KEY = 'career_educator_learning_token';
   var STATE_KEY = 'career_educator_learning_state';
   function request(action, params) {
@@ -90,13 +90,13 @@
   }
 
   function renderExamSocialLinks() {
-    var topbar = document.querySelector('.topbar');
-    if (!topbar || document.getElementById('authSocialLinks')) return;
+    var body = document.body;
+    if (!body || document.getElementById('authSocialLinks')) return;
 
     if (!document.getElementById('authSocialLinksStyle')) {
       var style = document.createElement('style');
       style.id = 'authSocialLinksStyle';
-      style.textContent = '.auth-social-links{display:flex;align-items:center;gap:9px;margin-top:9px;font-size:11px;font-weight:800}.auth-social-links .auth-social-label{color:rgba(255,255,255,.92);white-space:nowrap}.auth-social-links a{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:8px;color:#fff;text-decoration:none}.auth-social-links svg{width:15px;height:15px;display:block}.auth-social-links .instagram{background:linear-gradient(135deg,#f58529,#dd2a7b 52%,#8134af)}.auth-social-links .blog{background:#03c75a}.auth-social-links a:hover,.auth-social-links a:focus-visible{filter:brightness(.92);transform:translateY(-1px)}@media(max-width:420px){.auth-social-links{gap:8px;font-size:10px}}';
+      style.textContent = '.auth-social-links{position:fixed;left:50%;bottom:calc(10px + env(safe-area-inset-bottom,0px));z-index:1000;display:flex;align-items:center;gap:9px;margin:0;padding:7px 10px;border:1px solid rgba(255,255,255,.16);border-radius:999px;background:rgba(11,23,36,.94);box-shadow:0 8px 24px rgba(0,0,0,.24);backdrop-filter:blur(8px);transform:translateX(-50%);font-size:11px;font-weight:800}.auth-social-links .auth-social-label{color:rgba(255,255,255,.92);white-space:nowrap}.auth-social-links a{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:8px;color:#fff;text-decoration:none}.auth-social-links svg{width:15px;height:15px;display:block}.auth-social-links .instagram{background:linear-gradient(135deg,#f58529,#dd2a7b 52%,#8134af)}.auth-social-links .blog{background:#03c75a}.auth-social-links a:hover,.auth-social-links a:focus-visible{filter:brightness(.92);transform:translateY(-1px)}@media(max-width:420px){.auth-social-links{gap:8px;padding:6px 8px;font-size:10px}.auth-social-links a{width:27px;height:27px}}';
       document.head.appendChild(style);
     }
 
@@ -104,7 +104,7 @@
     links.id = 'authSocialLinks';
     links.className = 'auth-social-links';
     links.innerHTML = '<span class="auth-social-label">강의하는 심팀장</span><a class="instagram" href="https://www.instagram.com/career_educator" target="_blank" rel="noopener noreferrer" aria-label="인스타그램" title="인스타그램"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"/></svg></a><a class="blog" href="https://blog.naver.com/magoshim" target="_blank" rel="noopener noreferrer" aria-label="네이버 블로그" title="네이버 블로그"><svg viewBox="0 0 24 24" aria-hidden="true"><text x="12" y="17" text-anchor="middle" font-family="Arial,sans-serif" font-size="15" font-weight="900" fill="currentColor">B</text></svg></a>';
-    topbar.appendChild(links);
+    body.appendChild(links);
   }
 
   function redirectToLogin() {
